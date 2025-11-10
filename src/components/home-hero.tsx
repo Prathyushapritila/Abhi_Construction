@@ -33,7 +33,7 @@ export function HomeHero() {
               <Button
                 asChild
                 size="lg"
-                className="bg-premiumGold hover:bg-premiumGold/90 text-royalNavy text-lg px-8 py-6 shadow-lg font-semibold"
+                className="bg-premiumGold hover:bg-premiumGold/90 text-royalNavy text-lg px-8 py-6 shadow-lg font-semibold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 focus:ring-offset-royalNavy"
               >
                 <Link href="/portfolio">
                   Explore Our Projects
@@ -44,7 +44,7 @@ export function HomeHero() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="text-lg px-8 py-6 border-2 border-marbleWhite text-marbleWhite hover:bg-marbleWhite/10 bg-transparent"
+                className="text-lg px-8 py-6 border-2 border-marbleWhite text-marbleWhite hover:bg-marbleWhite/10 bg-transparent focus:outline-none focus:ring-2 focus:ring-marbleWhite focus:ring-offset-2 focus:ring-offset-royalNavy"
               >
                 <Link href="/contact">
                   Get a Quote

@@ -13,7 +13,7 @@ export function StickyContactButtons() {
         target="_blank"
         rel="noopener noreferrer"
         className="focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 rounded-full"
-        aria-label="WhatsApp"
+        aria-label="WhatsApp - Contact us on WhatsApp"
       >
         <Button
           size="lg"
@@ -24,8 +24,8 @@ export function StickyContactButtons() {
       </Link>
       <Link
         href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
-        className="focus:outline-none focus:ring-2 focus:ring-royalBlue focus:ring-offset-2 rounded-full"
-        aria-label="Call"
+        className="focus:outline-none focus:ring-2 focus:ring-royalBlue focus:ring-offset-2 rounded-full md:hidden"
+        aria-label={`Call us at ${siteConfig.contact.phone}`}
       >
         <Button
           size="lg"

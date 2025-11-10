@@ -30,7 +30,7 @@ export function HomeCTA() {
           <Button
             asChild
             size="lg"
-            className="bg-premiumGold hover:bg-premiumGold/90 text-royalNavy text-lg px-8 py-6 shadow-lg font-semibold mt-6"
+            className="bg-premiumGold hover:bg-premiumGold/90 text-royalNavy text-lg px-8 py-6 shadow-lg font-semibold mt-6 focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 focus:ring-offset-royalNavy"
           >
             <Link href="/contact">
               <Calendar className="mr-2 h-5 w-5" />

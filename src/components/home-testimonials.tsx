@@ -8,14 +8,20 @@ const testimonials = [
   {
     id: 1,
     content: "On time, every milestone—and the finishes are flawless.",
+    name: "Rohit M.",
+    area: "Kokapet",
   },
   {
     id: 2,
     content: "They listened first, then designed around our life.",
+    name: "Sravani K.",
+    area: "Bachupally",
   },
   {
     id: 3,
     content: "A single team from drawings to décor made it stress-free.",
+    name: "Vikram R.",
+    area: "Nizampet",
   },
 ];
 
@@ -47,9 +53,13 @@ export function HomeTestimonials() {
               <Card className="h-full border-2 border-premiumGold/30 bg-white hover:shadow-lg transition-shadow">
                 <CardContent className="p-8 text-center">
                   <Quote className="h-12 w-12 text-premiumGold/40 mx-auto mb-4" />
-                  <p className="text-lg md:text-xl text-steelGray leading-relaxed italic">
+                  <p className="text-lg md:text-xl text-steelGray leading-relaxed italic mb-4" aria-live="polite">
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
+                  <div className="pt-4 border-t border-premiumGold/20">
+                    <p className="font-heading font-semibold text-royalNavy">{testimonial.name}</p>
+                    <p className="text-sm text-steelGray">{testimonial.area}</p>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>

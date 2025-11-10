@@ -31,9 +31,15 @@ export function FullWidthBg({
         <div className="relative w-full h-full">
           <Image
             src={image}
-            alt="Background"
+            alt={image.includes("home-hero")
+              ? "Modern luxury villa exterior in Hyderabad at dusk with warm architectural lighting"
+              : image.includes("home-statement") 
+              ? "Architectural stone and steel textures with soft light"
+              : image.includes("home-cta")
+              ? "Elegant living room interior with warm golden lighting"
+              : "Background image"}
             fill
-            className="object-cover"
+            className="object-cover object-center"
             sizes="100vw"
             loading="lazy"
           />
