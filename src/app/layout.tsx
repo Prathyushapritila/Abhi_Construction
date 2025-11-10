@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     url: "https://abhiconstructions.com",
     siteName: "Abhi Constructions",
     title: "Abhi Constructions - Building Excellence Since 1999",
-    description: "Premier construction company specializing in residential, commercial, and renovation projects.",
+    description: "Premier construction company in Hyderabad, India specializing in custom home building, residential construction, and renovation projects.",
     images: [
       {
         url: "/og-image.jpg",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Abhi Constructions - Building Excellence Since 1999",
-    description: "Premier construction company specializing in residential, commercial, and renovation projects.",
+    description: "Premier construction company in Hyderabad, India specializing in custom home building, residential construction, and renovation projects.",
     images: ["/og-image.jpg"],
   },
   robots: {

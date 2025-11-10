@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -24,22 +24,24 @@ export function BeforeAfter({
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMove = (clientX: number) => {
+  const handleMove = useCallback((clientX: number) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = clientX - rect.left;
     const percentage = (x / rect.width) * 100;
     setSliderPosition(Math.max(0, Math.min(100, percentage)));
-  };
+  }, []);
 
   const handleMouseDown = () => setIsDragging(true);
-  const handleMouseUp = () => setIsDragging(false);
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseUp = useCallback(() => setIsDragging(false), []);
+  
+  const handleMouseMove = useCallback((e: MouseEvent) => {
     if (isDragging) handleMove(e.clientX);
-  };
-  const handleTouchMove = (e: TouchEvent) => {
+  }, [isDragging, handleMove]);
+  
+  const handleTouchMove = useCallback((e: TouchEvent) => {
     if (isDragging && e.touches[0]) handleMove(e.touches[0].clientX);
-  };
+  }, [isDragging, handleMove]);
 
   useEffect(() => {
     if (isDragging) {
@@ -54,7 +56,7 @@ export function BeforeAfter({
         document.removeEventListener("touchend", handleMouseUp);
       };
     }
-  }, [isDragging]);
+  }, [isDragging, handleMouseMove, handleTouchMove, handleMouseUp]);
 
   return (
     <div

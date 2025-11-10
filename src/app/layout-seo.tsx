@@ -7,7 +7,6 @@ export function LayoutSEO() {
     "@id": "https://abhiconstructions.com/#organization",
     name: "Abhi Constructions & Innovations",
     image: "https://abhiconstructions.com/og-image.jpg",
-    "@id": "https://abhiconstructions.com",
     url: "https://abhiconstructions.com",
     telephone: "+919876543210",
     priceRange: "$$$",
