@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="border-t-2 border-premiumGold/30 bg-gradient-to-b from-card to-royalNavy/5 dark:to-royalNavy/20">
+    <footer className="border-t border-premiumGold/30 bg-royalNavy text-marbleWhite">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-8">
           {/* Company Info */}
@@ -22,34 +22,34 @@ export function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-marbleWhite/80 leading-relaxed">
               {siteConfig.tagline}. Building excellence, one project at a time.
             </p>
             <div className="flex space-x-4 pt-2">
               <a
                 href="#"
-                className="text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
+                className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
+                className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
+                className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
+                className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
@@ -59,12 +59,12 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold mb-4 text-royalNavy dark:text-marbleWhite text-lg">Quick Links</h4>
+            <h4 className="font-heading font-semibold mb-4 text-premiumGold text-lg">Quick Links</h4>
             <ul className="space-y-2.5">
               <li>
                 <Link
                   href="/"
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
+                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
                   Home
                 </Link>
@@ -72,7 +72,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
+                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
                   About Us
                 </Link>
@@ -80,7 +80,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
+                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
                   Services
                 </Link>
@@ -88,7 +88,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/portfolio"
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
+                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
                   Portfolio
                 </Link>
@@ -96,7 +96,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
+                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
                   Contact
                 </Link>
@@ -106,7 +106,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading font-semibold mb-4 text-royalNavy dark:text-marbleWhite text-lg">Contact Us</h4>
+            <h4 className="font-heading font-semibold mb-4 text-premiumGold text-lg">Contact Us</h4>
             <ul className="space-y-3">
               {siteConfig.contact.name && (
                 <li className="flex items-start space-x-3">
@@ -117,13 +117,13 @@ export function Footer() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">{siteConfig.contact.name}</p>
+                    <p className="text-sm font-semibold text-marbleWhite">{siteConfig.contact.name}</p>
                   </div>
                 </li>
               )}
               <li className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-premiumGold mt-1 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground leading-relaxed">
+                <span className="text-sm text-marbleWhite/80 leading-relaxed">
                   {siteConfig.contact.address}
                 </span>
               </li>
@@ -131,7 +131,7 @@ export function Footer() {
                 <Phone className="h-4 w-4 text-premiumGold flex-shrink-0" />
                 <a
                   href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm"
+                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm"
                 >
                   {siteConfig.contact.phone}
                 </a>
@@ -140,15 +140,15 @@ export function Footer() {
                 <Mail className="h-4 w-4 text-premiumGold flex-shrink-0" />
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm break-all"
+                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm break-all"
                 >
                   {siteConfig.contact.email}
                 </a>
               </li>
               <li className="flex items-start space-x-3">
                 <Clock className="h-4 w-4 text-premiumGold mt-1 flex-shrink-0" />
-                <div className="text-sm text-muted-foreground">
-                  <p className="font-medium text-foreground">Mon-Sat: 9AM-7PM</p>
+                <div className="text-sm text-marbleWhite/80">
+                  <p className="font-medium text-marbleWhite">Mon-Sat: 9AM-7PM</p>
                   <p>Sun: 10AM-5PM</p>
                 </div>
               </li>
@@ -157,9 +157,9 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-premiumGold/20">
+        <div className="pt-6 border-t border-premiumGold/30">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground text-center md:text-left">
+            <p className="text-sm text-marbleWhite/60 text-center md:text-left">
               &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
             </p>
             <div className="flex items-center gap-2">
@@ -167,7 +167,7 @@ export function Footer() {
                 href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-premiumGold transition-colors flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm"
+                className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm"
               >
                 <MessageCircle className="h-4 w-4" />
                 <span>WhatsApp</span>
