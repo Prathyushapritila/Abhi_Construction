@@ -6,8 +6,8 @@ import { siteConfig } from "@/config/site";
 export function Footer() {
   return (
     <footer className="border-t border-premiumGold/20 bg-card">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4 lg:col-span-1">
             <Link href="/" className="inline-block group">
@@ -113,60 +113,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-heading font-semibold mb-6 text-royalNavy dark:text-marbleWhite">Our Services</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/services"
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
-                >
-                  Custom Home Construction
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
-                >
-                  Architectural Design & Planning
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
-                >
-                  Interior Design & Turnkey Fit-Out
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
-                >
-                  Kitchen & Bath Renovations
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
-                >
-                  Project Management
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
-                >
-                  Smart & Sustainable Homes
-                </Link>
-              </li>
-            </ul>
-          </div>
 
           {/* Contact Info */}
           <div>
@@ -234,29 +180,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-premiumGold/20">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground text-center md:text-left">
-              &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-            </p>
-            <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm text-muted-foreground">
-              <Link href="/about" className="hover:text-premiumGold transition-colors">
-                About
-              </Link>
-              <span className="text-premiumGold/50">•</span>
-              <Link href="/services" className="hover:text-premiumGold transition-colors">
-                Services
-              </Link>
-              <span className="text-premiumGold/50">•</span>
-              <Link href="/contact" className="hover:text-premiumGold transition-colors">
-                Contact
-              </Link>
-              <span className="text-premiumGold/50">•</span>
-              <Link href="/portfolio" className="hover:text-premiumGold transition-colors">
-                Portfolio
-              </Link>
-            </div>
-          </div>
+        <div className="mt-8 pt-6 border-t border-premiumGold/20">
+          <p className="text-sm text-muted-foreground text-center">
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

@@ -1,4 +1,9 @@
 import { HomeHero } from "@/components/home-hero";
+import { HomeAboutTeaser } from "@/components/home-about-teaser";
+import { HomeWhatWeDo } from "@/components/home-what-we-do";
+import { HomeFeaturedTeaser } from "@/components/home-featured-teaser";
+import { HomeWhyChoose } from "@/components/home-why-choose";
+import { HomeFinalCTA } from "@/components/home-final-cta";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
@@ -8,5 +13,14 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <HomeHero />;
+  return (
+    <>
+      <HomeHero />
+      <HomeAboutTeaser />
+      <HomeWhatWeDo />
+      <HomeFeaturedTeaser />
+      <HomeWhyChoose />
+      <HomeFinalCTA />
+    </>
+  );
 }
