@@ -37,13 +37,13 @@ export function HomeHero() {
         />
       </div>
 
-      {/* Theme-aware overlay: More distinct differences between light and dark */}
+      {/* Theme-aware overlay: Optimized for better image visibility */}
       <div 
         className="absolute inset-0 z-[1] transition-all duration-500"
         style={{
           backgroundColor: currentTheme === "dark" 
-            ? "rgba(15, 23, 42, 0.40)" 
-            : "rgba(0, 0, 0, 0.60)",
+            ? "rgba(15, 23, 42, 0.35)" 
+            : "rgba(0, 0, 0, 0.50)",
         }}
       />
       
@@ -52,8 +52,8 @@ export function HomeHero() {
         className="absolute inset-0 z-[1] transition-opacity duration-500"
         style={{
           background: currentTheme === "dark"
-            ? "linear-gradient(to bottom, rgba(15, 23, 42, 0.15) 0%, rgba(0, 0, 0, 0.35) 100%)"
-            : "linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.60) 100%)",
+            ? "linear-gradient(to bottom, rgba(15, 23, 42, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%)"
+            : "linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.55) 100%)",
         }}
       />
 
