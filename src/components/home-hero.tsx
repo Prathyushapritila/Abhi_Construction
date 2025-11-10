@@ -18,11 +18,11 @@ export function HomeHero() {
       {/* Content - Centered */}
       <div className="container mx-auto px-4 relative z-10 text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white leading-tight mb-6">
-          Build Beautiful. Live Better.
+          Crafted Homes. Thoughtful Interiors.
         </h1>
 
         <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8 max-w-2xl mx-auto">
-          We design and build elegant homes and interiors that reflect your lifestyle and personality.
+          We design and build refined living spaces—simple, modern, and made for you.
         </p>
 
         <Button
@@ -31,7 +31,7 @@ export function HomeHero() {
           className="bg-premiumGold hover:bg-premiumGold/90 text-royalNavy text-lg px-8 py-6 shadow-lg font-semibold"
         >
           <Link href="/portfolio">
-            Explore Projects
+            Discover Our Work
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </Button>
