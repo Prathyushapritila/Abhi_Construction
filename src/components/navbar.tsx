@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -39,11 +40,15 @@ export function Navbar() {
   return (
     <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-premiumGold/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <nav className="container mx-auto flex h-20 items-center justify-between px-4" aria-label="Main navigation">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-heading font-bold text-royalBlue">
-            Abhi Constructions
-          </span>
-          <span className="text-sm text-premiumGold font-medium">& Innovations</span>
+            <Link href="/" className="flex items-center space-x-3">
+          <Image
+            src="/projects/logo.jpeg"
+            alt="Abhi Constructions & Innovations"
+            width={120}
+            height={60}
+            className="h-12 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}

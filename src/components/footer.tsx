@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 export function Footer() {
@@ -8,9 +9,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-heading font-bold text-royalBlue">
-              Abhi Constructions
-            </h3>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/projects/logo.jpeg"
+                alt="Abhi Constructions & Innovations"
+                width={140}
+                height={70}
+                className="h-14 w-auto object-contain"
+              />
+            </Link>
             <p className="text-sm text-muted-foreground">
               Building excellence, one project at a time. Your trusted partner in construction and design.
             </p>

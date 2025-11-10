@@ -19,66 +19,101 @@ interface Project {
 const residentialProjects: Project[] = [
   {
     id: "1",
-    title: "PRIVATE House, Gachibowli",
-    location: "Gachibowli, Hyderabad",
-    type: "Full Renovation",
-    description: "A traditional house in the heart of Gachibowli that had been empty for over 15 years and was in need of a full renovation. This project involved complete interior and exterior restoration while maintaining the traditional architectural character.",
+    title: "Luxury Interior Design, Hyderabad",
+    location: "Hyderabad, Telangana",
+    type: "Complete Interior Design & Renovation",
+    description: "A stunning modern interior design project featuring a blend of spiritual elements, contemporary design, and natural materials. This project showcases our expertise in creating harmonious living spaces with premium finishes, sophisticated lighting, and thoughtful space planning.",
     status: "completed",
-    images: ["/api/placeholder/800/600", "/api/placeholder/800/600", "/api/placeholder/800/600"],
+    images: [
+      "/projects/interior-1.jpeg",
+      "/projects/interior-2.jpeg",
+      "/projects/living-room-1.jpeg",
+    ],
     year: "2024",
     details: [
-      "Complete roof renovation with traditional tiles",
-      "Interior and exterior restoration",
-      "Modern amenities integration",
-      "Structural reinforcement",
+      "Modern living and dining area design",
+      "Sophisticated lighting with LED strips and chandeliers",
+      "Premium furniture and upholstery selection",
+      "Spiritual art integration with Buddha artwork",
+      "Natural wood accents and warm lighting",
     ],
   },
   {
     id: "2",
-    title: "PRIVATE Villa, Jubilee Hills",
-    location: "Jubilee Hills, Hyderabad",
-    type: "Interior & Exterior Renovation",
-    description: "Comprehensive renovation of a luxury villa including both interior and exterior work. The project focused on modernizing the space while preserving its elegant character.",
+    title: "Modern Kitchen Design, Hyderabad",
+    location: "Hyderabad, Telangana",
+    type: "Kitchen Renovation & Design",
+    description: "A sleek, contemporary kitchen featuring high-gloss white cabinets, light blue glass backsplash, and modern appliances. This project demonstrates our attention to detail in creating functional yet beautiful kitchen spaces.",
     status: "completed",
-    images: ["/api/placeholder/800/600", "/api/placeholder/800/600", "/api/placeholder/800/600"],
+    images: [
+      "/projects/kitchen-1.jpeg",
+    ],
     year: "2024",
     details: [
-      "Interior design and renovation",
-      "Exterior isolation and finishing",
-      "Premium material selection",
-      "Smart home integration",
+      "High-gloss handleless cabinetry",
+      "Light blue glass backsplash",
+      "Modern black gas hob and range hood",
+      "Under-cabinet LED lighting",
+      "Premium countertops and fixtures",
     ],
   },
   {
     id: "3",
-    title: "PRIVATE Villa, Banjara Hills",
-    location: "Banjara Hills, Hyderabad",
-    type: "Complete Renovation",
-    description: "Our team renovated the interior and exterior of this luxury villa in Banjara Hills, transforming it into a modern living space with premium finishes.",
-    status: "in-progress",
-    images: ["/api/placeholder/800/600", "/api/placeholder/800/600"],
+    title: "Luxury Living Room & Media Wall",
+    location: "Hyderabad, Telangana",
+    type: "Interior Design & Media Wall Installation",
+    description: "An elegant living room featuring a sophisticated media wall with wooden slats, modern lighting, and premium furniture. The space combines functionality with luxury design elements.",
+    status: "completed",
+    images: [
+      "/projects/living-room-1.jpeg",
+    ],
     year: "2024",
     details: [
-      "Interior and exterior renovation",
-      "Plasterboard installation",
-      "Modern fixtures and fittings",
-      "Landscaping and outdoor spaces",
+      "Custom media wall with wooden slats",
+      "L-shaped sectional sofa with premium upholstery",
+      "Modern linear LED lighting",
+      "Floating media console",
+      "Polished white tile flooring",
     ],
   },
   {
     id: "4",
-    title: "Modern Residence, HITEC City",
-    location: "HITEC City, Hyderabad",
-    type: "New Build",
-    description: "A contemporary new build featuring modern design elements and sustainable construction practices. This project showcases our ability to create innovative residential spaces.",
+    title: "Spiritual Alcove & Built-in Seating",
+    location: "Hyderabad, Telangana",
+    type: "Custom Interior Design",
+    description: "A beautifully designed alcove featuring illuminated Buddha artwork, built-in upholstered bench with integrated storage, and warm wooden paneling. This project showcases our ability to create serene, meditative spaces within modern homes.",
     status: "completed",
-    images: ["/api/placeholder/800/600", "/api/placeholder/800/600", "/api/placeholder/800/600", "/api/placeholder/800/600"],
-    year: "2023",
+    images: [
+      "/projects/alcove-1.jpeg",
+      "/projects/interior-1.jpeg",
+    ],
+    year: "2024",
     details: [
-      "Contemporary design",
-      "Sustainable materials",
-      "Energy-efficient systems",
-      "Smart home technology",
+      "Custom illuminated artwork installation",
+      "Built-in bench with storage drawers",
+      "Warm wooden ceiling and paneling",
+      "Ambient LED lighting",
+      "Artificial turf flooring for unique aesthetic",
+    ],
+  },
+  {
+    id: "5",
+    title: "Modern Dining & Bathroom Design",
+    location: "Hyderabad, Telangana",
+    type: "Interior Design & Space Planning",
+    description: "A sophisticated dining area separated by a decorative geometric partition from a modern bathroom vanity. This project demonstrates our expertise in open-plan design and space division.",
+    status: "completed",
+    images: [
+      "/projects/dining-1.jpeg",
+      "/projects/bathroom-1.jpeg",
+    ],
+    year: "2024",
+    details: [
+      "Geometric partition with mirrored panels",
+      "Modern dining area with premium furniture",
+      "Contemporary bathroom vanity design",
+      "Wooden slatted ceiling with cove lighting",
+      "Polished tile flooring throughout",
     ],
   },
 ];
@@ -151,9 +186,14 @@ export function ResidentialProjects() {
                     transition={{ duration: 0.5, delay: imgIndex * 0.1 }}
                     className="relative h-64 md:h-80 rounded-lg overflow-hidden border-2 border-premiumGold/20 hover:border-premiumGold/50 transition-colors group cursor-pointer"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-royalBlue/20 to-premiumGold/20 flex items-center justify-center">
-                      <Building2 className="h-16 w-16 text-royalBlue/30 group-hover:scale-110 transition-transform" />
-                    </div>
+                    <Image
+                      src={image}
+                      alt={`${project.title} - Image ${imgIndex + 1}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </motion.div>
                 ))}
               </div>
