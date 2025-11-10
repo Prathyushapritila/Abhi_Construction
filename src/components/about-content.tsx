@@ -148,26 +148,34 @@ export function AboutContent() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {valuePillars.map((pillar, index) => {
               const Icon = pillar.icon;
               return (
                 <motion.div
                   key={pillar.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="group"
                 >
-                  <Card className="h-full border-2 hover:border-premiumGold/50 transition-colors bg-white hover:shadow-lg">
-                    <CardHeader>
-                      <div className="h-12 w-12 rounded-lg bg-royalBlue/10 flex items-center justify-center mb-4">
-                        <Icon className="h-6 w-6 text-royalBlue" />
-                      </div>
-                      <CardTitle className="text-xl font-heading text-royalNavy">{pillar.title}</CardTitle>
+                  <Card className="h-full border-2 border-premiumGold/20 hover:border-premiumGold transition-all duration-300 bg-white hover:shadow-2xl relative overflow-hidden">
+                    {/* Gold accent line on hover */}
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-premiumGold/0 via-premiumGold to-premiumGold/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                    <CardHeader className="pb-4">
+                      <motion.div 
+                        className="h-16 w-16 rounded-xl bg-gradient-to-br from-premiumGold/20 to-royalBlue/20 flex items-center justify-center mb-4 group-hover:from-premiumGold/30 group-hover:to-royalBlue/30 transition-all duration-300"
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        <Icon className="h-8 w-8 text-royalBlue group-hover:text-premiumGold transition-colors duration-300" />
+                      </motion.div>
+                      <CardTitle className="text-xl font-heading text-royalNavy group-hover:text-premiumGold transition-colors duration-300">{pillar.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-base text-steelGray">
+                      <CardDescription className="text-base text-steelGray leading-relaxed">
                         {pillar.description}
                       </CardDescription>
                     </CardContent>
@@ -201,45 +209,81 @@ export function AboutContent() {
       </section>
 
       {/* How We Work - 5 Step Process */}
-      <section className="py-20 bg-marbleWhite">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-marbleWhite via-royalNavy/5 to-marbleWhite relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-premiumGold/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-royalBlue/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-royalNavy gold-underline">
               How We Work
             </h2>
-            <p className="text-xl text-steelGray mb-8">
+            <p className="text-xl text-steelGray mb-8 max-w-2xl mx-auto">
               One seamless journey, one dedicated project manager, zero stress.
             </p>
           </motion.div>
 
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 mb-8">
-            {processSteps.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={item.step}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex flex-col items-center"
-                >
-                  <div className="h-16 w-16 rounded-full bg-royalBlue/10 flex items-center justify-center mb-3 border-2 border-premiumGold/30">
-                    <Icon className="h-8 w-8 text-royalBlue" />
-                  </div>
-                  <span className="text-lg font-heading font-semibold text-royalNavy">{item.step}</span>
-                  {index < processSteps.length - 1 && (
-                    <span className="hidden md:block text-premiumGold text-2xl font-bold mx-2">→</span>
-                  )}
-                </motion.div>
-              );
-            })}
+          <div className="max-w-5xl mx-auto">
+            <div className="relative">
+              {/* Connecting line (desktop only) */}
+              <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-premiumGold/30 via-premiumGold/50 to-premiumGold/30" />
+              
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4">
+                {processSteps.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <motion.div
+                      key={item.step}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.15 }}
+                      whileHover={{ y: -10, scale: 1.05 }}
+                      className="flex flex-col items-center group relative"
+                    >
+                      {/* Step number badge */}
+                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
+                        <div className="h-8 w-8 rounded-full bg-premiumGold text-royalNavy font-bold text-sm flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                          {index + 1}
+                        </div>
+                      </div>
+                      
+                      {/* Icon container with gradient */}
+                      <div className="h-24 w-24 rounded-2xl bg-gradient-to-br from-premiumGold/20 via-royalBlue/20 to-premiumGold/20 flex items-center justify-center mb-4 border-2 border-premiumGold/30 group-hover:border-premiumGold group-hover:shadow-xl transition-all duration-300 relative z-10">
+                        <Icon className="h-10 w-10 text-royalNavy group-hover:text-premiumGold transition-colors duration-300" />
+                      </div>
+                      
+                      {/* Step name */}
+                      <span className="text-lg font-heading font-bold text-royalNavy group-hover:text-premiumGold transition-colors duration-300 text-center">
+                        {item.step}
+                      </span>
+                      
+                      {/* Arrow connector (desktop only) */}
+                      {index < processSteps.length - 1 && (
+                        <div className="hidden md:block absolute top-12 -right-2 z-10">
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            whileInView={{ scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.15 + 0.3 }}
+                            className="text-premiumGold text-2xl font-bold"
+                          >
+                            →
+                          </motion.div>
+                        </div>
+                      )}
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -321,20 +365,6 @@ export function AboutContent() {
         </div>
       </section>
 
-      {/* Optional Micro-copy Footer */}
-      <section className="py-12 bg-marbleWhite border-t border-premiumGold/20">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-sm md:text-base text-steelGray">
-            <span className="font-medium italic">Built for life. Finished for joy.</span>
-            <span className="text-premiumGold">•</span>
-            <span className="font-medium italic">Details you can feel.</span>
-            <span className="text-premiumGold">•</span>
-            <span className="font-medium italic">{siteConfig.location}&apos;s design-build, perfected.</span>
-            <span className="text-premiumGold">•</span>
-            <span className="font-medium italic">Precision in every line. Warmth in every room.</span>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

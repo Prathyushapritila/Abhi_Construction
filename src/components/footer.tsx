@@ -23,7 +23,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-marbleWhite/80 leading-relaxed">
-              {siteConfig.tagline}. Building excellence, one project at a time.
+              {siteConfig.tagline}
             </p>
             <div className="flex space-x-4 pt-2">
               <a
