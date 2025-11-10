@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/button";
 export function HomeHero() {
   return (
     <section 
-      className="relative min-h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+      className="relative min-h-[90vh] w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
       style={{
         backgroundImage: "url('/bg/home-hero.jpg')",
       }}
     >
-      {/* Dark Overlay */}
+      {/* Dark Overlay - 65% opacity */}
       <div className="absolute inset-0 bg-black/65 z-0" />
 
       {/* Content - Centered */}
