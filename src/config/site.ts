@@ -11,6 +11,9 @@ export const siteConfig = {
   // Background Images (place in /public/bg/)
   backgrounds: {
     hero: "/bg/bg-hero.jpg",
+    homeHero: "/bg/home-hero.jpg",
+    homeStatement: "/bg/home-statement.jpg",
+    homeCta: "/bg/home-cta.jpg",
     services: "/bg/bg-services.jpg",
     portfolio: "/bg/bg-portfolio.jpg",
     contact: "/bg/bg-contact.jpg",

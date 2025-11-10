@@ -1,41 +1,45 @@
-import { HeroBg } from "@/components/hero-bg";
-import { AboutPreview } from "@/components/about-preview";
-import { ServicesGrid } from "@/components/services-grid";
-import { ServicesBgSection } from "@/components/services-bg-section";
-import { PortfolioPreview } from "@/components/portfolio-preview";
-import { Testimonials } from "@/components/testimonials";
-import { CTA } from "@/components/cta";
-import { siteConfig } from "@/config/site";
+import { HomeHero } from "@/components/home-hero";
+import { HomeAboutPreview } from "@/components/home-about-preview";
+import { HomeServices } from "@/components/home-services";
+import { HomeStatementBand } from "@/components/home-statement-band";
+import { HomeFeaturedProjects } from "@/components/home-featured-projects";
+import { HomeTestimonials } from "@/components/home-testimonials";
+import { HomeStatsBand } from "@/components/home-stats-band";
+import { HomeCTA } from "@/components/home-cta";
 import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Home",
-  description: `${siteConfig.name} - ${siteConfig.tagline}. Custom homes, architecture, and interiors in ${siteConfig.location}.`,
+  description: `${siteConfig.name} - Build Beautiful. Live Better. Custom homes, architecture, and interiors crafted in ${siteConfig.location} with precision and heart.`,
 };
 
 export default function HomePage() {
   return (
     <>
       {/* Hero Section with Full-Width Background */}
-      <HeroBg />
+      <HomeHero />
 
-      {/* About Preview Band */}
-      <AboutPreview />
+      {/* About Preview */}
+      <HomeAboutPreview />
 
       {/* Services Grid */}
-      <ServicesGrid />
+      <HomeServices />
 
-      {/* Full-Width Background Image Section */}
-      <ServicesBgSection />
+      {/* Statement Band with Background Image */}
+      <HomeStatementBand />
 
-      {/* Portfolio Preview */}
-      <PortfolioPreview />
+      {/* Featured Projects */}
+      <HomeFeaturedProjects />
 
-      {/* Testimonials Strip */}
-      <Testimonials />
+      {/* Testimonials */}
+      <HomeTestimonials />
 
-      {/* Final CTA Band */}
-      <CTA />
+      {/* Stats Band */}
+      <HomeStatsBand />
+
+      {/* Final CTA with Background Image */}
+      <HomeCTA />
     </>
   );
 }
