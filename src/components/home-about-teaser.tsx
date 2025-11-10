@@ -75,22 +75,24 @@ export function HomeAboutTeaser() {
                     </div>
                     <motion.p 
                       className="text-3xl md:text-4xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-2 relative inline-block"
-                      whileHover={{ rotate: [0, -5, 5, -5, 0], scale: 1.1 }}
-                      transition={{ duration: 0.5 }}
+                      animate={{ 
+                        rotate: [0, 360],
+                      }}
+                      transition={{ 
+                        duration: 20,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}
+                      whileHover={{ 
+                        scale: 1.2,
+                        rotate: [0, 360],
+                        transition: { duration: 2, ease: "easeInOut" }
+                      }}
                       style={{
-                        textShadow: "0 0 20px rgba(212, 175, 55, 0.3)",
+                        textShadow: "0 0 20px rgba(212, 175, 55, 0.4)",
                       }}
                     >
-                      <span className="relative z-10">{stat.value}</span>
-                      <span 
-                        className="absolute inset-0 opacity-20 blur-sm"
-                        style={{
-                          transform: "scaleY(-1) translateY(100%)",
-                          filter: "blur(2px)",
-                        }}
-                      >
-                        {stat.value}
-                      </span>
+                      {stat.value}
                     </motion.p>
                     <p className="text-sm text-steelGray dark:text-slate-400">
                       {stat.label}
