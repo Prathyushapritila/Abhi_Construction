@@ -119,10 +119,10 @@ export function ProjectsGallery() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-foreground">
-            Our Projects
+            Project Gallery
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Showcasing excellence in every build
+            Browse our collection of residential, commercial, and renovation projects
           </p>
         </motion.div>
 
@@ -167,12 +167,13 @@ export function ProjectsGallery() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow border-2 hover:border-royalBlue/50 h-full flex flex-col">
-                  <div className="relative h-64 bg-gradient-to-br from-royalBlue/20 to-gold/20 flex items-center justify-center">
-                    <Building2 className="h-16 w-16 text-royalBlue/50" />
+                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-premiumGold/50 h-full flex flex-col group">
+                  <div className="relative h-64 bg-gradient-to-br from-royalBlue/20 to-premiumGold/20 flex items-center justify-center overflow-hidden">
+                    <Building2 className="h-16 w-16 text-royalBlue/50 group-hover:scale-110 transition-transform" />
                     <div className="absolute top-4 right-4 bg-royalBlue text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {project.year}
                     </div>
+                    <div className="absolute inset-0 bg-royalBlue/0 group-hover:bg-royalBlue/5 transition-colors" />
                   </div>
                   <CardContent className="p-6 flex-1 flex flex-col">
                     <h3 className="text-xl font-heading font-semibold mb-2">

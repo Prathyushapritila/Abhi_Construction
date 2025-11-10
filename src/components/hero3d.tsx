@@ -11,13 +11,15 @@ import * as THREE from "three";
 
 function ATower() {
   const meshRef = useRef<THREE.Group>(null);
-  const prefersReducedMotion = typeof window !== "undefined" 
-    ? window.matchMedia("(prefers-reduced-motion: reduce)").matches 
-    : false;
 
   useFrame((state) => {
-    if (meshRef.current && !prefersReducedMotion) {
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3;
+    if (meshRef.current) {
+      const prefersReducedMotion = typeof window !== "undefined" 
+        ? window.matchMedia("(prefers-reduced-motion: reduce)").matches 
+        : false;
+      if (!prefersReducedMotion) {
+        meshRef.current.rotation.y = state.clock.elapsedTime * 0.3;
+      }
     }
   });
 
@@ -68,7 +70,7 @@ function Scene() {
       <OrbitControls
         enableZoom={false}
         enablePan={false}
-        autoRotate={!window.matchMedia("(prefers-reduced-motion: reduce)").matches}
+        autoRotate={typeof window !== "undefined" ? !window.matchMedia("(prefers-reduced-motion: reduce)").matches : true}
         autoRotateSpeed={0.5}
       />
       <Environment preset="city" />

@@ -22,8 +22,13 @@ function Model({ src, autoRotate }: { src: string; autoRotate?: boolean }) {
   const ref = useRef<Group>(null);
 
   useFrame((state) => {
-    if (ref.current && autoRotate && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      ref.current.rotation.y = state.clock.elapsedTime * 0.2;
+    if (ref.current && autoRotate) {
+      const prefersReducedMotion = typeof window !== "undefined" 
+        ? window.matchMedia("(prefers-reduced-motion: reduce)").matches 
+        : false;
+      if (!prefersReducedMotion) {
+        ref.current.rotation.y = state.clock.elapsedTime * 0.2;
+      }
     }
   });
 

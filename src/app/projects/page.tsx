@@ -1,16 +1,17 @@
+import { ResidentialProjects } from "@/components/residential-projects";
 import { ProjectsGallery } from "@/components/projects-gallery";
 import { CTA } from "@/components/cta";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Explore our portfolio of completed construction projects including residential, commercial, and renovation work.",
+  description: "Explore our portfolio of completed construction projects including residential, commercial, and renovation work in Hyderabad, India.",
 };
 
 export default function ProjectsPage() {
   return (
     <>
-      <section className="py-20 bg-gradient-to-br from-royalBlue/10 via-background to-gold/5">
+      <section className="py-20 bg-gradient-to-br from-royalNavy/5 via-background to-premiumGold/5 marble-texture">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6 text-foreground">
@@ -22,6 +23,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
+      <ResidentialProjects />
       <ProjectsGallery />
       <CTA />
     </>
