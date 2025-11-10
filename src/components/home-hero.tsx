@@ -25,7 +25,7 @@ export function HomeHero() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/bg/home-hero.jpg')",
+          backgroundImage: "url('/bg/home-hero.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
