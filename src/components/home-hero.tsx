@@ -62,21 +62,10 @@ export function HomeHero() {
         }}
       />
 
-      {/* Content - Only CTA button, text is in the image */}
+      {/* Content - Text is in the image, no button here */}
       <div className="container mx-auto px-4 relative z-10 text-center py-20">
         <div className="max-w-4xl mx-auto">
-          <div className="mt-10">
-            <Button
-              asChild
-              size="lg"
-              className="bg-premiumGold hover:bg-premiumGold/90 text-royalNavy text-lg px-8 py-6 shadow-2xl font-semibold border-2 border-premiumGold/50"
-            >
-              <Link href="/portfolio">
-                Discover Our Work
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
+          {/* Empty - text is in the background image */}
         </div>
       </div>
     </section>

@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const valuePillars = [
   {
@@ -16,36 +17,42 @@ const valuePillars = [
     title: "End-to-End Design-Build Excellence",
     description: "From architectural blueprints to final interior styling—one team, one vision, zero handoff gaps. We eliminate the chaos of coordinating multiple contractors.",
     highlight: "Single Point of Contact",
+    image: "/projects/interior-1.jpeg",
   },
   {
     icon: Clock,
     title: "Fixed-Bid Pricing, Guaranteed Timelines",
     description: "No surprise costs. No missed deadlines. We provide transparent quotes and stick to them—your project manager tracks every milestone in real-time.",
     highlight: "On-Time, On-Budget",
+    image: "/projects/kitchen-1.jpeg",
   },
   {
     icon: Award,
     title: "Curated Materials, Crafted Details",
     description: "We source premium finishes and fixtures directly from trusted suppliers. Every joint, every surface, every fixture is inspected—luxury isn't optional, it's standard.",
     highlight: "Premium by Default",
+    image: "/projects/dining-1.jpeg",
   },
   {
     icon: Zap,
     title: "Future-Ready Smart Homes",
     description: "3D walkthroughs before construction, smart-home integration, and sustainable building practices. Your home adapts to technology and environmental standards.",
     highlight: "Built for Tomorrow",
+    image: "/projects/living-room-1.jpeg",
   },
   {
     icon: MapPin,
     title: "Hyderabad's Trusted Builder Network",
     description: "Deep local knowledge of permits, regulations, and suppliers. We've built relationships that get approvals faster and materials delivered on schedule.",
     highlight: "Local Advantage",
+    image: "/projects/interior-2.jpeg",
   },
   {
     icon: Shield,
     title: "Comprehensive Warranty & Support",
     description: "Post-handover support with structured warranties. We stand behind our work—your peace of mind is part of the package.",
     highlight: "Long-Term Partnership",
+    image: "/projects/bathroom-1.jpeg",
   },
 ];
 
@@ -128,6 +135,18 @@ export function AboutContent() {
 
       {/* Our Promise */}
       <section className="py-20 bg-stone-50 dark:bg-slate-800 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-10 dark:opacity-15">
+          <Image
+            src="/projects/interior-1.jpeg"
+            alt="Our Promise"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-stone-50/95 via-stone-50/90 to-stone-50/95 dark:from-slate-800/95 dark:via-slate-800/90 dark:to-slate-800/95" />
+        </div>
+        
         {/* Background animation */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] marble-texture" />
         <motion.div 
@@ -215,8 +234,20 @@ export function AboutContent() {
                   className="group"
                 >
                   <Card className="h-full border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 bg-white dark:bg-slate-800 hover:shadow-2xl relative overflow-hidden">
+                    {/* Background Image */}
+                    <div className="absolute inset-0 opacity-20 dark:opacity-30 group-hover:opacity-30 dark:group-hover:opacity-40 transition-opacity duration-300">
+                      <Image
+                        src={pillar.image}
+                        alt={pillar.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/90 dark:from-slate-800/80 dark:via-slate-800/60 dark:to-slate-800/90" />
+                    </div>
+                    
                     {/* Background pattern overlay */}
-                    <div className={`absolute inset-0 ${pattern} opacity-60 dark:opacity-40`} />
+                    <div className={`absolute inset-0 ${pattern} opacity-40 dark:opacity-30`} />
                     {/* Decorative corner accent */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-bl-full blur-2xl" />
                     <div className="absolute bottom-0 left-0 w-24 h-24 bg-royalBlue/5 dark:bg-royalBlue/10 rounded-tr-full blur-xl" />
@@ -252,6 +283,18 @@ export function AboutContent() {
 
       {/* Our Story */}
       <section className="py-20 bg-stone-50 dark:bg-slate-800 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-10 dark:opacity-15">
+          <Image
+            src="/projects/living-room-1.jpeg"
+            alt="Our Story"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-stone-50/95 via-stone-50/90 to-stone-50/95 dark:from-slate-800/95 dark:via-slate-800/90 dark:to-slate-800/95" />
+        </div>
+        
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] marble-texture" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl" />
@@ -277,6 +320,18 @@ export function AboutContent() {
 
       {/* How We Work - 5 Step Process */}
       <section className="py-20 bg-gradient-to-br from-marbleWhite via-royalNavy/5 to-marbleWhite dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-10 dark:opacity-15">
+          <Image
+            src="/projects/kitchen-1.jpeg"
+            alt="How We Work"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-marbleWhite/95 via-marbleWhite/90 to-marbleWhite/95 dark:from-slate-900/95 dark:via-slate-800/90 dark:to-slate-900/95" />
+        </div>
+        
         {/* Decorative background elements with animation */}
         <motion.div 
           className="absolute top-0 left-0 w-96 h-96 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"

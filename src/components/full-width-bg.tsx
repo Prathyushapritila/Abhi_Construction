@@ -45,8 +45,14 @@ export function FullWidthBg({
             sizes="100vw"
             priority={image.includes("about") || image.includes("home-hero")}
             quality={90}
+            unoptimized={false}
             onError={(e) => {
               console.error("Image failed to load:", image);
+              // Fallback to a default image if the specified one fails
+              const target = e.target as HTMLImageElement;
+              if (target && !target.src.includes("placeholder")) {
+                target.src = "/projects/interior-1.jpeg";
+              }
             }}
           />
         </div>

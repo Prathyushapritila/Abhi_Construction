@@ -73,35 +73,14 @@ export function HomeAboutTeaser() {
                     <div className="h-16 w-16 rounded-full bg-premiumGold/10 dark:bg-premiumGold/20 flex items-center justify-center mb-4">
                       <Icon className="h-8 w-8 text-premiumGold" />
                     </div>
-                    <motion.p 
-                      className="text-3xl md:text-4xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-2 relative inline-block perspective-1000"
+                    <p 
+                      className="text-3xl md:text-4xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-2"
                       style={{
                         textShadow: "0 0 20px rgba(212, 175, 55, 0.4)",
-                        transformStyle: "preserve-3d",
-                      }}
-                      whileHover={{ 
-                        scale: 1.15,
-                        rotateY: [0, 15, -15, 0],
-                        transition: { duration: 0.6, ease: "easeInOut" }
                       }}
                     >
-                      <motion.span
-                        animate={{ 
-                          rotateY: [0, 360],
-                        }}
-                        transition={{ 
-                          duration: 15,
-                          repeat: Infinity,
-                          ease: "linear"
-                        }}
-                        style={{
-                          display: "inline-block",
-                          transformStyle: "preserve-3d",
-                        }}
-                      >
-                        {stat.value}
-                      </motion.span>
-                    </motion.p>
+                      {stat.value}
+                    </p>
                     <p className="text-sm text-steelGray dark:text-slate-400">
                       {stat.label}
                     </p>
@@ -111,18 +90,29 @@ export function HomeAboutTeaser() {
             })}
           </motion.div>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-center"
+            className="text-center flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button
               asChild
               size="lg"
-              className="bg-royalBlue dark:bg-blue-600 hover:bg-royalBlue/90 dark:hover:bg-blue-700 text-white text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="bg-premiumGold hover:bg-premiumGold/90 text-royalNavy text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-semibold"
+            >
+              <Link href="/portfolio">
+                Discover Our Work
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="bg-transparent border-2 border-royalBlue dark:border-blue-600 text-royalBlue dark:text-blue-400 hover:bg-royalBlue hover:text-white dark:hover:bg-blue-600 dark:hover:text-white text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <Link href="/about">
                 Learn More About Us
@@ -135,4 +125,5 @@ export function HomeAboutTeaser() {
     </section>
   );
 }
+
 
