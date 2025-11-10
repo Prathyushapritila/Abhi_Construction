@@ -9,7 +9,9 @@ export function HomeHero() {
     <section 
       className="relative min-h-[90vh] w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
       style={{
-        backgroundImage: "url('/bg/home-hero.jpg')",
+        backgroundImage: "url('/bg/home-hero.jpg'), linear-gradient(135deg, #0B1C3D 0%, #0A4DAD 50%, #0B1C3D 100%)",
+        backgroundSize: "cover, cover",
+        backgroundPosition: "center, center",
       }}
     >
       {/* Dark Overlay - 65% opacity */}
@@ -18,11 +20,13 @@ export function HomeHero() {
       {/* Content - Centered */}
       <div className="container mx-auto px-4 relative z-10 text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white leading-tight mb-6">
-          Crafted Homes. Thoughtful Interiors.
+          Building More Than Homes{" "}
+          <span className="text-premiumGold">—</span>{" "}
+          <span className="text-premiumGold">Crafting Legacies.</span>
         </h1>
 
         <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8 max-w-2xl mx-auto">
-          We design and build refined living spaces—simple, modern, and made for you.
+          Where architecture, design, and innovation come together to create timeless spaces.
         </p>
 
         <Button

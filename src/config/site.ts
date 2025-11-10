@@ -54,10 +54,10 @@ export const siteConfig = {
   
   // Contact
   contact: {
-    phone: "+91 98765 43210",
-    email: "info@abhiconstructions.com",
+    phone: "96661512956",
+    email: "abhiconstructions@gmail.com",
     address: "Hyderabad, Telangana, India",
-    whatsapp: "919876543210",
+    whatsapp: "96661512956",
   },
 };
 
