@@ -37,23 +37,15 @@ export function FullWidthBg({
               ? "Architectural stone and steel textures with soft light"
               : image.includes("home-cta")
               ? "Elegant living room interior with warm golden lighting"
-              : image.includes("about")
+              : image.includes("about") || image.includes("projects")
               ? "Construction and design background"
               : "Background image"}
             fill
             className="object-cover object-center"
             sizes="100vw"
-            priority={image.includes("about") || image.includes("home-hero")}
+            priority={image.includes("about") || image.includes("home-hero") || image.includes("projects")}
             quality={90}
             unoptimized={false}
-            onError={(e) => {
-              console.error("Image failed to load:", image);
-              // Fallback to a default image if the specified one fails
-              const target = e.target as HTMLImageElement;
-              if (target && !target.src.includes("placeholder")) {
-                target.src = "/projects/interior-1.jpeg";
-              }
-            }}
           />
         </div>
       </motion.div>

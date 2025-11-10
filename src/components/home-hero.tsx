@@ -62,10 +62,22 @@ export function HomeHero() {
         }}
       />
 
-      {/* Content - Text is in the image, no button here */}
+      {/* Content - Text is in the image, button below */}
       <div className="container mx-auto px-4 relative z-10 text-center py-20">
         <div className="max-w-4xl mx-auto">
-          {/* Empty - text is in the background image */}
+          {/* Text is in the background image, button appears below */}
+          <div className="mt-16 md:mt-24">
+            <Button
+              asChild
+              size="lg"
+              className="bg-premiumGold hover:bg-premiumGold/90 text-royalNavy text-lg px-8 py-6 shadow-2xl font-semibold border-2 border-premiumGold/50"
+            >
+              <Link href="/portfolio">
+                Discover Our Work
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
