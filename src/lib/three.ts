@@ -6,7 +6,8 @@ export const createEnvironment = () => {
     "/env/py.jpg", "/env/ny.jpg",
     "/env/pz.jpg", "/env/nz.jpg",
   ]);
-  envMap.encoding = THREE.sRGBEncoding;
+  // In Three.js r152+, encoding was replaced with colorSpace
+  envMap.colorSpace = THREE.SRGBColorSpace;
   return envMap;
 };
 
