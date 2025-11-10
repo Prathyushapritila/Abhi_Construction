@@ -1,4 +1,4 @@
-import { Hero3D } from "@/components/hero3d";
+import { Hero } from "@/components/hero";
 import { Advantages } from "@/components/advantages";
 import { ServicesGrid } from "@/components/services-grid";
 import { Stats } from "@/components/stats";
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <Hero3D />
+      <Hero />
       <Advantages />
       <ServicesGrid />
       <Stats />

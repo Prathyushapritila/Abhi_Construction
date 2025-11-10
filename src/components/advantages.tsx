@@ -39,7 +39,7 @@ const advantages = [
 
 export function Advantages() {
   return (
-    <section id="advantages" className="py-20 bg-background">
+    <section id="advantages" className="py-20 bg-stone-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,10 +67,10 @@ export function Advantages() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow border-2 hover:border-royalBlue/50">
+                <Card className="h-full hover:shadow-lg transition-shadow border-2 hover:border-amber-600/50 bg-white">
                   <CardHeader>
-                    <div className="h-12 w-12 rounded-lg bg-royalBlue/10 flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-royalBlue" />
+                    <div className="h-12 w-12 rounded-lg bg-amber-100 flex items-center justify-center mb-4">
+                      <Icon className="h-6 w-6 text-amber-700" />
                     </div>
                     <CardTitle className="text-xl font-heading">{advantage.title}</CardTitle>
                   </CardHeader>
