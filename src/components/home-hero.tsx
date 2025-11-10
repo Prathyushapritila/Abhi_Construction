@@ -37,23 +37,23 @@ export function HomeHero() {
         />
       </div>
 
-      {/* Theme-aware overlay: optimized for both modes - lighter overlay for dark mode, darker for light mode */}
+      {/* Theme-aware overlay: More distinct differences between light and dark */}
       <div 
         className="absolute inset-0 z-[1] transition-all duration-500"
         style={{
           backgroundColor: currentTheme === "dark" 
-            ? "rgba(11, 28, 61, 0.50)" 
-            : "rgba(0, 0, 0, 0.55)",
+            ? "rgba(15, 23, 42, 0.40)" 
+            : "rgba(0, 0, 0, 0.60)",
         }}
       />
       
-      {/* Additional gradient overlay for better text contrast - subtle for this image */}
+      {/* Additional gradient overlay for better text contrast */}
       <div 
         className="absolute inset-0 z-[1] transition-opacity duration-500"
         style={{
           background: currentTheme === "dark"
-            ? "linear-gradient(to bottom, rgba(11, 28, 61, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%)"
-            : "linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%)",
+            ? "linear-gradient(to bottom, rgba(15, 23, 42, 0.15) 0%, rgba(0, 0, 0, 0.35) 100%)"
+            : "linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.60) 100%)",
         }}
       />
 

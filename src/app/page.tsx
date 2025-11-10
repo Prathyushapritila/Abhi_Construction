@@ -1,9 +1,6 @@
 import { HomeHero } from "@/components/home-hero";
+import { HomeCEOQuote } from "@/components/home-ceo-quote";
 import { HomeAboutTeaser } from "@/components/home-about-teaser";
-import { HomeWhatWeDo } from "@/components/home-what-we-do";
-import { HomeFeaturedTeaser } from "@/components/home-featured-teaser";
-import { HomeWhyChoose } from "@/components/home-why-choose";
-import { HomeFinalCTA } from "@/components/home-final-cta";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
@@ -16,11 +13,8 @@ export default function HomePage() {
   return (
     <>
       <HomeHero />
+      <HomeCEOQuote />
       <HomeAboutTeaser />
-      <HomeWhatWeDo />
-      <HomeFeaturedTeaser />
-      <HomeWhyChoose />
-      <HomeFinalCTA />
     </>
   );
 }
