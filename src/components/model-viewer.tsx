@@ -6,12 +6,14 @@ import { OrbitControls, Stage, useGLTF } from "@react-three/drei";
 import { Group } from "three";
 import Image from "next/image";
 
+type EnvironmentPreset = "apartment" | "city" | "dawn" | "forest" | "lobby" | "night" | "park" | "studio" | "sunset" | "warehouse";
+
 interface ModelViewerProps {
   src?: string;
   fallback?: string;
   autoRotate?: boolean;
   exposure?: number;
-  environment?: string;
+  environment?: EnvironmentPreset;
   className?: string;
 }
 
@@ -41,7 +43,7 @@ export function ModelViewer({
   fallback,
   autoRotate = false,
   exposure = 1,
-  environment = "city",
+  environment = "city" as EnvironmentPreset,
   className = "",
 }: ModelViewerProps) {
   if (!src && fallback) {
