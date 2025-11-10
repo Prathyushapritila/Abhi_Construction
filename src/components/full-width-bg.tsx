@@ -37,11 +37,17 @@ export function FullWidthBg({
               ? "Architectural stone and steel textures with soft light"
               : image.includes("home-cta")
               ? "Elegant living room interior with warm golden lighting"
+              : image.includes("about")
+              ? "Construction and design background"
               : "Background image"}
             fill
             className="object-cover object-center"
             sizes="100vw"
-            loading="lazy"
+            priority={image.includes("about") || image.includes("home-hero")}
+            quality={90}
+            onError={(e) => {
+              console.error("Image failed to load:", image);
+            }}
           />
         </div>
       </motion.div>

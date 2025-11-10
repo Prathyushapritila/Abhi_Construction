@@ -74,25 +74,33 @@ export function HomeAboutTeaser() {
                       <Icon className="h-8 w-8 text-premiumGold" />
                     </div>
                     <motion.p 
-                      className="text-3xl md:text-4xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-2 relative inline-block"
-                      animate={{ 
-                        rotate: [0, 360],
-                      }}
-                      transition={{ 
-                        duration: 20,
-                        repeat: Infinity,
-                        ease: "linear"
-                      }}
-                      whileHover={{ 
-                        scale: 1.2,
-                        rotate: [0, 360],
-                        transition: { duration: 2, ease: "easeInOut" }
-                      }}
+                      className="text-3xl md:text-4xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-2 relative inline-block perspective-1000"
                       style={{
                         textShadow: "0 0 20px rgba(212, 175, 55, 0.4)",
+                        transformStyle: "preserve-3d",
+                      }}
+                      whileHover={{ 
+                        scale: 1.15,
+                        rotateY: [0, 15, -15, 0],
+                        transition: { duration: 0.6, ease: "easeInOut" }
                       }}
                     >
-                      {stat.value}
+                      <motion.span
+                        animate={{ 
+                          rotateY: [0, 360],
+                        }}
+                        transition={{ 
+                          duration: 15,
+                          repeat: Infinity,
+                          ease: "linear"
+                        }}
+                        style={{
+                          display: "inline-block",
+                          transformStyle: "preserve-3d",
+                        }}
+                      >
+                        {stat.value}
+                      </motion.span>
                     </motion.p>
                     <p className="text-sm text-steelGray dark:text-slate-400">
                       {stat.label}

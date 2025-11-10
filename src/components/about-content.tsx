@@ -193,6 +193,17 @@ export function AboutContent() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {valuePillars.map((pillar, index) => {
               const Icon = pillar.icon;
+              // Different background patterns for each card
+              const bgPatterns = [
+                "bg-gradient-to-br from-premiumGold/5 via-transparent to-royalBlue/5",
+                "bg-gradient-to-bl from-royalBlue/5 via-transparent to-premiumGold/5",
+                "bg-gradient-to-tr from-premiumGold/5 via-transparent to-royalBlue/5",
+                "bg-gradient-to-tl from-royalBlue/5 via-transparent to-premiumGold/5",
+                "bg-gradient-to-br from-premiumGold/8 via-royalBlue/3 to-premiumGold/8",
+                "bg-gradient-to-bl from-royalBlue/8 via-premiumGold/3 to-royalBlue/8",
+              ];
+              const pattern = bgPatterns[index % bgPatterns.length];
+              
               return (
                 <motion.div
                   key={pillar.title}
@@ -204,22 +215,29 @@ export function AboutContent() {
                   className="group"
                 >
                   <Card className="h-full border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 bg-white dark:bg-slate-800 hover:shadow-2xl relative overflow-hidden">
+                    {/* Background pattern overlay */}
+                    <div className={`absolute inset-0 ${pattern} opacity-60 dark:opacity-40`} />
+                    {/* Decorative corner accent */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-bl-full blur-2xl" />
+                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-royalBlue/5 dark:bg-royalBlue/10 rounded-tr-full blur-xl" />
+                    
                     {/* Gold accent line on hover */}
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-premiumGold/0 via-premiumGold to-premiumGold/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                    <CardHeader className="pb-4">
+                    
+                    <CardHeader className="pb-4 relative z-10">
                       <motion.div 
-                        className="h-16 w-16 rounded-xl bg-gradient-to-br from-premiumGold/20 to-royalBlue/20 dark:from-premiumGold/30 dark:to-royalBlue/30 flex items-center justify-center mb-4 group-hover:from-premiumGold/40 group-hover:to-royalBlue/40 transition-all duration-300"
+                        className="h-16 w-16 rounded-xl bg-gradient-to-br from-premiumGold/20 to-royalBlue/20 dark:from-premiumGold/30 dark:to-royalBlue/30 flex items-center justify-center mb-4 group-hover:from-premiumGold/40 group-hover:to-royalBlue/40 transition-all duration-300 shadow-lg"
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
                         <Icon className="h-8 w-8 text-royalBlue dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-300" />
                       </motion.div>
-                      <CardTitle className="text-xl font-heading text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-300">{pillar.title}</CardTitle>
+                      <CardTitle className="text-xl font-heading text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-300 relative z-10">{pillar.title}</CardTitle>
                       {pillar.highlight && (
-                        <p className="text-sm font-semibold text-premiumGold mt-2">{pillar.highlight}</p>
+                        <p className="text-sm font-semibold text-premiumGold mt-2 relative z-10">{pillar.highlight}</p>
                       )}
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="relative z-10">
                       <CardDescription className="text-base text-steelGray dark:text-slate-300 leading-relaxed">
                         {pillar.description}
                       </CardDescription>
@@ -293,59 +311,59 @@ export function AboutContent() {
             </p>
           </motion.div>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="relative">
-              {/* Connecting line (desktop only) */}
-              <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-premiumGold/30 via-premiumGold/50 to-premiumGold/30" />
-              
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4">
-                {processSteps.map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <motion.div
-                      key={item.step}
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: index * 0.15 }}
-                      whileHover={{ y: -10, scale: 1.05 }}
-                      className="flex flex-col items-center group relative"
-                    >
-                      {/* Step number badge */}
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
-                        <div className="h-8 w-8 rounded-full bg-premiumGold text-royalNavy font-bold text-sm flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {processSteps.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={item.step}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    whileHover={{ y: -8, scale: 1.05 }}
+                    className="group relative"
+                  >
+                    <div className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-2xl p-6 border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 hover:shadow-2xl relative overflow-hidden h-full">
+                      {/* Background gradient pattern */}
+                      <div className={`absolute inset-0 opacity-30 dark:opacity-20 ${
+                        index % 2 === 0 
+                          ? "bg-gradient-to-br from-premiumGold/10 to-royalBlue/10" 
+                          : "bg-gradient-to-bl from-royalBlue/10 to-premiumGold/10"
+                      }`} />
+                      
+                      {/* Step number in top-left corner */}
+                      <div className="absolute top-4 left-4 z-10">
+                        <div className="h-10 w-10 rounded-full bg-premiumGold text-royalNavy dark:text-royalNavy font-bold text-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                           {index + 1}
                         </div>
                       </div>
                       
-                      {/* Icon container with gradient */}
-                      <div className="h-24 w-24 rounded-2xl bg-gradient-to-br from-premiumGold/20 via-royalBlue/20 to-premiumGold/20 dark:from-premiumGold/30 dark:via-royalBlue/30 dark:to-premiumGold/30 flex items-center justify-center mb-4 border-2 border-premiumGold/30 dark:border-premiumGold/40 group-hover:border-premiumGold group-hover:shadow-xl transition-all duration-300 relative z-10">
-                        <Icon className="h-10 w-10 text-royalNavy dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-300" />
-                      </div>
-                      
-                      {/* Step name */}
-                      <span className="text-lg font-heading font-bold text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-300 text-center">
-                        {item.step}
-                      </span>
-                      
-                      {/* Arrow connector (desktop only) */}
-                      {index < processSteps.length - 1 && (
-                        <div className="hidden md:block absolute top-12 -right-2 z-10">
+                      {/* Content */}
+                      <div className="relative z-10 pt-12">
+                        {/* Icon */}
+                        <div className="h-20 w-20 rounded-xl bg-gradient-to-br from-premiumGold/20 to-royalBlue/20 dark:from-premiumGold/30 dark:to-royalBlue/30 flex items-center justify-center mb-4 mx-auto group-hover:from-premiumGold/40 group-hover:to-royalBlue/40 transition-all duration-300 shadow-lg">
                           <motion.div
-                            initial={{ scale: 0 }}
-                            whileInView={{ scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.15 + 0.3 }}
-                            className="text-premiumGold text-2xl font-bold"
+                            whileHover={{ rotate: 360 }}
+                            transition={{ duration: 0.6 }}
                           >
-                            →
+                            <Icon className="h-10 w-10 text-royalBlue dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-300" />
                           </motion.div>
                         </div>
-                      )}
-                    </motion.div>
-                  );
-                })}
-              </div>
+                        
+                        {/* Step name */}
+                        <h3 className="text-xl font-heading font-bold text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-300 text-center mb-3">
+                          {item.step}
+                        </h3>
+                        
+                        {/* Decorative bottom accent */}
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-premiumGold/50 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>
