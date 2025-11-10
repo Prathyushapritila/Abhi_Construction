@@ -18,7 +18,7 @@ export function Hero() {
           >
             <Building2 className="h-12 w-12 text-royalBlue mr-3" />
             <span className="text-sm font-semibold text-royalBlue uppercase tracking-wider">
-              Excellence in Construction
+              Discover The Abhi Constructions Advantage
             </span>
           </motion.div>
 
@@ -28,8 +28,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground"
           >
-            Building Your
-            <span className="block text-royalBlue">Dreams to Reality</span>
+            Build Your Custom Home
+            <span className="block text-royalBlue">On Your Lot</span>
           </motion.h1>
 
           <motion.p
@@ -38,7 +38,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
           >
-            Transforming visions into exceptional structures with precision, quality, and unwavering commitment to excellence.
+            Discover the Abhi Constructions Advantage. Enjoy legendary craftsmanship, flexible floor plans, and premium finishes - all in less time and at a fraction of the custom price.
           </motion.p>
 
           <motion.div

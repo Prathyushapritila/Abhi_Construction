@@ -8,13 +8,13 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Address",
-    content: "123 Construction Street\nBuilding City, BC 12345",
+    content: "Hyderabad, Telangana, India",
   },
   {
     icon: Phone,
     title: "Phone",
-    content: "+1 (234) 567-8900",
-    href: "tel:+1234567890",
+    content: "+91 98765 43210",
+    href: "tel:+919876543210",
   },
   {
     icon: Mail,
@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: "Business Hours",
-    content: "Monday - Friday: 8:00 AM - 6:00 PM\nSaturday: 9:00 AM - 4:00 PM",
+    content: "Monday - Saturday: 9:00 AM - 7:00 PM\nSunday: 10:00 AM - 5:00 PM",
   },
 ];
 

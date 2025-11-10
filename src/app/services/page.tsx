@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Wrench, Hammer, Paintbrush, Ruler, Shield, CheckCircle } from "lucide-react";
+import { Building2, Wrench, Hammer, Paintbrush, Ruler, Shield, CheckCircle, Search, DraftingCompass, Construction, Palette, Handshake, DollarSign, Clock, UserCheck, ShieldCheck } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const services = [
   {
@@ -159,6 +160,155 @@ export default function ServicesPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Process Steps */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-foreground">
+              Our Process
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              From concept to completion, we guide you through every step
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-6xl mx-auto">
+            {[
+              { icon: Search, title: "Discover", desc: "Understanding your vision, needs, and budget" },
+              { icon: DraftingCompass, title: "Design", desc: "Architecture and interior design planning" },
+              { icon: Construction, title: "Build", desc: "Quality construction with dedicated project manager" },
+              { icon: Palette, title: "Style", desc: "Interior finishes and styling" },
+              { icon: Handshake, title: "Handover", desc: "Final walkthrough and warranty support" },
+            ].map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <motion.div
+                  key={step.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="h-16 w-16 rounded-full bg-royalBlue/10 flex items-center justify-center mx-auto mb-4 border-2 border-premiumGold/20">
+                    <Icon className="h-8 w-8 text-royalBlue" />
+                  </div>
+                  <h3 className="text-lg font-heading font-semibold mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-foreground">
+              Why Choose Us
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: DollarSign, title: "Transparent Pricing", desc: "Fixed-bid options with no surprises" },
+              { icon: Clock, title: "On-time Delivery", desc: "98% of projects completed on schedule" },
+              { icon: UserCheck, title: "Dedicated PM", desc: "Your personal project manager from start to finish" },
+              { icon: ShieldCheck, title: "Warranty", desc: "Comprehensive warranty on all work" },
+            ].map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <Card className="h-full border-2 hover:border-premiumGold/50 transition-all hover:shadow-lg">
+                    <CardContent className="p-6 text-center">
+                      <div className="h-12 w-12 rounded-lg bg-premiumGold/10 flex items-center justify-center mx-auto mb-4">
+                        <Icon className="h-6 w-6 text-premiumGold" />
+                      </div>
+                      <h3 className="text-lg font-heading font-semibold mb-2">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-12 text-center text-foreground">
+              Frequently Asked Questions
+            </h2>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {[
+                {
+                  q: "How long does a custom home build typically take?",
+                  a: "Most custom homes take 8-12 months from groundbreaking to completion, depending on size and complexity. We provide detailed timelines during the design phase.",
+                },
+                {
+                  q: "Do you offer fixed-price contracts?",
+                  a: "Yes, we offer fixed-bid options for complete transparency. You'll know the price upfront with no surprises.",
+                },
+                {
+                  q: "Can I modify existing floor plans?",
+                  a: "Absolutely! We specialize in customizing our portfolio designs to fit your family's unique needs and preferences.",
+                },
+                {
+                  q: "What areas do you serve?",
+                  a: "We build throughout Hyderabad and the surrounding Telangana region. Contact us to discuss your specific location.",
+                },
+                {
+                  q: "Do you handle permits and approvals?",
+                  a: "Yes, our team manages all permits, approvals, and code compliance as part of our comprehensive service.",
+                },
+                {
+                  q: "What warranty do you provide?",
+                  a: "We offer a comprehensive warranty on all construction work, with dedicated support for any issues that arise.",
+                },
+              ].map((faq, i) => (
+                <AccordionItem key={i} value={`item-${i}`} className="border-2 border-premiumGold/20 rounded-lg px-4">
+                  <AccordionTrigger className="text-left font-heading font-semibold">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
         </div>
       </section>
 

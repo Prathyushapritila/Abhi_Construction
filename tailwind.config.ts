@@ -10,10 +10,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        royalNavy: "#0B1C3D",
         royalBlue: "#0A4DAD",
+        marbleWhite: "#F7F7F9",
         steelGray: "#4F4F4F",
+        premiumGold: "#D4AF37",
         gold: "#D4AF37",
-        background: "#F8FAFC",
+        background: "#F7F7F9",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

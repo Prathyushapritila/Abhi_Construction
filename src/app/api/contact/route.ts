@@ -5,8 +5,10 @@ const contactSchema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   phone: z.string().min(10),
-  subject: z.string().min(3),
+  serviceType: z.string().min(1),
+  budget: z.string().min(1),
   message: z.string().min(10),
+  consent: z.boolean().refine((val) => val === true),
 });
 
 export async function POST(request: NextRequest) {

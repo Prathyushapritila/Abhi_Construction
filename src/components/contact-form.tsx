@@ -10,14 +10,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().min(10, "Please enter a valid phone number"),
-  subject: z.string().min(3, "Subject must be at least 3 characters"),
+  serviceType: z.string().min(1, "Please select a service type"),
+  budget: z.string().min(1, "Please select a budget range"),
   message: z.string().min(10, "Message must be at least 10 characters"),
+  consent: z.boolean().refine((val) => val === true, "You must agree to be contacted"),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -32,8 +35,13 @@ export function ContactForm() {
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
+    watch,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
+    defaultValues: {
+      consent: false,
+    },
   });
 
   const onSubmit = async (data: ContactFormData) => {
@@ -117,14 +125,14 @@ export function ContactForm() {
             <Label htmlFor="phone">
               Phone <span className="text-destructive">*</span>
             </Label>
-            <Input
-              id="phone"
-              type="tel"
-              {...register("phone")}
-              placeholder="+1 (234) 567-8900"
-              aria-invalid={errors.phone ? "true" : "false"}
-              aria-describedby={errors.phone ? "phone-error" : undefined}
-            />
+              <Input
+                id="phone"
+                type="tel"
+                {...register("phone")}
+                placeholder="+91 98765 43210"
+                aria-invalid={errors.phone ? "true" : "false"}
+                aria-describedby={errors.phone ? "phone-error" : undefined}
+              />
             {errors.phone && (
               <p id="phone-error" className="text-sm text-destructive" role="alert">
                 {errors.phone.message}
@@ -133,19 +141,49 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="subject">
-              Subject <span className="text-destructive">*</span>
+            <Label htmlFor="serviceType">
+              Service Type <span className="text-destructive">*</span>
             </Label>
-            <Input
-              id="subject"
-              {...register("subject")}
-              placeholder="What is this regarding?"
-              aria-invalid={errors.subject ? "true" : "false"}
-              aria-describedby={errors.subject ? "subject-error" : undefined}
-            />
-            {errors.subject && (
-              <p id="subject-error" className="text-sm text-destructive" role="alert">
-                {errors.subject.message}
+            <Select onValueChange={(value) => setValue("serviceType", value)}>
+              <SelectTrigger id="serviceType" aria-invalid={errors.serviceType ? "true" : "false"}>
+                <SelectValue placeholder="Select a service" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="custom-home">Custom Home Construction</SelectItem>
+                <SelectItem value="design-build">Design-Build (Architecture)</SelectItem>
+                <SelectItem value="interior-design">Interior Design & Styling</SelectItem>
+                <SelectItem value="renovation">Kitchen & Bath Renovations</SelectItem>
+                <SelectItem value="project-management">Project/Permit Management</SelectItem>
+                <SelectItem value="smart-sustainable">Smart & Sustainable Homes</SelectItem>
+                <SelectItem value="other">Other</SelectItem>
+              </SelectContent>
+            </Select>
+            {errors.serviceType && (
+              <p id="serviceType-error" className="text-sm text-destructive" role="alert">
+                {errors.serviceType.message}
+              </p>
+            )}
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="budget">
+              Budget Range <span className="text-destructive">*</span>
+            </Label>
+            <Select onValueChange={(value) => setValue("budget", value)}>
+              <SelectTrigger id="budget" aria-invalid={errors.budget ? "true" : "false"}>
+                <SelectValue placeholder="Select budget range" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="under-500k">Under ₹50 Lakhs</SelectItem>
+                <SelectItem value="500k-1m">₹50 Lakhs - ₹1 Crore</SelectItem>
+                <SelectItem value="1m-2m">₹1 Crore - ₹2 Crores</SelectItem>
+                <SelectItem value="2m-5m">₹2 Crores - ₹5 Crores</SelectItem>
+                <SelectItem value="over-5m">Over ₹5 Crores</SelectItem>
+              </SelectContent>
+            </Select>
+            {errors.budget && (
+              <p id="budget-error" className="text-sm text-destructive" role="alert">
+                {errors.budget.message}
               </p>
             )}
           </div>
@@ -168,6 +206,27 @@ export function ContactForm() {
               </p>
             )}
           </div>
+
+          <div className="flex items-start space-x-2">
+            <input
+              type="checkbox"
+              id="consent"
+              {...register("consent")}
+              checked={watch("consent")}
+              onChange={(e) => setValue("consent", e.target.checked)}
+              className="mt-1 h-4 w-4 rounded border-gray-300 text-royalBlue focus:ring-royalBlue"
+              aria-invalid={errors.consent ? "true" : "false"}
+            />
+            <Label htmlFor="consent" className="text-sm">
+              I agree to be contacted by Abhi Constructions regarding my inquiry{" "}
+              <span className="text-destructive">*</span>
+            </Label>
+          </div>
+          {errors.consent && (
+            <p className="text-sm text-destructive" role="alert">
+              {errors.consent.message}
+            </p>
+          )}
 
           {error && (
             <motion.div

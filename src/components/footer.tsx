@@ -131,16 +131,16 @@ export function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-royalBlue mt-0.5 flex-shrink-0" />
                 <span className="text-sm text-muted-foreground">
-                  123 Construction Street, Building City, BC 12345
+                  Hyderabad, Telangana, India
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-royalBlue flex-shrink-0" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+919876543210"
                   className="text-sm text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
                 >
-                  +1 (234) 567-8900
+                  +91 98765 43210
                 </a>
               </li>
               <li className="flex items-center space-x-3">

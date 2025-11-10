@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Award, Users, Target } from "lucide-react";
+import { Building2, Award, Users, Target, CheckCircle2 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { InnovationTimeline } from "@/components/innovation-timeline";
 
 const values = [
   {
@@ -121,6 +122,95 @@ export default function AboutPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-center text-foreground">
+              Our Philosophy
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              <Card className="border-2 border-premiumGold/20">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-royalBlue">Precision</h3>
+                  <p className="text-muted-foreground">
+                    Every measurement matters. Every detail counts. We bring meticulous attention to every aspect of your project, ensuring perfection in execution.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-2 border-premiumGold/20">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-royalBlue">Creativity</h3>
+                  <p className="text-muted-foreground">
+                    Innovation drives us forward. We combine creative design thinking with practical construction expertise to bring unique visions to life.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Certifications & Partners */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-foreground">
+              Certifications & Partners
+            </h2>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {["ISO Certified", "LEED Partner", "Green Building", "Award Winner"].map((cert, i) => (
+              <motion.div
+                key={cert}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <Card className="border-2 border-premiumGold/20 text-center p-6">
+                  <CheckCircle2 className="h-8 w-8 text-premiumGold mx-auto mb-2" />
+                  <p className="font-semibold">{cert}</p>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Innovation Timeline */}
+      <InnovationTimeline />
+
+      {/* Quote Block */}
+      <section className="py-20 bg-royalNavy text-marbleWhite">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <blockquote className="text-2xl md:text-3xl font-heading font-semibold mb-4">
+              &ldquo;Building Dreams with Innovation&rdquo;
+            </blockquote>
+            <p className="text-premiumGold text-lg">— Our Promise to You</p>
+          </motion.div>
         </div>
       </section>
 

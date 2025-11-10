@@ -4,6 +4,7 @@ import React from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { LayoutSEO } from "./layout-seo";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     default: "Abhi Constructions - Building Excellence Since 1999",
     template: "%s | Abhi Constructions",
   },
-  description: "Premier construction company specializing in residential, commercial, and renovation projects. Quality craftsmanship, on-time delivery, and exceptional service.",
+  description: "Premier construction company in Hyderabad, India specializing in custom home building, residential construction, and renovation projects. Quality craftsmanship, on-time delivery, and exceptional service.",
   keywords: ["construction", "residential construction", "commercial construction", "renovation", "building", "construction company"],
   authors: [{ name: "Abhi Constructions" }],
   creator: "Abhi Constructions",
@@ -75,6 +76,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <LayoutSEO />
+      </head>
       <body className={`${poppins.variable} ${inter.variable} antialiased`}>
         <ThemeProvider
           attribute="class"

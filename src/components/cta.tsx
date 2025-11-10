@@ -17,10 +17,10 @@ export function CTA() {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-            Ready to Start Your Project?
+            Ready to Build Your Dream Home?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how we can bring your construction vision to life. Get in touch with our team today.
+            Not seeing your dream location? Contact us! We want to learn more about your unique build and help you create the home you&apos;ve always wanted.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
@@ -39,7 +39,7 @@ export function CTA() {
               size="lg"
               className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-6"
             >
-              <Link href="tel:+1234567890">
+              <Link href="tel:+919876543210">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Us Now
               </Link>
