@@ -66,7 +66,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {/* Hero Section with Full-Width Background */}
+      {/* Hero Section - Minimal & Elegant */}
       <HomeHero />
 
       {/* About Preview */}
