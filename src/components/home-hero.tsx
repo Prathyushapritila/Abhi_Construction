@@ -57,19 +57,9 @@ export function HomeHero() {
         }}
       />
 
-      {/* Content - Centered with proper spacing and contrast */}
+      {/* Content - Only CTA button, text is in the image */}
       <div className="container mx-auto px-4 relative z-10 text-center py-20">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6 drop-shadow-2xl">
-            <span className="text-white">Building More Than Homes</span>{" "}
-            <span className="text-premiumGold">—</span>{" "}
-            <span className="text-premiumGold">Crafting Legacies.</span>
-          </h1>
-
-          <p className="text-lg md:text-xl lg:text-2xl leading-relaxed mb-8 max-w-2xl mx-auto text-white drop-shadow-lg font-medium">
-            Where architecture, design, and innovation come together to create timeless spaces.
-          </p>
-
           <div className="mt-10">
             <Button
               asChild
