@@ -41,23 +41,23 @@ export function HomeHero() {
         }}
       />
 
-      {/* Theme-aware overlay: optimized for both modes */}
+      {/* Theme-aware overlay: optimized for both modes - lighter overlay for dark mode, darker for light mode */}
       <div 
         className="absolute inset-0 z-[1] transition-all duration-500"
         style={{
           backgroundColor: currentTheme === "dark" 
-            ? "rgba(11, 28, 61, 0.75)" 
-            : "rgba(0, 0, 0, 0.65)",
+            ? "rgba(11, 28, 61, 0.50)" 
+            : "rgba(0, 0, 0, 0.55)",
         }}
       />
       
-      {/* Additional gradient overlay for better text contrast */}
+      {/* Additional gradient overlay for better text contrast - subtle for this image */}
       <div 
         className="absolute inset-0 z-[1] transition-opacity duration-500"
         style={{
           background: currentTheme === "dark"
-            ? "linear-gradient(to bottom, rgba(11, 28, 61, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%)"
-            : "linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%)",
+            ? "linear-gradient(to bottom, rgba(11, 28, 61, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%)"
+            : "linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%)",
         }}
       />
 
