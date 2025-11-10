@@ -5,12 +5,12 @@ import { MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const locations = [
-  "Hyderabad", "Secunderabad", "Gachibowli", "HITEC City", "Banjara Hills", 
-  "Jubilee Hills", "Kondapur", "Madhapur", "Manikonda", "Miyapur",
-  "Nanakramguda", "Financial District", "Raidurg", "Kokapet", "Tellapur",
-  "Rangareddy", "Medchal", "Sangareddy", "Qutubullapur", "Uppal",
-  "LB Nagar", "Dilsukhnagar", "Kukatpally", "Alwal", "Malkajgiri",
-  "Serilingampally", "Rajendranagar", "Shamshabad", "Gandipet", "Osmania University",
+  "Pragathi Nagar", "Nizampet", "Kukatpally", "Bachupally", "Hyderabad",
+  "Secunderabad", "Gachibowli", "HITEC City", "Banjara Hills", "Jubilee Hills",
+  "Kondapur", "Madhapur", "Manikonda", "Miyapur", "Nanakramguda",
+  "Financial District", "Raidurg", "Kokapet", "Tellapur", "Rangareddy",
+  "Medchal", "Sangareddy", "Qutubullapur", "Uppal", "LB Nagar",
+  "Dilsukhnagar", "Alwal", "Malkajgiri", "Serilingampally", "Rajendranagar",
 ];
 
 export function Locations() {

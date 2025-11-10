@@ -44,7 +44,7 @@ export default function AboutPage() {
               About Abhi Constructions
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              With over 25 years of experience in the construction industry, we have built a reputation for excellence, reliability, and innovation. Our commitment to quality and customer satisfaction has made us a trusted name in construction.
+              With over 10 years of experience in the construction industry, we have built a reputation for excellence, reliability, and innovation in Hyderabad. Our commitment to quality and customer satisfaction has made us a trusted name in custom home construction, architecture, and interior design.
             </p>
           </motion.div>
         </div>
@@ -61,15 +61,15 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="prose prose-lg dark:prose-invert max-w-none"
             >
-              <h2 className="text-3xl font-heading font-bold mb-6 text-foreground">Our Story</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6 text-foreground gold-underline">Our Story</h2>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Founded in 1999, Abhi Constructions began as a small family business with a big vision: to transform the construction industry through quality, integrity, and innovation. What started as a local contractor has grown into a premier construction company serving clients across the region.
+                Founded in Hyderabad over 10 years ago, Abhi Constructions & Innovations began as a small family business with a big vision: to transform the construction industry through quality, integrity, and innovation. Rooted in the vibrant city of Hyderabad, we understand the unique needs of Telangana&apos;s growing communities.
               </p>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Over the years, we&apos;ve completed hundreds of projects, from custom residential homes to large-scale commercial developments. Each project has taught us something new, and we&apos;ve continuously evolved our methods, technologies, and approach to stay at the forefront of the industry.
+                Over the years, we&apos;ve completed 20+ custom homes and 30+ interior design projects across Hyderabad, from Pragathi Nagar to Nizampet, Kukatpally to Bachupally. Each project has taught us something new, and we&apos;ve continuously evolved our methods, technologies, and approach to stay at the forefront of the industry.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Today, we&apos;re proud to be recognized as one of the region&apos;s most trusted construction companies, known for our attention to detail, commitment to sustainability, and unwavering dedication to client satisfaction.
+                Today, we&apos;re proud to be recognized as one of Hyderabad&apos;s most trusted construction companies, known for our attention to detail, commitment to sustainability, and unwavering dedication to client satisfaction. Our tagline &quot;Building Dreams with Innovation&quot; reflects our mission to create exceptional spaces that exceed expectations.
               </p>
             </motion.div>
           </div>
@@ -195,6 +195,65 @@ export default function AboutPage() {
 
       {/* Innovation Timeline */}
       <InnovationTimeline />
+
+      {/* Leadership Team */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-foreground gold-underline">
+              Our Leadership Team
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Experienced professionals dedicated to your success
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                name: "Abhi Kumar",
+                role: "Founder & CEO",
+                description: "With over 10 years of experience in construction and design, Abhi leads our team with a vision for innovation and excellence.",
+              },
+              {
+                name: "Priya Sharma",
+                role: "Head of Design",
+                description: "An award-winning interior designer with expertise in modern and traditional design, bringing creativity to every project.",
+              },
+              {
+                name: "Rajesh Patel",
+                role: "Project Director",
+                description: "Ensures every project is delivered on time and within budget, with over 8 years of project management experience.",
+              },
+            ].map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="h-full border-2 hover:border-premiumGold/50 transition-colors text-center">
+                  <CardContent className="p-6">
+                    <div className="h-24 w-24 rounded-full bg-gradient-to-br from-royalBlue/20 to-premiumGold/20 mx-auto mb-4 flex items-center justify-center">
+                      <Users className="h-12 w-12 text-royalBlue" />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold mb-2">{member.name}</h3>
+                    <p className="text-premiumGold font-semibold mb-3">{member.role}</p>
+                    <p className="text-sm text-muted-foreground">{member.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Quote Block */}
       <section className="py-20 bg-royalNavy text-marbleWhite">

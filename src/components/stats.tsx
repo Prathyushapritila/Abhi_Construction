@@ -6,27 +6,27 @@ import { Building2, Users, Award, Calendar } from "lucide-react";
 const stats = [
   {
     icon: Building2,
-    value: "500+",
-    label: "Projects Completed",
-    description: "Successfully delivered construction projects",
+    value: "20+",
+    label: "Homes Built",
+    description: "Custom homes delivered across Hyderabad",
   },
   {
     icon: Users,
-    value: "200+",
-    label: "Happy Clients",
-    description: "Satisfied customers across various sectors",
+    value: "30+",
+    label: "Interiors Completed",
+    description: "Turnkey interior design projects",
   },
   {
     icon: Award,
-    value: "25+",
+    value: "10+",
     label: "Years Experience",
-    description: "Decades of expertise in construction",
+    description: "Building dreams with innovation",
   },
   {
     icon: Calendar,
-    value: "98%",
-    label: "On-Time Delivery",
-    description: "Projects completed within deadline",
+    value: "100%",
+    label: "Client Satisfaction",
+    description: "Dedicated to excellence in every project",
   },
 ];
 
