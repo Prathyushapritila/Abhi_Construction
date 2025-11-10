@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -22,16 +23,19 @@ export function HomeHero() {
       className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden"
     >
       {/* Background Image Layer */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url('/bg/home-hero.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-        }}
-      />
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/bg/home-hero.png"
+          alt="Modern luxury villa exterior"
+          fill
+          priority
+          className="object-cover"
+          quality={90}
+          style={{
+            objectPosition: "center",
+          }}
+        />
+      </div>
 
       {/* Theme-aware overlay: optimized for both modes - lighter overlay for dark mode, darker for light mode */}
       <div 
