@@ -38,37 +38,41 @@ export function Navbar() {
   }, [isOpen]);
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-premiumGold/20 bg-royalNavy/95 backdrop-blur supports-[backdrop-filter]:bg-royalNavy/80 shadow-lg">
-      <nav className="container mx-auto flex h-20 items-center justify-between px-4" aria-label="Main navigation">
-            <Link href="/" className="flex items-center space-x-3 group">
+    <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-white/10 bg-white/95 dark:bg-royalNavy/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/90 dark:supports-[backdrop-filter]:bg-royalNavy/85 shadow-lg">
+      <nav className="container mx-auto flex h-24 md:h-28 items-center justify-between px-4 md:px-6" aria-label="Main navigation">
+        <Link href="/" className="flex items-center space-x-3 group">
           <div className="relative">
-            {/* Subtle glow effect */}
-            <div className="absolute inset-0 blur-xl opacity-30 group-hover:opacity-50 transition-opacity bg-premiumGold/20 rounded-lg" />
+            {/* Enhanced glow effect */}
+            <div className="absolute inset-0 blur-2xl opacity-40 group-hover:opacity-60 transition-opacity bg-premiumGold/30 rounded-xl" />
             <Image
               src="/projects/logo.jpeg"
               alt="Abhi Constructions & Innovations"
-              width={180}
-              height={90}
-              className="h-16 md:h-20 w-auto object-contain brightness-110 contrast-110 saturate-110 drop-shadow-lg relative z-10 transition-all duration-300 group-hover:brightness-125 group-hover:scale-105"
+              width={240}
+              height={120}
+              className="h-20 md:h-24 lg:h-28 w-auto object-contain brightness-115 contrast-115 saturate-115 drop-shadow-2xl relative z-10 transition-all duration-300 group-hover:brightness-130 group-hover:scale-110 filter"
               priority
             />
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm px-2 py-1",
+                "text-base font-semibold transition-all duration-300 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-md px-3 py-2 relative group",
                 pathname === item.href
                   ? "text-premiumGold"
-                  : "text-marbleWhite/80"
+                  : "text-royalNavy dark:text-marbleWhite/90"
               )}
             >
               {item.label}
+              {pathname === item.href && (
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-premiumGold rounded-full" />
+              )}
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-premiumGold/50 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
           <ThemeToggle />
@@ -98,17 +102,17 @@ export function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden border-t"
           >
-            <div className="container mx-auto px-4 py-4 space-y-2">
+            <div className="container mx-auto px-4 py-4 space-y-2 bg-white dark:bg-royalNavy">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "block px-3 py-2 rounded-md text-base font-medium transition-colors hover:bg-accent focus:outline-none focus:ring-2 focus:ring-royalBlue focus:ring-offset-2",
+                    "block px-4 py-3 rounded-lg text-base font-semibold transition-all hover:bg-premiumGold/10 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2",
                     pathname === item.href
-                      ? "text-royalBlue bg-accent"
-                      : "text-foreground"
+                      ? "text-premiumGold bg-premiumGold/10 border-l-4 border-premiumGold"
+                      : "text-royalNavy dark:text-marbleWhite"
                   )}
                 >
                   {item.label}
