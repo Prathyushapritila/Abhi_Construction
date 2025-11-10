@@ -38,7 +38,7 @@ export function Navbar() {
   }, [isOpen]);
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-premiumGold/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
+    <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-premiumGold/20 bg-royalNavy/95 backdrop-blur supports-[backdrop-filter]:bg-royalNavy/80 shadow-lg">
       <nav className="container mx-auto flex h-20 items-center justify-between px-4" aria-label="Main navigation">
             <Link href="/" className="flex items-center space-x-3">
           <Image
@@ -58,10 +58,10 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-royalBlue focus:outline-none focus:ring-2 focus:ring-royalBlue focus:ring-offset-2 rounded-sm px-2 py-1",
+                "text-sm font-medium transition-colors hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm px-2 py-1",
                 pathname === item.href
-                  ? "text-royalBlue"
-                  : "text-foreground/60"
+                  ? "text-premiumGold"
+                  : "text-marbleWhite/80"
               )}
             >
               {item.label}

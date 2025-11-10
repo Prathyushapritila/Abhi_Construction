@@ -1,26 +1,41 @@
-import { Hero } from "@/components/hero";
-import { Advantages } from "@/components/advantages";
+import { HeroBg } from "@/components/hero-bg";
+import { AboutPreview } from "@/components/about-preview";
 import { ServicesGrid } from "@/components/services-grid";
-import { Stats } from "@/components/stats";
+import { ServicesBgSection } from "@/components/services-bg-section";
+import { PortfolioPreview } from "@/components/portfolio-preview";
 import { Testimonials } from "@/components/testimonials";
 import { CTA } from "@/components/cta";
+import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "Abhi Constructions & Innovations - Building Dreams with Innovation. Custom homes, architecture, and interiors in Hyderabad, India. Precision, transparency, and timelines you can trust.",
+  description: `${siteConfig.name} - ${siteConfig.tagline}. Custom homes, architecture, and interiors in ${siteConfig.location}.`,
 };
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <Advantages />
+      {/* Hero Section with Full-Width Background */}
+      <HeroBg />
+
+      {/* About Preview Band */}
+      <AboutPreview />
+
+      {/* Services Grid */}
       <ServicesGrid />
-      <Stats />
+
+      {/* Full-Width Background Image Section */}
+      <ServicesBgSection />
+
+      {/* Portfolio Preview */}
+      <PortfolioPreview />
+
+      {/* Testimonials Strip */}
       <Testimonials />
+
+      {/* Final CTA Band */}
       <CTA />
     </>
   );
 }
-

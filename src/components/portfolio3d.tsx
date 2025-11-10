@@ -147,15 +147,15 @@ export function Portfolio3D() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-royalNavy gold-underline">
             Our Portfolio
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-steelGray max-w-2xl mx-auto">
             Showcasing excellence in every build
           </p>
         </motion.div>
 
-        {/* Filter Tabs */}
+        {/* Filter Tabs - Category Pills */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => {
             const Icon = category.icon;

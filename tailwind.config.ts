@@ -9,13 +9,26 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        royalNavy: "#0B1C3D",
-        royalBlue: "#0A4DAD",
-        marbleWhite: "#F7F7F9",
-        steelGray: "#4F4F4F",
-        premiumGold: "#D4AF37",
-        gold: "#D4AF37",
+          colors: {
+            royalNavy: "#0B1C3D",
+            royalBlue: "#0A4DAD",
+            marbleWhite: "#F7F7F9",
+            steelGray: "#4F4F4F",
+            premiumGold: "#D4AF37",
+            gold: "#D4AF37",
+            // Keep amber for backward compatibility but prefer gold
+            amber: {
+              50: "#fffbeb",
+              100: "#fef3c7",
+              200: "#fde68a",
+              300: "#fcd34d",
+              400: "#fbbf24",
+              500: "#f59e0b",
+              600: "#d97706",
+              700: "#b45309",
+              800: "#92400e",
+              900: "#78350f",
+            },
         background: "#F7F7F9",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

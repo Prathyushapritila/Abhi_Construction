@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
@@ -43,6 +44,14 @@ const testimonials = [
 
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // Auto-rotate testimonials
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -55,7 +64,7 @@ export function Testimonials() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="py-20 bg-background">
+    <section id="testimonials" className="py-16 bg-royalNavy text-marbleWhite">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,10 +73,10 @@ export function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-marbleWhite">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-marbleWhite/80 max-w-2xl mx-auto">
             Trusted by homeowners and businesses across the region
           </p>
         </motion.div>
@@ -81,10 +90,10 @@ export function Testimonials() {
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="border-2">
+              <Card className="border-2 border-premiumGold/30 bg-royalNavy/50">
                 <CardContent className="p-8 md:p-12">
-                  <Quote className="h-12 w-12 text-royalBlue/20 mb-6" />
-                  <p className="text-lg md:text-xl text-foreground mb-6 leading-relaxed">
+                  <Quote className="h-12 w-12 text-premiumGold/40 mb-6" />
+                  <p className="text-lg md:text-xl text-marbleWhite mb-6 leading-relaxed">
                     &ldquo;{currentTestimonial.content}&rdquo;
                   </p>
                   <div className="flex items-center justify-between flex-wrap gap-4">

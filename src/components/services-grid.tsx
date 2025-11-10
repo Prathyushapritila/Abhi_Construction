@@ -76,7 +76,7 @@ const services = [
 
 export function ServicesGrid() {
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-marbleWhite">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -85,10 +85,10 @@ export function ServicesGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-royalNavy gold-underline">
             Our Services
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-steelGray max-w-2xl mx-auto">
             Comprehensive construction solutions tailored to your needs
           </p>
         </motion.div>
@@ -104,7 +104,7 @@ export function ServicesGrid() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-xl transition-all duration-300 border-2 hover:border-amber-600/50 group hover:scale-[1.01] overflow-hidden bg-white">
+                <Card className="h-full hover:shadow-xl transition-all duration-300 border-2 hover:border-premiumGold/50 group hover:scale-[1.01] overflow-hidden bg-white">
                   {service.image && (
                     <div className="relative h-48 w-full overflow-hidden">
                       <Image
@@ -116,27 +116,27 @@ export function ServicesGrid() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                       <div className="absolute top-4 left-4 h-12 w-12 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-amber-700" />
+                        <Icon className="h-6 w-6 text-royalBlue" />
                       </div>
                     </div>
                   )}
                   <CardHeader>
                     {!service.image && (
-                      <div className="h-12 w-12 rounded-lg bg-amber-100 flex items-center justify-center mb-4">
-                        <Icon className="h-6 w-6 text-amber-700" />
+                      <div className="h-12 w-12 rounded-lg bg-royalBlue/10 flex items-center justify-center mb-4">
+                        <Icon className="h-6 w-6 text-royalBlue" />
                       </div>
                     )}
-                    <CardTitle className="text-xl font-heading">{service.title}</CardTitle>
+                    <CardTitle className="text-xl font-heading text-royalNavy">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base mb-4">
+                    <CardDescription className="text-base mb-4 text-steelGray">
                       {service.description}
                     </CardDescription>
                     {service.benefits && (
                       <ul className="space-y-2">
                         {service.benefits.map((benefit, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-stone-600">
-                            <span className="text-amber-600 mt-1">•</span>
+                          <li key={i} className="flex items-start gap-2 text-sm text-steelGray">
+                            <span className="text-premiumGold mt-1">•</span>
                             <span>{benefit}</span>
                           </li>
                         ))}
@@ -144,7 +144,7 @@ export function ServicesGrid() {
                     )}
                     <a
                       href="/services"
-                      className="inline-block mt-4 text-amber-700 hover:text-amber-800 font-semibold text-sm transition-colors"
+                      className="inline-block mt-4 text-royalBlue hover:text-royalBlue/80 font-semibold text-sm transition-colors"
                     >
                       Learn more →
                     </a>
