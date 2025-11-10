@@ -25,19 +25,11 @@ export function HomeHero() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/bg/home-hero.png')",
+          backgroundImage: `url('/bg/home-hero.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
-        }}
-      />
-      
-      {/* Gradient Fallback - Only shows if image fails to load */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          background: "linear-gradient(135deg, #0B1C3D 0%, #0A4DAD 50%, #0B1C3D 100%)",
         }}
       />
 
