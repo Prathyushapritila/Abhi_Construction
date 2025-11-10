@@ -17,7 +17,7 @@ export const siteConfig = {
     services: "/bg/bg-services.jpg",
     portfolio: "/bg/bg-portfolio.jpg",
     contact: "/bg/bg-contact.jpg",
-    about: "/bg/bg-about.jpg",
+    about: "/bg/about-hero.png",
   },
   
   // Section Titles

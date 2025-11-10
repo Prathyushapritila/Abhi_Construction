@@ -69,7 +69,7 @@ export function AboutContent() {
     <>
       {/* Hero Band with Quote */}
       <FullWidthBg 
-        image="/bg/about-hero.png"
+        image={siteConfig.backgrounds.about}
         overlay={0.75}
       >
         <div className="text-center max-w-4xl mx-auto py-16">
