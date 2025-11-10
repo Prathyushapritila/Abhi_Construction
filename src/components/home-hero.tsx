@@ -23,15 +23,17 @@ export function HomeHero() {
     >
       {/* Background Image Layer */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-all duration-500"
+        className="absolute inset-0 z-0"
         style={{
           backgroundImage: "url('/bg/home-hero.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
         }}
       />
       
-      {/* Gradient Fallback */}
+      {/* Gradient Fallback - Only shows if image fails to load */}
       <div 
         className="absolute inset-0 z-0"
         style={{
