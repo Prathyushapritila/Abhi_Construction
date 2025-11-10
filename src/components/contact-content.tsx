@@ -47,6 +47,22 @@ export function ContactContent() {
 
           {/* Contact Info */}
           <div className="space-y-6">
+            {siteConfig.contact.name && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="bg-card p-6 rounded-lg border-2 border-premiumGold/20 shadow-lg"
+              >
+                <h3 className="text-xl font-heading font-semibold mb-2 text-royalNavy">
+                  Contact Person
+                </h3>
+                <p className="text-lg text-royalBlue font-medium">
+                  {siteConfig.contact.name}
+                </p>
+              </motion.div>
+            )}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

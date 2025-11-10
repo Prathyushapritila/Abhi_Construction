@@ -10,14 +10,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block">
-              <Image
-                src="/projects/logo.jpeg"
-                alt="Abhi Constructions & Innovations"
-                width={140}
-                height={70}
-                className="h-14 w-auto object-contain"
-              />
+            <Link href="/" className="inline-block group">
+              <div className="relative">
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 blur-lg opacity-20 group-hover:opacity-30 transition-opacity bg-premiumGold/20 rounded-lg" />
+                <Image
+                  src="/projects/logo.jpeg"
+                  alt="Abhi Constructions & Innovations"
+                  width={180}
+                  height={90}
+                  className="h-16 md:h-20 w-auto object-contain brightness-110 contrast-110 saturate-110 drop-shadow-md relative z-10 transition-all duration-300 group-hover:brightness-125 group-hover:scale-105"
+                />
+              </div>
             </Link>
             <p className="text-sm text-muted-foreground">
               Building excellence, one project at a time. Your trusted partner in construction and design.

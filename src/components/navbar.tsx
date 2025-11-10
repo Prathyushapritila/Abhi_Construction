@@ -40,15 +40,19 @@ export function Navbar() {
   return (
     <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-premiumGold/20 bg-royalNavy/95 backdrop-blur supports-[backdrop-filter]:bg-royalNavy/80 shadow-lg">
       <nav className="container mx-auto flex h-20 items-center justify-between px-4" aria-label="Main navigation">
-            <Link href="/" className="flex items-center space-x-3">
-          <Image
-            src="/projects/logo.jpeg"
-            alt="Abhi Constructions & Innovations"
-            width={120}
-            height={60}
-            className="h-12 w-auto object-contain"
-            priority
-          />
+            <Link href="/" className="flex items-center space-x-3 group">
+          <div className="relative">
+            {/* Subtle glow effect */}
+            <div className="absolute inset-0 blur-xl opacity-30 group-hover:opacity-50 transition-opacity bg-premiumGold/20 rounded-lg" />
+            <Image
+              src="/projects/logo.jpeg"
+              alt="Abhi Constructions & Innovations"
+              width={180}
+              height={90}
+              className="h-16 md:h-20 w-auto object-contain brightness-110 contrast-110 saturate-110 drop-shadow-lg relative z-10 transition-all duration-300 group-hover:brightness-125 group-hover:scale-105"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

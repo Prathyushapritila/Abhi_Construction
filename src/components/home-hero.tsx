@@ -3,8 +3,20 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export function HomeHero() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Default to light mode overlay until theme is loaded
+  const currentTheme = mounted ? theme : "light";
+
   return (
     <section 
       className="relative min-h-[90vh] w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
@@ -14,8 +26,22 @@ export function HomeHero() {
         backgroundPosition: "center, center",
       }}
     >
-      {/* Dark Overlay - 65% opacity */}
-      <div className="absolute inset-0 bg-black/65 z-0" />
+      {/* Theme-aware overlay: darker in light mode, lighter in dark mode */}
+      <div 
+        className="absolute inset-0 z-0 transition-colors duration-300"
+        style={{
+          backgroundColor: currentTheme === "dark" ? "rgba(0, 0, 0, 0.55)" : "rgba(0, 0, 0, 0.70)",
+        }}
+      />
+      
+      {/* Additional theme-aware filter for image brightness */}
+      <div 
+        className="absolute inset-0 z-0 transition-opacity duration-300"
+        style={{
+          backdropFilter: currentTheme === "dark" ? "brightness(0.85) contrast(1.1)" : "brightness(0.7) contrast(1.15)",
+          WebkitBackdropFilter: currentTheme === "dark" ? "brightness(0.85) contrast(1.1)" : "brightness(0.7) contrast(1.15)",
+        }}
+      />
 
       {/* Content - Centered */}
       <div className="container mx-auto px-4 relative z-10 text-center">
