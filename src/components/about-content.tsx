@@ -17,42 +17,42 @@ const valuePillars = [
     title: "End-to-End Design-Build Excellence",
     description: "From architectural blueprints to final interior styling—one team, one vision, zero handoff gaps. We eliminate the chaos of coordinating multiple contractors.",
     highlight: "Single Point of Contact",
-    image: "/projects/interior-1.jpeg",
+    image: "/projects/interior-1.jpeg", // TODO: Replace with architectural blueprints workspace image
   },
   {
     icon: Clock,
     title: "Fixed-Bid Pricing, Guaranteed Timelines",
     description: "No surprise costs. No missed deadlines. We provide transparent quotes and stick to them—your project manager tracks every milestone in real-time.",
     highlight: "On-Time, On-Budget",
-    image: "/projects/kitchen-1.jpeg",
+    image: "/projects/kitchen-1.jpeg", // TODO: Replace with modern office workspace with clock/checklist image
   },
   {
     icon: Award,
     title: "Curated Materials, Crafted Details",
     description: "We source premium finishes and fixtures directly from trusted suppliers. Every joint, every surface, every fixture is inspected—luxury isn't optional, it's standard.",
     highlight: "Premium by Default",
-    image: "/projects/dining-1.jpeg",
+    image: "/projects/dining-1.jpeg", // TODO: Replace with close-up of high-end materials (marble, wood, metal) image
   },
   {
     icon: Zap,
     title: "Future-Ready Smart Homes",
     description: "3D walkthroughs before construction, smart-home integration, and sustainable building practices. Your home adapts to technology and environmental standards.",
     highlight: "Built for Tomorrow",
-    image: "/projects/living-room-1.jpeg",
+    image: "/projects/living-room-1.jpeg", // TODO: Replace with modern luxury villa interior with smart devices image
   },
   {
     icon: MapPin,
     title: "Hyderabad's Trusted Builder Network",
     description: "Deep local knowledge of permits, regulations, and suppliers. We've built relationships that get approvals faster and materials delivered on schedule.",
     highlight: "Local Advantage",
-    image: "/projects/interior-2.jpeg",
+    image: "/projects/interior-2.jpeg", // TODO: Replace with Hyderabad cityscape at sunset image
   },
   {
     icon: Shield,
     title: "Comprehensive Warranty & Support",
     description: "Post-handover support with structured warranties. We stand behind our work—your peace of mind is part of the package.",
     highlight: "Long-Term Partnership",
-    image: "/projects/bathroom-1.jpeg",
+    image: "/projects/bathroom-1.jpeg", // TODO: Replace with handshake between builder and homeowner image
   },
 ];
 
@@ -69,7 +69,7 @@ export function AboutContent() {
     <>
       {/* Hero Band with Quote */}
       <FullWidthBg 
-        image="/projects/interior-1.jpeg"
+        image="/bg/about-hero.png"
         overlay={0.75}
       >
         <div className="text-center max-w-4xl mx-auto py-16">

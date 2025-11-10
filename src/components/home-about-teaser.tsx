@@ -90,24 +90,14 @@ export function HomeAboutTeaser() {
             })}
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-center flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="text-center"
           >
-            <Button
-              asChild
-              size="lg"
-              className="bg-premiumGold hover:bg-premiumGold/90 text-royalNavy text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-semibold"
-            >
-              <Link href="/portfolio">
-                Discover Our Work
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
             <Button
               asChild
               size="lg"
