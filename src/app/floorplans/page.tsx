@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Filter, X, MapPin, Home, Bath, Car, Layers } from "lucide-react";
@@ -117,7 +117,7 @@ const sampleFloorplans: Floorplan[] = [
 
 type SortOption = "price-asc" | "price-desc" | "sqft-asc" | "sqft-desc" | "newest";
 
-export default function FloorplansPage() {
+function FloorplansContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [showFilters, setShowFilters] = useState(false);
@@ -496,6 +496,18 @@ export default function FloorplansPage() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function FloorplansPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-royalBlue"></div>
+      </div>
+    }>
+      <FloorplansContent />
+    </Suspense>
   );
 }
 
