@@ -1,15 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Clock, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-card">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="border-t border-premiumGold/20 bg-card">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:col-span-1">
             <Link href="/" className="inline-block group">
               <div className="relative">
                 {/* Subtle glow effect */}
@@ -23,34 +23,34 @@ export function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-sm text-muted-foreground">
-              Building excellence, one project at a time. Your trusted partner in construction and design.
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {siteConfig.tagline}. Building excellence, one project at a time. Your trusted partner in construction and design.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 pt-2">
               <a
                 href="#"
-                className="text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                className="text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                className="text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                className="text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                className="text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
@@ -60,12 +60,12 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="font-heading font-semibold mb-6 text-royalNavy dark:text-marbleWhite">Quick Links</h4>
+            <ul className="space-y-3">
               <li>
                 <Link
                   href="/"
-                  className="text-sm text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
                   Home
                 </Link>
@@ -73,7 +73,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-sm text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
                   About Us
                 </Link>
@@ -81,17 +81,33 @@ export function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="text-sm text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
                   Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/projects"
-                  className="text-sm text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                  href="/portfolio"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
-                  Projects
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/floorplans"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
+                >
+                  Floorplans
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -99,38 +115,54 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-heading font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
+            <h4 className="font-heading font-semibold mb-6 text-royalNavy dark:text-marbleWhite">Our Services</h4>
+            <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services#residential"
-                  className="text-sm text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                  href="/services"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
-                  Residential Construction
+                  Custom Home Construction
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#commercial"
-                  className="text-sm text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                  href="/services"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
-                  Commercial Projects
+                  Architectural Design & Planning
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#renovation"
-                  className="text-sm text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                  href="/services"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
-                  Renovation
+                  Interior Design & Turnkey Fit-Out
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#consultation"
-                  className="text-sm text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                  href="/services"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
                 >
-                  Consultation
+                  Kitchen & Bath Renovations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
+                >
+                  Project Management
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
+                >
+                  Smart & Sustainable Homes
                 </Link>
               </li>
             </ul>
@@ -138,41 +170,95 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading font-semibold mb-4">Contact</h4>
-            <ul className="space-y-3">
+            <h4 className="font-heading font-semibold mb-6 text-royalNavy dark:text-marbleWhite">Contact Us</h4>
+            <ul className="space-y-4">
+              {siteConfig.contact.name && (
+                <li className="flex items-start space-x-3">
+                  <div className="h-5 w-5 text-premiumGold mt-0.5 flex-shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{siteConfig.contact.name}</p>
+                    <p className="text-xs text-muted-foreground">Contact Person</p>
+                  </div>
+                </li>
+              )}
               <li className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-royalBlue mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">
-                  Hyderabad, Telangana, India
+                <MapPin className="h-5 w-5 text-premiumGold mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-muted-foreground leading-relaxed">
+                  {siteConfig.contact.address}
                 </span>
               </li>
-                  <li className="flex items-center space-x-3">
-                    <Phone className="h-5 w-5 text-royalBlue flex-shrink-0" />
-                    <a
-                      href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
-                      className="text-sm text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
-                    >
-                      {siteConfig.contact.phone}
-                    </a>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5 text-royalBlue flex-shrink-0" />
-                    <a
-                      href={`mailto:${siteConfig.contact.email}`}
-                      className="text-sm text-muted-foreground hover:text-royalBlue transition-colors focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
-                    >
-                      {siteConfig.contact.email}
-                    </a>
-                  </li>
+              <li className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-premiumGold flex-shrink-0" />
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm"
+                >
+                  {siteConfig.contact.phone}
+                </a>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-premiumGold flex-shrink-0" />
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm break-all"
+                >
+                  {siteConfig.contact.email}
+                </a>
+              </li>
+              <li className="flex items-start space-x-3">
+                <Clock className="h-5 w-5 text-premiumGold mt-0.5 flex-shrink-0" />
+                <div className="text-sm text-muted-foreground">
+                  <p className="font-medium text-foreground mb-1">Business Hours</p>
+                  <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                  <p>Sunday: 10:00 AM - 5:00 PM</p>
+                </div>
+              </li>
+              <li className="flex items-center space-x-3 pt-2">
+                <MessageCircle className="h-5 w-5 text-premiumGold flex-shrink-0" />
+                <a
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm"
+                >
+                  WhatsApp Us
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Abhi Constructions. All rights reserved.</p>
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-premiumGold/20">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground text-center md:text-left">
+              &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+            </p>
+            <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm text-muted-foreground">
+              <Link href="/about" className="hover:text-premiumGold transition-colors">
+                About
+              </Link>
+              <span className="text-premiumGold/50">•</span>
+              <Link href="/services" className="hover:text-premiumGold transition-colors">
+                Services
+              </Link>
+              <span className="text-premiumGold/50">•</span>
+              <Link href="/contact" className="hover:text-premiumGold transition-colors">
+                Contact
+              </Link>
+              <span className="text-premiumGold/50">•</span>
+              <Link href="/portfolio" className="hover:text-premiumGold transition-colors">
+                Portfolio
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
-
