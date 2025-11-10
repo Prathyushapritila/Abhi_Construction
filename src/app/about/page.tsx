@@ -21,7 +21,7 @@ export default function AboutPage() {
             About {siteConfig.name}
           </h1>
           <p className="text-xl md:text-2xl text-marbleWhite/90 leading-relaxed">
-            With over {siteConfig.stats.years} years of experience in the construction industry, we have built a reputation for excellence, reliability, and innovation in {siteConfig.location}.
+            Where architecture, craftsmanship, and interiors meet to create homes that feel personal—and look unforgettable.
           </p>
         </div>
       </FullWidthBg>

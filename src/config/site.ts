@@ -44,9 +44,9 @@ export const siteConfig = {
   
   // Stats
   stats: {
-    projects: "30+",
-    interiors: "30+",
-    years: "10",
+    projects: "20+",
+    interiors: "20+",
+    years: "5+",
   },
   
   // Contact

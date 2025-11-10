@@ -1,38 +1,77 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Award, Users, Target, CheckCircle2 } from "lucide-react";
+import { Building2, Award, Users, Target, CheckCircle2, Eye, Zap, MapPin, Clock, Shield, Palette, DraftingCompass } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { InnovationTimeline } from "@/components/innovation-timeline";
+import { FullWidthBg } from "./full-width-bg";
 import { siteConfig } from "@/config/site";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-const values = [
+const valuePillars = [
   {
     icon: Building2,
-    title: "Quality First",
-    description: "We never compromise on quality. Every project is built to the highest standards using premium materials and skilled craftsmanship.",
+    title: "Design-Build Under One Roof",
+    description: "Architecture, construction, and interiors handled by one expert team.",
+  },
+  {
+    icon: Clock,
+    title: "Transparent & Timely",
+    description: "Clear scopes, tracked milestones, and handovers that happen when we say they will.",
   },
   {
     icon: Award,
-    title: "Excellence",
-    description: "Award-winning designs and construction that exceed expectations. We strive for perfection in every detail.",
+    title: "Premium, Always",
+    description: "Curated materials, meticulous detailing, and finishes that feel genuinely luxurious.",
   },
   {
-    icon: Users,
-    title: "Client Focused",
-    description: "Your vision is our mission. We work closely with clients to ensure their dreams become reality.",
+    icon: Zap,
+    title: "Innovation in Practice",
+    description: "3D visualizations, smart-home options, and sustainable choices that future-proof your space.",
   },
   {
-    icon: Target,
-    title: "Reliability",
-    description: "On-time delivery, transparent communication, and dependable service you can count on.",
+    icon: MapPin,
+    title: "Hyderabad Expertise",
+    description: "Local approvals, reliable partners, and on-ground experience you can count on.",
   },
+];
+
+const processSteps = [
+  { step: "Discover", icon: Eye },
+  { step: "Design", icon: DraftingCompass },
+  { step: "Detail", icon: Palette },
+  { step: "Build", icon: Building2 },
+  { step: "Style", icon: Award },
 ];
 
 export function AboutContent() {
   return (
     <>
-      {/* Story Section */}
+      {/* Hero Band with Quote */}
+      <FullWidthBg 
+        image={siteConfig.backgrounds.about}
+        overlay={0.75}
+      >
+        <div className="text-center max-w-4xl mx-auto py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-3xl md:text-5xl font-heading font-bold text-marbleWhite leading-tight mb-6">
+              We don&apos;t just build homes. We shape the way you live.
+            </p>
+            <p className="text-xl md:text-2xl text-marbleWhite/90 leading-relaxed">
+              From the first sketch to the final cushion, our team designs, builds, and styles spaces that feel refined, warm, and beautifully yours.
+            </p>
+          </motion.div>
+        </div>
+      </FullWidthBg>
+
+      {/* Short Intro */}
       <section className="py-20 bg-marbleWhite">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -41,25 +80,61 @@ export function AboutContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="prose prose-lg dark:prose-invert max-w-none"
+              className="prose prose-lg max-w-none text-center"
             >
-              <h2 className="text-3xl font-heading font-bold mb-6 text-royalNavy gold-underline">Our Story</h2>
-              <p className="text-steelGray mb-4 leading-relaxed">
-                Founded in {siteConfig.location} over {siteConfig.stats.years} years ago, {siteConfig.name} began as a small family business with a big vision: to transform the construction industry through quality, integrity, and innovation. Rooted in the vibrant city of {siteConfig.location}, we understand the unique needs of Telangana&apos;s growing communities.
+              <p className="text-xl md:text-2xl text-steelGray leading-relaxed mb-6">
+                Born in {siteConfig.location}, we blend <strong className="text-royalNavy">architectural vision</strong> with <strong className="text-royalNavy">engineering precision</strong> and <strong className="text-royalNavy">interior artistry</strong>. For over a decade, we&apos;ve delivered homes that balance function with feeling—crafted thoughtfully, finished impeccably, and handed over on time.
               </p>
-              <p className="text-steelGray mb-4 leading-relaxed">
-                Over the years, we&apos;ve completed {siteConfig.stats.projects} custom homes and {siteConfig.stats.interiors} interior design projects across {siteConfig.location}, from Pragathi Nagar to Nizampet, Kukatpally to Bachupally. Each project has taught us something new, and we&apos;ve continuously evolved our methods, technologies, and approach to stay at the forefront of the industry.
-              </p>
-              <p className="text-steelGray leading-relaxed">
-                Today, we&apos;re proud to be recognized as one of {siteConfig.location}&apos;s most trusted construction companies, known for our attention to detail, commitment to sustainability, and unwavering dedication to client satisfaction. Our tagline &quot;{siteConfig.tagline}&quot; reflects our mission to create exceptional spaces that exceed expectations.
+              <p className="text-xl md:text-2xl text-steelGray leading-relaxed font-semibold">
+                Your dream, our blueprint.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Credibility Line */}
+      <section className="py-12 bg-royalNavy text-marbleWhite">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <p className="text-lg md:text-xl font-semibold">
+              <strong>{siteConfig.stats.projects}</strong> homes delivered, <strong>{siteConfig.stats.interiors}</strong> interior projects, <strong>{siteConfig.stats.years}</strong> years of trusted execution across {siteConfig.location}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Promise */}
       <section className="py-20 bg-stone-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-royalNavy gold-underline">
+                Our Promise
+              </h2>
+              <div className="space-y-4 text-xl md:text-2xl text-steelGray">
+                <p className="font-semibold">We listen deeply.</p>
+                <p className="font-semibold">We design boldly.</p>
+                <p className="font-semibold">We deliver beautifully—without surprises, compromises, or shortcuts.</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Sets Us Apart - Value Pillars */}
+      <section className="py-20 bg-marbleWhite">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -69,34 +144,31 @@ export function AboutContent() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-royalNavy gold-underline">
-              Our Values
+              What Sets Us Apart
             </h2>
-            <p className="text-xl text-steelGray max-w-2xl mx-auto">
-              The principles that guide everything we do
-            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => {
-              const Icon = value.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {valuePillars.map((pillar, index) => {
+              const Icon = pillar.icon;
               return (
                 <motion.div
-                  key={value.title}
+                  key={pillar.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Card className="h-full border-2 hover:border-royalBlue/50 transition-colors bg-white">
+                  <Card className="h-full border-2 hover:border-premiumGold/50 transition-colors bg-white hover:shadow-lg">
                     <CardHeader>
                       <div className="h-12 w-12 rounded-lg bg-royalBlue/10 flex items-center justify-center mb-4">
                         <Icon className="h-6 w-6 text-royalBlue" />
                       </div>
-                      <CardTitle className="text-xl font-heading">{value.title}</CardTitle>
+                      <CardTitle className="text-xl font-heading text-royalNavy">{pillar.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-base">
-                        {value.description}
+                      <CardDescription className="text-base text-steelGray">
+                        {pillar.description}
                       </CardDescription>
                     </CardContent>
                   </Card>
@@ -107,7 +179,28 @@ export function AboutContent() {
         </div>
       </section>
 
-      {/* Philosophy Section */}
+      {/* Our Story */}
+      <section className="py-20 bg-stone-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-royalNavy gold-underline text-center">
+                Our Story
+              </h2>
+              <p className="text-lg md:text-xl text-steelGray leading-relaxed">
+                What started as a small, hands-on studio has grown into a full-service, design-led firm trusted by families across {siteConfig.location}. We&apos;ve learned that the best homes don&apos;t scream—they <strong className="text-royalNavy">whisper quality</strong>. Clean lines, honest materials, balanced light, crafted joinery—these are the quiet details that make every day feel exceptional.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Work - 5 Step Process */}
       <section className="py-20 bg-marbleWhite">
         <div className="container mx-auto px-4">
           <motion.div
@@ -115,129 +208,90 @@ export function AboutContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-center text-royalNavy gold-underline">
-              Our Philosophy
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-royalNavy gold-underline">
+              How We Work
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-              <Card className="border-2 border-premiumGold/20 bg-white">
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-royalBlue">Precision</h3>
-                  <p className="text-steelGray">
-                    Every measurement matters. Every detail counts. We bring meticulous attention to every aspect of your project, ensuring perfection in execution.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-2 border-premiumGold/20 bg-white">
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-royalBlue">Creativity</h3>
-                  <p className="text-steelGray">
-                    Innovation drives us forward. We combine creative design thinking with practical construction expertise to bring unique visions to life.
-                  </p>
-                </CardContent>
-              </Card>
+            <p className="text-xl text-steelGray mb-8">
+              One seamless journey, one dedicated project manager, zero stress.
+            </p>
+          </motion.div>
+
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 mb-8">
+            {processSteps.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={item.step}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex flex-col items-center"
+                >
+                  <div className="h-16 w-16 rounded-full bg-royalBlue/10 flex items-center justify-center mb-3 border-2 border-premiumGold/30">
+                    <Icon className="h-8 w-8 text-royalBlue" />
+                  </div>
+                  <span className="text-lg font-heading font-semibold text-royalNavy">{item.step}</span>
+                  {index < processSteps.length - 1 && (
+                    <span className="hidden md:block text-premiumGold text-2xl font-bold mx-2">→</span>
+                  )}
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Badges */}
+      <section className="py-16 bg-royalNavy text-marbleWhite">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center space-y-6"
+          >
+            <div className="flex flex-wrap justify-center gap-6 text-lg md:text-xl">
+              <p className="font-semibold">On time. Fixed scope. Clear pricing.</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 text-lg md:text-xl">
+              <p className="font-semibold">30+ awards & recognitions.</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 text-lg md:text-xl">
+              <p className="font-semibold">98% client referral rate</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Certifications & Partners */}
-      <section className="py-20 bg-stone-50">
+      {/* Closing Statement */}
+      <section className="py-20 bg-gradient-to-br from-royalBlue/10 via-marbleWhite to-premiumGold/5">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-royalNavy gold-underline">
-              Certifications & Partners
-            </h2>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {["ISO Certified", "LEED Partner", "Green Building", "Award Winner"].map((cert, i) => (
-              <motion.div
-                key={cert}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-              >
-                <Card className="border-2 border-premiumGold/20 text-center p-6 bg-white">
-                  <CheckCircle2 className="h-8 w-8 text-premiumGold mx-auto mb-2" />
-                  <p className="font-semibold text-royalNavy">{cert}</p>
-                </Card>
-              </motion.div>
-            ))}
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 text-royalNavy">
+                A home is more than square feet.
+              </h2>
+              <p className="text-xl md:text-2xl text-steelGray leading-relaxed mb-8">
+                It&apos;s the way your morning light falls across the floor. The way your living room holds a celebration. The way every corner feels made for you.
+              </p>
+              <p className="text-2xl md:text-3xl font-heading font-bold text-royalBlue">
+                That&apos;s what we build.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Innovation Timeline */}
-      <InnovationTimeline />
-
-      {/* Leadership Team */}
-      <section className="py-20 bg-marbleWhite">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-royalNavy gold-underline">
-              Our Leadership Team
-            </h2>
-            <p className="text-xl text-steelGray max-w-2xl mx-auto">
-              Experienced professionals dedicated to your success
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                name: "Abhi Kumar",
-                role: "Founder & CEO",
-                description: `With over ${siteConfig.stats.years} years of experience in construction and design, Abhi leads our team with a vision for innovation and excellence.`,
-              },
-              {
-                name: "Priya Sharma",
-                role: "Head of Design",
-                description: "An award-winning interior designer with expertise in modern and traditional design, bringing creativity to every project.",
-              },
-              {
-                name: "Rajesh Patel",
-                role: "Project Director",
-                description: "Ensures every project is delivered on time and within budget, with over 8 years of project management experience.",
-              },
-            ].map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="h-full border-2 hover:border-premiumGold/50 transition-colors text-center bg-white">
-                  <CardContent className="p-6">
-                    <div className="h-24 w-24 rounded-full bg-gradient-to-br from-royalBlue/20 to-premiumGold/20 mx-auto mb-4 flex items-center justify-center">
-                      <Users className="h-12 w-12 text-royalBlue" />
-                    </div>
-                    <h3 className="text-xl font-heading font-bold mb-2 text-royalNavy">{member.name}</h3>
-                    <p className="text-premiumGold font-semibold mb-3">{member.role}</p>
-                    <p className="text-sm text-steelGray">{member.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quote Block */}
+      {/* CTA Section */}
       <section className="py-20 bg-royalNavy text-marbleWhite">
         <div className="container mx-auto px-4">
           <motion.div
@@ -247,34 +301,40 @@ export function AboutContent() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <blockquote className="text-2xl md:text-3xl font-heading font-semibold mb-4">
-              &ldquo;{siteConfig.tagline}&rdquo;
-            </blockquote>
-            <p className="text-premiumGold text-lg">— Our Promise to You</p>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Ready to start the conversation?
+            </h2>
+            <p className="text-xl md:text-2xl text-marbleWhite/90 mb-8">
+              Let&apos;s design your home—beautifully, intelligently, and on time.
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="bg-premiumGold hover:bg-premiumGold/90 text-royalNavy text-lg px-8 py-6 font-semibold"
+            >
+              <Link href="/contact">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20 bg-royalBlue text-white">
+      {/* Optional Micro-copy Footer */}
+      <section className="py-12 bg-marbleWhite border-t border-premiumGold/20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-              Our Mission
-            </h2>
-            <p className="text-xl text-blue-100 leading-relaxed">
-              To deliver exceptional construction services that exceed client expectations while maintaining the highest standards of quality, safety, and professionalism. We are committed to building lasting relationships and creating spaces that inspire and endure.
-            </p>
-          </motion.div>
+          <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-sm md:text-base text-steelGray">
+            <span className="font-medium italic">Built for life. Finished for joy.</span>
+            <span className="text-premiumGold">•</span>
+            <span className="font-medium italic">Details you can feel.</span>
+            <span className="text-premiumGold">•</span>
+            <span className="font-medium italic">{siteConfig.location}&apos;s design-build, perfected.</span>
+            <span className="text-premiumGold">•</span>
+            <span className="font-medium italic">Precision in every line. Warmth in every room.</span>
+          </div>
         </div>
       </section>
     </>
   );
 }
-
