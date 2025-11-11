@@ -1,11 +1,11 @@
 import { FullWidthBg } from "@/components/full-width-bg";
-import { Portfolio3D } from "@/components/portfolio3d";
+import { PortfolioSimple } from "@/components/portfolio-simple";
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: `Explore our portfolio of completed projects including residential homes, luxury villas, interior designs, and renovations in ${siteConfig.location}.`,
+  description: `Explore our portfolio of completed projects including residential homes and interior designs in ${siteConfig.location}.`,
 };
 
 export default function PortfolioPage() {
@@ -27,7 +27,7 @@ export default function PortfolioPage() {
       </FullWidthBg>
 
       {/* Portfolio Content */}
-      <Portfolio3D />
+      <PortfolioSimple />
     </div>
   );
 }
