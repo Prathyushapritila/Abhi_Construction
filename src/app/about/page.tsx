@@ -13,7 +13,7 @@ export default function AboutPage() {
     <div className="min-h-screen">
       {/* Hero Section with Background */}
       <FullWidthBg 
-        image={siteConfig.backgrounds.about}
+        image="/bg/about-hero.png"
         overlay={0.7}
       >
         <div className="text-center max-w-4xl mx-auto py-20">

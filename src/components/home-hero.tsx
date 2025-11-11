@@ -62,23 +62,14 @@ export function HomeHero() {
         }}
       />
 
-      {/* Content - Text overlay and button */}
+      {/* Content - Text is in the image, button positioned after "create timeless spaces" */}
       <div className="container mx-auto px-4 relative z-10 text-center py-20">
         <div className="max-w-4xl mx-auto">
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-6 drop-shadow-2xl">
-            Building More Than Homes{" "}
-            <span className="text-premiumGold">—</span>{" "}
-            <span className="text-premiumGold">Crafting Legacies.</span>
-          </h1>
+          {/* Empty space for text that's in the background image */}
+          <div className="h-[40vh] md:h-[45vh]"></div>
           
-          {/* Subtext */}
-          <p className="text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed mb-8 max-w-2xl mx-auto drop-shadow-lg font-medium">
-            Where architecture, design, and innovation come together to create timeless spaces.
-          </p>
-          
-          {/* Button - After the text */}
-          <div className="mt-8">
+          {/* Button - Positioned after "create timeless spaces" text in the image */}
+          <div className="mt-4 md:mt-6">
             <Button
               asChild
               size="lg"
