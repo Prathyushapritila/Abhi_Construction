@@ -111,12 +111,14 @@ export function ServicesDetail() {
                     transition={{ duration: 0.6 }}
                     className={!isEven ? "lg:order-2" : ""}
                   >
-                    <div className="relative h-96 rounded-lg overflow-hidden border-2 border-premiumGold/20">
+                    <div className={`relative h-96 rounded-lg overflow-hidden border-2 border-premiumGold/20 ${service.title === "Project Management & Permit Assistance" ? "bg-slate-100" : ""}`}>
                       <Image
                         src={service.image}
                         alt={service.title}
                         fill
-                        className="object-cover"
+                        className={service.title === "Project Management & Permit Assistance" 
+                          ? "object-contain" 
+                          : "object-cover"}
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
                     </div>
