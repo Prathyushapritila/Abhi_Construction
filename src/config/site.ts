@@ -55,10 +55,10 @@ export const siteConfig = {
   // Contact
   contact: {
     name: "Srikanth Pritila",
-    phone: "96661512956",
+    phone: "9666155296",
     email: "abhiconstructions@gmail.com",
     address: "Hyderabad, Telangana, India",
-    whatsapp: "96661512956",
+    whatsapp: "9666155296",
   },
 };
 

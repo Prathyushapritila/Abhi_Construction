@@ -241,10 +241,10 @@ export function AboutContent() {
                 >
                   <Card className="h-full border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 bg-white dark:bg-slate-800 hover:shadow-2xl relative overflow-hidden">
                     {/* Background Image - Bright and elegant with readable text overlay */}
-                    <div className="absolute inset-0 opacity-25 dark:opacity-35 group-hover:opacity-35 dark:group-hover:opacity-45 transition-opacity duration-300">
+                    <div className="absolute inset-0 opacity-25 dark:opacity-35 group-hover:opacity-35 dark:group-hover:opacity-45 transition-opacity duration-300 z-0">
                       <Image
-                        src={pillar.image}
-                        alt={pillar.title}
+                        src={pillar.fallback || pillar.image}
+                        alt=""
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -271,15 +271,15 @@ export function AboutContent() {
                     
                     <CardHeader className="pb-4 relative z-10">
                       <motion.div 
-                        className="h-16 w-16 rounded-xl bg-gradient-to-br from-premiumGold/20 to-royalBlue/20 dark:from-premiumGold/30 dark:to-royalBlue/30 flex items-center justify-center mb-4 group-hover:from-premiumGold/40 group-hover:to-royalBlue/40 transition-all duration-300 shadow-lg"
+                        className="h-16 w-16 rounded-xl bg-gradient-to-br from-premiumGold/20 to-royalBlue/20 dark:from-premiumGold/30 dark:to-royalBlue/30 flex items-center justify-center mb-4 group-hover:from-premiumGold/40 group-hover:to-royalBlue/40 transition-all duration-300 shadow-lg relative z-20"
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <Icon className="h-8 w-8 text-royalBlue dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-300" />
+                        <Icon className="h-8 w-8 text-royalBlue dark:text-premiumGold dark:group-hover:text-premiumGold group-hover:text-premiumGold transition-colors duration-300" />
                       </motion.div>
-                      <CardTitle className="text-xl font-heading text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-300 relative z-10">{pillar.title}</CardTitle>
+                      <h3 className="text-xl font-heading font-bold text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-300 relative z-20 mb-2">{pillar.title}</h3>
                       {pillar.highlight && (
-                        <p className="text-sm font-semibold text-premiumGold mt-2 relative z-10">{pillar.highlight}</p>
+                        <p className="text-sm font-semibold text-premiumGold mt-2 relative z-20">{pillar.highlight}</p>
                       )}
                     </CardHeader>
                     <CardContent className="relative z-10">
