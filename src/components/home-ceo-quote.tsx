@@ -38,15 +38,19 @@ export function HomeCEOQuote() {
             </div>
           </motion.div>
 
-          {/* Quote Text - No quotes */}
+          {/* Quote Text - With opening/closing quotes, no middle quote */}
           <motion.blockquote
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-royalNavy dark:text-slate-100 leading-relaxed mb-8 text-center"
+            className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-royalNavy dark:text-slate-100 leading-relaxed mb-8 text-center relative"
           >
-            We don&apos;t just build houses—we craft homes where families create memories. Every project is a partnership, every detail matters, and every client&apos;s vision becomes our mission.
+            <span className="absolute -left-4 md:-left-8 top-0 text-premiumGold text-6xl md:text-8xl font-serif opacity-30 dark:opacity-40">&ldquo;</span>
+            <span className="relative z-10">
+              We don&apos;t just build houses—we craft homes where families create memories. Every project is a partnership, every detail matters, and every client&apos;s vision becomes our mission.
+            </span>
+            <span className="absolute -right-4 md:-right-8 bottom-0 text-premiumGold text-6xl md:text-8xl font-serif opacity-30 dark:opacity-40">&rdquo;</span>
           </motion.blockquote>
 
           {/* Author Info - Right Corner - No Box */}

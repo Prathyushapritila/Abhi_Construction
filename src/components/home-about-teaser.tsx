@@ -15,13 +15,13 @@ function CountUp({
   value: string; 
   duration?: number;
 }) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1); // Start from 1 instead of 0
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
   
   // Extract number and suffix from value string (e.g., "30+" -> 30, "+")
   const match = value.match(/(\d+)(.*)/);
-  const end = match ? parseInt(match[1], 10) : 0;
+  const end = match ? parseInt(match[1], 10) : 1;
   const suffix = match ? match[2] : "";
   
   useEffect(() => {
@@ -61,7 +61,8 @@ function CountUp({
       
       // Ease out cubic for smooth deceleration
       const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-      const currentCount = Math.floor(easeOutCubic * end);
+      // Map from 1 to end (not 0 to end)
+      const currentCount = Math.max(1, Math.floor(1 + (easeOutCubic * (end - 1))));
       
       setCount(currentCount);
       

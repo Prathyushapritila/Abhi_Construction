@@ -105,7 +105,7 @@ export function Footer() {
         <div className="pt-6 border-t border-premiumGold/30">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-marbleWhite/60 text-center md:text-left">
-              &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+              &copy; 2017-{new Date().getFullYear()} {siteConfig.name}. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               <a
