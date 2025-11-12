@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Paintbrush } from "lucide-react";
+import { Building2, Paintbrush, Wrench, Hammer, Paintbrush2, Square, HardHat, Plug, Settings } from "lucide-react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { siteConfig } from "@/config/site";
@@ -11,13 +11,13 @@ const services = [
     icon: Building2,
     title: "Residential",
     description: "Custom home construction and residential projects",
-    href: "/portfolio?category=Residential",
+    href: "/portfolio?category=residential",
   },
   {
     icon: Paintbrush,
     title: "Interiors",
     description: "Interior design and turnkey fit-out services",
-    href: "/portfolio?category=Interiors",
+    href: "/portfolio?category=interiors",
   },
 ];
 
@@ -68,10 +68,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Main Services Grid */}
       <section className="py-20 bg-marbleWhite dark:bg-slate-900">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -118,6 +118,78 @@ export default function ServicesPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Handyman Services Section */}
+      <section className="py-20 bg-stone-50 dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-royalNavy dark:text-premiumGold">
+              Handyman Services
+            </h2>
+            <p className="text-lg md:text-xl text-steelGray dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              We answer your emails & phone calls, show up on time, get the job done quickly, clean up behind ourselves, and employ only reliable, friendly skilled professionals.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {[
+              { icon: Paintbrush2, name: "Painting" },
+              { icon: Square, name: "Tiling" },
+              { icon: Hammer, name: "Carpentry" },
+              { icon: Wrench, name: "Assembly" },
+              { icon: HardHat, name: "Plastering" },
+              { icon: Settings, name: "Plasterboards" },
+              { icon: Building2, name: "Exterior" },
+              { icon: Plug, name: "Installation" },
+              { icon: Wrench, name: "Repairs" },
+              { icon: Settings, name: "Maintenance" },
+              { icon: Building2, name: "Commercial" },
+              { icon: Plug, name: "Plumbing & Electrical" },
+            ].map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <motion.div
+                  key={service.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  whileHover={{ y: -4, scale: 1.05 }}
+                >
+                  <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 border-premiumGold/20 hover:border-premiumGold dark:border-premiumGold/30 dark:hover:border-premiumGold group cursor-pointer bg-white dark:bg-slate-800 text-center">
+                    <CardContent className="p-6">
+                      <div className="h-12 w-12 rounded-lg bg-royalBlue/10 dark:bg-royalBlue/20 flex items-center justify-center mb-3 mx-auto group-hover:bg-premiumGold/20 dark:group-hover:bg-premiumGold/30 transition-all duration-200">
+                        <Icon className="h-6 w-6 text-royalBlue dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-200" />
+                      </div>
+                      <p className="text-sm font-semibold text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-200">
+                        {service.name}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-center mt-12"
+          >
+            <p className="text-base text-steelGray dark:text-slate-300 mb-4">
+              All prices will be given upon request. Please <Link href="/contact" className="text-premiumGold hover:underline font-semibold">contact us</Link> for further information.
+            </p>
+          </motion.div>
         </div>
       </section>
     </div>

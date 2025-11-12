@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { Home, Paintbrush, Building2 } from "lucide-react";
+import { Home, Paintbrush, Building2, Building } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-type PortfolioCategory = "all" | "residential" | "interiors";
+type PortfolioCategory = "residential" | "villas" | "commercial" | "interiors";
 
 interface PortfolioItem {
   id: string;
@@ -31,7 +31,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: "2",
     title: "Luxury Villa",
-    category: "residential",
+    category: "villas",
     description: "Contemporary villa with stunning architecture and landscaping.",
     image: "/projects/living-room-1.jpeg",
     location: "Hyderabad",
@@ -68,11 +68,28 @@ const portfolioItems: PortfolioItem[] = [
     image: "/projects/alcove-1.jpeg",
     location: "Hyderabad",
   },
+  {
+    id: "7",
+    title: "Luxury Villa Estate",
+    category: "villas",
+    description: "Spacious villa with modern amenities and elegant design.",
+    image: "/projects/interior-2.jpeg",
+    location: "Hyderabad",
+  },
+  {
+    id: "8",
+    title: "Commercial Office Space",
+    category: "commercial",
+    description: "Modern commercial office with professional design and layout.",
+    image: "/projects/interior-1.jpeg",
+    location: "Hyderabad",
+  },
 ];
 
 const categories: { value: PortfolioCategory; label: string; icon: typeof Home }[] = [
-  { value: "all", label: "All Projects", icon: Building2 },
   { value: "residential", label: "Residential", icon: Home },
+  { value: "villas", label: "Villas", icon: Building2 },
+  { value: "commercial", label: "Commercial", icon: Building },
   { value: "interiors", label: "Interiors", icon: Paintbrush },
 ];
 
@@ -81,15 +98,17 @@ export function PortfolioSimple() {
   const categoryParam = searchParams?.get("category");
   
   // Map URL category to component category (case-insensitive)
-  const getCategoryFromParam = (param: string | null): PortfolioCategory => {
-    if (!param) return "all";
+  const getCategoryFromParam = (param: string | null): PortfolioCategory | null => {
+    if (!param) return null;
     const lowerParam = param.toLowerCase();
     if (lowerParam === "residential") return "residential";
+    if (lowerParam === "villas") return "villas";
+    if (lowerParam === "commercial") return "commercial";
     if (lowerParam === "interiors") return "interiors";
-    return "all";
+    return null;
   };
 
-  const [activeCategory, setActiveCategory] = useState<PortfolioCategory>(
+  const [activeCategory, setActiveCategory] = useState<PortfolioCategory | null>(
     getCategoryFromParam(categoryParam)
   );
 
@@ -97,13 +116,14 @@ export function PortfolioSimple() {
   useEffect(() => {
     if (categoryParam) {
       setActiveCategory(getCategoryFromParam(categoryParam));
+    } else {
+      setActiveCategory(null);
     }
   }, [categoryParam]);
 
-  const filteredItems =
-    activeCategory === "all"
-      ? portfolioItems
-      : portfolioItems.filter((item) => item.category === activeCategory);
+  const filteredItems = activeCategory
+    ? portfolioItems.filter((item) => item.category === activeCategory)
+    : portfolioItems;
 
   return (
     <section id="portfolio" className="py-20 bg-marbleWhite dark:bg-slate-900">
@@ -131,7 +151,7 @@ export function PortfolioSimple() {
               <Button
                 key={category.value}
                 variant={activeCategory === category.value ? "default" : "outline"}
-                onClick={() => setActiveCategory(category.value)}
+                onClick={() => setActiveCategory(activeCategory === category.value ? null : category.value)}
                 className={`flex items-center space-x-2 ${
                   activeCategory === category.value
                     ? "bg-royalBlue text-white border-royalBlue hover:bg-royalBlue/90"
