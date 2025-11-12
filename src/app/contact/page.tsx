@@ -1,4 +1,3 @@
-import { FullWidthBg } from "@/components/full-width-bg";
 import { ContactContent } from "@/components/contact-content";
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
@@ -11,20 +10,25 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Background */}
-      <FullWidthBg 
-        image={siteConfig.backgrounds.contact}
-        overlay={0.7}
-      >
-        <div className="text-center max-w-4xl mx-auto py-20">
-          <h1 className="text-5xl md:text-7xl font-heading font-bold text-marbleWhite mb-6">
-            {siteConfig.sections.contact.title}
-          </h1>
-          <p className="text-xl md:text-2xl text-marbleWhite/90 leading-relaxed">
-            {siteConfig.sections.contact.subtitle}
-          </p>
+      {/* Hero Section */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-stone-100 via-marbleWhite to-stone-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] blueprint-grid" />
+        {/* Decorative circles */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-royalBlue/5 dark:bg-royalBlue/10 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-royalNavy dark:text-premiumGold">
+              {siteConfig.sections.contact.title}
+            </h1>
+            <p className="text-xl md:text-2xl text-steelGray dark:text-slate-300 leading-relaxed">
+              {siteConfig.sections.contact.subtitle}
+            </p>
+          </div>
         </div>
-      </FullWidthBg>
+      </section>
 
       {/* Contact Section */}
       <ContactContent />

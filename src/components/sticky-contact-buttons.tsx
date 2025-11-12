@@ -9,7 +9,7 @@ export function StickyContactButtons() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
       <Link
-        href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+        href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
         target="_blank"
         rel="noopener noreferrer"
         className="focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 rounded-full"
@@ -23,9 +23,9 @@ export function StickyContactButtons() {
         </Button>
       </Link>
       <Link
-        href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+        href={`tel:+91${siteConfig.contact.phone.replace(/\s/g, "")}`}
         className="focus:outline-none focus:ring-2 focus:ring-royalBlue focus:ring-offset-2 rounded-full md:hidden"
-        aria-label={`Call us at ${siteConfig.contact.phone}`}
+        aria-label={`Call us at +91 ${siteConfig.contact.phone}`}
       >
         <Button
           size="lg"

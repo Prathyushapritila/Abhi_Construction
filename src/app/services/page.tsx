@@ -5,6 +5,7 @@ import { Building2, Paintbrush, Wrench, Hammer, Paintbrush2, Square, HardHat, Pl
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { siteConfig } from "@/config/site";
+import Image from "next/image";
 
 const services = [
   {
@@ -33,23 +34,46 @@ export default function ServicesPage() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-royalBlue/5 dark:bg-royalBlue/10 rounded-full blur-3xl" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1
+          <div className="max-w-5xl mx-auto">
+            {/* Hero Content Box */}
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl md:text-7xl font-heading font-bold mb-6 text-royalNavy dark:text-premiumGold"
+              className="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-2xl p-8 md:p-12 border-2 border-premiumGold/20 dark:border-premiumGold/30 shadow-2xl overflow-hidden"
             >
-              Services
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl md:text-2xl text-steelGray dark:text-slate-300 leading-relaxed"
-            >
-              Explore our construction and design services
-            </motion.p>
+              {/* Background Image - Residential & Interiors */}
+              <div className="absolute inset-0 opacity-20 dark:opacity-15 z-0">
+                <Image
+                  src="/projects/interior-1.jpeg"
+                  alt="Residential and Interiors"
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/70 to-white/80 dark:from-slate-800/80 dark:via-slate-800/70 dark:to-slate-800/80" />
+              </div>
+              
+              {/* Content */}
+              <div className="relative z-10 text-center">
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="text-5xl md:text-7xl font-heading font-bold mb-6 text-royalNavy dark:text-premiumGold"
+                >
+                  Services
+                </motion.h1>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-xl md:text-2xl text-steelGray dark:text-slate-300 leading-relaxed"
+                >
+                  Explore our construction and design services
+                </motion.p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

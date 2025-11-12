@@ -17,19 +17,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    content: siteConfig.contact.phone,
-    href: `tel:${siteConfig.contact.phone.replace(/\s/g, "")}`,
+    content: `+91 ${siteConfig.contact.phone}`,
+    href: `tel:+91${siteConfig.contact.phone.replace(/\s/g, "")}`,
   },
   {
     icon: Mail,
     title: "Email",
     content: siteConfig.contact.email,
     href: `mailto:${siteConfig.contact.email}`,
-  },
-  {
-    icon: Clock,
-    title: "Business Hours",
-    content: "Monday - Saturday: 9:00 AM - 7:00 PM\nSunday: 10:00 AM - 5:00 PM",
   },
 ];
 
@@ -121,13 +116,13 @@ export function ContactContent() {
               <h3 className="font-heading font-semibold text-lg text-royalNavy mb-4">
                 Quick Contact
               </h3>
-              <Link href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer">
+              <Link href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`} target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   WhatsApp Us
                 </Button>
               </Link>
-              <Link href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}>
+              <Link href={`tel:+91${siteConfig.contact.phone.replace(/\s/g, "")}`}>
                 <Button variant="outline" className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white">
                   <Phone className="mr-2 h-5 w-5" />
                   Call Us Now
@@ -146,9 +141,9 @@ export function ContactContent() {
               <h3 className="font-heading font-semibold text-lg text-royalNavy mb-4">
                 Our Location
               </h3>
-              <div className="relative h-64 rounded-lg overflow-hidden border-2 border-premiumGold/20">
+              <div className="relative h-64 rounded-lg overflow-hidden border-2 border-premiumGold/20 bg-stone-100 dark:bg-slate-700">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.258317674889!2d78.4867!3d17.3850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzA2LjAiTiA3OMKwMjknMTIuMSJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.258317674889!2d78.486715315315!3d17.385044188045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -156,7 +151,7 @@ export function ContactContent() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="absolute inset-0"
-                  title="Abhi Constructions Location - Hyderabad"
+                  title="Abhi Constructions Location - Hyderabad, Telangana, India"
                 />
               </div>
               <p className="text-sm text-steelGray mt-2">

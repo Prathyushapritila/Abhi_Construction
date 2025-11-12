@@ -45,7 +45,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
@@ -109,7 +109,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-4">
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm"

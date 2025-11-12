@@ -18,7 +18,6 @@ const contactSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().min(10, "Please enter a valid phone number"),
   serviceType: z.string().min(1, "Please select a service type"),
-  budget: z.string().min(1, "Please select a budget range"),
   message: z.string().min(10, "Message must be at least 10 characters"),
   consent: z.boolean().refine((val) => val === true, "You must agree to be contacted"),
 });
@@ -161,29 +160,6 @@ export function ContactForm() {
             {errors.serviceType && (
               <p id="serviceType-error" className="text-sm text-destructive" role="alert">
                 {errors.serviceType.message}
-              </p>
-            )}
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="budget">
-              Budget Range <span className="text-destructive">*</span>
-            </Label>
-            <Select onValueChange={(value) => setValue("budget", value)}>
-              <SelectTrigger id="budget" aria-invalid={errors.budget ? "true" : "false"}>
-                <SelectValue placeholder="Select budget range" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="under-500k">Under ₹50 Lakhs</SelectItem>
-                <SelectItem value="500k-1m">₹50 Lakhs - ₹1 Crore</SelectItem>
-                <SelectItem value="1m-2m">₹1 Crore - ₹2 Crores</SelectItem>
-                <SelectItem value="2m-5m">₹2 Crores - ₹5 Crores</SelectItem>
-                <SelectItem value="over-5m">Over ₹5 Crores</SelectItem>
-              </SelectContent>
-            </Select>
-            {errors.budget && (
-              <p id="budget-error" className="text-sm text-destructive" role="alert">
-                {errors.budget.message}
               </p>
             )}
           </div>
