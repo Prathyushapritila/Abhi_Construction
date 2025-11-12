@@ -5,11 +5,15 @@
 @layer base {
   :root {
     --header-h: 80px;
+    /* Logo colors: Orange/Gold + Gray */
+    --logo-orange: 255 140 0; /* #FF8C00 - Orange from logo */
+    --logo-gold: 255 215 0; /* #FFD700 - Gold from logo */
+    --logo-gray: 128 128 128; /* #808080 - Gray from logo */
     --royal-navy: 11 28 61;
     --royal-blue: 10 77 173;
     --marble-white: 247 247 249;
     --steel-gray: 79 79 79;
-    --premium-gold: 212 175 55;
+    --premium-gold: 255 140 0; /* Changed to match logo orange */
     
     --background: 247 247 249;
     --foreground: 11 28 61;
@@ -23,7 +27,7 @@
     --secondary-foreground: 11 28 61;
     --muted: 241 245 249;
     --muted-foreground: 100 116 139;
-    --accent: 212 175 55;
+    --accent: 255 140 0; /* Logo orange */
     --accent-foreground: 11 28 61;
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
@@ -46,7 +50,7 @@
     --secondary-foreground: 248 250 252;
     --muted: 51 65 85;
     --muted-foreground: 148 163 184;
-    --accent: 212 175 55;
+    --accent: 255 140 0; /* Logo orange */
     --accent-foreground: 15 23 42;
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
@@ -76,21 +80,23 @@
 }
 
 @layer utilities {
-  /* Logo Background Watermark */
+  /* Logo Background Watermark - Visible on all pages */
   .logo-watermark {
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.03;
+    opacity: 0.04;
     background-image: url('/logo.png');
-    background-size: contain;
+    background-size: 60% auto;
     background-position: center;
     background-repeat: no-repeat;
+    mix-blend-mode: multiply;
   }
   
   .dark .logo-watermark {
-    opacity: 0.05;
+    opacity: 0.06;
+    mix-blend-mode: screen;
   }
   
   .blueprint-grid {

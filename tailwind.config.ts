@@ -13,9 +13,12 @@ const config: Config = {
             royalNavy: "#0B1C3D",
             royalBlue: "#0A4DAD",
             marbleWhite: "#F7F7F9",
-            steelGray: "#4F4F4F",
-            premiumGold: "#D4AF37",
-            gold: "#D4AF37",
+            steelGray: "#808080", /* Updated to match logo gray */
+            premiumGold: "#FF8C00", /* Updated to match logo orange */
+            gold: "#FFD700", /* Logo gold */
+            logoOrange: "#FF8C00",
+            logoGold: "#FFD700",
+            logoGray: "#808080",
             // Keep amber for backward compatibility but prefer gold
             amber: {
               50: "#fffbeb",

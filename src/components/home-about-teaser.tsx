@@ -67,21 +67,27 @@ export function HomeAboutTeaser() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-premiumGold/20 dark:border-premiumGold/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  whileHover={{ scale: 1.1, y: -10 }}
+                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border-2 border-premiumGold/30 dark:border-premiumGold/40 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group"
                 >
                   <div className="flex flex-col items-center text-center">
-                    <div className="h-16 w-16 rounded-full bg-premiumGold/10 dark:bg-premiumGold/20 flex items-center justify-center mb-4">
-                      <Icon className="h-8 w-8 text-premiumGold" />
-                    </div>
-                    <p 
-                      className="text-3xl md:text-4xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-2"
+                    <motion.div 
+                      className="h-16 w-16 rounded-full bg-premiumGold/10 dark:bg-premiumGold/20 flex items-center justify-center mb-4 group-hover:bg-premiumGold/20 dark:group-hover:bg-premiumGold/30 transition-all duration-300"
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <Icon className="h-8 w-8 text-premiumGold group-hover:scale-125 transition-transform duration-300" />
+                    </motion.div>
+                    <motion.p 
+                      className="text-3xl md:text-4xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-2 group-hover:text-premiumGold transition-colors duration-300"
                       style={{
                         textShadow: "0 0 20px rgba(212, 175, 55, 0.4)",
                       }}
+                      whileHover={{ scale: 1.2 }}
                     >
                       {stat.value}
-                    </p>
-                    <p className="text-sm text-steelGray dark:text-slate-400">
+                    </motion.p>
+                    <p className="text-sm text-steelGray dark:text-slate-400 group-hover:text-premiumGold transition-colors duration-300">
                       {stat.label}
                     </p>
                   </div>

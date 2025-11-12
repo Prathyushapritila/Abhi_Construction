@@ -22,11 +22,8 @@ export function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-sm text-marbleWhite/80 leading-relaxed italic">
+            <p className="text-sm text-marbleWhite/90 leading-relaxed italic font-medium">
               {siteConfig.logo.caption}
-            </p>
-            <p className="text-sm text-marbleWhite/80 leading-relaxed">
-              {siteConfig.tagline}
             </p>
             <div className="flex space-x-4 pt-2">
               <a

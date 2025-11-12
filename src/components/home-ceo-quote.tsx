@@ -38,22 +38,18 @@ export function HomeCEOQuote() {
             </div>
           </motion.div>
 
-          {/* Quote Text */}
+          {/* Quote Text - No quotes */}
           <motion.blockquote
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-royalNavy dark:text-slate-100 leading-relaxed mb-8 text-center relative"
+            className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-royalNavy dark:text-slate-100 leading-relaxed mb-8 text-center"
           >
-            <span className="absolute -left-4 md:-left-8 top-0 text-premiumGold text-6xl md:text-8xl font-serif opacity-30 dark:opacity-40">&ldquo;</span>
-            <span className="relative z-10">
-              We don&apos;t just build houses—we craft homes where families create memories. Every project is a partnership, every detail matters, and every client&apos;s vision becomes our mission.
-            </span>
-            <span className="absolute -right-4 md:-right-8 bottom-0 text-premiumGold text-6xl md:text-8xl font-serif opacity-30 dark:opacity-40">&rdquo;</span>
+            We don&apos;t just build houses—we craft homes where families create memories. Every project is a partnership, every detail matters, and every client&apos;s vision becomes our mission.
           </motion.blockquote>
 
-          {/* Author Info - Right Corner */}
+          {/* Author Info - Right Corner - No Box */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +57,7 @@ export function HomeCEOQuote() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-12 flex justify-end"
           >
-            <div className="inline-block px-8 py-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-lg border border-premiumGold/20 dark:border-premiumGold/30 shadow-lg text-right">
+            <div className="text-right">
               <p className="text-xl font-semibold text-royalBlue dark:text-premiumGold mb-1">
                 Srikanth Pritila
               </p>
