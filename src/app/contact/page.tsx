@@ -20,10 +20,10 @@ export default function ContactPage() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-royalNavy dark:text-premiumGold">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy dark:text-premiumGold px-2 sm:px-0">
               {siteConfig.sections.contact.title}
             </h1>
-            <p className="text-xl md:text-2xl text-steelGray dark:text-slate-300 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-steelGray dark:text-slate-300 leading-relaxed px-2 sm:px-0">
               {siteConfig.sections.contact.subtitle}
             </p>
           </div>

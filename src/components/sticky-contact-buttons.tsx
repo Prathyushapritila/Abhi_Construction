@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 
 export function StickyContactButtons() {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-2 sm:gap-3">
       <Link
         href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
         target="_blank"
@@ -17,9 +17,10 @@ export function StickyContactButtons() {
       >
         <Button
           size="lg"
-          className="h-14 w-14 rounded-full bg-green-600 hover:bg-green-700 text-white shadow-lg hover:scale-110 transition-transform"
+          className="h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-green-600 hover:bg-green-700 text-white shadow-lg hover:scale-110 transition-transform"
+          aria-label="WhatsApp - Contact us on WhatsApp"
         >
-          <MessageCircle className="h-6 w-6" />
+          <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
         </Button>
       </Link>
       <Link
@@ -30,9 +31,10 @@ export function StickyContactButtons() {
         <Button
           size="lg"
           variant="outline"
-          className="h-14 w-14 rounded-full border-2 border-royalBlue bg-white text-royalBlue hover:bg-royalBlue hover:text-white shadow-lg hover:scale-110 transition-transform"
+          className="h-12 w-12 sm:h-14 sm:w-14 rounded-full border-2 border-royalBlue bg-white text-royalBlue hover:bg-royalBlue hover:text-white shadow-lg hover:scale-110 transition-transform"
+          aria-label={`Call us at +91 ${siteConfig.contact.phone}`}
         >
-          <Phone className="h-6 w-6" />
+          <Phone className="h-5 w-5 sm:h-6 sm:w-6" />
         </Button>
       </Link>
     </div>

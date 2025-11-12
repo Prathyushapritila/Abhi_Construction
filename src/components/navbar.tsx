@@ -39,7 +39,7 @@ export function Navbar() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-white/10 bg-white/95 dark:bg-royalNavy/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/90 dark:supports-[backdrop-filter]:bg-royalNavy/85 shadow-lg">
-      <nav className="container mx-auto flex h-24 md:h-28 items-center justify-between px-4 md:px-6" aria-label="Main navigation">
+      <nav className="container mx-auto flex h-20 sm:h-22 md:h-24 lg:h-28 items-center justify-between px-3 sm:px-4 md:px-6 max-w-7xl" aria-label="Main navigation">
         <Link href="/" className="flex items-center space-x-3 group">
           <div className="relative">
             {/* Enhanced glow effect - no white box */}
@@ -48,14 +48,15 @@ export function Navbar() {
               alt="Abhi Constructions & Innovations"
               width={240}
               height={120}
-              className="h-20 md:h-24 lg:h-28 w-auto object-contain brightness-115 contrast-115 saturate-115 drop-shadow-2xl relative z-10 transition-all duration-300 group-hover:brightness-130 group-hover:scale-110 filter"
+              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[180px] sm:max-w-[200px] md:max-w-[240px] object-contain brightness-115 contrast-115 saturate-115 drop-shadow-2xl relative z-10 transition-all duration-300 group-hover:brightness-130 group-hover:scale-110 filter"
               priority
+              sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
             />
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
           {navItems.map((item) => (
             <Link
               key={item.href}

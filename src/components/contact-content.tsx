@@ -32,9 +32,9 @@ export function ContactContent() {
   return (
     <>
       <StickyContactButtons />
-      <section className="py-20 bg-marbleWhite">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <section className="py-12 sm:py-16 md:py-20 bg-marbleWhite">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <ContactForm />
@@ -64,7 +64,7 @@ export function ContactContent() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-heading font-bold mb-6 text-royalNavy">
+              <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy">
                 Contact Information
               </h2>
             </motion.div>
@@ -141,7 +141,7 @@ export function ContactContent() {
               <h3 className="font-heading font-semibold text-lg text-royalNavy mb-4">
                 Our Location
               </h3>
-              <div className="relative h-64 rounded-lg overflow-hidden border-2 border-premiumGold/20 bg-stone-100 dark:bg-slate-700">
+              <div className="relative h-48 sm:h-56 md:h-64 rounded-lg overflow-hidden border-2 border-premiumGold/20 bg-stone-100 dark:bg-slate-700">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.258317674889!2d78.486715315315!3d17.385044188045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
                   width="100%"

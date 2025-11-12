@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 export function Footer() {
   return (
     <footer className="border-t border-premiumGold/30 bg-royalNavy text-marbleWhite">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 py-8 sm:py-10 md:py-12 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-8">
           {/* Company Info */}
           <div className="space-y-4">
@@ -18,7 +18,8 @@ export function Footer() {
                   alt="Abhi Constructions & Innovations"
                   width={180}
                   height={90}
-                  className="h-16 md:h-18 w-auto object-contain brightness-110 contrast-110 saturate-110 drop-shadow-md relative z-10 transition-all duration-300 group-hover:brightness-125 group-hover:scale-105"
+                  className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto max-w-[140px] sm:max-w-[160px] md:max-w-[180px] object-contain brightness-110 contrast-110 saturate-110 drop-shadow-md relative z-10 transition-all duration-300 group-hover:brightness-125 group-hover:scale-105"
+                  sizes="(max-width: 640px) 140px, (max-width: 768px) 160px, 180px"
                 />
               </div>
             </Link>

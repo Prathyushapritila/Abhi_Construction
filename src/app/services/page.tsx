@@ -40,7 +40,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-2xl p-8 md:p-12 border-2 border-premiumGold/20 dark:border-premiumGold/30 shadow-2xl overflow-hidden"
+              className="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 border-2 border-premiumGold/20 dark:border-premiumGold/30 shadow-2xl overflow-hidden"
             >
               {/* Background Image - Residential & Interiors */}
               <div className="absolute inset-0 opacity-20 dark:opacity-15 z-0">
@@ -60,7 +60,7 @@ export default function ServicesPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-5xl md:text-7xl font-heading font-bold mb-6 text-royalNavy dark:text-premiumGold"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy dark:text-premiumGold"
                 >
                   Services
                 </motion.h1>
@@ -68,7 +68,7 @@ export default function ServicesPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-xl md:text-2xl text-steelGray dark:text-slate-300 leading-relaxed"
+                  className="text-base sm:text-lg md:text-xl lg:text-2xl text-steelGray dark:text-slate-300 leading-relaxed px-2 sm:px-0"
                 >
                   Explore our construction and design services
                 </motion.p>
@@ -99,7 +99,7 @@ export default function ServicesPage() {
                       transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
                       className="h-full"
                     >
-                      <Card className="h-full min-h-[400px] hover:shadow-2xl transition-all duration-250 border-2 border-premiumGold/30 hover:border-premiumGold dark:border-premiumGold/40 dark:hover:border-premiumGold group cursor-pointer bg-gradient-to-br from-white via-white to-stone-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
+                      <Card className="h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] hover:shadow-2xl transition-all duration-250 border-2 border-premiumGold/30 hover:border-premiumGold dark:border-premiumGold/40 dark:hover:border-premiumGold group cursor-pointer bg-gradient-to-br from-white via-white to-stone-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
                         {/* Animated background gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/0 via-premiumGold/5 to-premiumGold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
                         <div className="absolute inset-0 bg-gradient-to-tl from-royalBlue/0 via-royalBlue/5 to-royalBlue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
@@ -116,7 +116,7 @@ export default function ServicesPage() {
                           >
                             <Icon className="h-12 w-12 text-royalBlue dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-250" />
                           </motion.div>
-                          <CardTitle className="text-4xl md:text-5xl font-heading font-bold text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-250 mb-4">
+                          <CardTitle className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-250 mb-3 sm:mb-4">
                             {service.title}
                           </CardTitle>
                         </CardHeader>
@@ -166,7 +166,7 @@ export default function ServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
             {[
               { icon: Paintbrush2, name: "Painting" },
               { icon: Square, name: "Tiling" },
