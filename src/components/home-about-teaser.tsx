@@ -81,7 +81,7 @@ export function HomeAboutTeaser() {
                     <motion.p 
                       className="text-3xl md:text-4xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-2 group-hover:text-premiumGold transition-colors duration-300"
                       style={{
-                        textShadow: "0 0 20px rgba(212, 175, 55, 0.4)",
+                        textShadow: "0 0 20px rgba(255, 140, 0, 0.4)",
                       }}
                       whileHover={{ scale: 1.2 }}
                     >
