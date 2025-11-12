@@ -179,12 +179,62 @@ export function HomeAboutTeaser() {
             })}
           </motion.div>
 
+          {/* Testimonials */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="mb-12"
+          >
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-center mb-8 text-royalNavy dark:text-premiumGold">
+              What Our Satisfied Clients Are Saying
+            </h3>
+            <p className="text-base md:text-lg text-steelGray dark:text-slate-300 text-center mb-8 max-w-3xl mx-auto leading-relaxed">
+              At Abhi Constructions and Innovations, we&apos;re all about building strong bonding and relationships with our clients. We hear you from getting feedback in order to improve and progress in our service.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  name: "K P Rajendra",
+                  content: "Abhi Constructions and Innovations proved to my expectations in every way. The team was professional, efficient, and delivered thier best results. I recommend them for any construction or interior design projects. all the best.",
+                },
+                {
+                  name: "Krishna C Kammari",
+                  content: "I'm so happy to have worked with Abhi Constructions and Innovations. Their attention to minute detailings and perseverance to quality is impressive. I would definitely work with them again if I start my next new house.",
+                },
+                {
+                  name: "Arun",
+                  content: "Working with Abhi Constructions and Innovations was delightful. They made the construction process seamless and stress-free, and the end result was absouletly amazing.",
+                },
+              ].map((testimonial, index) => (
+                <motion.div
+                  key={testimonial.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                  className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-xl p-6 border-2 border-premiumGold/30 dark:border-premiumGold/40 shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <p className="text-sm md:text-base text-steelGray dark:text-slate-300 leading-relaxed italic mb-4">
+                    &ldquo;{testimonial.content}&rdquo;
+                  </p>
+                  <div className="pt-4 border-t border-premiumGold/20 dark:border-premiumGold/30">
+                    <p className="font-heading font-semibold text-royalNavy dark:text-premiumGold">
+                      {testimonial.name}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
             className="text-center"
           >
             <Button

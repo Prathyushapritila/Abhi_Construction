@@ -1,7 +1,6 @@
 import { HomeHero } from "@/components/home-hero";
 import { HomeCEOQuote } from "@/components/home-ceo-quote";
 import { HomeAboutTeaser } from "@/components/home-about-teaser";
-import { TestimonialsSection } from "@/components/testimonials-section";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
@@ -16,7 +15,6 @@ export default function HomePage() {
       <HomeHero />
       <HomeCEOQuote />
       <HomeAboutTeaser />
-      <TestimonialsSection />
     </>
   );
 }
