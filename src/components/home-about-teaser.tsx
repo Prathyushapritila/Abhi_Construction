@@ -26,6 +26,9 @@ function CountUp({
   
   useEffect(() => {
     // Intersection Observer to trigger animation when in view
+    const currentRef = ref.current;
+    if (!currentRef) return;
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -37,14 +40,10 @@ function CountUp({
       { threshold: 0.5 }
     );
     
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(currentRef);
     
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      observer.unobserve(currentRef);
     };
   }, [isVisible]);
   
