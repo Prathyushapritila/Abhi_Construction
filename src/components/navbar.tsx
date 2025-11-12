@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -43,7 +44,7 @@ export function Navbar() {
           <div className="relative">
             {/* Enhanced glow effect - no white box */}
             <Image
-              src="/logo.png"
+              src={siteConfig.logo.image}
               alt="Abhi Constructions & Innovations"
               width={240}
               height={120}
