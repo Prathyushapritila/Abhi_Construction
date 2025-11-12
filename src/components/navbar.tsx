@@ -44,7 +44,7 @@ export function Navbar() {
             {/* Enhanced glow effect */}
             <div className="absolute inset-0 blur-2xl opacity-40 group-hover:opacity-60 transition-opacity bg-premiumGold/30 rounded-xl" />
             <Image
-              src="/projects/logo.jpeg"
+              src="/logo.png"
               alt="Abhi Constructions & Innovations"
               width={240}
               height={120}

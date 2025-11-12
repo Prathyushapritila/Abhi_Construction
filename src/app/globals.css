@@ -76,6 +76,23 @@
 }
 
 @layer utilities {
+  /* Logo Background Watermark */
+  .logo-watermark {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.03;
+    background-image: url('/logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .dark .logo-watermark {
+    opacity: 0.05;
+  }
+  
   .blueprint-grid {
     background-image: 
       linear-gradient(rgba(10, 77, 173, 0.06) 1px, transparent 1px),

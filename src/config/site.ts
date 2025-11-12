@@ -25,7 +25,7 @@ export const siteConfig = {
     hero: {
       headline: "Construction In Hyderabad",
       subheadline: "Meeting your residential and commercial needs",
-      description: "Abhi Constructions & Innovations is a dedicated team of skilled workers, that has been building and renovating homes, historical buildings, and commercial sites in Hyderabad, India for the last 10+ years.",
+      description: "Abhi Constructions & Innovations is a dedicated team of skilled workers, that has been building and renovating homes, historical buildings, and commercial sites in Hyderabad, India since 2017.",
     },
     about: {
       title: "About",
@@ -47,18 +47,24 @@ export const siteConfig = {
   
   // Stats
   stats: {
-    projects: "20+",
-    interiors: "20+",
-    years: "5+",
+    residential: "5+",
+    interiors: "30+",
+    years: "8",
   },
   
   // Contact
   contact: {
     name: "Srikanth Pritila",
     phone: "9666155296",
-    email: "abhiconstructions@gmail.com",
+    email: "abhignaninnovations@gmail.com",
     address: "Hyderabad, Telangana, India",
     whatsapp: "9666155296",
+  },
+  
+  // Logo
+  logo: {
+    image: "/logo.png",
+    caption: "experience the way of living",
   },
 };
 

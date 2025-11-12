@@ -53,15 +53,15 @@ export function HomeCEOQuote() {
             <span className="absolute -right-4 md:-right-8 bottom-0 text-premiumGold text-6xl md:text-8xl font-serif opacity-30 dark:opacity-40">&rdquo;</span>
           </motion.blockquote>
 
-          {/* Author Info */}
+          {/* Author Info - Right Corner */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-12 text-center"
+            className="mt-12 flex justify-end"
           >
-            <div className="inline-block px-8 py-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-lg border border-premiumGold/20 dark:border-premiumGold/30 shadow-lg">
+            <div className="inline-block px-8 py-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-lg border border-premiumGold/20 dark:border-premiumGold/30 shadow-lg text-right">
               <p className="text-xl font-semibold text-royalBlue dark:text-premiumGold mb-1">
                 Srikanth Pritila
               </p>

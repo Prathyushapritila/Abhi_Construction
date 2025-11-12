@@ -7,14 +7,14 @@ export function Footer() {
   return (
     <footer className="border-t border-premiumGold/30 bg-royalNavy text-marbleWhite">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-8">
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="inline-block group">
               <div className="relative">
                 <div className="absolute inset-0 blur-lg opacity-20 group-hover:opacity-30 transition-opacity bg-premiumGold/20 rounded-lg" />
                 <Image
-                  src="/projects/logo.jpeg"
+                  src={siteConfig.logo.image}
                   alt="Abhi Constructions & Innovations"
                   width={180}
                   height={90}
@@ -22,86 +22,41 @@ export function Footer() {
                 />
               </div>
             </Link>
+            <p className="text-sm text-marbleWhite/80 leading-relaxed italic">
+              {siteConfig.logo.caption}
+            </p>
             <p className="text-sm text-marbleWhite/80 leading-relaxed">
               {siteConfig.tagline}
             </p>
             <div className="flex space-x-4 pt-2">
               <a
-                href="#"
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
-                className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
+              <a
+                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="h-5 w-5" />
+              </a>
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-heading font-semibold mb-4 text-premiumGold text-lg">Quick Links</h4>
-            <ul className="space-y-2.5">
-              <li>
-                <Link
-                  href="/"
-                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/portfolio"
-                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm inline-block"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
           </div>
 
           {/* Contact Info */}
@@ -145,13 +100,6 @@ export function Footer() {
                   {siteConfig.contact.email}
                 </a>
               </li>
-              <li className="flex items-start space-x-3">
-                <Clock className="h-4 w-4 text-premiumGold mt-1 flex-shrink-0" />
-                <div className="text-sm text-marbleWhite/80">
-                  <p className="font-medium text-marbleWhite">Mon-Sat: 9AM-7PM</p>
-                  <p>Sun: 10AM-5PM</p>
-                </div>
-              </li>
             </ul>
           </div>
         </div>
@@ -162,7 +110,7 @@ export function Footer() {
             <p className="text-sm text-marbleWhite/60 text-center md:text-left">
               &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
             </p>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
               <a
                 href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                 target="_blank"

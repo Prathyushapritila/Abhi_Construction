@@ -133,7 +133,7 @@ export function AboutContent() {
             className="text-center"
           >
             <p className="text-lg md:text-xl font-semibold">
-              <strong>{siteConfig.stats.projects}</strong> homes delivered, <strong>{siteConfig.stats.interiors}</strong> interior projects, <strong>{siteConfig.stats.years}</strong> years of trusted execution across {siteConfig.location}
+              <strong>{siteConfig.stats.residential}</strong> residential completed, <strong>{siteConfig.stats.interiors}</strong> interior projects, <strong>{siteConfig.stats.years}</strong> years of trusted execution across {siteConfig.location}
             </p>
           </motion.div>
         </div>

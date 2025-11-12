@@ -55,7 +55,7 @@ export function HomeAboutTeaser() {
             className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
           >
             {[
-              { icon: Building2, value: siteConfig.stats.projects, label: "Projects Completed" },
+              { icon: Building2, value: siteConfig.stats.residential, label: "Residential Completed" },
               { icon: Users, value: siteConfig.stats.interiors, label: "Interiors Delivered" },
               { icon: Award, value: siteConfig.stats.years, label: "Years of Excellence" },
             ].map((stat, index) => {
