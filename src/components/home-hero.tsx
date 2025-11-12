@@ -20,7 +20,7 @@ export function HomeHero() {
 
   return (
     <section 
-      className="relative min-h-[85vh] sm:min-h-[90vh] w-full flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100vh] sm:min-h-[90vh] w-full flex items-center justify-center overflow-hidden"
     >
       {/* Background Image Layer with brightness filter */}
       <div 
@@ -34,11 +34,12 @@ export function HomeHero() {
           alt="Modern luxury villa exterior"
           fill
           priority
-          className="object-cover"
+          className="object-contain sm:object-cover md:object-cover"
           quality={90}
           style={{
-            objectPosition: "center",
+            objectPosition: "center top",
           }}
+          sizes="100vw"
         />
       </div>
 
@@ -63,13 +64,13 @@ export function HomeHero() {
       />
 
       {/* Content - Text is in the image, button positioned after "create timeless spaces" */}
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-10 text-center py-12 sm:py-16 md:py-20 max-w-7xl">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-10 text-center py-8 sm:py-12 md:py-16 lg:py-20 max-w-7xl">
         <div className="max-w-4xl mx-auto">
-          {/* Empty space for text that's in the background image */}
-          <div className="h-[35vh] sm:h-[40vh] md:h-[45vh]"></div>
+          {/* Empty space for text that's in the background image - more space on mobile to show full text */}
+          <div className="h-[50vh] sm:h-[40vh] md:h-[45vh]"></div>
           
           {/* Button - Positioned after "create timeless spaces" text in the image */}
-          <div className="mt-4 md:mt-6">
+          <div className="mt-6 sm:mt-4 md:mt-6">
             <Button
               asChild
               size="lg"
