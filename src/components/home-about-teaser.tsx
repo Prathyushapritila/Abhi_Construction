@@ -151,26 +151,28 @@ export function HomeAboutTeaser() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border-2 border-premiumGold/30 dark:border-premiumGold/40 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group hover:scale-105 hover:-translate-y-2"
+                  whileHover={{ scale: 1.05, y: -8 }}
+                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border-2 border-premiumGold/30 dark:border-premiumGold/40 shadow-lg hover:shadow-2xl transition-all duration-200 cursor-pointer group"
                 >
                   <div className="flex flex-col items-center text-center">
                     <motion.div 
-                      className="h-16 w-16 rounded-full bg-premiumGold/10 dark:bg-premiumGold/20 flex items-center justify-center mb-4 group-hover:bg-premiumGold/20 dark:group-hover:bg-premiumGold/30 transition-all duration-300"
+                      className="h-16 w-16 rounded-full bg-premiumGold/10 dark:bg-premiumGold/20 flex items-center justify-center mb-4 group-hover:bg-premiumGold/20 dark:group-hover:bg-premiumGold/30 transition-all duration-200"
                       whileHover={{ rotate: 360, scale: 1.1 }}
-                      transition={{ duration: 0.6 }}
+                      transition={{ duration: 0.4 }}
                     >
-                      <Icon className="h-8 w-8 text-premiumGold group-hover:scale-125 transition-transform duration-300" />
+                      <Icon className="h-8 w-8 text-premiumGold group-hover:scale-125 transition-transform duration-200" />
                     </motion.div>
                     <motion.p 
-                      className="text-3xl md:text-4xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-2 group-hover:text-premiumGold transition-colors duration-300"
+                      className="text-3xl md:text-4xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-2 group-hover:text-premiumGold transition-colors duration-200"
                       style={{
                         textShadow: "0 0 20px rgba(255, 140, 0, 0.4)",
                       }}
                       whileHover={{ scale: 1.15 }}
+                      transition={{ duration: 0.2 }}
                     >
                       <CountUp value={stat.value} duration={1200} />
                     </motion.p>
-                    <p className="text-sm text-steelGray dark:text-slate-400 group-hover:text-premiumGold transition-colors duration-300 font-medium">
+                    <p className="text-sm text-steelGray dark:text-slate-400 group-hover:text-premiumGold transition-colors duration-200 font-medium">
                       {stat.label}
                     </p>
                   </div>
@@ -214,13 +216,14 @@ export function HomeAboutTeaser() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                  className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-xl p-6 border-2 border-premiumGold/30 dark:border-premiumGold/40 shadow-lg hover:shadow-xl transition-all duration-300"
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-xl p-6 border-2 border-premiumGold/30 dark:border-premiumGold/40 shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer group h-full flex flex-col"
                 >
-                  <p className="text-sm md:text-base text-steelGray dark:text-slate-300 leading-relaxed italic mb-4">
+                  <p className="text-sm md:text-base text-steelGray dark:text-slate-300 leading-relaxed italic mb-4 flex-grow">
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
-                  <div className="pt-4 border-t border-premiumGold/20 dark:border-premiumGold/30">
-                    <p className="font-heading font-semibold text-royalNavy dark:text-premiumGold">
+                  <div className="pt-4 border-t border-premiumGold/20 dark:border-premiumGold/30 group-hover:border-premiumGold dark:group-hover:border-premiumGold transition-colors duration-200">
+                    <p className="font-heading font-semibold text-royalNavy dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-200">
                       {testimonial.name}
                     </p>
                   </div>

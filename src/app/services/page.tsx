@@ -25,14 +25,14 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-royalNavy via-royalBlue to-royalNavy text-marbleWhite">
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-marbleWhite via-stone-50 to-marbleWhite dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl md:text-7xl font-heading font-bold mb-6"
+              className="text-5xl md:text-7xl font-heading font-bold mb-6 text-royalNavy dark:text-premiumGold"
             >
               Services
             </motion.h1>
@@ -40,7 +40,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl md:text-2xl text-marbleWhite/90 leading-relaxed"
+              className="text-xl md:text-2xl text-steelGray dark:text-slate-300 leading-relaxed"
             >
               Explore our construction and design services
             </motion.p>
@@ -83,24 +83,36 @@ export default function ServicesPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Link href={service.href}>
-                    <Card className="h-full hover:shadow-2xl transition-all duration-300 border-2 hover:border-premiumGold/50 group hover:scale-[1.02] cursor-pointer bg-white dark:bg-slate-800">
-                      <CardHeader>
-                        <div className="h-16 w-16 rounded-lg bg-royalBlue/10 dark:bg-royalBlue/20 flex items-center justify-center mb-4 group-hover:bg-premiumGold/20 dark:group-hover:bg-premiumGold/30 transition-all duration-300">
-                          <Icon className="h-8 w-8 text-royalBlue dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-300" />
-                        </div>
-                        <CardTitle className="text-2xl font-heading text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-300">
-                          {service.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-base text-steelGray dark:text-slate-300 mb-4">
-                          {service.description}
-                        </p>
-                        <span className="inline-block text-royalNavy dark:text-premiumGold font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
-                          View Projects →
-                        </span>
-                      </CardContent>
-                    </Card>
+                    <motion.div
+                      whileHover={{ y: -8, scale: 1.03 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Card className="h-full hover:shadow-2xl transition-all duration-200 border-2 border-premiumGold/20 hover:border-premiumGold dark:border-premiumGold/30 dark:hover:border-premiumGold group cursor-pointer bg-white dark:bg-slate-800 relative overflow-hidden">
+                        {/* Hover gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                        
+                        <CardHeader className="relative z-10">
+                          <motion.div 
+                            className="h-16 w-16 rounded-lg bg-royalBlue/10 dark:bg-royalBlue/20 flex items-center justify-center mb-4 group-hover:bg-premiumGold/20 dark:group-hover:bg-premiumGold/30 transition-all duration-200"
+                            whileHover={{ rotate: 360, scale: 1.1 }}
+                            transition={{ duration: 0.4 }}
+                          >
+                            <Icon className="h-8 w-8 text-royalBlue dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-200" />
+                          </motion.div>
+                          <CardTitle className="text-2xl font-heading text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-200">
+                            {service.title}
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent className="relative z-10">
+                          <p className="text-base text-steelGray dark:text-slate-300 mb-4">
+                            {service.description}
+                          </p>
+                          <span className="inline-block text-royalNavy dark:text-premiumGold font-semibold text-sm group-hover:translate-x-2 transition-transform duration-200">
+                            View Projects →
+                          </span>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
                   </Link>
                 </motion.div>
               );

@@ -411,71 +411,21 @@ export function AboutContent() {
         </div>
       </section>
 
-      {/* Social Proof Badges with Testimonials */}
-      <section className="py-20 bg-royalNavy text-marbleWhite">
+      {/* Social Proof Badges */}
+      <section className="py-16 bg-royalNavy text-marbleWhite">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center space-y-6 mb-12"
+            className="text-center space-y-6"
           >
             <div className="flex flex-wrap justify-center gap-6 text-lg md:text-xl">
               <p className="font-semibold">On time. Fixed scope. Clear pricing.</p>
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-lg md:text-xl">
               <p className="font-semibold">98% client referral rate</p>
-            </div>
-          </motion.div>
-
-          {/* Testimonials */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-6xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-center mb-8">
-              What Our Satisfied Clients Are Saying
-            </h2>
-            <p className="text-lg text-marbleWhite/80 max-w-3xl mx-auto text-center mb-12 leading-relaxed">
-              At Abhi Constructions and Innovations, we&apos;re all about building strong bonding and relationships with our clients. We hear you from getting feedback in order to improve and progress in our service. Insight some of our testimonials given from our profound clients, and contact us to submit your own.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  name: "K P Rajendra",
-                  content: "Abhi Constructions and Innovations proved to my expectations in every way. The team was professional, efficient, and delivered thier best results. I recommend them for any construction or interior design projects. all the best.",
-                },
-                {
-                  name: "Krishna C Kammari",
-                  content: "I'm so happy to have worked with Abhi Constructions and Innovations. Their attention to minute detailings and perseverance to quality is impressive. I would definitely work with them again if I start my next new house.",
-                },
-                {
-                  name: "Arun",
-                  content: "Working with Abhi Constructions and Innovations was delightful. They made the construction process seamless and stress-free, and the end result was absouletly amazing.",
-                },
-              ].map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className="bg-royalNavy/50 border-2 border-premiumGold/30 rounded-lg p-6"
-                >
-                  <p className="text-base text-marbleWhite/90 leading-relaxed italic mb-4">
-                    &ldquo;{testimonial.content}&rdquo;
-                  </p>
-                  <div className="pt-4 border-t border-premiumGold/20">
-                    <p className="font-heading font-semibold text-premiumGold text-lg">
-                      {testimonial.name}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
             </div>
           </motion.div>
         </div>
