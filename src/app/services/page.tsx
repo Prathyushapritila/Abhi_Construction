@@ -25,8 +25,14 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-marbleWhite via-stone-50 to-marbleWhite dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-stone-100 via-marbleWhite to-stone-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] blueprint-grid" />
+        {/* Decorative circles */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-royalBlue/5 dark:bg-royalBlue/10 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -48,26 +54,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* What We Do Section */}
-      <section className="py-16 bg-marbleWhite dark:bg-slate-900">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-royalNavy dark:text-premiumGold">
-              What We Do
-            </h2>
-            <p className="text-lg md:text-xl text-steelGray dark:text-slate-300 max-w-2xl mx-auto">
-              Comprehensive construction and design solutions
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Main Services Grid */}
       <section className="py-20 bg-marbleWhite dark:bg-slate-900">
         <div className="container mx-auto px-4">
@@ -86,27 +72,27 @@ export default function ServicesPage() {
                   <Link href={service.href}>
                     <motion.div
                       whileHover={{ y: -12, scale: 1.02 }}
-                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
                       className="h-full"
                     >
-                      <Card className="h-full min-h-[400px] hover:shadow-2xl transition-all duration-300 border-2 border-premiumGold/30 hover:border-premiumGold dark:border-premiumGold/40 dark:hover:border-premiumGold group cursor-pointer bg-gradient-to-br from-white via-white to-stone-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
+                      <Card className="h-full min-h-[400px] hover:shadow-2xl transition-all duration-250 border-2 border-premiumGold/30 hover:border-premiumGold dark:border-premiumGold/40 dark:hover:border-premiumGold group cursor-pointer bg-gradient-to-br from-white via-white to-stone-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
                         {/* Animated background gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/0 via-premiumGold/5 to-premiumGold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        <div className="absolute inset-0 bg-gradient-to-tl from-royalBlue/0 via-royalBlue/5 to-royalBlue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/0 via-premiumGold/5 to-premiumGold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
+                        <div className="absolute inset-0 bg-gradient-to-tl from-royalBlue/0 via-royalBlue/5 to-royalBlue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
                         
                         {/* Decorative corner accents */}
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-premiumGold/5 rounded-bl-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-royalBlue/5 rounded-tr-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-premiumGold/5 rounded-bl-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-royalBlue/5 rounded-tr-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
                         
                         <CardHeader className="relative z-10 p-8">
                           <motion.div 
-                            className="h-24 w-24 rounded-2xl bg-gradient-to-br from-royalBlue/20 to-premiumGold/20 dark:from-royalBlue/30 dark:to-premiumGold/30 flex items-center justify-center mb-6 group-hover:from-premiumGold/30 group-hover:to-royalBlue/30 dark:group-hover:from-premiumGold/40 dark:group-hover:to-royalBlue/40 transition-all duration-300 shadow-xl group-hover:shadow-2xl"
+                            className="h-24 w-24 rounded-2xl bg-gradient-to-br from-royalBlue/20 to-premiumGold/20 dark:from-royalBlue/30 dark:to-premiumGold/30 flex items-center justify-center mb-6 group-hover:from-premiumGold/30 group-hover:to-royalBlue/30 dark:group-hover:from-premiumGold/40 dark:group-hover:to-royalBlue/40 transition-all duration-250 shadow-xl group-hover:shadow-2xl"
                             whileHover={{ rotate: 360, scale: 1.15 }}
-                            transition={{ duration: 0.6 }}
+                            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
                           >
-                            <Icon className="h-12 w-12 text-royalBlue dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-300" />
+                            <Icon className="h-12 w-12 text-royalBlue dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-250" />
                           </motion.div>
-                          <CardTitle className="text-4xl md:text-5xl font-heading font-bold text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-300 mb-4">
+                          <CardTitle className="text-4xl md:text-5xl font-heading font-bold text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-250 mb-4">
                             {service.title}
                           </CardTitle>
                         </CardHeader>
@@ -115,14 +101,14 @@ export default function ServicesPage() {
                             {service.description}
                           </p>
                           <motion.span 
-                            className="inline-flex items-center gap-2 text-royalNavy dark:text-premiumGold font-bold text-base md:text-lg group-hover:text-premiumGold transition-colors duration-300"
+                            className="inline-flex items-center gap-2 text-royalNavy dark:text-premiumGold font-bold text-base md:text-lg group-hover:text-premiumGold transition-colors duration-250"
                             whileHover={{ x: 8 }}
-                            transition={{ duration: 0.2 }}
+                            transition={{ duration: 0.2, ease: "easeOut" }}
                           >
                             View Projects
                             <motion.span
                               animate={{ x: [0, 4, 0] }}
-                              transition={{ duration: 1.5, repeat: Infinity }}
+                              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                             >
                               →
                             </motion.span>

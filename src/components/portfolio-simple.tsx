@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { Home, Paintbrush, Building2, Building } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 type PortfolioCategory = "residential" | "villas" | "commercial" | "interiors";
 
@@ -164,44 +163,37 @@ export function PortfolioSimple() {
           })}
         </div>
 
-        {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="h-full hover:shadow-xl transition-all duration-300 border-2 hover:border-premiumGold/50 group overflow-hidden bg-white dark:bg-slate-800">
-                <div className="relative h-64 w-full overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-heading font-semibold mb-2 text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-steelGray dark:text-slate-300 text-sm mb-4 line-clamp-2">
-                    {item.description}
-                  </p>
-                  {item.location && (
-                    <p className="text-xs text-premiumGold font-semibold mb-4">
-                      {item.location}
-                    </p>
-                  )}
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        {/* Minimal Portfolio - Just Categories */}
+        {activeCategory && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <p className="text-lg text-steelGray dark:text-slate-400">
+              Images from <span className="font-semibold text-premiumGold">{activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}</span> folder will be displayed here.
+            </p>
+            <p className="text-sm text-steelGray dark:text-slate-500 mt-2">
+              Please add images to <code className="bg-stone-100 dark:bg-slate-800 px-2 py-1 rounded">/public/{activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}/</code> folder
+            </p>
+          </motion.div>
+        )}
+        
+        {!activeCategory && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <p className="text-lg text-steelGray dark:text-slate-400">
+              Select a category above to view projects
+            </p>
+          </motion.div>
+        )}
       </div>
     </section>
   );
