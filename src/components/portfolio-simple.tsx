@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Home, Paintbrush, Building2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -76,7 +77,28 @@ const categories: { value: PortfolioCategory; label: string; icon: typeof Home }
 ];
 
 export function PortfolioSimple() {
-  const [activeCategory, setActiveCategory] = useState<PortfolioCategory>("all");
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams?.get("category");
+  
+  // Map URL category to component category (case-insensitive)
+  const getCategoryFromParam = (param: string | null): PortfolioCategory => {
+    if (!param) return "all";
+    const lowerParam = param.toLowerCase();
+    if (lowerParam === "residential") return "residential";
+    if (lowerParam === "interiors") return "interiors";
+    return "all";
+  };
+
+  const [activeCategory, setActiveCategory] = useState<PortfolioCategory>(
+    getCategoryFromParam(categoryParam)
+  );
+
+  // Update category when URL param changes
+  useEffect(() => {
+    if (categoryParam) {
+      setActiveCategory(getCategoryFromParam(categoryParam));
+    }
+  }, [categoryParam]);
 
   const filteredItems =
     activeCategory === "all"

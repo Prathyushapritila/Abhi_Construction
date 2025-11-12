@@ -41,8 +41,7 @@ export function Navbar() {
       <nav className="container mx-auto flex h-24 md:h-28 items-center justify-between px-4 md:px-6" aria-label="Main navigation">
         <Link href="/" className="flex items-center space-x-3 group">
           <div className="relative">
-            {/* Enhanced glow effect */}
-            <div className="absolute inset-0 blur-2xl opacity-40 group-hover:opacity-60 transition-opacity bg-premiumGold/30 rounded-xl" />
+            {/* Enhanced glow effect - no white box */}
             <Image
               src="/logo.png"
               alt="Abhi Constructions & Innovations"

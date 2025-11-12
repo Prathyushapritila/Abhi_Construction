@@ -103,33 +103,12 @@ export function ServicesDetail() {
             {/* Service Section */}
             <section className={`py-20 ${isEven ? "bg-marbleWhite" : "bg-stone-50"}`}>
               <div className="container mx-auto px-4">
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${!isEven ? "lg:flex-row-reverse" : ""}`}>
+                <div className="max-w-4xl mx-auto">
                   <motion.div
-                    initial={{ opacity: 0, x: isEven ? -20 : 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className={!isEven ? "lg:order-2" : ""}
-                  >
-                    <div className={`relative h-96 rounded-lg overflow-hidden border-2 border-premiumGold/20 ${service.title === "Project Management & Permit Assistance" ? "bg-slate-100" : ""}`}>
-                      <Image
-                        src={service.image}
-                        alt={service.title}
-                        fill
-                        className={service.title === "Project Management & Permit Assistance" 
-                          ? "object-contain" 
-                          : "object-cover"}
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                      />
-                    </div>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, x: isEven ? 20 : -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className={!isEven ? "lg:order-1" : ""}
                   >
                     <div className="h-16 w-16 rounded-lg bg-royalBlue/10 flex items-center justify-center mb-6">
                       <Icon className="h-8 w-8 text-royalBlue" />
@@ -162,26 +141,6 @@ export function ServicesDetail() {
               </div>
             </section>
 
-            {/* Full-Width Background Band Between Services (except last) */}
-            {index < services.length - 1 && (
-              <FullWidthBg 
-                image={siteConfig.backgrounds.services}
-                overlay={0.75}
-              >
-                <div className="py-12 text-center">
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <p className="text-2xl md:text-3xl font-heading font-semibold text-marbleWhite">
-                      Quality Construction Services in {siteConfig.location}
-                    </p>
-                  </motion.div>
-                </div>
-              </FullWidthBg>
-            )}
           </div>
         );
       })}

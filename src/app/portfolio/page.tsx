@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { FullWidthBg } from "@/components/full-width-bg";
 import { PortfolioSimple } from "@/components/portfolio-simple";
 import { siteConfig } from "@/config/site";
@@ -27,7 +28,9 @@ export default function PortfolioPage() {
       </FullWidthBg>
 
       {/* Portfolio Content */}
-      <PortfolioSimple />
+      <Suspense fallback={<div className="py-20 text-center">Loading portfolio...</div>}>
+        <PortfolioSimple />
+      </Suspense>
     </div>
   );
 }
