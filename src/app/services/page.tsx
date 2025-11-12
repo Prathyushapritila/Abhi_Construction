@@ -48,6 +48,26 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* What We Do Section */}
+      <section className="py-16 bg-marbleWhite dark:bg-slate-900">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-royalNavy dark:text-premiumGold">
+              What We Do
+            </h2>
+            <p className="text-lg md:text-xl text-steelGray dark:text-slate-300 max-w-2xl mx-auto">
+              Comprehensive construction and design solutions
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-20 bg-marbleWhite dark:bg-slate-900">
         <div className="container mx-auto px-4">
@@ -76,7 +96,7 @@ export default function ServicesPage() {
                         <p className="text-base text-steelGray dark:text-slate-300 mb-4">
                           {service.description}
                         </p>
-                        <span className="inline-block text-royalBlue dark:text-premiumGold font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                        <span className="inline-block text-royalNavy dark:text-premiumGold font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
                           View Projects →
                         </span>
                       </CardContent>
