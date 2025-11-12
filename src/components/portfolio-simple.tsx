@@ -19,72 +19,42 @@ interface PortfolioItem {
   location?: string;
 }
 
-const portfolioItems: PortfolioItem[] = [
-  {
-    id: "1",
-    title: "Modern Family Home",
-    category: "residential",
-    description: "Custom-built family home with open floor plan and premium finishes.",
-    image: "/projects/interior-1.jpeg",
-    location: "Hyderabad",
-  },
-  {
-    id: "2",
-    title: "Luxury Villa",
-    category: "villas",
-    description: "Contemporary villa with stunning architecture and landscaping.",
-    image: "/projects/living-room-1.jpeg",
-    location: "Hyderabad",
-  },
-  {
-    id: "3",
-    title: "Elegant Living Room",
-    category: "interiors",
-    description: "Sophisticated interior design with modern furniture and lighting.",
-    image: "/projects/kitchen-1.jpeg",
-    location: "Hyderabad",
-  },
-  {
-    id: "4",
-    title: "Premium Kitchen Design",
-    category: "interiors",
-    description: "High-end kitchen with custom cabinetry and premium appliances.",
-    image: "/projects/bathroom-1.jpeg",
-    location: "Hyderabad",
-  },
-  {
-    id: "5",
-    title: "Contemporary Residence",
-    category: "residential",
-    description: "Beautiful home featuring clean lines and natural materials.",
-    image: "/projects/dining-1.jpeg",
-    location: "Hyderabad",
-  },
-  {
-    id: "6",
-    title: "Master Bedroom Suite",
-    category: "interiors",
-    description: "Luxurious bedroom with elegant furnishings and warm ambiance.",
-    image: "/projects/alcove-1.jpeg",
-    location: "Hyderabad",
-  },
-  {
-    id: "7",
-    title: "Luxury Villa Estate",
-    category: "villas",
-    description: "Spacious villa with modern amenities and elegant design.",
-    image: "/projects/interior-2.jpeg",
-    location: "Hyderabad",
-  },
-  {
-    id: "8",
-    title: "Commercial Office Space",
-    category: "commercial",
-    description: "Modern commercial office with professional design and layout.",
-    image: "/projects/interior-1.jpeg",
-    location: "Hyderabad",
-  },
-];
+// Portfolio items organized by category folders
+// Images should be placed in: /public/Residential/, /public/Villas/, /public/Commercial/, /public/Interiors/
+const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
+  residential: [
+    "/Residential/1.jpg",
+    "/Residential/2.jpg",
+    "/Residential/3.jpg",
+    "/Residential/4.jpg",
+    "/Residential/5.jpg",
+    "/Residential/6.jpg",
+  ],
+  villas: [
+    "/Villas/1.jpg",
+    "/Villas/2.jpg",
+    "/Villas/3.jpg",
+    "/Villas/4.jpg",
+    "/Villas/5.jpg",
+    "/Villas/6.jpg",
+  ],
+  commercial: [
+    "/Commercial/1.jpg",
+    "/Commercial/2.jpg",
+    "/Commercial/3.jpg",
+    "/Commercial/4.jpg",
+    "/Commercial/5.jpg",
+    "/Commercial/6.jpg",
+  ],
+  interiors: [
+    "/Interiors/1.jpg",
+    "/Interiors/2.jpg",
+    "/Interiors/3.jpg",
+    "/Interiors/4.jpg",
+    "/Interiors/5.jpg",
+    "/Interiors/6.jpg",
+  ],
+};
 
 const categories: { value: PortfolioCategory; label: string; icon: typeof Home }[] = [
   { value: "residential", label: "Residential", icon: Home },
@@ -121,9 +91,38 @@ export function PortfolioSimple() {
     }
   }, [categoryParam]);
 
-  const filteredItems = activeCategory
-    ? portfolioItems.filter((item) => item.category === activeCategory)
-    : portfolioItems;
+  // Get items based on active category or show all
+  const getItemsForCategory = (category: PortfolioCategory | null) => {
+    if (!category) {
+      // Show all categories
+      const allItems: PortfolioItem[] = [];
+      Object.entries(portfolioItemsByCategory).forEach(([cat, images]) => {
+        images.forEach((image, index) => {
+          allItems.push({
+            id: `${cat}-${index + 1}`,
+            title: `${cat.charAt(0).toUpperCase() + cat.slice(1)} Project ${index + 1}`,
+            category: cat as PortfolioCategory,
+            description: `Premium ${cat} project showcasing our expertise and craftsmanship.`,
+            image,
+            location: "Hyderabad",
+          });
+        });
+      });
+      return allItems;
+    }
+    
+    // Show items for specific category
+    return portfolioItemsByCategory[category].map((image, index) => ({
+      id: `${category}-${index + 1}`,
+      title: `${category.charAt(0).toUpperCase() + category.slice(1)} Project ${index + 1}`,
+      category,
+      description: `Premium ${category} project showcasing our expertise and craftsmanship.`,
+      image,
+      location: "Hyderabad",
+    }));
+  };
+
+  const filteredItems = getItemsForCategory(activeCategory);
 
   return (
     <section id="portfolio" className="py-20 bg-marbleWhite dark:bg-slate-900">
