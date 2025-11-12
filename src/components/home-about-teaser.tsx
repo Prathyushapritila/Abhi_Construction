@@ -17,6 +17,7 @@ function CountUp({
 }) {
   const [count, setCount] = useState(1); // Start from 1 instead of 0
   const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
   
   // Extract number and suffix from value string (e.g., "30+" -> 30, "+")
@@ -32,20 +33,21 @@ function CountUp({
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !isVisible) {
+          if (entry.isIntersecting && !isVisible && !hasAnimated) {
             setIsVisible(true);
+            setHasAnimated(true);
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
     
     observer.observe(currentRef);
     
-    return () => {
-      observer.unobserve(currentRef);
-    };
-  }, [isVisible]);
+      return () => {
+        observer.unobserve(currentRef);
+      };
+  }, [isVisible, hasAnimated]);
   
   useEffect(() => {
     if (!isVisible) return;
@@ -60,8 +62,8 @@ function CountUp({
       
       // Ease out cubic for smooth deceleration
       const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-      // Map from 1 to end (not 0 to end)
-      const currentCount = Math.max(1, Math.floor(1 + (easeOutCubic * (end - 1))));
+      // Map from 1 to end (not 0 to end) - fast counting
+      const currentCount = Math.max(1, Math.min(end, Math.floor(1 + (easeOutCubic * (end - 1)))));
       
       setCount(currentCount);
       
@@ -149,13 +151,12 @@ export function HomeAboutTeaser() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                  whileHover={{ scale: 1.1, y: -10 }}
-                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border-2 border-premiumGold/30 dark:border-premiumGold/40 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group"
+                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border-2 border-premiumGold/30 dark:border-premiumGold/40 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group hover:scale-105 hover:-translate-y-2"
                 >
                   <div className="flex flex-col items-center text-center">
                     <motion.div 
                       className="h-16 w-16 rounded-full bg-premiumGold/10 dark:bg-premiumGold/20 flex items-center justify-center mb-4 group-hover:bg-premiumGold/20 dark:group-hover:bg-premiumGold/30 transition-all duration-300"
-                      whileHover={{ rotate: 360 }}
+                      whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
                     >
                       <Icon className="h-8 w-8 text-premiumGold group-hover:scale-125 transition-transform duration-300" />
@@ -165,11 +166,11 @@ export function HomeAboutTeaser() {
                       style={{
                         textShadow: "0 0 20px rgba(255, 140, 0, 0.4)",
                       }}
-                      whileHover={{ scale: 1.2 }}
+                      whileHover={{ scale: 1.15 }}
                     >
-                      <CountUp value={stat.value} duration={1500} />
+                      <CountUp value={stat.value} duration={1200} />
                     </motion.p>
-                    <p className="text-sm text-steelGray dark:text-slate-400 group-hover:text-premiumGold transition-colors duration-300">
+                    <p className="text-sm text-steelGray dark:text-slate-400 group-hover:text-premiumGold transition-colors duration-300 font-medium">
                       {stat.label}
                     </p>
                   </div>

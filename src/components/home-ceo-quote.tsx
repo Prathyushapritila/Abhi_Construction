@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
 
 export function HomeCEOQuote() {
   return (
@@ -24,21 +23,7 @@ export function HomeCEOQuote() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-5xl mx-auto"
         >
-          {/* Quote Icon with animation */}
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            whileInView={{ scale: 1, rotate: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center mb-8"
-          >
-            <div className="relative">
-              <Quote className="h-16 w-16 text-premiumGold dark:text-premiumGold/80" />
-              <div className="absolute inset-0 bg-premiumGold/20 dark:bg-premiumGold/10 rounded-full blur-xl" />
-            </div>
-          </motion.div>
-
-          {/* Quote Text - With opening/closing quotes, no middle quote */}
+          {/* Quote Text - With opening/closing quotes, no middle quote icon */}
           <motion.blockquote
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
