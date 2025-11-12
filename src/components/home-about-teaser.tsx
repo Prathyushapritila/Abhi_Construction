@@ -5,6 +5,88 @@ import { ArrowRight, Building2, Users, Award } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
+import { useState, useEffect, useRef } from "react";
+
+// CountUp component for animated numbers
+function CountUp({ 
+  value, 
+  duration = 1500 
+}: { 
+  value: string; 
+  duration?: number;
+}) {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+  
+  // Extract number and suffix from value string (e.g., "30+" -> 30, "+")
+  const match = value.match(/(\d+)(.*)/);
+  const end = match ? parseInt(match[1], 10) : 0;
+  const suffix = match ? match[2] : "";
+  
+  useEffect(() => {
+    // Intersection Observer to trigger animation when in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isVisible) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [isVisible]);
+  
+  useEffect(() => {
+    if (!isVisible) return;
+    
+    let startTime: number;
+    let animationFrame: number;
+    
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Ease out cubic for smooth deceleration
+      const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+      const currentCount = Math.floor(easeOutCubic * end);
+      
+      setCount(currentCount);
+      
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      } else {
+        setCount(end); // Ensure we end at exact value
+      }
+    };
+    
+    animationFrame = requestAnimationFrame(animate);
+    
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [isVisible, end, duration]);
+  
+  return (
+    <span ref={ref}>
+      {count}{suffix}
+    </span>
+  );
+}
 
 export function HomeAboutTeaser() {
   return (
@@ -85,7 +167,7 @@ export function HomeAboutTeaser() {
                       }}
                       whileHover={{ scale: 1.2 }}
                     >
-                      {stat.value}
+                      <CountUp value={stat.value} duration={1500} />
                     </motion.p>
                     <p className="text-sm text-steelGray dark:text-slate-400 group-hover:text-premiumGold transition-colors duration-300">
                       {stat.label}
