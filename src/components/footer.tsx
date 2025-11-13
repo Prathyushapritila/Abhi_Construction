@@ -49,10 +49,10 @@ export function Footer() {
                 href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
-                aria-label="WhatsApp"
+                className="text-marbleWhite/80 hover:text-green-400 dark:hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 rounded-sm p-1"
+                aria-label="WhatsApp - Contact us on WhatsApp"
               >
-                <MessageCircle className="h-5 w-5" />
+                <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.5} />
               </a>
             </div>
           </div>
@@ -113,9 +113,10 @@ export function Footer() {
                 href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm"
+                className="text-sm text-marbleWhite/90 hover:text-green-400 dark:hover:text-green-400 transition-colors flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded-sm font-medium"
+                aria-label="WhatsApp - Contact us on WhatsApp"
               >
-                <MessageCircle className="h-4 w-4" />
+                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.5} />
                 <span>WhatsApp</span>
               </a>
             </div>
