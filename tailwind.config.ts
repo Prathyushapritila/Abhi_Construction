@@ -10,11 +10,11 @@ const config: Config = {
   theme: {
     extend: {
           colors: {
-            royalNavy: "#0B1C3D",
-            royalBlue: "#0A4DAD",
+            royalNavy: "#404040", /* Dark gray - logo theme */
+            royalBlue: "#808080", /* Medium gray - logo theme */
             marbleWhite: "#F7F7F9",
-            steelGray: "#808080", /* Updated to match logo gray */
-            premiumGold: "#FF8C00", /* Updated to match logo orange */
+            steelGray: "#808080", /* Logo gray */
+            premiumGold: "#FF8C00", /* Logo orange */
             gold: "#FFD700", /* Logo gold */
             logoOrange: "#FF8C00",
             logoGold: "#FFD700",
@@ -38,7 +38,7 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0A4DAD",
+          DEFAULT: "#FF8C00", /* Logo orange */
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {

@@ -64,14 +64,11 @@ export function HomeHero() {
       />
 
       {/* Content - Text is in the image, button positioned after "create timeless spaces" */}
-      <div className="absolute inset-0 flex items-center justify-center z-10">
+      <div className="absolute inset-0 flex items-end justify-center z-10 pb-12 sm:pb-16 md:pb-20">
         <div className="container mx-auto px-3 sm:px-4 md:px-6 text-center max-w-7xl w-full">
           <div className="max-w-4xl mx-auto w-full">
-            {/* Empty space for text that's in the background image - reduced on mobile for better spacing */}
-            <div className="h-[35vh] sm:h-[38vh] md:h-[42vh]"></div>
-            
-            {/* Button - Positioned after "create timeless spaces" text in the image - closer on mobile */}
-            <div className="mt-1 sm:mt-3 md:mt-5">
+            {/* Button - Positioned at the bottom center after "create timeless spaces" text */}
+            <div className="mt-4 sm:mt-6 md:mt-8">
               <Button
                 asChild
                 size="lg"

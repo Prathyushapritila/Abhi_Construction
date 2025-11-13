@@ -298,7 +298,7 @@ export function AboutContent() {
                 Our Story
               </h2>
               <p className="text-lg md:text-xl text-steelGray dark:text-slate-300 leading-relaxed">
-                What started as a small, hands-on studio has grown into a full-service, design-led firm trusted by families across {siteConfig.location}. We&apos;ve learned that the best homes don&apos;t scream—they <strong className="text-royalNavy dark:text-premiumGold">whisper quality</strong>. Clean lines, honest materials, balanced light, crafted joinery—these are the quiet details that make every day feel exceptional.
+                Founded in 2017, Abhi Constructions & Innovations began as a local construction team in {siteConfig.location}. Over the years, we&apos;ve evolved into a comprehensive design-build firm serving families throughout the region. Our approach focuses on <strong className="text-royalNavy dark:text-premiumGold">thoughtful design and quality execution</strong>. We believe in creating spaces that reflect your lifestyle—where functionality meets aesthetics, and every detail is carefully considered to enhance daily living.
               </p>
             </motion.div>
           </div>
