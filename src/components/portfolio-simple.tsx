@@ -34,7 +34,6 @@ const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
     "/Villas/1.jpg",
     "/Villas/2.jpg",
     "/Villas/3.jpg",
-    "/Villas/4.jpg",
     "/Villas/5.jpg",
     "/Villas/6.jpg",
     "/Villas/7.jpg",
@@ -44,10 +43,8 @@ const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
     "/Commercial/2.jpg",
     "/Commercial/3.jpg",
     "/Commercial/4.jpg",
-    "/Commercial/5.jpg",
-    "/Commercial/6.jpg",
   ],
-  interiors: Array.from({ length: 30 }, (_, i) => `/Interiors/${i + 1}.jpg`),
+  interiors: Array.from({ length: 17 }, (_, i) => `/Interiors/${i + 1}.jpg`),
 };
 
 const categories: { value: PortfolioCategory; label: string; icon: typeof Home }[] = [
@@ -94,7 +91,7 @@ export function PortfolioSimple() {
         images.forEach((image, index) => {
           allItems.push({
             id: `${cat}-${index + 1}`,
-            title: `${cat.charAt(0).toUpperCase() + cat.slice(1)} Project ${index + 1}`,
+            title: `${cat.charAt(0).toUpperCase() + cat.slice(1)} Portfolio`,
             category: cat as PortfolioCategory,
             description: `Premium ${cat} project showcasing our expertise and craftsmanship.`,
             image,
@@ -105,10 +102,10 @@ export function PortfolioSimple() {
       return allItems;
     }
     
-    // Show items for specific category
+    // Show items for specific category - no project numbers
     return portfolioItemsByCategory[category].map((image, index) => ({
       id: `${category}-${index + 1}`,
-      title: `${category.charAt(0).toUpperCase() + category.slice(1)} Project ${index + 1}`,
+      title: `${category.charAt(0).toUpperCase() + category.slice(1)} Portfolio`,
       category,
       description: `Premium ${category} project showcasing our expertise and craftsmanship.`,
       image,
@@ -179,19 +176,24 @@ export function PortfolioSimple() {
               >
                 <Card className="h-full overflow-hidden border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 hover:shadow-2xl cursor-pointer bg-white dark:bg-slate-800">
                   <div className="relative aspect-square overflow-hidden bg-stone-100 dark:bg-slate-700">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                      loading={index < 12 ? "eager" : "lazy"}
-                      onError={(e) => {
-                        // Hide image if it fails to load
-                        const target = e.target as HTMLImageElement;
-                        target.style.display = 'none';
-                      }}
-                    />
+                    <div 
+                      className={`relative w-full h-full ${item.id === 'villas-5' ? 'transform rotate-90' : ''}`}
+                      style={item.id === 'villas-5' ? { transform: 'rotate(90deg)' } : {}}
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                        loading={index < 12 ? "eager" : "lazy"}
+                        onError={(e) => {
+                          // Hide image if it fails to load
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                        }}
+                      />
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                       <h3 className="text-white font-heading font-semibold text-lg mb-1">
@@ -202,12 +204,9 @@ export function PortfolioSimple() {
                       </p>
                     </div>
                   </div>
-                  <CardContent className="p-4">
-                    <h3 className="font-heading font-semibold text-lg mb-2 text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-steelGray dark:text-slate-400 line-clamp-2">
-                      {item.description}
+                  <CardContent className="p-2 sm:p-4">
+                    <p className="text-xs sm:text-sm text-steelGray dark:text-slate-400 text-center">
+                      {item.location}
                     </p>
                   </CardContent>
                 </Card>
