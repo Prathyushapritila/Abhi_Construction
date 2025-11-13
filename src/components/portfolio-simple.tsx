@@ -38,9 +38,6 @@ const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
     "/Villas/5.jpg",
     "/Villas/6.jpg",
     "/Villas/7.jpg",
-    "/Villas/8.jpg",
-    "/Villas/9.jpg",
-    "/Villas/10.jpg",
   ],
   commercial: [
     "/Commercial/1.jpg",
