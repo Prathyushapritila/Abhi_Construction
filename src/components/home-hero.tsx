@@ -37,7 +37,7 @@ export function HomeHero() {
           className="object-contain sm:object-cover md:object-cover"
           quality={90}
           style={{
-            objectPosition: "center top",
+            objectPosition: "center 20%",
           }}
           sizes="100vw"
         />

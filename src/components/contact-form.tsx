@@ -154,14 +154,49 @@ export function ContactForm() {
               >
                 <SelectValue placeholder="Select a service" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="custom-home">Custom Home Construction</SelectItem>
-                <SelectItem value="design-build">Design-Build (Architecture)</SelectItem>
-                <SelectItem value="interior-design">Interior Design & Styling</SelectItem>
-                <SelectItem value="renovation">Kitchen & Bath Renovations</SelectItem>
-                <SelectItem value="project-management">Project/Permit Management</SelectItem>
-                <SelectItem value="smart-sustainable">Smart & Sustainable Homes</SelectItem>
-                <SelectItem value="other">Other</SelectItem>
+              <SelectContent className="bg-white dark:bg-slate-800 border-premiumGold/30 dark:border-premiumGold/40">
+                <SelectItem 
+                  value="custom-home"
+                  className="focus:bg-premiumGold/20 focus:text-premiumGold dark:focus:bg-premiumGold/30 dark:focus:text-premiumGold text-royalNavy dark:text-slate-200 cursor-pointer"
+                >
+                  Custom Home Construction
+                </SelectItem>
+                <SelectItem 
+                  value="design-build"
+                  className="focus:bg-premiumGold/20 focus:text-premiumGold dark:focus:bg-premiumGold/30 dark:focus:text-premiumGold text-royalNavy dark:text-slate-200 cursor-pointer"
+                >
+                  Design-Build (Architecture)
+                </SelectItem>
+                <SelectItem 
+                  value="interior-design"
+                  className="focus:bg-premiumGold/20 focus:text-premiumGold dark:focus:bg-premiumGold/30 dark:focus:text-premiumGold text-royalNavy dark:text-slate-200 cursor-pointer"
+                >
+                  Interior Design & Styling
+                </SelectItem>
+                <SelectItem 
+                  value="renovation"
+                  className="focus:bg-premiumGold/20 focus:text-premiumGold dark:focus:bg-premiumGold/30 dark:focus:text-premiumGold text-royalNavy dark:text-slate-200 cursor-pointer"
+                >
+                  Kitchen & Bath Renovations
+                </SelectItem>
+                <SelectItem 
+                  value="project-management"
+                  className="focus:bg-premiumGold/20 focus:text-premiumGold dark:focus:bg-premiumGold/30 dark:focus:text-premiumGold text-royalNavy dark:text-slate-200 cursor-pointer"
+                >
+                  Project/Permit Management
+                </SelectItem>
+                <SelectItem 
+                  value="smart-sustainable"
+                  className="focus:bg-premiumGold/20 focus:text-premiumGold dark:focus:bg-premiumGold/30 dark:focus:text-premiumGold text-royalNavy dark:text-slate-200 cursor-pointer"
+                >
+                  Smart & Sustainable Homes
+                </SelectItem>
+                <SelectItem 
+                  value="other"
+                  className="focus:bg-premiumGold/20 focus:text-premiumGold dark:focus:bg-premiumGold/30 dark:focus:text-premiumGold text-royalNavy dark:text-slate-200 cursor-pointer"
+                >
+                  Other
+                </SelectItem>
               </SelectContent>
             </Select>
             {errors.serviceType && (
