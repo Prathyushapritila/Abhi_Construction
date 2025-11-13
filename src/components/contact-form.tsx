@@ -72,10 +72,10 @@ export function ContactForm() {
   };
 
   return (
-    <Card className="border-2">
+    <Card className="border-2 border-premiumGold/30 dark:border-premiumGold/40 bg-white dark:bg-slate-800 shadow-xl">
       <CardHeader>
-        <CardTitle className="text-2xl font-heading">Get In Touch</CardTitle>
-        <CardDescription>
+        <CardTitle className="text-2xl font-heading text-royalNavy dark:text-slate-100">Get In Touch</CardTitle>
+        <CardDescription className="text-steelGray dark:text-slate-300">
           Fill out the form below and we&apos;ll get back to you as soon as possible.
         </CardDescription>
       </CardHeader>
@@ -83,13 +83,14 @@ export function ContactForm() {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="name">
+              <Label htmlFor="name" className="text-royalNavy dark:text-slate-200 font-medium">
                 Name <span className="text-destructive">*</span>
               </Label>
               <Input
                 id="name"
                 {...register("name")}
                 placeholder="Your full name"
+                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200"
                 aria-invalid={errors.name ? "true" : "false"}
                 aria-describedby={errors.name ? "name-error" : undefined}
               />
@@ -101,7 +102,7 @@ export function ContactForm() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email">
+              <Label htmlFor="email" className="text-royalNavy dark:text-slate-200 font-medium">
                 Email <span className="text-destructive">*</span>
               </Label>
               <Input
@@ -109,6 +110,7 @@ export function ContactForm() {
                 type="email"
                 {...register("email")}
                 placeholder="your.email@example.com"
+                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200"
                 aria-invalid={errors.email ? "true" : "false"}
                 aria-describedby={errors.email ? "email-error" : undefined}
               />
@@ -121,7 +123,7 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="phone">
+            <Label htmlFor="phone" className="text-royalNavy dark:text-slate-200 font-medium">
               Phone <span className="text-destructive">*</span>
             </Label>
               <Input
@@ -129,6 +131,7 @@ export function ContactForm() {
                 type="tel"
                 {...register("phone")}
                 placeholder="+91 98765 43210"
+                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200"
                 aria-invalid={errors.phone ? "true" : "false"}
                 aria-describedby={errors.phone ? "phone-error" : undefined}
               />
@@ -140,11 +143,15 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="serviceType">
+            <Label htmlFor="serviceType" className="text-royalNavy dark:text-slate-200 font-medium">
               Service Type <span className="text-destructive">*</span>
             </Label>
             <Select onValueChange={(value) => setValue("serviceType", value)}>
-              <SelectTrigger id="serviceType" aria-invalid={errors.serviceType ? "true" : "false"}>
+              <SelectTrigger 
+                id="serviceType" 
+                aria-invalid={errors.serviceType ? "true" : "false"}
+                className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200"
+              >
                 <SelectValue placeholder="Select a service" />
               </SelectTrigger>
               <SelectContent>
@@ -165,7 +172,7 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message">
+            <Label htmlFor="message" className="text-royalNavy dark:text-slate-200 font-medium">
               Message <span className="text-destructive">*</span>
             </Label>
             <Textarea
@@ -173,6 +180,7 @@ export function ContactForm() {
               {...register("message")}
               placeholder="Tell us about your project..."
               rows={6}
+              className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200"
               aria-invalid={errors.message ? "true" : "false"}
               aria-describedby={errors.message ? "message-error" : undefined}
             />
@@ -190,10 +198,10 @@ export function ContactForm() {
               {...register("consent")}
               checked={watch("consent")}
               onChange={(e) => setValue("consent", e.target.checked)}
-              className="mt-1 h-4 w-4 rounded border-gray-300 text-royalBlue focus:ring-royalBlue"
+              className="mt-1 h-4 w-4 rounded border-royalNavy/30 dark:border-slate-600 text-premiumGold focus:ring-premiumGold focus:ring-2 focus:ring-offset-2 cursor-pointer"
               aria-invalid={errors.consent ? "true" : "false"}
             />
-            <Label htmlFor="consent" className="text-sm">
+            <Label htmlFor="consent" className="text-sm text-royalNavy dark:text-slate-200">
               I agree to be contacted by Abhi Constructions regarding my inquiry{" "}
               <span className="text-destructive">*</span>
             </Label>
@@ -232,7 +240,7 @@ export function ContactForm() {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-royalBlue hover:bg-royalBlue/90 text-white"
+            className="w-full bg-premiumGold hover:bg-premiumGold/90 text-royalNavy font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
             size="lg"
           >
             {isSubmitting ? (
