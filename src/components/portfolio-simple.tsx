@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Home, Paintbrush, Building2, Building } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 type PortfolioCategory = "residential" | "villas" | "commercial" | "interiors";
 
@@ -36,6 +37,10 @@ const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
     "/Villas/4.jpg",
     "/Villas/5.jpg",
     "/Villas/6.jpg",
+    "/Villas/7.jpg",
+    "/Villas/8.jpg",
+    "/Villas/9.jpg",
+    "/Villas/10.jpg",
   ],
   commercial: [
     "/Commercial/1.jpg",
@@ -52,6 +57,30 @@ const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
     "/Interiors/4.jpg",
     "/Interiors/5.jpg",
     "/Interiors/6.jpg",
+    "/Interiors/7.jpg",
+    "/Interiors/8.jpg",
+    "/Interiors/9.jpg",
+    "/Interiors/10.jpg",
+    "/Interiors/11.jpg",
+    "/Interiors/12.jpg",
+    "/Interiors/13.jpg",
+    "/Interiors/14.jpg",
+    "/Interiors/15.jpg",
+    "/Interiors/16.jpg",
+    "/Interiors/17.jpg",
+    "/Interiors/18.jpg",
+    "/Interiors/19.jpg",
+    "/Interiors/20.jpg",
+    "/Interiors/21.jpg",
+    "/Interiors/22.jpg",
+    "/Interiors/23.jpg",
+    "/Interiors/24.jpg",
+    "/Interiors/25.jpg",
+    "/Interiors/26.jpg",
+    "/Interiors/27.jpg",
+    "/Interiors/28.jpg",
+    "/Interiors/29.jpg",
+    "/Interiors/30.jpg",
   ],
 };
 
@@ -163,17 +192,74 @@ export function PortfolioSimple() {
           })}
         </div>
 
-        {/* Minimal Portfolio - Just Categories */}
-        {activeCategory && (
+        {/* Portfolio Grid */}
+        {activeCategory && filteredItems.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          >
+            {filteredItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="group"
+              >
+                <Card className="h-full overflow-hidden border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 hover:shadow-2xl cursor-pointer bg-white dark:bg-slate-800">
+                  <div className="relative aspect-square overflow-hidden bg-stone-100 dark:bg-slate-700">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                      loading={index < 12 ? "eager" : "lazy"}
+                      onError={(e) => {
+                        // Hide image if it fails to load
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 className="text-white font-heading font-semibold text-lg mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-white/90 text-sm">
+                        {item.location}
+                      </p>
+                    </div>
+                  </div>
+                  <CardContent className="p-4">
+                    <h3 className="font-heading font-semibold text-lg mb-2 text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-steelGray dark:text-slate-400 line-clamp-2">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+
+        {activeCategory && filteredItems.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center py-12"
           >
             <p className="text-lg text-steelGray dark:text-slate-400">
-              Images from <span className="font-semibold text-premiumGold">{activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}</span> folder will be displayed here.
+              No images found for <span className="font-semibold text-premiumGold">{activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}</span> category.
             </p>
             <p className="text-sm text-steelGray dark:text-slate-500 mt-2">
               Please add images to <code className="bg-stone-100 dark:bg-slate-800 px-2 py-1 rounded">/public/{activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}/</code> folder
@@ -187,7 +273,7 @@ export function PortfolioSimple() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center py-12"
           >
             <p className="text-lg text-steelGray dark:text-slate-400">
               Select a category above to view projects
