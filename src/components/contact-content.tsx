@@ -32,7 +32,7 @@ export function ContactContent() {
   return (
     <>
       <StickyContactButtons />
-      <section className="py-12 sm:py-16 md:py-20 bg-marbleWhite">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-stone-50 via-marbleWhite to-stone-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Contact Form */}
@@ -48,12 +48,12 @@ export function ContactContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="bg-card p-6 rounded-lg border-2 border-premiumGold/20 shadow-lg"
+                className="bg-white dark:bg-slate-800 p-6 rounded-lg border-2 border-premiumGold/30 dark:border-premiumGold/40 shadow-lg"
               >
-                <h3 className="text-xl font-heading font-semibold mb-2 text-royalNavy">
+                <h3 className="text-xl font-heading font-semibold mb-2 text-royalNavy dark:text-slate-100">
                   Contact Person
                 </h3>
-                <p className="text-lg text-royalBlue font-medium">
+                <p className="text-lg text-premiumGold dark:text-premiumGold font-medium">
                   {siteConfig.contact.name}
                 </p>
               </motion.div>
@@ -64,7 +64,7 @@ export function ContactContent() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy">
+              <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy dark:text-slate-100">
                 Contact Information
               </h2>
             </motion.div>
@@ -79,23 +79,23 @@ export function ContactContent() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div className="flex items-start space-x-4 p-4 rounded-lg border-2 hover:border-royalBlue/50 transition-colors bg-white">
-                    <div className="h-12 w-12 rounded-lg bg-royalBlue/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="h-6 w-6 text-royalBlue" />
+                  <div className="flex items-start space-x-4 p-4 rounded-lg border-2 hover:border-premiumGold/50 transition-colors bg-white dark:bg-slate-800 shadow-md">
+                    <div className="h-12 w-12 rounded-lg bg-premiumGold/20 dark:bg-premiumGold/30 flex items-center justify-center flex-shrink-0">
+                      <Icon className="h-6 w-6 text-premiumGold dark:text-premiumGold" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-semibold text-lg mb-2 text-royalNavy">
+                      <h3 className="font-heading font-semibold text-lg mb-2 text-royalNavy dark:text-slate-100">
                         {info.title}
                       </h3>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-steelGray hover:text-royalBlue transition-colors whitespace-pre-line focus:outline-none focus:ring-2 focus:ring-royalBlue rounded-sm"
+                          className="text-royalNavy dark:text-slate-200 hover:text-premiumGold dark:hover:text-premiumGold transition-colors whitespace-pre-line focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm font-medium"
                         >
                           {info.content}
                         </a>
                       ) : (
-                        <p className="text-steelGray whitespace-pre-line">
+                        <p className="text-royalNavy dark:text-slate-200 whitespace-pre-line font-medium">
                           {info.content}
                         </p>
                       )}
@@ -113,7 +113,7 @@ export function ContactContent() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="space-y-4 pt-6"
             >
-              <h3 className="font-heading font-semibold text-lg text-royalNavy mb-4">
+              <h3 className="font-heading font-semibold text-lg text-royalNavy dark:text-slate-100 mb-4">
                 Quick Contact
               </h3>
               <Link href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`} target="_blank" rel="noopener noreferrer">
@@ -138,10 +138,10 @@ export function ContactContent() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="pt-6"
             >
-              <h3 className="font-heading font-semibold text-lg text-royalNavy mb-4">
+              <h3 className="font-heading font-semibold text-lg text-royalNavy dark:text-slate-100 mb-4">
                 Our Location
               </h3>
-              <div className="relative h-48 sm:h-56 md:h-64 rounded-lg overflow-hidden border-2 border-premiumGold/20 bg-stone-100 dark:bg-slate-700">
+              <div className="relative h-48 sm:h-56 md:h-64 rounded-lg overflow-hidden border-2 border-premiumGold/30 dark:border-premiumGold/40 bg-stone-100 dark:bg-slate-700">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.258317674889!2d78.486715315315!3d17.385044188045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
                   width="100%"
@@ -154,7 +154,7 @@ export function ContactContent() {
                   title="Abhi Constructions Location - Hyderabad, Telangana, India"
                 />
               </div>
-              <p className="text-sm text-steelGray mt-2">
+              <p className="text-sm text-royalNavy dark:text-slate-200 mt-2 font-medium">
                 {siteConfig.contact.address}
               </p>
             </motion.div>

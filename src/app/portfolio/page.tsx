@@ -17,14 +17,14 @@ export default function PortfolioPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/projects/interior-1.jpeg"
+            src="/projects/living-room-1.jpeg"
             alt="Portfolio background"
             fill
             className="object-cover"
             sizes="100vw"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-stone-900/75 via-stone-800/70 to-stone-900/75 dark:from-slate-900/85 dark:via-slate-800/80 dark:to-slate-900/85" />
+          <div className="absolute inset-0 bg-gradient-to-br from-stone-900/80 via-stone-800/75 to-stone-900/80 dark:from-slate-900/85 dark:via-slate-800/80 dark:to-slate-900/85" />
         </div>
         {/* Background pattern overlay */}
         <div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.08] blueprint-grid z-[1]" />
