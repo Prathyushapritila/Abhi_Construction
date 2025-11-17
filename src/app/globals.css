@@ -133,10 +133,12 @@
     mix-blend-mode: multiply !important;
     background: transparent !important;
     background-color: transparent !important;
+    filter: brightness(1) contrast(1.1) saturate(1.1) !important;
   }
   
   .dark .logo-container img {
     mix-blend-mode: normal !important;
+    filter: brightness(1.1) contrast(1.1) saturate(1.2) drop-shadow(0 0 10px rgba(255, 140, 0, 0.3)) !important;
   }
   
   /* Force navbar text visibility */
@@ -148,10 +150,65 @@
     color: white !important;
   }
   
+  /* Ensure Services nav item highlights like others */
+  header nav a[href="/services"] {
+    color: rgb(64, 64, 64) !important;
+  }
+  
+  .dark header nav a[href="/services"] {
+    color: white !important;
+  }
+  
+  header nav a[href="/services"]:hover,
+  header nav a[href="/services"].text-premiumGold {
+    color: rgb(255, 140, 0) !important; /* premiumGold */
+  }
+  
   /* Force remove borders from service cards */
   .service-card,
   .service-card * {
     border: none !important;
+  }
+  
+  /* Ensure buttons are visible in both modes */
+  button,
+  .btn,
+  [role="button"] {
+    color: inherit !important;
+  }
+  
+  /* Button text visibility */
+  .bg-premiumGold,
+  button.bg-premiumGold,
+  .bg-premiumGold button {
+    color: rgb(64, 64, 64) !important; /* royalNavy text on gold background */
+  }
+  
+  .dark .bg-premiumGold,
+  .dark button.bg-premiumGold {
+    color: rgb(64, 64, 64) !important;
+  }
+  
+  /* Outline button visibility */
+  button[variant="outline"],
+  .border-royalBlue,
+  .border-blue-600 {
+    color: rgb(128, 128, 128) !important; /* royalBlue */
+  }
+  
+  .dark button[variant="outline"],
+  .dark .border-royalBlue,
+  .dark .border-blue-600 {
+    color: rgb(96, 165, 250) !important; /* blue-400 */
+  }
+  
+  /* Ghost button visibility */
+  button[variant="ghost"] {
+    color: rgb(64, 64, 64) !important;
+  }
+  
+  .dark button[variant="ghost"] {
+    color: white !important;
   }
   
   .blueprint-grid {

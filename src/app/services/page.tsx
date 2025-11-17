@@ -46,34 +46,23 @@ export default function ServicesPage() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/15 rounded-full blur-3xl z-[1]" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            {/* Hero Content Box */}
-            <motion.div
+          <div className="text-center max-w-4xl mx-auto py-20">
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative bg-white/98 dark:bg-slate-800/98 backdrop-blur-md rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 border-0 shadow-2xl overflow-hidden"
+              className="text-5xl md:text-7xl font-heading font-bold text-white mb-6 drop-shadow-lg"
             >
-              {/* Content */}
-              <div className="relative z-10 text-center">
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy dark:text-premiumGold"
-                >
-                  Services
-                </motion.h1>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-base sm:text-lg md:text-xl lg:text-2xl text-royalNavy/90 dark:text-slate-200 leading-relaxed px-2 sm:px-0 font-medium"
-                >
-                  Explore our construction and design services
-                </motion.p>
-              </div>
-            </motion.div>
+              Services
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-xl md:text-2xl text-white/95 leading-relaxed drop-shadow-md"
+            >
+              Explore our construction and design services
+            </motion.p>
           </div>
         </div>
       </section>
