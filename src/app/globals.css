@@ -130,11 +130,28 @@
   
   /* Logo blend mode for white background removal */
   .logo-container img {
-    mix-blend-mode: multiply;
+    mix-blend-mode: multiply !important;
+    background: transparent !important;
+    background-color: transparent !important;
   }
   
   .dark .logo-container img {
-    mix-blend-mode: normal;
+    mix-blend-mode: normal !important;
+  }
+  
+  /* Force navbar text visibility */
+  header nav a:not([class*="text-premiumGold"]) {
+    color: rgb(64, 64, 64) !important; /* royalNavy */
+  }
+  
+  .dark header nav a:not([class*="text-premiumGold"]) {
+    color: white !important;
+  }
+  
+  /* Force remove borders from service cards */
+  .service-card,
+  .service-card * {
+    border: none !important;
   }
   
   .blueprint-grid {
