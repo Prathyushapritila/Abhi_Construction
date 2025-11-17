@@ -27,24 +27,10 @@ const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
     "/Residential/2.jpg",
     "/Residential/3.jpg",
     "/Residential/4.jpg",
-    "/Residential/5.jpg",
-    "/Residential/6.jpg",
   ],
-  villas: [
-    "/Villas/1.jpg",
-    "/Villas/2.jpg",
-    "/Villas/3.jpg",
-    "/Villas/5.jpg",
-    "/Villas/6.jpg",
-    "/Villas/7.jpg",
-  ],
-  commercial: [
-    "/Commercial/1.jpg",
-    "/Commercial/2.jpg",
-    "/Commercial/3.jpg",
-    "/Commercial/4.jpg",
-  ],
-  interiors: Array.from({ length: 17 }, (_, i) => `/Interiors/${i + 1}.jpg`),
+  villas: [],
+  commercial: [],
+  interiors: Array.from({ length: 22 }, (_, i) => `/Interiors/${i + 1}.jpg`),
 };
 
 const categories: { value: PortfolioCategory; label: string; icon: typeof Home }[] = [
@@ -176,24 +162,19 @@ export function PortfolioSimple() {
               >
                 <Card className="h-full overflow-hidden border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 hover:shadow-2xl cursor-pointer bg-white dark:bg-slate-800">
                   <div className="relative aspect-square overflow-hidden bg-stone-100 dark:bg-slate-700">
-                    <div 
-                      className={`relative w-full h-full ${item.id === 'villas-5' ? 'transform rotate-90' : ''}`}
-                      style={item.id === 'villas-5' ? { transform: 'rotate(90deg)' } : {}}
-                    >
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                        loading={index < 12 ? "eager" : "lazy"}
-                        onError={(e) => {
-                          // Hide image if it fails to load
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                        }}
-                      />
-                    </div>
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                      loading={index < 12 ? "eager" : "lazy"}
+                      onError={(e) => {
+                        // Hide image if it fails to load
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                      }}
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                       <h3 className="text-white font-heading font-semibold text-lg mb-1">
