@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { Home, Paintbrush, Building2, Building } from "lucide-react";
+import { Home, Paintbrush } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-type PortfolioCategory = "residential" | "villas" | "commercial" | "interiors";
+type PortfolioCategory = "residential" | "interiors";
 
 interface PortfolioItem {
   id: string;
@@ -20,7 +20,7 @@ interface PortfolioItem {
 }
 
 // Portfolio items organized by category folders
-// Images should be placed in: /public/Residential/, /public/Villas/, /public/Commercial/, /public/Interiors/
+// Images should be placed in: /public/Residential/, /public/Interiors/
 const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
   residential: [
     "/Residential/1.jpg",
@@ -28,15 +28,11 @@ const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
     "/Residential/3.jpg",
     "/Residential/4.jpg",
   ],
-  villas: [],
-  commercial: [],
-  interiors: Array.from({ length: 22 }, (_, i) => `/Interiors/${i + 1}.jpg`),
+  interiors: Array.from({ length: 19 }, (_, i) => `/Interiors/${i + 1}.jpg`),
 };
 
 const categories: { value: PortfolioCategory; label: string; icon: typeof Home }[] = [
   { value: "residential", label: "Residential", icon: Home },
-  { value: "villas", label: "Villas", icon: Building2 },
-  { value: "commercial", label: "Commercial", icon: Building },
   { value: "interiors", label: "Interiors", icon: Paintbrush },
 ];
 
@@ -49,8 +45,6 @@ export function PortfolioSimple() {
     if (!param) return null;
     const lowerParam = param.toLowerCase();
     if (lowerParam === "residential") return "residential";
-    if (lowerParam === "villas") return "villas";
-    if (lowerParam === "commercial") return "commercial";
     if (lowerParam === "interiors") return "interiors";
     return null;
   };
