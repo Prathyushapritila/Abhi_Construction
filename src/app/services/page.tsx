@@ -52,7 +52,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative bg-white/98 dark:bg-slate-800/98 backdrop-blur-md rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 border-2 border-premiumGold/40 dark:border-premiumGold/40 shadow-2xl overflow-hidden"
+              className="relative bg-white/98 dark:bg-slate-800/98 backdrop-blur-md rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 border-0 shadow-2xl overflow-hidden"
             >
               {/* Content */}
               <div className="relative z-10 text-center">
@@ -99,7 +99,7 @@ export default function ServicesPage() {
                       transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
                       className="h-full"
                     >
-                      <Card className="h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] hover:shadow-2xl transition-all duration-250 border-0 hover:border-0 dark:border-0 dark:hover:border-0 group cursor-pointer bg-gradient-to-br from-stone-100 via-white to-stone-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden shadow-lg">
+                      <Card className="h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] hover:shadow-2xl transition-all duration-250 !border-0 group cursor-pointer bg-gradient-to-br from-stone-100 via-white to-stone-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden shadow-lg">
                         {/* Animated background gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/0 via-premiumGold/5 to-premiumGold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
                         <div className="absolute inset-0 bg-gradient-to-tl from-royalBlue/0 via-royalBlue/5 to-royalBlue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
@@ -191,7 +191,7 @@ export default function ServicesPage() {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   whileHover={{ y: -4, scale: 1.05 }}
                 >
-                  <Card className="h-full hover:shadow-lg transition-all duration-200 border-0 hover:border-0 dark:border-0 dark:hover:border-0 group cursor-pointer bg-white dark:bg-slate-800 text-center">
+                  <Card className="h-full hover:shadow-lg transition-all duration-200 !border-0 group cursor-pointer bg-white dark:bg-slate-800 text-center">
                     <CardContent className="p-6">
                       <div className="h-12 w-12 rounded-lg bg-royalBlue/10 dark:bg-royalBlue/20 flex items-center justify-center mb-3 mx-auto group-hover:bg-premiumGold/20 dark:group-hover:bg-premiumGold/30 transition-all duration-200">
                         <Icon className="h-6 w-6 text-royalBlue dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-200" />
