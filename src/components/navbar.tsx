@@ -43,20 +43,21 @@ export function Navbar() {
         <Link href="/" className="flex items-center space-x-3 group">
           <div className="relative">
             {/* Logo with transparent white background */}
-            <div className="relative bg-transparent">
-              <Image
-                src={siteConfig.logo.image}
-                alt="Abhi Constructions & Innovations"
-                width={240}
-                height={120}
-                className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[180px] sm:max-w-[200px] md:max-w-[240px] object-contain drop-shadow-2xl relative z-10 transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
-                style={{ 
-                  mixBlendMode: 'multiply',
-                  backgroundColor: 'transparent'
-                }}
-                priority
-                sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
-              />
+            <div className="relative bg-transparent logo-container">
+              <div className="relative">
+                <Image
+                  src={siteConfig.logo.image}
+                  alt="Abhi Constructions & Innovations"
+                  width={240}
+                  height={120}
+                  className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[180px] sm:max-w-[200px] md:max-w-[240px] object-contain drop-shadow-2xl relative z-10 transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
+                  style={{ 
+                    backgroundColor: 'transparent'
+                  }}
+                  priority
+                  sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
+                />
+              </div>
             </div>
           </div>
         </Link>
@@ -70,8 +71,8 @@ export function Navbar() {
               className={cn(
                 "text-base font-semibold transition-all duration-300 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-md px-3 py-2 relative group",
                 pathname === item.href
-                  ? "text-premiumGold"
-                  : "text-royalNavy dark:text-marbleWhite/90"
+                  ? "text-premiumGold dark:text-premiumGold"
+                  : "text-royalNavy dark:text-white dark:hover:text-premiumGold/90"
               )}
             >
               {item.label}
@@ -117,8 +118,8 @@ export function Navbar() {
                   className={cn(
                     "block px-4 py-3 rounded-lg text-base font-semibold transition-all hover:bg-premiumGold/10 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2",
                     pathname === item.href
-                      ? "text-premiumGold bg-premiumGold/10 border-l-4 border-premiumGold"
-                      : "text-royalNavy dark:text-marbleWhite"
+                      ? "text-premiumGold bg-premiumGold/10 border-l-4 border-premiumGold dark:text-premiumGold"
+                      : "text-royalNavy dark:text-white"
                   )}
                 >
                   {item.label}

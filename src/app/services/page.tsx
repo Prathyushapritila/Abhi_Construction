@@ -26,7 +26,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -99,7 +99,7 @@ export default function ServicesPage() {
                       transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
                       className="h-full"
                     >
-                      <Card className="h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] hover:shadow-2xl transition-all duration-250 border-2 border-premiumGold/30 hover:border-premiumGold dark:border-premiumGold/40 dark:hover:border-premiumGold group cursor-pointer bg-gradient-to-br from-stone-100 via-white to-stone-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden shadow-lg">
+                      <Card className="h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] hover:shadow-2xl transition-all duration-250 border-0 hover:border-0 dark:border-0 dark:hover:border-0 group cursor-pointer bg-gradient-to-br from-stone-100 via-white to-stone-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden shadow-lg">
                         {/* Animated background gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/0 via-premiumGold/5 to-premiumGold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
                         <div className="absolute inset-0 bg-gradient-to-tl from-royalBlue/0 via-royalBlue/5 to-royalBlue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
@@ -191,7 +191,7 @@ export default function ServicesPage() {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   whileHover={{ y: -4, scale: 1.05 }}
                 >
-                  <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 border-premiumGold/20 hover:border-premiumGold dark:border-premiumGold/30 dark:hover:border-premiumGold group cursor-pointer bg-white dark:bg-slate-800 text-center">
+                  <Card className="h-full hover:shadow-lg transition-all duration-200 border-0 hover:border-0 dark:border-0 dark:hover:border-0 group cursor-pointer bg-white dark:bg-slate-800 text-center">
                     <CardContent className="p-6">
                       <div className="h-12 w-12 rounded-lg bg-royalBlue/10 dark:bg-royalBlue/20 flex items-center justify-center mb-3 mx-auto group-hover:bg-premiumGold/20 dark:group-hover:bg-premiumGold/30 transition-all duration-200">
                         <Icon className="h-6 w-6 text-royalBlue dark:text-premiumGold group-hover:text-premiumGold transition-colors duration-200" />

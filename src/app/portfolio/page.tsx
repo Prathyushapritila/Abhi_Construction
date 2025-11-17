@@ -13,7 +13,7 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image

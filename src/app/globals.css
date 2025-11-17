@@ -122,6 +122,21 @@
     mix-blend-mode: screen;
   }
   
+  /* Remove white background from logo */
+  img[alt="Abhi Constructions & Innovations"] {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+  
+  /* Logo blend mode for white background removal */
+  .logo-container img {
+    mix-blend-mode: multiply;
+  }
+  
+  .dark .logo-container img {
+    mix-blend-mode: normal;
+  }
+  
   .blueprint-grid {
     background-image: 
       linear-gradient(rgba(10, 77, 173, 0.06) 1px, transparent 1px),

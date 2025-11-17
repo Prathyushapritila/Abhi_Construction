@@ -11,7 +11,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-stone-100 via-marbleWhite to-stone-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden">
+      <section className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-br from-stone-100 via-marbleWhite to-stone-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] blueprint-grid" />
         {/* Decorative circles */}
