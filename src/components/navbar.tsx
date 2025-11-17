@@ -38,20 +38,26 @@ export function Navbar() {
   }, [isOpen]);
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-white/10 bg-white/95 dark:bg-royalNavy/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/90 dark:supports-[backdrop-filter]:bg-royalNavy/85 shadow-lg">
+    <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#ffffff] dark:bg-royalNavy/98 backdrop-blur-md supports-[backdrop-filter]:bg-[#ffffff] dark:supports-[backdrop-filter]:bg-royalNavy/98 shadow-lg dark:shadow-2xl">
       <nav className="container mx-auto flex h-20 sm:h-22 md:h-24 lg:h-28 items-center justify-between px-3 sm:px-4 md:px-6 max-w-7xl" aria-label="Main navigation">
         <Link href="/" className="flex items-center space-x-3 group">
           <div className="relative">
-            {/* Enhanced glow effect - no white box */}
-            <Image
-              src={siteConfig.logo.image}
-              alt="Abhi Constructions & Innovations"
-              width={240}
-              height={120}
-              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[180px] sm:max-w-[200px] md:max-w-[240px] object-contain brightness-115 contrast-115 saturate-115 drop-shadow-2xl relative z-10 transition-all duration-300 group-hover:brightness-130 group-hover:scale-110 filter"
-              priority
-              sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
-            />
+            {/* Logo with transparent white background */}
+            <div className="relative bg-transparent">
+              <Image
+                src={siteConfig.logo.image}
+                alt="Abhi Constructions & Innovations"
+                width={240}
+                height={120}
+                className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[180px] sm:max-w-[200px] md:max-w-[240px] object-contain drop-shadow-2xl relative z-10 transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
+                style={{ 
+                  mixBlendMode: 'multiply',
+                  backgroundColor: 'transparent'
+                }}
+                priority
+                sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
+              />
+            </div>
           </div>
         </Link>
 
@@ -102,7 +108,7 @@ export function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden border-t"
           >
-            <div className="container mx-auto px-4 py-4 space-y-2 bg-white dark:bg-royalNavy">
+            <div className="container mx-auto px-4 py-4 space-y-2 bg-[#ffffff] dark:bg-royalNavy/98">
               {navItems.map((item) => (
                 <Link
                   key={item.href}

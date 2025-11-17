@@ -63,7 +63,7 @@ export const siteConfig = {
   
   // Logo
   logo: {
-    image: "/logo.png",
+    image: "/Abi_Logo_New.jpeg",
     caption: "experience the way of living",
   },
 };
