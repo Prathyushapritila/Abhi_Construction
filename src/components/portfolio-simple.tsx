@@ -28,7 +28,7 @@ const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
     "/Residential/3.jpg",
     "/Residential/4.jpg",
   ],
-  interiors: Array.from({ length: 64 }, (_, i) => `/Interiors/${i + 1}.jpg`),
+  interiors: Array.from({ length: 65 }, (_, i) => `/Interiors/${i + 1}.jpg`),
 };
 
 const categories: { value: PortfolioCategory; label: string; icon: typeof Home }[] = [
