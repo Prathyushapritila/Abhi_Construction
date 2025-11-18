@@ -32,12 +32,12 @@ export default function PortfolioPage() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-premiumGold/10 dark:bg-premiumGold/15 rounded-full blur-3xl z-[1]" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/15 rounded-full blur-3xl z-[1]" />
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto py-20">
-            <h1 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6 drop-shadow-lg">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
+          <div className="text-center max-w-4xl mx-auto py-12 sm:py-16 md:py-20">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-white mb-4 sm:mb-6 drop-shadow-lg">
               {siteConfig.sections.portfolio.title}
             </h1>
-            <p className="text-xl md:text-2xl text-white/95 leading-relaxed drop-shadow-md">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed drop-shadow-md">
               {siteConfig.sections.portfolio.subtitle}
             </p>
           </div>

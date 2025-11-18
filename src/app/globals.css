@@ -94,6 +94,82 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  
+  /* Standardized container widths */
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+    }
+  }
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1536px;
+    }
+  }
+  
+  /* Standardized section spacing */
+  .section-standard {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  @media (min-width: 640px) {
+    .section-standard {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .section-standard {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-standard {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+  }
+  
+  /* Standardized image aspect ratios */
+  .img-standard {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .img-square {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  
+  .img-landscape {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  
+  .img-portrait {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
   /* Ensure all sections are contained */
   section {
     width: 100%;

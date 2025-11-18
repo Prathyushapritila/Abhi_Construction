@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function HomeCEOQuote() {
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
+    <section className="relative section-standard overflow-hidden">
       {/* Background with gradient - NO IMAGE */}
       <div className="absolute inset-0 bg-gradient-to-br from-marbleWhite via-royalNavy/5 to-marbleWhite dark:from-slate-900 dark:via-royalNavy/20 dark:to-slate-900" />
       
@@ -15,7 +15,7 @@ export function HomeCEOQuote() {
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] blueprint-grid" />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

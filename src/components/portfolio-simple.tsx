@@ -96,25 +96,25 @@ export function PortfolioSimple() {
   const filteredItems = getItemsForCategory(activeCategory);
 
   return (
-    <section id="portfolio" className="py-20 bg-marbleWhite dark:bg-slate-900">
-      <div className="container mx-auto px-4">
+    <section id="portfolio" className="section-standard bg-marbleWhite dark:bg-slate-900">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-royalNavy dark:text-premiumGold gold-underline">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy dark:text-premiumGold gold-underline">
             Our Portfolio
           </h2>
-          <p className="text-xl text-steelGray dark:text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-steelGray dark:text-slate-400 max-w-2xl mx-auto">
             Showcasing excellence in every build
           </p>
         </motion.div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-12 md:mb-16">
           {categories.map((category) => {
             const Icon = category.icon;
             return (
@@ -142,7 +142,7 @@ export function PortfolioSimple() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8"
           >
             {filteredItems.map((item, index) => (
               <motion.div
@@ -154,7 +154,7 @@ export function PortfolioSimple() {
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="group"
               >
-                <Card className="h-full overflow-hidden border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 hover:shadow-2xl cursor-pointer bg-white dark:bg-slate-800">
+                <Card className="h-full overflow-hidden border-0 transition-all duration-300 hover:shadow-2xl cursor-pointer bg-white dark:bg-slate-800">
                   <div className="relative aspect-square overflow-hidden bg-stone-100 dark:bg-slate-700">
                     <Image
                       src={item.image}
@@ -179,8 +179,8 @@ export function PortfolioSimple() {
                       </p>
                     </div>
                   </div>
-                  <CardContent className="p-2 sm:p-4">
-                    <p className="text-xs sm:text-sm text-steelGray dark:text-slate-400 text-center">
+                  <CardContent className="p-4 sm:p-6">
+                    <p className="text-sm sm:text-base text-steelGray dark:text-slate-400 text-center font-medium">
                       {item.location}
                     </p>
                   </CardContent>

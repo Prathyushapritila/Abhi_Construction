@@ -92,7 +92,7 @@ function CountUp({
 
 export function HomeAboutTeaser() {
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
+    <section className="relative section-standard overflow-hidden">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-royalNavy/5 via-marbleWhite to-royalBlue/5 dark:from-slate-900 dark:via-slate-800 dark:to-royalNavy/30" />
       
@@ -100,7 +100,7 @@ export function HomeAboutTeaser() {
       <div className="absolute top-20 right-10 w-72 h-72 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-80 h-80 bg-royalBlue/5 dark:bg-royalBlue/10 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Main Content */}
           <motion.div
@@ -115,7 +115,7 @@ export function HomeAboutTeaser() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-4 sm:mb-6 px-2 sm:px-0"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-4 sm:mb-6"
             >
               {siteConfig.sections.hero.headline}
             </motion.h2>
@@ -124,7 +124,7 @@ export function HomeAboutTeaser() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-steelGray dark:text-slate-300 leading-relaxed max-w-4xl mx-auto px-2 sm:px-0"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-steelGray dark:text-slate-300 leading-relaxed max-w-4xl mx-auto"
             >
               {siteConfig.sections.hero.description}
             </motion.p>
@@ -136,7 +136,7 @@ export function HomeAboutTeaser() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16"
           >
             {[
               { icon: Building2, value: siteConfig.stats.residential, label: "Residential Completed" },
@@ -152,7 +152,7 @@ export function HomeAboutTeaser() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                   whileHover={{ scale: 1.05, y: -8 }}
-                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border-2 border-premiumGold/30 dark:border-premiumGold/40 shadow-lg hover:shadow-2xl transition-all duration-200 cursor-pointer group"
+                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 sm:p-8 border-0 shadow-lg hover:shadow-2xl transition-all duration-200 cursor-pointer group"
                 >
                   <div className="flex flex-col items-center text-center">
                     <motion.div 
@@ -195,7 +195,7 @@ export function HomeAboutTeaser() {
             <p className="text-base md:text-lg text-steelGray dark:text-slate-300 text-center mb-8 max-w-3xl mx-auto leading-relaxed">
               At Abhi Constructions and Innovations, we&apos;re all about building strong bonding and relationships with our clients. We hear you from getting feedback in order to improve and progress in our service.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
               {[
                 {
                   name: "K P Rajendra",
@@ -217,7 +217,7 @@ export function HomeAboutTeaser() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                   whileHover={{ y: -6, scale: 1.02 }}
-                  className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-xl p-6 border-2 border-premiumGold/30 dark:border-premiumGold/40 shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer group h-full flex flex-col"
+                  className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-xl p-6 sm:p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer group h-full flex flex-col"
                 >
                   <p className="text-sm md:text-base text-steelGray dark:text-slate-300 leading-relaxed italic mb-4 flex-grow">
                     &ldquo;{testimonial.content}&rdquo;
@@ -244,7 +244,7 @@ export function HomeAboutTeaser() {
               asChild
               size="lg"
               variant="outline"
-              className="bg-transparent border-2 border-royalBlue dark:border-blue-600 text-royalBlue dark:text-blue-400 hover:bg-royalBlue hover:text-white dark:hover:bg-blue-600 dark:hover:text-white text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="bg-transparent border-2 border-premiumGold text-premiumGold hover:bg-premiumGold hover:text-royalNavy dark:hover:text-royalNavy text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-semibold"
             >
               <Link href="/about">
                 Learn More About Us

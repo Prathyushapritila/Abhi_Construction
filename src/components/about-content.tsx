@@ -96,8 +96,8 @@ export function AboutContent() {
       </FullWidthBg>
 
       {/* Credibility Line */}
-      <section className="py-12 bg-royalNavy text-marbleWhite">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 bg-royalNavy text-marbleWhite">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -113,7 +113,7 @@ export function AboutContent() {
       </section>
 
       {/* Our Promise */}
-      <section className="py-20 bg-stone-50 dark:bg-slate-800 relative overflow-hidden">
+      <section className="section-standard bg-stone-50 dark:bg-slate-800 relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 opacity-10 dark:opacity-15">
           <Image
@@ -137,7 +137,7 @@ export function AboutContent() {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -145,10 +145,10 @@ export function AboutContent() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-royalNavy dark:text-premiumGold gold-underline">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 sm:mb-8 text-royalNavy dark:text-premiumGold gold-underline">
                 Our Promise
               </h2>
-              <div className="space-y-4 text-xl md:text-2xl text-steelGray dark:text-slate-300">
+              <div className="space-y-4 sm:space-y-6 text-lg sm:text-xl md:text-2xl text-steelGray dark:text-slate-300">
                 <p className="font-semibold">We listen deeply.</p>
                 <p className="font-semibold">We design boldly.</p>
                 <p className="font-semibold">We deliver beautifully—without surprises, compromises, or shortcuts.</p>
@@ -159,7 +159,7 @@ export function AboutContent() {
       </section>
 
       {/* What Sets Us Apart - Value Pillars */}
-      <section className="py-20 bg-marbleWhite dark:bg-slate-900 relative overflow-hidden">
+      <section className="section-standard bg-marbleWhite dark:bg-slate-900 relative overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] blueprint-grid" />
         <motion.div 
@@ -172,23 +172,23 @@ export function AboutContent() {
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-royalNavy dark:text-premiumGold gold-underline">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy dark:text-premiumGold gold-underline">
               What Sets Us Apart
             </h2>
-            <p className="text-lg md:text-xl text-steelGray dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-steelGray dark:text-slate-400 max-w-2xl mx-auto">
               Six pillars that define how we build differently—and why our clients choose us again and again.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {valuePillars.map((pillar, index) => {
               const Icon = pillar.icon;
               // Different background patterns for each card
@@ -269,7 +269,7 @@ export function AboutContent() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-stone-50 dark:bg-slate-800 relative overflow-hidden">
+      <section className="section-standard bg-stone-50 dark:bg-slate-800 relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 opacity-10 dark:opacity-15">
           <Image
@@ -286,7 +286,7 @@ export function AboutContent() {
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] marble-texture" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl" />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -306,7 +306,7 @@ export function AboutContent() {
       </section>
 
       {/* How We Work - 5 Step Process */}
-      <section className="py-20 bg-gradient-to-br from-marbleWhite via-royalNavy/5 to-marbleWhite dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
+      <section className="section-standard bg-gradient-to-br from-marbleWhite via-royalNavy/5 to-marbleWhite dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 opacity-10 dark:opacity-15">
           <Image
@@ -337,7 +337,7 @@ export function AboutContent() {
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -412,8 +412,8 @@ export function AboutContent() {
       </section>
 
       {/* Social Proof Badges */}
-      <section className="py-16 bg-royalNavy text-marbleWhite">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 bg-royalNavy text-marbleWhite">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -444,7 +444,7 @@ export function AboutContent() {
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
         />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -467,8 +467,8 @@ export function AboutContent() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-royalNavy text-marbleWhite">
-        <div className="container mx-auto px-4">
+      <section className="section-standard bg-royalNavy text-marbleWhite">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

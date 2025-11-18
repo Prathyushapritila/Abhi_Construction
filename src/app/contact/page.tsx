@@ -18,12 +18,12 @@ export default function ContactPage() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-royalBlue/5 dark:bg-royalBlue/10 rounded-full blur-3xl" />
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy dark:text-premiumGold px-2 sm:px-0">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
+          <div className="text-center max-w-4xl mx-auto py-12 sm:py-16 md:py-20">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy dark:text-premiumGold">
               {siteConfig.sections.contact.title}
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-steelGray dark:text-slate-300 leading-relaxed px-2 sm:px-0">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-steelGray dark:text-slate-300 leading-relaxed">
               {siteConfig.sections.contact.subtitle}
             </p>
           </div>

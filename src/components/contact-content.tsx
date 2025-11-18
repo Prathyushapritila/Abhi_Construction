@@ -32,8 +32,8 @@ export function ContactContent() {
   return (
     <>
       <StickyContactButtons />
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-stone-50 via-marbleWhite to-stone-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 max-w-7xl">
+      <section className="section-standard bg-gradient-to-br from-stone-50 via-marbleWhite to-stone-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Contact Form */}
           <div className="lg:col-span-2">
