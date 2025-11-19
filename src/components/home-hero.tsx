@@ -1,9 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -37,7 +34,7 @@ export function HomeHero() {
           className="object-cover"
           quality={90}
           style={{
-            objectPosition: "center 0%",
+            objectPosition: "center center",
           }}
           sizes="100vw"
         />
@@ -63,26 +60,6 @@ export function HomeHero() {
         }}
       />
 
-      {/* Content - Text is in the image, button positioned after "create timeless spaces" */}
-      <div className="absolute inset-0 flex items-end justify-center z-10 pb-0 sm:pb-0 md:pb-0 lg:pb-0">
-        <div className="container mx-auto px-3 sm:px-4 md:px-6 text-center max-w-7xl w-full">
-          <div className="max-w-4xl mx-auto w-full">
-            {/* Button - Positioned at bottom center after the sentence completes */}
-            <div className="mb-4 sm:mb-6 md:mb-8">
-              <Button
-                asChild
-                size="lg"
-                className="bg-premiumGold hover:bg-premiumGold/90 text-royalNavy text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 shadow-2xl font-semibold border-2 border-premiumGold/50 w-full sm:w-auto"
-              >
-                <Link href="/portfolio" className="flex items-center justify-center">
-                  Discover Our Work
-                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
