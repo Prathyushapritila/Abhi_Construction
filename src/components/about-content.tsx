@@ -260,18 +260,24 @@ export function AboutContent() {
                       >
                         <Icon className="h-8 w-8 text-royalBlue dark:text-premiumGold dark:group-hover:text-premiumGold group-hover:text-premiumGold transition-colors duration-300" />
                       </motion.div>
-                      <h3 className={`text-xl font-heading font-bold text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-300 relative z-20 mb-2 ${
-                        pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty")) ? "drop-shadow-lg [text-shadow:_2px_2px_4px_rgba(255,255,255,0.8)] dark:[text-shadow:_2px_2px_4px_rgba(0,0,0,0.8)]" : ""
+                      <h3 className={`text-xl font-heading font-bold group-hover:text-premiumGold transition-colors duration-300 relative z-20 mb-2 ${
+                        pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty")) 
+                          ? "text-royalNavy dark:text-slate-100 drop-shadow-lg [text-shadow:_2px_2px_4px_rgba(255,255,255,0.9)] dark:[text-shadow:_2px_2px_4px_rgba(0,0,0,0.9)]" 
+                          : "text-royalNavy dark:text-slate-100"
                       }`}>{pillar.title}</h3>
                       {pillar.highlight && (
-                        <p className={`text-sm font-semibold text-premiumGold mt-2 relative z-20 ${
-                          pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty")) ? "drop-shadow-md [text-shadow:_1px_1px_3px_rgba(255,255,255,0.8)] dark:[text-shadow:_1px_1px_3px_rgba(0,0,0,0.8)]" : ""
+                        <p className={`text-sm font-semibold mt-2 relative z-20 ${
+                          pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty")) 
+                            ? "text-premiumGold drop-shadow-md [text-shadow:_1px_1px_3px_rgba(255,255,255,0.9)] dark:[text-shadow:_1px_1px_3px_rgba(0,0,0,0.9)]" 
+                            : "text-premiumGold"
                         }`}>{pillar.highlight}</p>
                       )}
                     </CardHeader>
                     <CardContent className="relative z-10">
-                      <CardDescription className={`text-base text-steelGray dark:text-slate-300 leading-relaxed ${
-                        pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty")) ? "drop-shadow-md [text-shadow:_1px_1px_2px_rgba(255,255,255,0.9)] dark:[text-shadow:_1px_1px_2px_rgba(0,0,0,0.9)] font-medium" : ""
+                      <CardDescription className={`text-base leading-relaxed ${
+                        pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty")) 
+                          ? "text-royalNavy dark:text-slate-200 drop-shadow-md [text-shadow:_1px_1px_2px_rgba(255,255,255,0.95)] dark:[text-shadow:_1px_1px_2px_rgba(0,0,0,0.95)] font-medium" 
+                          : "text-steelGray dark:text-slate-300"
                       }`}>
                         {pillar.description}
                       </CardDescription>
