@@ -357,136 +357,69 @@
     border: none !important;
   }
   
-  /* Select a service placeholder color - not yellow - AGGRESSIVE OVERRIDE */
+  /* Select a service placeholder color - not yellow */
   [id="serviceType"] span[data-placeholder],
   [id="serviceType"] [data-placeholder],
-  [id="serviceType"]::placeholder,
-  [id="serviceType"] span,
-  [id="serviceType"] * {
+  [id="serviceType"]::placeholder {
     color: rgb(128, 128, 128) !important;
   }
   
   .dark [id="serviceType"] span[data-placeholder],
   .dark [id="serviceType"] [data-placeholder],
-  .dark [id="serviceType"]::placeholder,
-  .dark [id="serviceType"] span,
-  .dark [id="serviceType"] * {
+  .dark [id="serviceType"]::placeholder {
     color: rgb(148, 163, 184) !important;
   }
   
   /* Override any yellow/premiumGold color on SelectValue placeholder */
   [id="serviceType"] span[data-placeholder].text-premiumGold,
-  [id="serviceType"] span[data-placeholder],
-  [id="serviceType"] span.text-premiumGold {
+  [id="serviceType"] span[data-placeholder] {
     color: rgb(128, 128, 128) !important;
   }
   
   .dark [id="serviceType"] span[data-placeholder].text-premiumGold,
-  .dark [id="serviceType"] span[data-placeholder],
-  .dark [id="serviceType"] span.text-premiumGold {
+  .dark [id="serviceType"] span[data-placeholder] {
     color: rgb(148, 163, 184) !important;
   }
   
-  /* Select trigger placeholder - force color */
-  button[id="serviceType"] span[data-placeholder],
-  button[id="serviceType"] span {
-    color: rgb(128, 128, 128) !important;
-  }
-  
-  .dark button[id="serviceType"] span[data-placeholder],
-  .dark button[id="serviceType"] span {
-    color: rgb(148, 163, 184) !important;
-  }
-  
-  /* Ensure buttons are visible in both modes - AGGRESSIVE OVERRIDE */
+  /* Ensure buttons are visible in both modes */
   button,
   .btn,
-  [role="button"],
-  a[role="button"] {
+  [role="button"] {
     color: inherit !important;
-    opacity: 1 !important;
-    visibility: visible !important;
   }
   
-  /* Button text visibility - Light mode */
+  /* Button text visibility */
   .bg-premiumGold,
   button.bg-premiumGold,
-  .bg-premiumGold button,
-  button.bg-premiumGold * {
+  .bg-premiumGold button {
     color: rgb(64, 64, 64) !important; /* royalNavy text on gold background */
-    opacity: 1 !important;
-    visibility: visible !important;
   }
   
-  /* Button text visibility - Dark mode */
   .dark .bg-premiumGold,
-  .dark button.bg-premiumGold,
-  .dark .bg-premiumGold button,
-  .dark button.bg-premiumGold * {
+  .dark button.bg-premiumGold {
     color: rgb(64, 64, 64) !important;
-    opacity: 1 !important;
-    visibility: visible !important;
   }
   
-  /* Outline button visibility - Light mode */
+  /* Outline button visibility */
   button[variant="outline"],
   .border-royalBlue,
-  .border-blue-600,
-  button.border-2,
-  button.border-royalNavy {
-    color: rgb(64, 64, 64) !important; /* royalNavy */
-    border-color: rgb(64, 64, 64) !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+  .border-blue-600 {
+    color: rgb(128, 128, 128) !important; /* royalBlue */
   }
   
-  /* Outline button visibility - Dark mode */
   .dark button[variant="outline"],
   .dark .border-royalBlue,
-  .dark .border-blue-600,
-  .dark button.border-2,
-  .dark button.border-royalNavy,
-  .dark button.border-slate-300 {
-    color: rgb(203, 213, 225) !important; /* slate-300 */
-    border-color: rgb(203, 213, 225) !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+  .dark .border-blue-600 {
+    color: rgb(96, 165, 250) !important; /* blue-400 */
   }
   
-  /* Ghost button visibility - Light mode */
-  button[variant="ghost"],
-  button.bg-transparent {
+  /* Ghost button visibility */
+  button[variant="ghost"] {
     color: rgb(64, 64, 64) !important;
-    opacity: 1 !important;
-    visibility: visible !important;
   }
   
-  /* Ghost button visibility - Dark mode */
-  .dark button[variant="ghost"],
-  .dark button.bg-transparent {
+  .dark button[variant="ghost"] {
     color: white !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-  
-  /* All buttons in dark mode - ensure visibility */
-  .dark button,
-  .dark .btn,
-  .dark [role="button"] {
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-  
-  /* Button text in dark mode - ensure readable */
-  .dark button:not(.bg-premiumGold),
-  .dark button:not(.bg-premiumGold) * {
-    color: white !important;
-  }
-  
-  /* Premium gold buttons in dark mode - keep dark text */
-  .dark button.bg-premiumGold,
-  .dark button.bg-premiumGold * {
-    color: rgb(64, 64, 64) !important;
   }
   
   .blueprint-grid {

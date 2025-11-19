@@ -20,7 +20,7 @@ export function HomeHero() {
 
   return (
     <section 
-      className="relative min-h-[35vh] sm:min-h-[40vh] md:min-h-[45vh] w-full overflow-hidden"
+      className="relative min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] w-full overflow-hidden"
     >
       {/* Background Image Layer with brightness filter */}
       <div 
@@ -63,18 +63,12 @@ export function HomeHero() {
         }}
       />
 
-      {/* Content - Text overlay and button */}
-      <div className="absolute inset-0 flex flex-col items-center justify-end z-10 pb-8 sm:pb-10 md:pb-12">
+      {/* Content - Text is in the image, button positioned after "create timeless spaces" */}
+      <div className="absolute inset-0 flex items-end justify-center z-10 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
         <div className="container mx-auto px-3 sm:px-4 md:px-6 text-center max-w-7xl w-full">
           <div className="max-w-4xl mx-auto w-full">
-            {/* Text Overlay - Replace with your sentence */}
-            <div className="mb-4 sm:mb-5 md:mb-6">
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-white drop-shadow-2xl leading-tight">
-                Building more than houses, we create timeless spaces
-              </h1>
-            </div>
-            {/* Button - Positioned at bottom center after the sentence */}
-            <div className="mb-2 sm:mb-3 md:mb-4">
+            {/* Button - Positioned at bottom center after the sentence completes */}
+            <div className="mb-4 sm:mb-6 md:mb-8">
               <Button
                 asChild
                 size="lg"
