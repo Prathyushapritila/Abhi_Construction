@@ -20,9 +20,9 @@ export function ThemeToggle() {
         variant="ghost" 
         size="icon" 
         aria-label="Toggle theme" 
-        className="text-royalNavy dark:text-white w-10 h-10 flex items-center justify-center"
+        className="text-royalNavy dark:text-white w-8 h-8 flex items-center justify-center"
       >
-        <Sun className="h-5 w-5 text-royalNavy dark:text-white" />
+        <Sun className="h-4 w-4 text-royalNavy dark:text-white" />
       </Button>
     );
   }
@@ -33,13 +33,13 @@ export function ThemeToggle() {
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label="Toggle theme"
-      className="text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold w-10 h-10 flex items-center justify-center"
+      className="text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold w-8 h-8 flex items-center justify-center"
     >
-      <span className="relative w-5 h-5 flex items-center justify-center">
+      <span className="relative w-4 h-4 flex items-center justify-center">
         {theme === "dark" ? (
-          <Sun className="h-5 w-5 text-royalNavy dark:text-white absolute" />
+          <Sun className="h-4 w-4 text-royalNavy dark:text-white absolute" />
         ) : (
-          <Moon className="h-5 w-5 text-royalNavy dark:text-white absolute" />
+          <Moon className="h-4 w-4 text-royalNavy dark:text-white absolute" />
         )}
       </span>
     </Button>

@@ -19,7 +19,7 @@ export function FullWidthBg({
   parallax = true
 }: FullWidthBgProps) {
   return (
-    <section className={`relative py-14 sm:py-18 md:py-22 overflow-hidden min-h-[45vh] sm:min-h-[50vh] md:min-h-[55vh] ${className}`}>
+    <section className={`relative py-14 sm:py-18 md:py-22 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh] ${className}`}>
       {/* Background Image */}
       <motion.div
         className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900"
