@@ -14,12 +14,14 @@ const services = [
     title: "Residential",
     description: "Custom home construction and residential projects",
     href: "/portfolio?category=residential",
+    bgImage: "/bg/residential.jpg",
   },
   {
     icon: Paintbrush,
     title: "Interiors",
     description: "Interior design and turnkey fit-out services",
     href: "/portfolio?category=interiors",
+    bgImage: "/bg/interiors.jpg",
   },
 ];
 
@@ -93,14 +95,25 @@ export default function ServicesPage() {
                       transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
                       className="h-full"
                     >
-                      <Card className="service-card h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] hover:shadow-2xl transition-all duration-250 !border-0 group cursor-pointer bg-gradient-to-br from-stone-100 via-white to-stone-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden shadow-lg">
+                      <Card className="service-card h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] hover:shadow-2xl transition-all duration-250 !border-0 group cursor-pointer relative overflow-hidden shadow-lg">
+                        {/* Background Image */}
+                        <div className="absolute inset-0 z-0">
+                          <Image
+                            src={service.bgImage}
+                            alt={`${service.title} background`}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-br from-stone-100/90 via-white/90 to-stone-50/90 dark:from-slate-800/90 dark:via-slate-800/90 dark:to-slate-900/90" />
+                        </div>
                         {/* Animated background gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/0 via-premiumGold/5 to-premiumGold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
-                        <div className="absolute inset-0 bg-gradient-to-tl from-royalBlue/0 via-royalBlue/5 to-royalBlue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/0 via-premiumGold/5 to-premiumGold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250 z-10" />
+                        <div className="absolute inset-0 bg-gradient-to-tl from-royalBlue/0 via-royalBlue/5 to-royalBlue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250 z-10" />
                         
                         {/* Decorative corner accents */}
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-premiumGold/5 rounded-bl-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
-                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-royalBlue/5 rounded-tr-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-premiumGold/5 rounded-bl-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-250 z-10" />
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-royalBlue/5 rounded-tr-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-250 z-10" />
                         
                         <CardHeader className="relative z-10 p-8">
                           <motion.div 

@@ -114,11 +114,10 @@ export function Footer() {
                 href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-marbleWhite/90 hover:text-green-400 dark:hover:text-green-400 transition-colors flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded-sm font-medium"
+                className="text-marbleWhite/80 hover:text-green-400 dark:hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-400 rounded-sm p-1"
                 aria-label="WhatsApp - Contact us on WhatsApp"
               >
-                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.5} />
-                <span>WhatsApp</span>
+                <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.5} />
               </a>
             </div>
           </div>
