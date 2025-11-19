@@ -245,29 +245,12 @@
     filter: brightness(1.1) contrast(1.1) saturate(1.2) drop-shadow(0 0 10px rgba(255, 140, 0, 0.3)) !important;
   }
   
-  /* Force navbar text visibility */
+  /* Force navbar text visibility in light mode */
   header nav a:not([class*="text-premiumGold"]) {
     color: rgb(64, 64, 64) !important; /* royalNavy */
   }
   
-  .dark header nav a:not([class*="text-premiumGold"]) {
-    color: white !important;
-  }
-  
-  /* Ensure all nav items are visible in dark mode */
-  .dark header nav a {
-    color: white !important;
-  }
-  
-  .dark header nav a:hover {
-    color: rgb(255, 140, 0) !important; /* premiumGold */
-  }
-  
-  .dark header nav a.text-premiumGold {
-    color: rgb(255, 140, 0) !important; /* premiumGold */
-  }
-  
-  /* Force visibility for all navigation links in dark mode - OVERRIDE EVERYTHING */
+  /* Force ALL navigation links to be visible in dark mode - OVERRIDE EVERYTHING */
   .dark header nav a,
   .dark header nav a[href="/"],
   .dark header nav a[href="/about"],
@@ -277,8 +260,17 @@
   .dark header nav a:not([class*="text-premiumGold"]) {
     color: white !important;
     opacity: 1 !important;
+    visibility: visible !important;
   }
   
+  /* Active link in dark mode */
+  .dark header nav a.text-premiumGold {
+    color: rgb(255, 140, 0) !important; /* premiumGold */
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* Hover state in dark mode */
   .dark header nav a:hover,
   .dark header nav a[href="/"]:hover,
   .dark header nav a[href="/about"]:hover,
@@ -287,11 +279,7 @@
   .dark header nav a[href="/contact"]:hover {
     color: rgb(255, 140, 0) !important; /* premiumGold */
     opacity: 1 !important;
-  }
-  
-  .dark header nav a.text-premiumGold {
-    color: rgb(255, 140, 0) !important;
-    opacity: 1 !important;
+    visibility: visible !important;
   }
   
   /* Ensure Services nav item highlights like others */

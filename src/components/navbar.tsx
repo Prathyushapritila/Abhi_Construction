@@ -72,7 +72,7 @@ export function Navbar() {
                 "text-base font-semibold transition-all duration-300 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-md px-3 py-2 relative group",
                 pathname === item.href
                   ? "text-premiumGold dark:text-premiumGold"
-                  : "text-royalNavy !text-royalNavy dark:!text-white dark:hover:!text-premiumGold"
+                  : "text-royalNavy dark:text-white dark:hover:text-premiumGold"
               )}
             >
               {item.label}
@@ -119,7 +119,7 @@ export function Navbar() {
                     "block px-4 py-3 rounded-lg text-base font-semibold transition-all hover:bg-premiumGold/10 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2",
                     pathname === item.href
                       ? "text-premiumGold bg-premiumGold/10 border-l-4 border-premiumGold dark:text-premiumGold"
-                      : "text-royalNavy !text-royalNavy dark:!text-white"
+                      : "text-royalNavy dark:text-white"
                   )}
                 >
                   {item.label}

@@ -28,7 +28,23 @@ const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
     "/Residential/3.jpg",
     "/Residential/4.jpg",
   ],
-  interiors: Array.from({ length: 60 }, (_, i) => `/Interiors/${i + 1}.jpg`),
+  interiors: [
+    "/Interiors/1.jpg", "/Interiors/2.jpg", "/Interiors/3.jpg", "/Interiors/4.jpg",
+    "/Interiors/5.jpg", "/Interiors/6.jpg", "/Interiors/7.jpg", "/Interiors/8.jpg",
+    "/Interiors/9.jpg", "/Interiors/10.jpg", "/Interiors/11.jpg", "/Interiors/12.jpg",
+    "/Interiors/13.jpg", "/Interiors/14.jpg", "/Interiors/15.jpg", "/Interiors/16.jpg",
+    "/Interiors/17.jpg", "/Interiors/19.jpg", "/Interiors/20.jpg", "/Interiors/21.jpg",
+    "/Interiors/22.jpg", "/Interiors/23.jpg", "/Interiors/24.jpg", "/Interiors/25.jpg",
+    "/Interiors/26.jpg", "/Interiors/27.jpg", "/Interiors/28.jpg", "/Interiors/29.jpg",
+    "/Interiors/30.jpg", "/Interiors/31.jpg", "/Interiors/32.jpg", "/Interiors/33.jpg",
+    "/Interiors/34.jpg", "/Interiors/35.jpg", "/Interiors/36.jpg", "/Interiors/37.jpg",
+    "/Interiors/38.jpg", "/Interiors/39.jpg", "/Interiors/40.jpg", "/Interiors/41.jpg",
+    "/Interiors/42.jpg", "/Interiors/43.jpg", "/Interiors/44.jpg", "/Interiors/45.jpg",
+    "/Interiors/46.jpg", "/Interiors/47.jpg", "/Interiors/48.jpg", "/Interiors/49.jpg",
+    "/Interiors/50.jpg", "/Interiors/51.jpg", "/Interiors/52.jpg", "/Interiors/53.jpg",
+    "/Interiors/54.jpg", "/Interiors/55.jpg", "/Interiors/56.jpg", "/Interiors/57.jpg",
+    "/Interiors/58.jpg", "/Interiors/59.jpg", "/Interiors/60.jpg",
+  ],
 };
 
 const categories: { value: PortfolioCategory; label: string; icon: typeof Home }[] = [
