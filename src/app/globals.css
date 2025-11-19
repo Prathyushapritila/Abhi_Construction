@@ -538,13 +538,16 @@
     background: rgb(15, 23, 42) !important;
   }
   
-  /* Theme toggle button - prevent layout shift - smallest size */
-  button[aria-label="Toggle theme"],
+  /* Theme toggle button - prevent layout shift - match nav button height */
+  button[aria-label="Toggle theme"] {
+    width: 2rem !important;
+    height: 2rem !important;
+    min-width: 2rem !important;
+    min-height: 2rem !important;
+    flex-shrink: 0 !important;
+  }
+  
   button[aria-label="Toggle theme"] * {
-    width: 1rem !important;
-    height: 1rem !important;
-    min-width: 1rem !important;
-    min-height: 1rem !important;
     flex-shrink: 0 !important;
   }
   

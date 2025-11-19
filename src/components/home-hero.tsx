@@ -20,7 +20,7 @@ export function HomeHero() {
 
   return (
     <section 
-      className="relative min-h-[65vh] sm:min-h-[70vh] md:min-h-[75vh] w-full overflow-x-hidden"
+      className="relative min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] w-full overflow-x-hidden"
     >
       {/* Background Image Layer with brightness filter */}
       <div 
@@ -37,7 +37,7 @@ export function HomeHero() {
           className="object-cover"
           quality={90}
           style={{
-            objectPosition: "center top",
+            objectPosition: "center 0%",
           }}
           sizes="100vw"
         />
