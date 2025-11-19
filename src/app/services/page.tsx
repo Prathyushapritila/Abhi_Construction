@@ -128,7 +128,7 @@ export default function ServicesPage() {
                           </CardTitle>
                         </CardHeader>
                         <CardContent className="relative z-10 p-8 pt-0">
-                          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-steelGray dark:text-slate-300 mb-6 leading-relaxed font-medium">
+                          <p className="text-lg md:text-xl text-royalNavy dark:text-white mb-6 leading-relaxed font-semibold drop-shadow-lg">
                             {service.description}
                           </p>
                           <motion.span 
