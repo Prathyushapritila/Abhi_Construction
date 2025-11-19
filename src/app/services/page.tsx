@@ -68,7 +68,20 @@ export default function ServicesPage() {
       </section>
 
       {/* Main Services Grid */}
-      <section className="section-standard bg-marbleWhite dark:bg-slate-900">
+      <section className="section-standard relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/bg/services.jpg"
+            alt="Services background"
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+          <div className="absolute inset-0 bg-marbleWhite/95 dark:bg-slate-900/95" />
+        </div>
+        <div className="relative z-10">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto mb-12 md:mb-16">
             {services.map((service, index) => {
@@ -134,6 +147,7 @@ export default function ServicesPage() {
               );
             })}
           </div>
+        </div>
         </div>
       </section>
 
