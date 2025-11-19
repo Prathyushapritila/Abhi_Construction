@@ -358,16 +358,25 @@
   }
   
   /* Select a service placeholder color - not yellow */
-  select[id="serviceType"],
+  [id="serviceType"] span[data-placeholder],
   [id="serviceType"] [data-placeholder],
-  [id="serviceType"]::placeholder,
+  [id="serviceType"]::placeholder {
+    color: rgb(128, 128, 128) !important;
+  }
+  
+  .dark [id="serviceType"] span[data-placeholder],
+  .dark [id="serviceType"] [data-placeholder],
+  .dark [id="serviceType"]::placeholder {
+    color: rgb(148, 163, 184) !important;
+  }
+  
+  /* Override any yellow/premiumGold color on SelectValue placeholder */
+  [id="serviceType"] span[data-placeholder].text-premiumGold,
   [id="serviceType"] span[data-placeholder] {
     color: rgb(128, 128, 128) !important;
   }
   
-  .dark select[id="serviceType"],
-  .dark [id="serviceType"] [data-placeholder],
-  .dark [id="serviceType"]::placeholder,
+  .dark [id="serviceType"] span[data-placeholder].text-premiumGold,
   .dark [id="serviceType"] span[data-placeholder] {
     color: rgb(148, 163, 184) !important;
   }
