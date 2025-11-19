@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Clock, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export function Footer() {
@@ -45,6 +45,15 @@ export function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2} />
+              </a>
+              <a
+                href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-marbleWhite/80 hover:text-green-400 dark:hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 rounded-sm p-1"
+                aria-label="WhatsApp - Contact us on WhatsApp"
+              >
+                <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.5} />
               </a>
             </div>
           </div>

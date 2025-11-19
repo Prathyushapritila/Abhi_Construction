@@ -30,7 +30,7 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <StickyContactButtons />
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
+      <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
           <Image
@@ -105,7 +105,7 @@ export default function ServicesPage() {
                             className="object-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-br from-stone-100/70 via-white/70 to-stone-50/70 dark:from-slate-800/70 dark:via-slate-800/70 dark:to-slate-900/70" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-stone-100/50 via-white/50 to-stone-50/50 dark:from-slate-800/50 dark:via-slate-800/50 dark:to-slate-900/50" />
                         </div>
                         {/* Animated background gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/0 via-premiumGold/5 to-premiumGold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250 z-10" />
