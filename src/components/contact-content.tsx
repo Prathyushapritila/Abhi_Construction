@@ -116,7 +116,7 @@ export function ContactContent() {
               <h3 className="font-heading font-semibold text-lg text-royalNavy dark:text-slate-100 mb-4">
                 Quick Contact
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-6 sm:space-y-8">
                 <Link 
                   href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`} 
                   target="_blank" 
