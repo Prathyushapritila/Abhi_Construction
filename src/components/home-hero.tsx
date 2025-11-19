@@ -37,7 +37,7 @@ export function HomeHero() {
           className="object-cover"
           quality={90}
           style={{
-            objectPosition: "center 5%",
+            objectPosition: "center top",
           }}
           sizes="100vw"
         />
