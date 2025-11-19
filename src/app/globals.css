@@ -267,21 +267,31 @@
     color: rgb(255, 140, 0) !important; /* premiumGold */
   }
   
-  /* Force visibility for all navigation links in dark mode */
+  /* Force visibility for all navigation links in dark mode - OVERRIDE EVERYTHING */
+  .dark header nav a,
   .dark header nav a[href="/"],
   .dark header nav a[href="/about"],
   .dark header nav a[href="/services"],
   .dark header nav a[href="/portfolio"],
-  .dark header nav a[href="/contact"] {
+  .dark header nav a[href="/contact"],
+  .dark header nav a:not([class*="text-premiumGold"]) {
     color: white !important;
+    opacity: 1 !important;
   }
   
+  .dark header nav a:hover,
   .dark header nav a[href="/"]:hover,
   .dark header nav a[href="/about"]:hover,
   .dark header nav a[href="/services"]:hover,
   .dark header nav a[href="/portfolio"]:hover,
   .dark header nav a[href="/contact"]:hover {
     color: rgb(255, 140, 0) !important; /* premiumGold */
+    opacity: 1 !important;
+  }
+  
+  .dark header nav a.text-premiumGold {
+    color: rgb(255, 140, 0) !important;
+    opacity: 1 !important;
   }
   
   /* Ensure Services nav item highlights like others */
