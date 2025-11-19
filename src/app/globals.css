@@ -538,13 +538,13 @@
     background: rgb(15, 23, 42) !important;
   }
   
-  /* Theme toggle button - prevent layout shift - even smaller size */
+  /* Theme toggle button - prevent layout shift - very small size */
   button[aria-label="Toggle theme"],
   button[aria-label="Toggle theme"] * {
-    width: 1.5rem !important;
-    height: 1.5rem !important;
-    min-width: 1.5rem !important;
-    min-height: 1.5rem !important;
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+    min-width: 1.25rem !important;
+    min-height: 1.25rem !important;
     flex-shrink: 0 !important;
   }
   
