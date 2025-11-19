@@ -280,18 +280,18 @@ export function ContactForm() {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-premiumGold hover:bg-premiumGold/90 text-royalNavy font-semibold shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2"
+            className="w-full bg-premiumGold hover:bg-premiumGold/90 text-royalNavy font-semibold shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 min-h-[48px] sm:min-h-[52px] py-6 sm:py-7 px-4 box-border"
             size="lg"
           >
             {isSubmitting ? (
               <>
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                Sending...
+                <Loader2 className="h-5 w-5 animate-spin flex-shrink-0" />
+                <span className="whitespace-nowrap">Sending...</span>
               </>
             ) : (
               <>
-                <Send className="mr-2 h-5 w-5" />
-                Send Message
+                <Send className="h-5 w-5 flex-shrink-0" />
+                <span className="whitespace-nowrap">Send Message</span>
               </>
             )}
           </Button>

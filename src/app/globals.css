@@ -364,13 +364,24 @@
   }
   
   .dark #portfolio button[data-variant="outline"],
-  .dark #portfolio button:not([class*="bg-royalBlue"]) {
+  .dark #portfolio button:not([class*="bg-royalBlue"]),
+  .dark #portfolio button[data-variant="outline"] *,
+  .dark #portfolio button:not([class*="bg-royalBlue"]) * {
     border-color: rgb(255, 255, 255) !important;
     color: rgb(255, 255, 255) !important;
   }
   
-  .dark #portfolio button span {
-    color: inherit !important;
+  .dark #portfolio button span,
+  .dark #portfolio button[data-variant="outline"] span,
+  .dark #portfolio button:not([class*="bg-royalBlue"]) span {
+    color: rgb(255, 255, 255) !important;
+  }
+  
+  /* Ensure portfolio buttons are visible in dark mode - ULTRA AGGRESSIVE */
+  .dark #portfolio button:not([class*="bg-royalBlue"]) {
+    opacity: 1 !important;
+    visibility: visible !important;
+    border-width: 2px !important;
   }
   
   .dark #portfolio h2,
@@ -518,6 +529,22 @@
   .dark button.bg-premiumGold,
   .dark button.bg-premiumGold * {
     color: rgb(64, 64, 64) !important;
+  }
+  
+  /* Contact form button containment */
+  form button[type="submit"],
+  form button[type="submit"] * {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+  
+  /* Quick contact button containment */
+  a[href^="tel:"] button,
+  a[href^="tel:"] button * {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
   
   /* Prevent layout shift in navbar and theme toggle */
