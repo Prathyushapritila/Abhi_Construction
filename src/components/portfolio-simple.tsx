@@ -130,36 +130,41 @@ export function PortfolioSimple() {
         </motion.div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-12 md:mb-16">
+        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 mb-12 md:mb-16">
           {categories.map((category) => {
             const Icon = category.icon;
+            const isActive = activeCategory === category.value;
             return (
               <Button
                 key={category.value}
-                variant={activeCategory === category.value ? "default" : "outline"}
-                onClick={() => setActiveCategory(activeCategory === category.value ? null : category.value)}
-                className={`flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 ${
-                  activeCategory === category.value
-                    ? "bg-royalBlue text-white border-royalBlue hover:bg-royalBlue/90"
-                    : "border-royalNavy text-royalNavy hover:bg-royalNavy/10 dark:!border-white dark:!text-white dark:hover:bg-white/10 dark:bg-transparent"
-                }`}
+                variant={isActive ? "default" : "outline"}
+                onClick={() => setActiveCategory(isActive ? null : category.value)}
+                className="flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 min-w-[140px]"
                 style={{
-                  ...(activeCategory !== category.value ? {
+                  ...(isActive ? {
+                    backgroundColor: 'rgb(59, 130, 246)',
+                    borderColor: 'rgb(59, 130, 246)',
+                    color: 'white',
+                  } : {
                     borderColor: 'rgb(64, 64, 64)',
                     color: 'rgb(64, 64, 64)',
-                  } : {}),
+                    backgroundColor: 'transparent',
+                  }),
                 }}
               >
-                <Icon className="h-4 w-4 flex-shrink-0" style={{
-                  color: activeCategory === category.value 
-                    ? 'white' 
-                    : 'inherit'
-                }} />
-                <span style={{
-                  color: activeCategory === category.value 
-                    ? 'white' 
-                    : 'inherit'
-                }}>{category.label}</span>
+                <Icon 
+                  className="h-4 w-4 flex-shrink-0" 
+                  style={{
+                    color: isActive ? 'white' : 'inherit',
+                  }} 
+                />
+                <span 
+                  style={{
+                    color: isActive ? 'white' : 'inherit',
+                  }}
+                >
+                  {category.label}
+                </span>
               </Button>
             );
           })}

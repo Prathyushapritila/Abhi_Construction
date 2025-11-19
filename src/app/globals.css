@@ -414,11 +414,31 @@
     color: inherit !important;
   }
   
-  /* Portfolio buttons - ensure visibility in dark mode */
-  .dark #portfolio button:not([class*="bg-royalBlue"]) *,
-  .dark #portfolio button:not([class*="bg-royalBlue"]) svg {
-    color: rgb(255, 255, 255) !important;
+  /* Portfolio buttons - ensure visibility and alignment in dark mode */
+  .dark #portfolio button:not([class*="bg-royalBlue"]) {
     border-color: rgb(255, 255, 255) !important;
+    color: rgb(255, 255, 255) !important;
+    background-color: transparent !important;
+  }
+  
+  .dark #portfolio button:not([class*="bg-royalBlue"]) *,
+  .dark #portfolio button:not([class*="bg-royalBlue"]) svg,
+  .dark #portfolio button:not([class*="bg-royalBlue"]) span {
+    color: rgb(255, 255, 255) !important;
+  }
+  
+  /* Portfolio button container alignment */
+  #portfolio .flex.flex-wrap {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Portfolio buttons - ensure proper sizing and alignment */
+  #portfolio button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
   }
   
   .dark #portfolio h2,

@@ -115,12 +115,21 @@ export function ContactContent() {
               <h3 className="font-heading font-semibold text-lg text-royalNavy dark:text-slate-100 mb-4">
                 Quick Contact
               </h3>
-              <div className="w-full max-w-full">
-                <Link href={`tel:+91${siteConfig.contact.phone.replace(/\s/g, "")}`} className="block w-full" style={{ maxWidth: '100%', width: '100%' }}>
+              <div className="w-full" style={{ maxWidth: '100%', boxSizing: 'border-box' }}>
+                <Link 
+                  href={`tel:+91${siteConfig.contact.phone.replace(/\s/g, "")}`} 
+                  className="block w-full" 
+                  style={{ maxWidth: '100%', width: '100%', boxSizing: 'border-box' }}
+                >
                   <Button
                     variant="outline"
-                    className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white text-base sm:text-lg font-semibold py-6 sm:py-7 min-h-[48px] sm:min-h-[52px] dark:border-white dark:text-white dark:bg-transparent dark:hover:text-white dark:hover:bg-white/10 flex items-center justify-center gap-3 px-4 box-border rounded-lg transition-all duration-200"
-                    style={{ maxWidth: '100%', width: '100%' }}
+                    className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white text-base sm:text-lg font-semibold py-6 sm:py-7 min-h-[48px] sm:min-h-[52px] dark:border-white dark:text-white dark:bg-transparent dark:hover:text-white dark:hover:bg-white/10 flex items-center justify-center gap-3 px-4 rounded-lg transition-all duration-200"
+                    style={{ 
+                      maxWidth: '100%', 
+                      width: '100%',
+                      boxSizing: 'border-box',
+                      padding: '1.5rem 1rem',
+                    }}
                   >
                     <Phone className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-current dark:text-white" />
                     <span className="whitespace-nowrap text-current dark:text-white">Call Us Now</span>
