@@ -216,7 +216,7 @@ export function AboutContent() {
                     {/* Background Image - More visible for all cards with custom images */}
                     <div className={`absolute inset-0 z-0 ${
                       pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty"))
-                        ? "opacity-80 dark:opacity-70 group-hover:opacity-90 dark:group-hover:opacity-80" 
+                        ? "opacity-90 dark:opacity-80 group-hover:opacity-95 dark:group-hover:opacity-90" 
                         : "opacity-25 dark:opacity-35 group-hover:opacity-35 dark:group-hover:opacity-45"
                     } transition-opacity duration-300`}>
                       <Image
@@ -233,10 +233,10 @@ export function AboutContent() {
                           }
                         }}
                       />
-                      {/* Overlay for text readability - lighter for custom image cards to show image better */}
+                      {/* Overlay for text readability - much lighter for custom image cards to show image better */}
                       <div className={`absolute inset-0 ${
                         pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty"))
-                          ? "bg-gradient-to-b from-white/50 via-white/40 to-white/55 dark:from-slate-900/50 dark:via-slate-900/40 dark:to-slate-900/55"
+                          ? "bg-gradient-to-b from-white/30 via-white/25 to-white/35 dark:from-slate-900/30 dark:via-slate-900/25 dark:to-slate-900/35"
                           : "bg-gradient-to-b from-white/85 via-white/75 to-white/90 dark:from-slate-800/75 dark:via-slate-800/65 dark:to-slate-800/80"
                       }`} />
                     </div>
