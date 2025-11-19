@@ -20,7 +20,7 @@ export function HomeHero() {
 
   return (
     <section 
-      className="relative min-h-[45vh] sm:min-h-[50vh] md:min-h-[55vh] w-full overflow-hidden"
+      className="relative min-h-[45vh] sm:min-h-[50vh] md:min-h-[55vh] w-full overflow-x-hidden"
     >
       {/* Background Image Layer with brightness filter */}
       <div 
@@ -64,6 +64,26 @@ export function HomeHero() {
       />
 
       {/* Content - Text is in the image, button positioned after "create timeless spaces" */}
+      {/* Typo correction overlay - covers "timieless" and replaces with "timeless" */}
+      <div className="absolute inset-0 z-[5] pointer-events-none">
+        <div className="relative w-full h-full">
+          {/* Positioned to overlay the typo in the image - adjust position as needed */}
+          <span 
+            className="absolute text-white font-heading font-semibold drop-shadow-2xl"
+            style={{
+              bottom: 'calc(45% + 2rem)',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+              whiteSpace: 'nowrap',
+              opacity: 0.95,
+            }}
+          >
+            timeless
+          </span>
+        </div>
+      </div>
+      
       <div className="absolute inset-0 flex items-end justify-center z-10 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
         <div className="container mx-auto px-3 sm:px-4 md:px-6 text-center max-w-7xl w-full">
           <div className="max-w-4xl mx-auto w-full">
