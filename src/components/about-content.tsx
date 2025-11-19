@@ -49,8 +49,8 @@ const valuePillars = [
     title: "Hyderabad's Trusted Builder Network",
     description: "Deep local knowledge of permits, regulations, and suppliers. We've built relationships that get approvals faster and materials delivered on schedule.",
     highlight: "Local Advantage",
-    image: "/hyd.jpeg",
-    fallback: "/hyd.jpeg",
+    image: "/hyderabad.jpeg",
+    fallback: "/hyderabad.jpeg",
   },
   {
     icon: Shield,
@@ -215,7 +215,7 @@ export function AboutContent() {
                   <Card className="h-full border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 bg-white dark:bg-slate-800 hover:shadow-2xl relative overflow-hidden">
                     {/* Background Image - More visible for all cards with custom images */}
                     <div className={`absolute inset-0 z-0 ${
-                      pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty"))
+                      pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty"))
                         ? "opacity-80 dark:opacity-70 group-hover:opacity-90 dark:group-hover:opacity-80" 
                         : "opacity-25 dark:opacity-35 group-hover:opacity-35 dark:group-hover:opacity-45"
                     } transition-opacity duration-300`}>
@@ -235,7 +235,7 @@ export function AboutContent() {
                       />
                       {/* Overlay for text readability - lighter for custom image cards to show image better */}
                       <div className={`absolute inset-0 ${
-                        pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty"))
+                        pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty"))
                           ? "bg-gradient-to-b from-white/50 via-white/40 to-white/55 dark:from-slate-900/50 dark:via-slate-900/40 dark:to-slate-900/55"
                           : "bg-gradient-to-b from-white/85 via-white/75 to-white/90 dark:from-slate-800/75 dark:via-slate-800/65 dark:to-slate-800/80"
                       }`} />
@@ -253,7 +253,7 @@ export function AboutContent() {
                     <CardHeader className="pb-4 relative z-10">
                       <motion.div 
                         className={`h-16 w-16 rounded-xl bg-gradient-to-br from-premiumGold/20 to-royalBlue/20 dark:from-premiumGold/30 dark:to-royalBlue/30 flex items-center justify-center mb-4 group-hover:from-premiumGold/40 group-hover:to-royalBlue/40 transition-all duration-300 shadow-lg relative z-20 ${
-                          pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty")) ? "backdrop-blur-sm bg-white/80 dark:bg-slate-900/80" : ""
+                          pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty")) ? "backdrop-blur-sm bg-white/80 dark:bg-slate-900/80" : ""
                         }`}
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
@@ -261,13 +261,13 @@ export function AboutContent() {
                         <Icon className="h-8 w-8 text-royalBlue dark:text-premiumGold dark:group-hover:text-premiumGold group-hover:text-premiumGold transition-colors duration-300" />
                       </motion.div>
                       <h3 className={`text-xl font-heading font-bold group-hover:text-premiumGold transition-colors duration-300 relative z-20 mb-2 ${
-                        pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty")) 
+                        pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty")) 
                           ? "text-royalNavy dark:text-slate-100 drop-shadow-lg [text-shadow:_2px_2px_4px_rgba(255,255,255,0.9)] dark:[text-shadow:_2px_2px_4px_rgba(0,0,0,0.9)]" 
                           : "text-royalNavy dark:text-slate-100"
                       }`}>{pillar.title}</h3>
                       {pillar.highlight && (
                         <p className={`text-sm font-semibold mt-2 relative z-20 ${
-                          pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty")) 
+                          pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty")) 
                             ? "text-premiumGold drop-shadow-md [text-shadow:_1px_1px_3px_rgba(255,255,255,0.9)] dark:[text-shadow:_1px_1px_3px_rgba(0,0,0,0.9)]" 
                             : "text-premiumGold"
                         }`}>{pillar.highlight}</p>
@@ -275,7 +275,7 @@ export function AboutContent() {
                     </CardHeader>
                     <CardContent className="relative z-10">
                       <CardDescription className={`text-base leading-relaxed ${
-                        pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyd") || pillar.image.includes("warranty")) 
+                        pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty")) 
                           ? "text-royalNavy dark:text-slate-200 drop-shadow-md [text-shadow:_1px_1px_2px_rgba(255,255,255,0.95)] dark:[text-shadow:_1px_1px_2px_rgba(0,0,0,0.95)] font-medium" 
                           : "text-steelGray dark:text-slate-300"
                       }`}>
