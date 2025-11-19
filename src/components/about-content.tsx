@@ -213,10 +213,10 @@ export function AboutContent() {
                   className="group"
                 >
                   <Card className="h-full border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 bg-white dark:bg-slate-800 hover:shadow-2xl relative overflow-hidden">
-                    {/* Background Image - Visible for blueprints, adjusted for others */}
+                    {/* Background Image - More visible for blueprints, adjusted for others */}
                     <div className={`absolute inset-0 z-0 ${
                       pillar.title === "End-to-End Design-Build Excellence" 
-                        ? "opacity-60 dark:opacity-50 group-hover:opacity-70 dark:group-hover:opacity-60" 
+                        ? "opacity-80 dark:opacity-70 group-hover:opacity-90 dark:group-hover:opacity-80" 
                         : "opacity-25 dark:opacity-35 group-hover:opacity-35 dark:group-hover:opacity-45"
                     } transition-opacity duration-300`}>
                       <Image
@@ -233,10 +233,10 @@ export function AboutContent() {
                           }
                         }}
                       />
-                      {/* Overlay for text readability - lighter for blueprints card */}
+                      {/* Overlay for text readability - lighter for blueprints card to show image better */}
                       <div className={`absolute inset-0 ${
                         pillar.title === "End-to-End Design-Build Excellence"
-                          ? "bg-gradient-to-b from-white/70 via-white/60 to-white/75 dark:from-slate-800/60 dark:via-slate-800/50 dark:to-slate-800/65"
+                          ? "bg-gradient-to-b from-white/50 via-white/40 to-white/55 dark:from-slate-900/50 dark:via-slate-900/40 dark:to-slate-900/55"
                           : "bg-gradient-to-b from-white/85 via-white/75 to-white/90 dark:from-slate-800/75 dark:via-slate-800/65 dark:to-slate-800/80"
                       }`} />
                     </div>
@@ -252,19 +252,27 @@ export function AboutContent() {
                     
                     <CardHeader className="pb-4 relative z-10">
                       <motion.div 
-                        className="h-16 w-16 rounded-xl bg-gradient-to-br from-premiumGold/20 to-royalBlue/20 dark:from-premiumGold/30 dark:to-royalBlue/30 flex items-center justify-center mb-4 group-hover:from-premiumGold/40 group-hover:to-royalBlue/40 transition-all duration-300 shadow-lg relative z-20"
+                        className={`h-16 w-16 rounded-xl bg-gradient-to-br from-premiumGold/20 to-royalBlue/20 dark:from-premiumGold/30 dark:to-royalBlue/30 flex items-center justify-center mb-4 group-hover:from-premiumGold/40 group-hover:to-royalBlue/40 transition-all duration-300 shadow-lg relative z-20 ${
+                          pillar.title === "End-to-End Design-Build Excellence" ? "backdrop-blur-sm bg-white/80 dark:bg-slate-900/80" : ""
+                        }`}
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
                         <Icon className="h-8 w-8 text-royalBlue dark:text-premiumGold dark:group-hover:text-premiumGold group-hover:text-premiumGold transition-colors duration-300" />
                       </motion.div>
-                      <h3 className="text-xl font-heading font-bold text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-300 relative z-20 mb-2">{pillar.title}</h3>
+                      <h3 className={`text-xl font-heading font-bold text-royalNavy dark:text-slate-100 group-hover:text-premiumGold transition-colors duration-300 relative z-20 mb-2 ${
+                        pillar.title === "End-to-End Design-Build Excellence" ? "drop-shadow-lg [text-shadow:_2px_2px_4px_rgba(255,255,255,0.8)] dark:[text-shadow:_2px_2px_4px_rgba(0,0,0,0.8)]" : ""
+                      }`}>{pillar.title}</h3>
                       {pillar.highlight && (
-                        <p className="text-sm font-semibold text-premiumGold mt-2 relative z-20">{pillar.highlight}</p>
+                        <p className={`text-sm font-semibold text-premiumGold mt-2 relative z-20 ${
+                          pillar.title === "End-to-End Design-Build Excellence" ? "drop-shadow-md [text-shadow:_1px_1px_3px_rgba(255,255,255,0.8)] dark:[text-shadow:_1px_1px_3px_rgba(0,0,0,0.8)]" : ""
+                        }`}>{pillar.highlight}</p>
                       )}
                     </CardHeader>
                     <CardContent className="relative z-10">
-                      <CardDescription className="text-base text-steelGray dark:text-slate-300 leading-relaxed">
+                      <CardDescription className={`text-base text-steelGray dark:text-slate-300 leading-relaxed ${
+                        pillar.title === "End-to-End Design-Build Excellence" ? "drop-shadow-md [text-shadow:_1px_1px_2px_rgba(255,255,255,0.9)] dark:[text-shadow:_1px_1px_2px_rgba(0,0,0,0.9)] font-medium" : ""
+                      }`}>
                         {pillar.description}
                       </CardDescription>
                     </CardContent>
