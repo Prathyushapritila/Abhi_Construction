@@ -141,7 +141,7 @@ export function PortfolioSimple() {
                 className={`flex items-center space-x-2 ${
                   activeCategory === category.value
                     ? "bg-royalBlue text-white border-royalBlue hover:bg-royalBlue/90"
-                    : "border-royalNavy text-royalNavy dark:border-white dark:text-white hover:bg-royalNavy/10 dark:hover:bg-white/10"
+                    : "border-royalNavy text-royalNavy hover:bg-royalNavy/10 dark:border-white dark:text-white dark:hover:bg-white/10 !border-royalNavy !text-royalNavy dark:!border-white dark:!text-white"
                 }`}
               >
                 <Icon className="h-4 w-4" />

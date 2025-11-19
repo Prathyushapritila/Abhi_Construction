@@ -280,7 +280,7 @@ export function ContactForm() {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-premiumGold hover:bg-premiumGold/90 text-royalNavy font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+            className="w-full bg-premiumGold hover:bg-premiumGold/90 text-royalNavy font-semibold shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2"
             size="lg"
           >
             {isSubmitting ? (
