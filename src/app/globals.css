@@ -519,6 +519,25 @@
     will-change: auto;
   }
   
+  /* Ensure navbar has solid dark background in dark mode */
+  .dark header,
+  .dark header nav {
+    background-color: rgb(15, 23, 42) !important; /* slate-900 - solid dark background */
+    background: rgb(15, 23, 42) !important;
+  }
+  
+  /* Ensure mobile menu also has dark background */
+  .dark header nav div[class*="container"] {
+    background-color: rgb(15, 23, 42) !important; /* slate-900 */
+  }
+  
+  /* Override any transparent backgrounds in dark mode navbar */
+  .dark header[class*="bg-"],
+  .dark header[class*="backdrop"] {
+    background-color: rgb(15, 23, 42) !important; /* slate-900 */
+    background: rgb(15, 23, 42) !important;
+  }
+  
   /* Theme toggle button - prevent layout shift */
   button[aria-label="Toggle theme"],
   button[aria-label="Toggle theme"] * {
