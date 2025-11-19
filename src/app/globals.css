@@ -251,61 +251,84 @@
   }
   
   /* Force ALL navigation links to be visible in dark mode - OVERRIDE EVERYTHING */
-  /* Base rule for all nav links in dark mode */
-  .dark header nav a {
+  /* Base rule for all nav links in dark mode - ULTRA AGGRESSIVE */
+  .dark header nav a,
+  .dark header nav a *,
+  .dark header nav a span {
     color: white !important;
     opacity: 1 !important;
     visibility: visible !important;
-    display: block !important;
+    display: inline-block !important;
   }
   
-  /* Specific routes in dark mode */
+  /* Specific routes in dark mode - ULTRA AGGRESSIVE */
   .dark header nav a[href="/"],
   .dark header nav a[href="/about"],
   .dark header nav a[href="/services"],
   .dark header nav a[href="/portfolio"],
-  .dark header nav a[href="/contact"] {
+  .dark header nav a[href="/contact"],
+  .dark header nav a[href="/"] *,
+  .dark header nav a[href="/about"] *,
+  .dark header nav a[href="/services"] *,
+  .dark header nav a[href="/portfolio"] *,
+  .dark header nav a[href="/contact"] * {
     color: white !important;
     opacity: 1 !important;
     visibility: visible !important;
-    display: block !important;
+    display: inline-block !important;
   }
   
-  /* Non-active links in dark mode */
-  .dark header nav a:not([class*="text-premiumGold"]) {
+  /* Non-active links in dark mode - ULTRA AGGRESSIVE */
+  .dark header nav a:not([class*="text-premiumGold"]),
+  .dark header nav a:not([class*="text-premiumGold"]) * {
     color: white !important;
     opacity: 1 !important;
     visibility: visible !important;
-    display: block !important;
+    display: inline-block !important;
   }
   
-  /* Active link in dark mode */
+  /* Active link in dark mode - keep gold */
   .dark header nav a.text-premiumGold,
-  .dark header nav a[href].text-premiumGold {
+  .dark header nav a[href].text-premiumGold,
+  .dark header nav a.text-premiumGold * {
     color: rgb(255, 140, 0) !important; /* premiumGold */
     opacity: 1 !important;
     visibility: visible !important;
-    display: block !important;
+    display: inline-block !important;
   }
   
-  /* Hover state in dark mode - ALL links */
-  .dark header nav a:hover {
+  /* Hover state in dark mode - ALL links - ULTRA AGGRESSIVE */
+  .dark header nav a:hover,
+  .dark header nav a:hover * {
     color: rgb(255, 140, 0) !important; /* premiumGold */
     opacity: 1 !important;
     visibility: visible !important;
-    display: block !important;
+    display: inline-block !important;
   }
   
-  /* Specific route hovers in dark mode */
+  /* Specific route hovers in dark mode - ULTRA AGGRESSIVE */
   .dark header nav a[href="/"]:hover,
   .dark header nav a[href="/about"]:hover,
   .dark header nav a[href="/services"]:hover,
   .dark header nav a[href="/portfolio"]:hover,
-  .dark header nav a[href="/contact"]:hover {
+  .dark header nav a[href="/contact"]:hover,
+  .dark header nav a[href="/"]:hover *,
+  .dark header nav a[href="/about"]:hover *,
+  .dark header nav a[href="/services"]:hover *,
+  .dark header nav a[href="/portfolio"]:hover *,
+  .dark header nav a[href="/contact"]:hover * {
     color: rgb(255, 140, 0) !important; /* premiumGold */
     opacity: 1 !important;
     visibility: visible !important;
-    display: block !important;
+    display: inline-block !important;
+  }
+  
+  /* Override any transparent or invisible states */
+  .dark header nav a[class*="dark:text-white"],
+  .dark header nav a[class*="dark:text-white"] * {
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   
   /* Ensure Services nav item highlights like others */
