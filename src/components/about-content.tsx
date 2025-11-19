@@ -17,8 +17,8 @@ const valuePillars = [
     title: "End-to-End Design-Build Excellence",
     description: "From architectural blueprints to final interior styling—one team, one vision, zero handoff gaps. We eliminate the chaos of coordinating multiple contractors.",
     highlight: "Single Point of Contact",
-    image: "/bg/cards/design-build-excellence.jpg", // Placeholder - replace when image is provided
-    fallback: "/projects/interior-1.jpeg",
+    image: "/blueprints.jpeg",
+    fallback: "/blueprints.jpeg",
   },
   {
     icon: Clock,
@@ -213,8 +213,12 @@ export function AboutContent() {
                   className="group"
                 >
                   <Card className="h-full border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 bg-white dark:bg-slate-800 hover:shadow-2xl relative overflow-hidden">
-                    {/* Background Image - Bright and elegant with readable text overlay */}
-                    <div className="absolute inset-0 opacity-25 dark:opacity-35 group-hover:opacity-35 dark:group-hover:opacity-45 transition-opacity duration-300 z-0">
+                    {/* Background Image - Visible for blueprints, adjusted for others */}
+                    <div className={`absolute inset-0 z-0 ${
+                      pillar.title === "End-to-End Design-Build Excellence" 
+                        ? "opacity-60 dark:opacity-50 group-hover:opacity-70 dark:group-hover:opacity-60" 
+                        : "opacity-25 dark:opacity-35 group-hover:opacity-35 dark:group-hover:opacity-45"
+                    } transition-opacity duration-300`}>
                       <Image
                         src={pillar.fallback || pillar.image}
                         alt=""
@@ -229,8 +233,12 @@ export function AboutContent() {
                           }
                         }}
                       />
-                      {/* Bright overlay for text readability - lighter for premium look */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/75 to-white/90 dark:from-slate-800/75 dark:via-slate-800/65 dark:to-slate-800/80" />
+                      {/* Overlay for text readability - lighter for blueprints card */}
+                      <div className={`absolute inset-0 ${
+                        pillar.title === "End-to-End Design-Build Excellence"
+                          ? "bg-gradient-to-b from-white/70 via-white/60 to-white/75 dark:from-slate-800/60 dark:via-slate-800/50 dark:to-slate-800/65"
+                          : "bg-gradient-to-b from-white/85 via-white/75 to-white/90 dark:from-slate-800/75 dark:via-slate-800/65 dark:to-slate-800/80"
+                      }`} />
                     </div>
                     
                     {/* Background pattern overlay */}
