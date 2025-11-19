@@ -73,6 +73,34 @@
     font-family: var(--font-inter);
     overflow-x: hidden;
     max-width: 100vw;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+  }
+  
+  /* Allow text selection everywhere */
+  * {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+  }
+  
+  /* Exceptions for interactive elements */
+  button, a, input, textarea, select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  /* But allow selection in input/textarea */
+  input, textarea {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-poppins);
@@ -236,6 +264,23 @@
   }
   
   .dark header nav a.text-premiumGold {
+    color: rgb(255, 140, 0) !important; /* premiumGold */
+  }
+  
+  /* Force visibility for all navigation links in dark mode */
+  .dark header nav a[href="/"],
+  .dark header nav a[href="/about"],
+  .dark header nav a[href="/services"],
+  .dark header nav a[href="/portfolio"],
+  .dark header nav a[href="/contact"] {
+    color: white !important;
+  }
+  
+  .dark header nav a[href="/"]:hover,
+  .dark header nav a[href="/about"]:hover,
+  .dark header nav a[href="/services"]:hover,
+  .dark header nav a[href="/portfolio"]:hover,
+  .dark header nav a[href="/contact"]:hover {
     color: rgb(255, 140, 0) !important; /* premiumGold */
   }
   

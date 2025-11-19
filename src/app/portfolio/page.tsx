@@ -19,12 +19,15 @@ export default function PortfolioPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/projects/living-room-1.jpeg"
+            src="/bg/portfolio.jpg"
             alt="Portfolio background"
             fill
-            className="object-cover"
+            className="object-contain sm:object-cover"
             sizes="100vw"
             priority
+            style={{
+              objectPosition: "center",
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-stone-900/80 via-stone-800/75 to-stone-900/80 dark:from-slate-900/85 dark:via-slate-800/80 dark:to-slate-900/85" />
         </div>

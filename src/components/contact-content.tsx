@@ -111,7 +111,7 @@ export function ContactContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-4 pt-6"
+              className="space-y-6 pt-6"
             >
               <h3 className="font-heading font-semibold text-lg text-royalNavy dark:text-slate-100 mb-4">
                 Quick Contact
@@ -129,8 +129,8 @@ export function ContactContent() {
                 </Button>
               </Link>
               <Link href={`tel:+91${siteConfig.contact.phone.replace(/\s/g, "")}`}>
-                <Button variant="outline" className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white">
-                  <Phone className="mr-2 h-5 w-5" />
+                <Button variant="outline" className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white text-base sm:text-lg font-semibold py-6 sm:py-7 min-h-[48px] sm:min-h-[52px]">
+                  <Phone className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
                   Call Us Now
                 </Button>
               </Link>

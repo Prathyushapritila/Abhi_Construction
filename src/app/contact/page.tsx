@@ -19,9 +19,12 @@ export default function ContactPage() {
             src="/bg/contact.jpg"
             alt="Contact us"
             fill
-            className="object-cover"
+            className="object-contain sm:object-cover"
             sizes="100vw"
             priority
+            style={{
+              objectPosition: "center",
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-stone-800/60 to-stone-900/70 dark:from-slate-900/80 dark:via-slate-800/70 dark:to-slate-900/80" />
         </div>
