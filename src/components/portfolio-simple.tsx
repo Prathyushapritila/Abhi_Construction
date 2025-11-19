@@ -141,14 +141,8 @@ export function PortfolioSimple() {
                 className={`flex items-center space-x-2 ${
                   activeCategory === category.value
                     ? "bg-royalBlue text-white border-royalBlue hover:bg-royalBlue/90"
-                    : "border-royalNavy text-royalNavy dark:border-slate-300 dark:text-slate-300 hover:bg-royalNavy/10 dark:hover:bg-slate-300/10"
+                    : "border-royalNavy text-royalNavy dark:border-slate-300 dark:text-slate-300 hover:bg-royalNavy/10 dark:hover:bg-slate-300/10 !border-royalNavy !text-royalNavy dark:!border-slate-300 dark:!text-slate-300"
                 }`}
-                style={{
-                  ...(activeCategory !== category.value && {
-                    borderColor: 'rgb(64, 64, 64)',
-                    color: 'rgb(64, 64, 64)',
-                  }),
-                }}
               >
                 <Icon className="h-4 w-4" />
                 <span>{category.label}</span>

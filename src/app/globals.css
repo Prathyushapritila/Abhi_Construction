@@ -300,11 +300,28 @@
   
   .dark header nav a[href="/services"] {
     color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   
   header nav a[href="/services"]:hover,
   header nav a[href="/services"].text-premiumGold {
     color: rgb(255, 140, 0) !important; /* premiumGold */
+  }
+  
+  /* Portfolio button colors - ensure not yellow (premiumGold) */
+  /* Target buttons that are not active */
+  #portfolio button[variant="outline"],
+  #portfolio button.border-royalNavy,
+  #portfolio button.border-slate-300 {
+    border-color: rgb(64, 64, 64) !important;
+    color: rgb(64, 64, 64) !important;
+  }
+  
+  .dark #portfolio button[variant="outline"],
+  .dark #portfolio button.border-slate-300 {
+    border-color: rgb(203, 213, 225) !important;
+    color: rgb(203, 213, 225) !important;
   }
   
   /* Force remove borders from service cards */
