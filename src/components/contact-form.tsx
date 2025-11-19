@@ -277,12 +277,13 @@ export function ContactForm() {
             </motion.div>
           )}
 
-          <div className="w-full">
+          <div className="w-full max-w-full">
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-premiumGold hover:bg-premiumGold/90 text-royalNavy font-semibold shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-3 min-h-[48px] sm:min-h-[52px] py-6 sm:py-7 px-4 box-border rounded-lg dark:bg-premiumGold dark:hover:bg-premiumGold/90 dark:text-royalNavy max-w-full overflow-hidden"
+              className="w-full bg-premiumGold hover:bg-premiumGold/90 text-royalNavy font-semibold shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-3 min-h-[48px] sm:min-h-[52px] py-6 sm:py-7 px-4 box-border rounded-lg dark:bg-premiumGold dark:hover:bg-premiumGold/90 dark:text-royalNavy"
               size="lg"
+              style={{ maxWidth: '100%', width: '100%' }}
             >
               {isSubmitting ? (
                 <>

@@ -387,19 +387,38 @@
     background-color: transparent !important;
   }
   
-  /* Contact buttons - ensure they stay in box */
+  /* Contact buttons - ensure they stay in box and are visible */
+  form button[type="submit"],
+  a[href^="tel:"] button {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
   .dark form button[type="submit"],
   .dark a[href^="tel:"] button {
     opacity: 1 !important;
     visibility: visible !important;
     max-width: 100% !important;
+    width: 100% !important;
     overflow: hidden !important;
+    box-sizing: border-box !important;
   }
   
   .dark form button[type="submit"] *,
-  .dark a[href^="tel:"] button * {
+  .dark a[href^="tel:"] button *,
+  .dark form button[type="submit"] svg,
+  .dark a[href^="tel:"] button svg {
     opacity: 1 !important;
     visibility: visible !important;
+    color: inherit !important;
+  }
+  
+  /* Portfolio buttons - ensure visibility in dark mode */
+  .dark #portfolio button:not([class*="bg-royalBlue"]) *,
+  .dark #portfolio button:not([class*="bg-royalBlue"]) svg {
+    color: rgb(255, 255, 255) !important;
+    border-color: rgb(255, 255, 255) !important;
   }
   
   .dark #portfolio h2,

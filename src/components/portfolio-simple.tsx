@@ -138,20 +138,28 @@ export function PortfolioSimple() {
                 key={category.value}
                 variant={activeCategory === category.value ? "default" : "outline"}
                 onClick={() => setActiveCategory(activeCategory === category.value ? null : category.value)}
-                className={`flex items-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 ${
+                className={`flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 ${
                   activeCategory === category.value
                     ? "bg-royalBlue text-white border-royalBlue hover:bg-royalBlue/90"
-                    : "border-royalNavy text-royalNavy hover:bg-royalNavy/10 dark:border-white dark:text-white dark:hover:bg-white/10 dark:bg-transparent"
+                    : "border-royalNavy text-royalNavy hover:bg-royalNavy/10 dark:!border-white dark:!text-white dark:hover:bg-white/10 dark:bg-transparent"
                 }`}
                 style={{
-                  ...(activeCategory !== category.value && {
-                    borderColor: 'var(--royal-navy)',
-                    color: 'var(--royal-navy)',
-                  }),
+                  ...(activeCategory !== category.value ? {
+                    borderColor: 'rgb(64, 64, 64)',
+                    color: 'rgb(64, 64, 64)',
+                  } : {}),
                 }}
               >
-                <Icon className="h-4 w-4 text-current dark:text-white" />
-                <span className="text-current dark:text-white">{category.label}</span>
+                <Icon className="h-4 w-4 flex-shrink-0" style={{
+                  color: activeCategory === category.value 
+                    ? 'white' 
+                    : 'inherit'
+                }} />
+                <span style={{
+                  color: activeCategory === category.value 
+                    ? 'white' 
+                    : 'inherit'
+                }}>{category.label}</span>
               </Button>
             );
           })}
