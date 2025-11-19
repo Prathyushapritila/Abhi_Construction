@@ -63,20 +63,7 @@ export function HomeHero() {
         }}
       />
 
-      {/* Text Box at Top - "Building more than..." */}
-      <div className="absolute inset-0 flex items-start justify-center z-10 pt-8 sm:pt-12 md:pt-16 lg:pt-20">
-        <div className="container mx-auto px-3 sm:px-4 md:px-6 text-center max-w-7xl w-full">
-          <div className="max-w-4xl mx-auto w-full">
-            <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm rounded-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 shadow-2xl border-2 border-premiumGold/30 dark:border-premiumGold/50">
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-royalNavy dark:text-white leading-tight">
-                Building more than houses, we create timeless spaces
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Content - Button positioned at bottom */}
+      {/* Content - Text is in the image, button positioned after "create timeless spaces" */}
       <div className="absolute inset-0 flex items-end justify-center z-10 pb-0 sm:pb-0 md:pb-0 lg:pb-0">
         <div className="container mx-auto px-3 sm:px-4 md:px-6 text-center max-w-7xl w-full">
           <div className="max-w-4xl mx-auto w-full">
