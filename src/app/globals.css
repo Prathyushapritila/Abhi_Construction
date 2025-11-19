@@ -310,16 +310,28 @@
   }
   
   /* Portfolio button colors - ensure not yellow (premiumGold) */
-  /* Target buttons that are not active */
-  #portfolio button[variant="outline"],
-  #portfolio button.border-royalNavy,
-  #portfolio button.border-slate-300 {
+  /* Target outline variant buttons in portfolio section */
+  #portfolio button[data-variant="outline"],
+  #portfolio button:not([class*="bg-royalBlue"]) {
     border-color: rgb(64, 64, 64) !important;
     color: rgb(64, 64, 64) !important;
   }
   
-  .dark #portfolio button[variant="outline"],
-  .dark #portfolio button.border-slate-300 {
+  .dark #portfolio button[data-variant="outline"],
+  .dark #portfolio button:not([class*="bg-royalBlue"]) {
+    border-color: rgb(203, 213, 225) !important;
+    color: rgb(203, 213, 225) !important;
+  }
+  
+  /* Override any premiumGold/yellow colors on portfolio buttons */
+  #portfolio button.border-premiumGold,
+  #portfolio button.text-premiumGold:not([class*="bg-royalBlue"]) {
+    border-color: rgb(64, 64, 64) !important;
+    color: rgb(64, 64, 64) !important;
+  }
+  
+  .dark #portfolio button.border-premiumGold,
+  .dark #portfolio button.text-premiumGold:not([class*="bg-royalBlue"]) {
     border-color: rgb(203, 213, 225) !important;
     color: rgb(203, 213, 225) !important;
   }
