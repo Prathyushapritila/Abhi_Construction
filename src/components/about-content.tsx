@@ -216,7 +216,7 @@ export function AboutContent() {
                     {/* Background Image - Reduced opacity for better text visibility */}
                     <div className={`absolute inset-0 z-0 ${
                       pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty"))
-                        ? "opacity-40 dark:opacity-30 group-hover:opacity-50 dark:group-hover:opacity-40" 
+                        ? "opacity-30 dark:opacity-25 group-hover:opacity-40 dark:group-hover:opacity-35" 
                         : "opacity-25 dark:opacity-35 group-hover:opacity-35 dark:group-hover:opacity-45"
                     } transition-opacity duration-300`}>
                       <Image
@@ -233,10 +233,10 @@ export function AboutContent() {
                           }
                         }}
                       />
-                      {/* Overlay for text readability - increased for better text visibility */}
+                      {/* Overlay for text readability - much stronger for clear text visibility */}
                       <div className={`absolute inset-0 ${
                         pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty"))
-                          ? "bg-gradient-to-b from-white/75 via-white/70 to-white/80 dark:from-slate-800/70 dark:via-slate-800/65 dark:to-slate-800/75"
+                          ? "bg-gradient-to-b from-white/85 via-white/80 to-white/90 dark:from-slate-800/80 dark:via-slate-800/75 dark:to-slate-800/85"
                           : "bg-gradient-to-b from-white/85 via-white/75 to-white/90 dark:from-slate-800/75 dark:via-slate-800/65 dark:to-slate-800/80"
                       }`} />
                     </div>
