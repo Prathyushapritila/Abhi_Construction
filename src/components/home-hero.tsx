@@ -17,7 +17,7 @@ export function HomeHero() {
 
   return (
     <section 
-      className="relative min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] w-full overflow-x-hidden"
+      className="relative min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] w-full overflow-x-hidden overflow-y-visible"
     >
       {/* Background Image Layer with brightness filter */}
       <div 
