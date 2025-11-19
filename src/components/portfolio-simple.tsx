@@ -138,20 +138,14 @@ export function PortfolioSimple() {
                 key={category.value}
                 variant={activeCategory === category.value ? "default" : "outline"}
                 onClick={() => setActiveCategory(activeCategory === category.value ? null : category.value)}
-                className={`flex items-center space-x-2 ${
+                className={`flex items-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 ${
                   activeCategory === category.value
                     ? "bg-royalBlue text-white border-royalBlue hover:bg-royalBlue/90"
-                    : "border-royalNavy text-royalNavy hover:bg-royalNavy/10 dark:!border-white dark:!text-white dark:hover:bg-white/10"
+                    : "border-royalNavy text-royalNavy hover:bg-royalNavy/10 dark:border-white dark:text-white dark:hover:bg-white/10"
                 }`}
-                style={{
-                  ...(activeCategory !== category.value && {
-                    borderColor: 'var(--royal-navy)',
-                    color: 'var(--royal-navy)',
-                  }),
-                }}
               >
-                <Icon className="h-4 w-4" />
-                <span className="dark:!text-white">{category.label}</span>
+                <Icon className="h-4 w-4 text-current" />
+                <span className="text-current">{category.label}</span>
               </Button>
             );
           })}
