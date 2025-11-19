@@ -346,9 +346,17 @@
   header nav a[href="/services"].text-premiumGold {
     color: rgb(255, 140, 0) !important; /* premiumGold */
   }
+
+/* Improve dark mode readability for shared utility classes */
+.dark .text-steelGray {
+  color: rgb(226, 232, 240) !important;
+}
+
+.dark .text-royalNavy {
+  color: rgb(248, 250, 252) !important;
+}
   
-  /* Portfolio button colors - ensure not yellow (premiumGold) */
-  /* Target outline variant buttons in portfolio section */
+  /* Portfolio button + text visibility */
   #portfolio button[data-variant="outline"],
   #portfolio button:not([class*="bg-royalBlue"]) {
     border-color: rgb(64, 64, 64) !important;
@@ -357,21 +365,22 @@
   
   .dark #portfolio button[data-variant="outline"],
   .dark #portfolio button:not([class*="bg-royalBlue"]) {
-    border-color: rgb(203, 213, 225) !important;
-    color: rgb(203, 213, 225) !important;
+    border-color: rgb(248, 250, 252) !important;
+    color: rgb(248, 250, 252) !important;
   }
   
-  /* Override any premiumGold/yellow colors on portfolio buttons */
-  #portfolio button.border-premiumGold,
-  #portfolio button.text-premiumGold:not([class*="bg-royalBlue"]) {
-    border-color: rgb(64, 64, 64) !important;
-    color: rgb(64, 64, 64) !important;
+  .dark #portfolio button span {
+    color: inherit !important;
   }
   
-  .dark #portfolio button.border-premiumGold,
-  .dark #portfolio button.text-premiumGold:not([class*="bg-royalBlue"]) {
-    border-color: rgb(203, 213, 225) !important;
-    color: rgb(203, 213, 225) !important;
+  .dark #portfolio h2,
+  .dark #portfolio p {
+    color: rgb(248, 250, 252) !important;
+  }
+  
+  .dark #portfolio .text-steelGray,
+  .dark #portfolio .text-royalNavy {
+    color: rgb(226, 232, 240) !important;
   }
   
   /* Force remove borders from service cards */

@@ -14,13 +14,16 @@ export function ThemeToggle() {
     setMounted(true);
   }, []);
 
+  const baseClasses =
+    "text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold h-8 w-8 flex items-center justify-center rounded-full bg-transparent hover:bg-transparent active:bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-premiumGold/40 focus-visible:ring-offset-0";
+
   if (!mounted) {
     return (
-      <Button 
-        variant="ghost" 
-        size="icon" 
-        aria-label="Toggle theme" 
-        className="text-royalNavy dark:text-white h-8 w-8 flex items-center justify-center"
+      <Button
+        variant="ghost"
+        size="icon"
+        aria-label="Toggle theme"
+        className={baseClasses}
       >
         <Sun className="h-4 w-4 text-royalNavy dark:text-white" />
       </Button>
@@ -33,7 +36,7 @@ export function ThemeToggle() {
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label="Toggle theme"
-      className="text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold h-8 w-8 flex items-center justify-center"
+      className={baseClasses}
     >
       <span className="relative w-4 h-4 flex items-center justify-center">
         {theme === "dark" ? (
