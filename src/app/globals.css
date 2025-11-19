@@ -491,6 +491,32 @@
     color: rgb(64, 64, 64) !important;
   }
   
+  /* Prevent layout shift in navbar and theme toggle */
+  header nav {
+    will-change: auto;
+  }
+  
+  /* Theme toggle button - prevent layout shift */
+  button[aria-label="Toggle theme"],
+  button[aria-label="Toggle theme"] * {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    min-width: 2.5rem !important;
+    min-height: 2.5rem !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Navbar items - prevent layout shift */
+  header nav a {
+    display: inline-block !important;
+    min-width: fit-content !important;
+  }
+  
+  /* Prevent navbar container from shifting */
+  header nav > div {
+    flex-shrink: 0 !important;
+  }
+  
   .blueprint-grid {
     background-image: 
       linear-gradient(rgba(10, 77, 173, 0.06) 1px, transparent 1px),
