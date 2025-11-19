@@ -18,11 +18,11 @@ export default function AboutPage() {
         image="/bg/about.jpg"
         overlay={0.7}
       >
-        <div className="text-center max-w-4xl mx-auto py-12 sm:py-16 md:py-20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-marbleWhite mb-4 sm:mb-6">
+        <div className="text-center max-w-4xl mx-auto py-6 sm:py-8 md:py-10">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-marbleWhite mb-3 sm:mb-4">
             About Us
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-marbleWhite/90 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-marbleWhite/90 leading-relaxed">
             Where architecture, craftsmanship, and interiors meet to create homes that feel personal—and look unforgettable.
           </p>
         </div>

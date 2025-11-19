@@ -132,7 +132,7 @@ export function ContactForm() {
                 id="phone"
                 type="tel"
                 {...register("phone")}
-                placeholder="+91 98765 43210"
+                placeholder="+91 9666155296"
                 className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-premiumGold/50"
                 style={{ color: 'rgb(64, 64, 64)' }}
                 aria-invalid={errors.phone ? "true" : "false"}

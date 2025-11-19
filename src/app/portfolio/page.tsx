@@ -15,7 +15,7 @@ export default function PortfolioPage() {
     <div className="min-h-screen">
       <StickyContactButtons />
       {/* Hero Section with Background */}
-      <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh]">
+      <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden min-h-[35vh] sm:min-h-[40vh] md:min-h-[45vh]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
           <Image
@@ -38,11 +38,11 @@ export default function PortfolioPage() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/15 rounded-full blur-3xl z-[1]" />
         
         <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
-          <div className="text-center max-w-4xl mx-auto py-12 sm:py-16 md:py-20">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-white mb-4 sm:mb-6 drop-shadow-lg">
+          <div className="text-center max-w-4xl mx-auto py-6 sm:py-8 md:py-10">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-3 sm:mb-4 drop-shadow-lg">
               {siteConfig.sections.portfolio.title}
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed drop-shadow-md">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 leading-relaxed drop-shadow-md">
               {siteConfig.sections.portfolio.subtitle}
             </p>
           </div>
