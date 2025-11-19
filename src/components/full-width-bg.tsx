@@ -41,7 +41,10 @@ export function FullWidthBg({
               ? "Construction and design background"
               : "Background image"}
             fill
-            className="object-cover object-center"
+            className="object-contain"
+            style={{
+              objectPosition: "center",
+            }}
             sizes="100vw"
             priority={image.includes("about") || image.includes("home-hero") || image.includes("projects")}
             quality={90}

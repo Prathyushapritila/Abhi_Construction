@@ -22,7 +22,7 @@ export default function PortfolioPage() {
             src="/bg/portfolio.jpg"
             alt="Portfolio background"
             fill
-            className="object-contain sm:object-cover"
+            className="object-contain"
             sizes="100vw"
             priority
             style={{

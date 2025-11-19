@@ -32,12 +32,15 @@ export default function ServicesPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/bg/bg-services.jpg"
+            src="/bg/services.jpg"
             alt="Construction and design services"
             fill
-            className="object-cover"
+            className="object-contain"
             sizes="100vw"
             priority
+            style={{
+              objectPosition: "center",
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-stone-800/60 to-stone-900/70 dark:from-slate-900/80 dark:via-slate-800/70 dark:to-slate-900/80" />
         </div>
@@ -90,18 +93,7 @@ export default function ServicesPage() {
                       transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
                       className="h-full"
                     >
-                      <Card className="service-card h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] hover:shadow-2xl transition-all duration-250 !border-0 group cursor-pointer relative overflow-hidden shadow-lg">
-                        {/* Background Image */}
-                        <div className="absolute inset-0 z-0">
-                          <Image
-                            src="/bg/services.jpg"
-                            alt="Services background"
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-br from-stone-100/85 via-white/85 to-stone-50/85 dark:from-slate-800/85 dark:via-slate-800/85 dark:to-slate-900/85" />
-                        </div>
+                      <Card className="service-card h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] hover:shadow-2xl transition-all duration-250 !border-0 group cursor-pointer bg-gradient-to-br from-stone-100 via-white to-stone-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden shadow-lg">
                         {/* Animated background gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/0 via-premiumGold/5 to-premiumGold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
                         <div className="absolute inset-0 bg-gradient-to-tl from-royalBlue/0 via-royalBlue/5 to-royalBlue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />

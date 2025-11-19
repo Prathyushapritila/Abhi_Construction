@@ -19,7 +19,7 @@ export default function ContactPage() {
             src="/bg/contact.jpg"
             alt="Contact us"
             fill
-            className="object-contain sm:object-cover"
+            className="object-contain"
             sizes="100vw"
             priority
             style={{
