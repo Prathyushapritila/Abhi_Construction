@@ -64,11 +64,11 @@ export function HomeHero() {
       />
 
       {/* Content - Text is in the image, button positioned after "create timeless spaces" */}
-      <div className="absolute inset-0 flex items-center justify-center z-10">
+      <div className="absolute inset-0 flex items-end justify-center z-10 pb-8 sm:pb-12 md:pb-16 lg:pb-20">
         <div className="container mx-auto px-3 sm:px-4 md:px-6 text-center max-w-7xl w-full">
           <div className="max-w-4xl mx-auto w-full">
-            {/* Button - Positioned in the center after the sentence completes */}
-            <div className="mt-32 sm:mt-40 md:mt-48 lg:mt-56 xl:mt-64">
+            {/* Button - Positioned at bottom center after the sentence completes */}
+            <div>
               <Button
                 asChild
                 size="lg"

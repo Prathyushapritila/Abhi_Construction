@@ -153,10 +153,10 @@ export function ContactForm() {
               <SelectTrigger 
                 id="serviceType" 
                 aria-invalid={errors.serviceType ? "true" : "false"}
-                className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200"
+                className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800"
                 style={{ color: 'rgb(64, 64, 64)' }}
               >
-                <SelectValue placeholder="Select a service" style={{ color: 'rgb(128, 128, 128)' }} />
+                <SelectValue placeholder="Select a service" />
               </SelectTrigger>
               <SelectContent className="bg-white dark:bg-slate-800 border-premiumGold/30 dark:border-premiumGold/40">
                 <SelectItem 

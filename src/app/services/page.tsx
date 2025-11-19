@@ -105,7 +105,7 @@ export default function ServicesPage() {
                             className="object-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-br from-stone-100/90 via-white/90 to-stone-50/90 dark:from-slate-800/90 dark:via-slate-800/90 dark:to-slate-900/90" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-stone-100/70 via-white/70 to-stone-50/70 dark:from-slate-800/70 dark:via-slate-800/70 dark:to-slate-900/70" />
                         </div>
                         {/* Animated background gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/0 via-premiumGold/5 to-premiumGold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250 z-10" />

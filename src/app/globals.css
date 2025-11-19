@@ -251,21 +251,32 @@
   }
   
   /* Force ALL navigation links to be visible in dark mode - OVERRIDE EVERYTHING */
+  /* Base rule for all nav links in dark mode */
   .dark header nav a {
     color: white !important;
     opacity: 1 !important;
     visibility: visible !important;
+    display: block !important;
   }
   
+  /* Specific routes in dark mode */
   .dark header nav a[href="/"],
   .dark header nav a[href="/about"],
   .dark header nav a[href="/services"],
   .dark header nav a[href="/portfolio"],
-  .dark header nav a[href="/contact"],
+  .dark header nav a[href="/contact"] {
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+  
+  /* Non-active links in dark mode */
   .dark header nav a:not([class*="text-premiumGold"]) {
     color: white !important;
     opacity: 1 !important;
     visibility: visible !important;
+    display: block !important;
   }
   
   /* Active link in dark mode */
@@ -274,15 +285,18 @@
     color: rgb(255, 140, 0) !important; /* premiumGold */
     opacity: 1 !important;
     visibility: visible !important;
+    display: block !important;
   }
   
-  /* Hover state in dark mode */
+  /* Hover state in dark mode - ALL links */
   .dark header nav a:hover {
     color: rgb(255, 140, 0) !important; /* premiumGold */
     opacity: 1 !important;
     visibility: visible !important;
+    display: block !important;
   }
   
+  /* Specific route hovers in dark mode */
   .dark header nav a[href="/"]:hover,
   .dark header nav a[href="/about"]:hover,
   .dark header nav a[href="/services"]:hover,
@@ -291,6 +305,7 @@
     color: rgb(255, 140, 0) !important; /* premiumGold */
     opacity: 1 !important;
     visibility: visible !important;
+    display: block !important;
   }
   
   /* Ensure Services nav item highlights like others */
@@ -340,6 +355,21 @@
   .service-card,
   .service-card * {
     border: none !important;
+  }
+  
+  /* Select a service placeholder color - not yellow */
+  select[id="serviceType"],
+  [id="serviceType"] [data-placeholder],
+  [id="serviceType"]::placeholder,
+  [id="serviceType"] span[data-placeholder] {
+    color: rgb(128, 128, 128) !important;
+  }
+  
+  .dark select[id="serviceType"],
+  .dark [id="serviceType"] [data-placeholder],
+  .dark [id="serviceType"]::placeholder,
+  .dark [id="serviceType"] span[data-placeholder] {
+    color: rgb(148, 163, 184) !important;
   }
   
   /* Ensure buttons are visible in both modes */
