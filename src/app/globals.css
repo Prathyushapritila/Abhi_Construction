@@ -366,7 +366,9 @@
   .dark #portfolio button[data-variant="outline"],
   .dark #portfolio button:not([class*="bg-royalBlue"]),
   .dark #portfolio button[data-variant="outline"] *,
-  .dark #portfolio button:not([class*="bg-royalBlue"]) * {
+  .dark #portfolio button:not([class*="bg-royalBlue"]) *,
+  .dark #portfolio button[data-variant="outline"] svg,
+  .dark #portfolio button:not([class*="bg-royalBlue"]) svg {
     border-color: rgb(255, 255, 255) !important;
     color: rgb(255, 255, 255) !important;
   }
@@ -382,6 +384,22 @@
     opacity: 1 !important;
     visibility: visible !important;
     border-width: 2px !important;
+    background-color: transparent !important;
+  }
+  
+  /* Contact buttons - ensure they stay in box */
+  .dark form button[type="submit"],
+  .dark a[href^="tel:"] button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  
+  .dark form button[type="submit"] *,
+  .dark a[href^="tel:"] button * {
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   
   .dark #portfolio h2,

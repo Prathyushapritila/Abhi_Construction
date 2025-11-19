@@ -115,15 +115,17 @@ export function ContactContent() {
               <h3 className="font-heading font-semibold text-lg text-royalNavy dark:text-slate-100 mb-4">
                 Quick Contact
               </h3>
-              <Link href={`tel:+91${siteConfig.contact.phone.replace(/\s/g, "")}`} className="block w-full">
-                <Button
-                  variant="outline"
-                  className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white text-base sm:text-lg font-semibold py-6 sm:py-7 min-h-[48px] sm:min-h-[52px] dark:!border-white dark:!text-white dark:bg-transparent dark:hover:!text-white dark:hover:bg-white/10 flex items-center justify-center gap-3 px-4 box-border rounded-lg transition-all duration-200"
-                >
-                  <Phone className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-current" />
-                  <span className="whitespace-nowrap text-current">Call Us Now</span>
-                </Button>
-              </Link>
+              <div className="w-full">
+                <Link href={`tel:+91${siteConfig.contact.phone.replace(/\s/g, "")}`} className="block w-full">
+                  <Button
+                    variant="outline"
+                    className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white text-base sm:text-lg font-semibold py-6 sm:py-7 min-h-[48px] sm:min-h-[52px] dark:border-white dark:text-white dark:bg-transparent dark:hover:text-white dark:hover:bg-white/10 flex items-center justify-center gap-3 px-4 box-border rounded-lg transition-all duration-200 max-w-full overflow-hidden"
+                  >
+                    <Phone className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-current" />
+                    <span className="whitespace-nowrap text-current">Call Us Now</span>
+                  </Button>
+                </Link>
+              </div>
             </motion.div>
 
             {/* Google Maps Placeholder */}

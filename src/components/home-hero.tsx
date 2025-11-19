@@ -60,9 +60,9 @@ export function HomeHero() {
         }}
       />
 
-      {/* Overlay to mask background text */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-1/3">
-        <div className="h-full w-full bg-gradient-to-t from-stone-900/90 via-stone-900/50 to-transparent dark:from-slate-950/95 dark:via-slate-900/70 dark:to-transparent" />
+      {/* Overlay to mask background text - stronger to completely hide text */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-2/5 sm:h-1/2">
+        <div className="h-full w-full bg-gradient-to-t from-stone-950 via-stone-900/95 to-stone-900/70 dark:from-slate-950 dark:via-slate-950/98 dark:to-slate-900/80" />
       </div>
 
     </section>
