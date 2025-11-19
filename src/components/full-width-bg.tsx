@@ -22,7 +22,7 @@ export function FullWidthBg({
     <section className={`relative py-16 sm:py-20 md:py-24 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh] ${className}`}>
       {/* Background Image */}
       <motion.div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900"
         initial={parallax ? { scale: 1.1 } : { scale: 1 }}
         whileInView={parallax ? { scale: 1 } : { scale: 1 }}
         viewport={{ once: true }}
@@ -41,7 +41,7 @@ export function FullWidthBg({
               ? "Construction and design background"
               : "Background image"}
             fill
-            className="object-contain"
+            className="object-cover"
             style={{
               objectPosition: "center",
             }}

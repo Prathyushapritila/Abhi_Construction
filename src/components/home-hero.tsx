@@ -24,7 +24,7 @@ export function HomeHero() {
     >
       {/* Background Image Layer with brightness filter */}
       <div 
-        className="absolute inset-0 z-0 transition-all duration-500"
+        className="absolute inset-0 z-0 transition-all duration-500 bg-stone-900 dark:bg-slate-900"
         style={{
           filter: currentTheme === "light" ? "brightness(1.2) contrast(1.1) saturate(1.1)" : "brightness(1) contrast(1)",
         }}
@@ -34,7 +34,7 @@ export function HomeHero() {
           alt="Modern luxury villa exterior"
           fill
           priority
-          className="object-contain"
+          className="object-cover"
           quality={90}
           style={{
             objectPosition: "center 20%",

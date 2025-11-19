@@ -17,12 +17,12 @@ export default function PortfolioPage() {
       {/* Hero Section with Background */}
       <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
           <Image
             src="/bg/portfolio.jpg"
             alt="Portfolio background"
             fill
-            className="object-contain"
+            className="object-cover"
             sizes="100vw"
             priority
             style={{
