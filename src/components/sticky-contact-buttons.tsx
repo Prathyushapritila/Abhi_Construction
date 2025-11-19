@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 
 export function StickyContactButtons() {
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-3 sm:gap-4">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-4 sm:gap-5 md:gap-6">
       <Link
         href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
         target="_blank"

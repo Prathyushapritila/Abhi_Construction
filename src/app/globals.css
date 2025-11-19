@@ -226,6 +226,19 @@
     color: white !important;
   }
   
+  /* Ensure all nav items are visible in dark mode */
+  .dark header nav a {
+    color: white !important;
+  }
+  
+  .dark header nav a:hover {
+    color: rgb(255, 140, 0) !important; /* premiumGold */
+  }
+  
+  .dark header nav a.text-premiumGold {
+    color: rgb(255, 140, 0) !important; /* premiumGold */
+  }
+  
   /* Ensure Services nav item highlights like others */
   header nav a[href="/services"] {
     color: rgb(64, 64, 64) !important;

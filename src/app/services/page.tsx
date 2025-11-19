@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Building2, Paintbrush, Wrench, Hammer, Paintbrush2, Square, HardHat, Plug, Settings } from "lucide-react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { StickyContactButtons } from "@/components/sticky-contact-buttons";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
 
@@ -25,6 +26,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
+      <StickyContactButtons />
       {/* Hero Section */}
       <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
         {/* Background Image */}
@@ -68,21 +70,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Main Services Grid */}
-      <section className="section-standard relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/bg/services.jpg"
-            alt="Services background"
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-          />
-          <div className="absolute inset-0 bg-marbleWhite/95 dark:bg-slate-900/95" />
-        </div>
-        <div className="relative z-10">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
+      <section className="section-standard bg-marbleWhite dark:bg-slate-900">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto mb-12 md:mb-16">
             {services.map((service, index) => {
               const Icon = service.icon;
@@ -101,7 +90,18 @@ export default function ServicesPage() {
                       transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
                       className="h-full"
                     >
-                      <Card className="service-card h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] hover:shadow-2xl transition-all duration-250 !border-0 group cursor-pointer bg-gradient-to-br from-stone-100 via-white to-stone-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden shadow-lg">
+                      <Card className="service-card h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] hover:shadow-2xl transition-all duration-250 !border-0 group cursor-pointer relative overflow-hidden shadow-lg">
+                        {/* Background Image */}
+                        <div className="absolute inset-0 z-0">
+                          <Image
+                            src="/bg/services.jpg"
+                            alt="Services background"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-br from-stone-100/95 via-white/95 to-stone-50/95 dark:from-slate-800/95 dark:via-slate-800/95 dark:to-slate-900/95" />
+                        </div>
                         {/* Animated background gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-premiumGold/0 via-premiumGold/5 to-premiumGold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
                         <div className="absolute inset-0 bg-gradient-to-tl from-royalBlue/0 via-royalBlue/5 to-royalBlue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
@@ -146,7 +146,6 @@ export default function ServicesPage() {
                 </motion.div>
               );
             })}
-          </div>
           </div>
         </div>
       </section>

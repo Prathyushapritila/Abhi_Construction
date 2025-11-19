@@ -16,34 +16,35 @@ export function Footer() {
                 <Image
                   src={siteConfig.logo.image}
                   alt="Abhi Constructions & Innovations"
-                  width={180}
-                  height={90}
-                  className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto max-w-[140px] sm:max-w-[160px] md:max-w-[180px] object-contain brightness-110 contrast-110 saturate-110 drop-shadow-md relative z-10 transition-all duration-300 group-hover:brightness-125 group-hover:scale-105"
-                  sizes="(max-width: 640px) 140px, (max-width: 768px) 160px, 180px"
+                  width={240}
+                  height={120}
+                  className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[180px] sm:max-w-[200px] md:max-w-[240px] object-contain drop-shadow-2xl relative z-10 transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
+                  style={{ backgroundColor: 'transparent' }}
+                  sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
                 />
               </div>
             </Link>
             <p className="text-sm text-marbleWhite/90 leading-relaxed italic font-medium">
               {siteConfig.logo.caption}
             </p>
-            <div className="flex space-x-4 pt-2">
+            <div className="flex items-center space-x-4 pt-2">
               <a
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
+                className="text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm p-1"
                 aria-label="Facebook"
               >
-                <Facebook className="h-5 w-5" />
+                <Facebook className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2} />
               </a>
               <a
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-marbleWhite/60 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm"
+                className="text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm p-1"
                 aria-label="Instagram"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2} />
               </a>
               <a
                 href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}

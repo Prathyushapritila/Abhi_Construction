@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { PortfolioSimple } from "@/components/portfolio-simple";
+import { StickyContactButtons } from "@/components/sticky-contact-buttons";
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen">
+      <StickyContactButtons />
       {/* Hero Section with Background */}
       <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
         {/* Background Image */}

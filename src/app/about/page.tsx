@@ -1,5 +1,6 @@
 import { FullWidthBg } from "@/components/full-width-bg";
 import { AboutContent } from "@/components/about-content";
+import { StickyContactButtons } from "@/components/sticky-contact-buttons";
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
+      <StickyContactButtons />
       {/* Hero Section with Background */}
       <FullWidthBg 
         image="/bg/about.jpg"

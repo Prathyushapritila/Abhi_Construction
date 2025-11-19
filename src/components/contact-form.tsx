@@ -90,7 +90,7 @@ export function ContactForm() {
                 id="name"
                 {...register("name")}
                 placeholder="Your full name"
-                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200"
+                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-premiumGold/50"
                 aria-invalid={errors.name ? "true" : "false"}
                 aria-describedby={errors.name ? "name-error" : undefined}
               />
@@ -110,7 +110,7 @@ export function ContactForm() {
                 type="email"
                 {...register("email")}
                 placeholder="your.email@example.com"
-                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200"
+                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-premiumGold/50"
                 aria-invalid={errors.email ? "true" : "false"}
                 aria-describedby={errors.email ? "email-error" : undefined}
               />
@@ -131,7 +131,7 @@ export function ContactForm() {
                 type="tel"
                 {...register("phone")}
                 placeholder="+91 98765 43210"
-                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200"
+                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-premiumGold/50"
                 aria-invalid={errors.phone ? "true" : "false"}
                 aria-describedby={errors.phone ? "phone-error" : undefined}
               />
@@ -150,7 +150,7 @@ export function ContactForm() {
               <SelectTrigger 
                 id="serviceType" 
                 aria-invalid={errors.serviceType ? "true" : "false"}
-                className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200"
+                className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray dark:placeholder:text-slate-400"
               >
                 <SelectValue placeholder="Select a service" />
               </SelectTrigger>
@@ -215,7 +215,7 @@ export function ContactForm() {
               {...register("message")}
               placeholder="Tell us about your project..."
               rows={6}
-              className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200"
+              className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-premiumGold/50"
               aria-invalid={errors.message ? "true" : "false"}
               aria-describedby={errors.message ? "message-error" : undefined}
             />
