@@ -116,7 +116,7 @@ export function ContactContent() {
                 Quick Contact
               </h3>
               <Link href={`tel:+91${siteConfig.contact.phone.replace(/\s/g, "")}`}>
-                <Button variant="outline" className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white text-base sm:text-lg font-semibold py-6 sm:py-7 min-h-[48px] sm:min-h-[52px]">
+                <Button variant="outline" className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white text-base sm:text-lg font-semibold py-6 sm:py-7 min-h-[48px] sm:min-h-[52px] dark:border-white dark:text-white dark:hover:bg-white/10">
                   <Phone className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
                   Call Us Now
                 </Button>

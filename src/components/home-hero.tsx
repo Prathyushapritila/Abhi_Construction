@@ -60,13 +60,6 @@ export function HomeHero() {
         }}
       />
 
-      {/* Corrected text overlay */}
-      <div className="absolute inset-0 flex items-center justify-center z-[2] pointer-events-none px-4">
-        <p className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.8)] text-center leading-tight max-w-5xl">
-          Where architecture, design, and innovation come together to create timeless spaces.
-        </p>
-      </div>
-
     </section>
   );
 }
