@@ -20,7 +20,7 @@ export function HomeHero() {
 
   return (
     <section 
-      className="relative min-h-[45vh] sm:min-h-[50vh] md:min-h-[55vh] w-full overflow-x-hidden overflow-y-visible"
+      className="relative min-h-[45vh] sm:min-h-[50vh] md:min-h-[55vh] w-full overflow-hidden"
     >
       {/* Background Image Layer with brightness filter */}
       <div 
@@ -38,8 +38,6 @@ export function HomeHero() {
           quality={90}
           style={{
             objectPosition: "center 20%",
-            maxWidth: "100%",
-            height: "auto",
           }}
           sizes="100vw"
         />
@@ -65,18 +63,12 @@ export function HomeHero() {
         }}
       />
 
-      {/* Content - Text overlay and button */}
-      <div className="absolute inset-0 flex flex-col items-center justify-end z-10 pb-8 sm:pb-10 md:pb-12">
+      {/* Content - Text is in the image, button positioned after "create timeless spaces" */}
+      <div className="absolute inset-0 flex items-end justify-center z-10 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
         <div className="container mx-auto px-3 sm:px-4 md:px-6 text-center max-w-7xl w-full">
-          <div className="max-w-4xl mx-auto w-full flex flex-col items-center">
-            {/* Text Overlay - "Where architecture..." with corrected typo */}
-            <div className="mb-6 sm:mb-8 md:mb-10 order-1">
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-white drop-shadow-2xl leading-relaxed px-4">
-                Where architecture, craftsmanship, and interiors meet to create homes that feel personal—and look unforgettable.
-              </p>
-            </div>
-            {/* Button - Positioned below text */}
-            <div className="order-2">
+          <div className="max-w-4xl mx-auto w-full">
+            {/* Button - Positioned at bottom center after the sentence completes */}
+            <div className="mb-4 sm:mb-6 md:mb-8">
               <Button
                 asChild
                 size="lg"
