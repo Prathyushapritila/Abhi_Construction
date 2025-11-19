@@ -213,10 +213,10 @@ export function AboutContent() {
                   className="group"
                 >
                   <Card className="h-full border-2 border-premiumGold/20 dark:border-premiumGold/30 hover:border-premiumGold dark:hover:border-premiumGold transition-all duration-300 bg-white dark:bg-slate-800 hover:shadow-2xl relative overflow-hidden">
-                    {/* Background Image - More visible for all cards with custom images */}
+                    {/* Background Image - Reduced opacity for better text visibility */}
                     <div className={`absolute inset-0 z-0 ${
                       pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty"))
-                        ? "opacity-90 dark:opacity-80 group-hover:opacity-95 dark:group-hover:opacity-90" 
+                        ? "opacity-40 dark:opacity-30 group-hover:opacity-50 dark:group-hover:opacity-40" 
                         : "opacity-25 dark:opacity-35 group-hover:opacity-35 dark:group-hover:opacity-45"
                     } transition-opacity duration-300`}>
                       <Image
@@ -233,10 +233,10 @@ export function AboutContent() {
                           }
                         }}
                       />
-                      {/* Overlay for text readability - much lighter for custom image cards to show image better */}
+                      {/* Overlay for text readability - increased for better text visibility */}
                       <div className={`absolute inset-0 ${
                         pillar.image && (pillar.image.includes("blueprints") || pillar.image.includes("timeline") || pillar.image.includes("crafted") || pillar.image.includes("smarthome") || pillar.image.includes("hyderabad") || pillar.image.includes("warranty"))
-                          ? "bg-gradient-to-b from-white/30 via-white/25 to-white/35 dark:from-slate-900/30 dark:via-slate-900/25 dark:to-slate-900/35"
+                          ? "bg-gradient-to-b from-white/75 via-white/70 to-white/80 dark:from-slate-800/70 dark:via-slate-800/65 dark:to-slate-800/75"
                           : "bg-gradient-to-b from-white/85 via-white/75 to-white/90 dark:from-slate-800/75 dark:via-slate-800/65 dark:to-slate-800/80"
                       }`} />
                     </div>
