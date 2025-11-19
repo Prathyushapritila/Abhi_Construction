@@ -40,32 +40,17 @@ export function HomeHero() {
         />
       </div>
 
-      {/* Theme-aware overlay: Lighter in light mode for better image visibility */}
-      <div 
-        className="absolute inset-0 z-[1] transition-all duration-500"
-        style={{
-          backgroundColor: currentTheme === "dark" 
-            ? "rgba(15, 23, 42, 0.35)" 
-            : "rgba(0, 0, 0, 0.25)",
-        }}
-      />
-      
-      {/* Additional gradient overlay - lighter in light mode */}
-      <div 
-        className="absolute inset-0 z-[1] transition-opacity duration-500"
-        style={{
-          background: currentTheme === "dark"
-            ? "linear-gradient(to bottom, rgba(15, 23, 42, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%)"
-            : "linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%)",
-        }}
-      />
-
-      {/* Overlay to mask only the "Where architecture..." text at the bottom, keeping "BUILDING MORE THAN CRAFTING LEGACIES" visible */}
-      <div className="pointer-events-none absolute inset-0 z-[2]">
-        {/* Bottom overlay - only covers the very bottom where "Where architecture..." text is */}
-        <div className="absolute inset-x-0 bottom-0 h-1/4 sm:h-1/3 bg-stone-950 dark:bg-slate-950" style={{ opacity: 0.95 }} />
-        {/* Gradient overlay for smooth transition - lighter to preserve top text */}
-        <div className="absolute inset-x-0 bottom-0 h-1/3 sm:h-2/5 bg-gradient-to-t from-stone-950/90 via-stone-950/60 to-transparent dark:from-slate-950/90 dark:via-slate-950/60 dark:to-transparent" />
+      {/* Subtle overlay - only at the very bottom to hide "Where architecture..." text, blending naturally with image */}
+      <div className="pointer-events-none absolute inset-0 z-[1]">
+        {/* Very subtle bottom overlay - only covers bottom 15-20% where unwanted text is, blends with image */}
+        <div 
+          className="absolute inset-x-0 bottom-0 h-1/5 sm:h-1/4"
+          style={{
+            background: currentTheme === "dark"
+              ? "linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.4) 50%, transparent 100%)"
+              : "linear-gradient(to top, rgba(28, 25, 23, 0.75) 0%, rgba(28, 25, 23, 0.35) 50%, transparent 100%)",
+          }}
+        />
       </div>
 
     </section>
