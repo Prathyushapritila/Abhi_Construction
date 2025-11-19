@@ -60,14 +60,12 @@ export function HomeHero() {
         }}
       />
 
-      {/* Overlay to mask background text - MAXIMUM STRENGTH to completely hide text */}
+      {/* Overlay to mask only the "Where architecture..." text at the bottom, keeping "BUILDING MORE THAN CRAFTING LEGACIES" visible */}
       <div className="pointer-events-none absolute inset-0 z-[2]">
-        {/* Bottom solid overlay - covers text area completely */}
-        <div className="absolute inset-x-0 bottom-0 h-3/5 sm:h-2/3 md:h-3/4 bg-stone-950 dark:bg-slate-950" style={{ opacity: 0.98 }} />
-        {/* Gradient overlay for smooth transition */}
-        <div className="absolute inset-x-0 bottom-0 h-2/3 sm:h-3/4 md:h-4/5 bg-gradient-to-t from-stone-950 via-stone-950/95 to-transparent dark:from-slate-950 dark:via-slate-950/95 dark:to-transparent" />
-        {/* Additional solid layer for extra coverage */}
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-stone-950/99 dark:bg-slate-950/99" />
+        {/* Bottom overlay - only covers the very bottom where "Where architecture..." text is */}
+        <div className="absolute inset-x-0 bottom-0 h-1/4 sm:h-1/3 bg-stone-950 dark:bg-slate-950" style={{ opacity: 0.95 }} />
+        {/* Gradient overlay for smooth transition - lighter to preserve top text */}
+        <div className="absolute inset-x-0 bottom-0 h-1/3 sm:h-2/5 bg-gradient-to-t from-stone-950/90 via-stone-950/60 to-transparent dark:from-slate-950/90 dark:via-slate-950/60 dark:to-transparent" />
       </div>
 
     </section>

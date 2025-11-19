@@ -123,12 +123,16 @@ export function ContactContent() {
                 >
                   <Button
                     variant="outline"
-                    className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white text-base sm:text-lg font-semibold py-6 sm:py-7 min-h-[48px] sm:min-h-[52px] dark:border-white dark:text-white dark:bg-transparent dark:hover:text-white dark:hover:bg-white/10 flex items-center justify-center gap-3 px-4 rounded-lg transition-all duration-200"
+                    className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white text-base sm:text-lg font-semibold dark:border-white dark:text-white dark:bg-transparent dark:hover:text-white dark:hover:bg-white/10 flex items-center justify-center gap-3 rounded-lg transition-all duration-200"
                     style={{ 
                       maxWidth: '100%', 
                       width: '100%',
                       boxSizing: 'border-box',
-                      padding: '1.5rem 1rem',
+                      minHeight: '48px',
+                      padding: '0.875rem 1rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                     }}
                   >
                     <Phone className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-current dark:text-white" />

@@ -393,6 +393,10 @@
     max-width: 100% !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
   }
   
   .dark form button[type="submit"],
@@ -401,17 +405,30 @@
     visibility: visible !important;
     max-width: 100% !important;
     width: 100% !important;
-    overflow: hidden !important;
     box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
   }
   
   .dark form button[type="submit"] *,
   .dark a[href^="tel:"] button *,
   .dark form button[type="submit"] svg,
-  .dark a[href^="tel:"] button svg {
+  .dark a[href^="tel:"] button svg,
+  .dark form button[type="submit"] span,
+  .dark a[href^="tel:"] button span {
     opacity: 1 !important;
     visibility: visible !important;
     color: inherit !important;
+    display: inline-flex !important;
+  }
+  
+  /* Ensure contact form and quick contact sections have proper spacing */
+  form > div:last-child,
+  .pt-6 > div {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
   
   /* Portfolio buttons - ensure visibility and alignment in dark mode */
