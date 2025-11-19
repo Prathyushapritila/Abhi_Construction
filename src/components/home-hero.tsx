@@ -42,13 +42,20 @@ export function HomeHero() {
 
       {/* Overlay to hide all text: "BUILDING MORE THAN... CRAFTING LEGACIES" and "Where architecture... to create timeless spaces" */}
       <div className="pointer-events-none absolute inset-0 z-[1]">
-        {/* Stronger overlay covering middle and bottom areas where text appears */}
+        {/* Maximum strength overlay covering all text areas - almost completely opaque */}
         <div 
-          className="absolute inset-x-0 bottom-0 h-3/5 sm:h-2/3"
+          className="absolute inset-x-0 bottom-0 h-4/5 sm:h-5/6"
           style={{
             background: currentTheme === "dark"
-              ? "linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.85) 40%, rgba(15, 23, 42, 0.6) 70%, transparent 100%)"
-              : "linear-gradient(to top, rgba(28, 25, 23, 0.92) 0%, rgba(28, 25, 23, 0.8) 40%, rgba(28, 25, 23, 0.55) 70%, transparent 100%)",
+              ? "linear-gradient(to top, rgba(15, 23, 42, 0.99) 0%, rgba(15, 23, 42, 0.98) 30%, rgba(15, 23, 42, 0.95) 60%, rgba(15, 23, 42, 0.7) 85%, transparent 100%)"
+              : "linear-gradient(to top, rgba(28, 25, 23, 0.98) 0%, rgba(28, 25, 23, 0.96) 30%, rgba(28, 25, 23, 0.92) 60%, rgba(28, 25, 23, 0.65) 85%, transparent 100%)",
+          }}
+        />
+        {/* Additional solid layer for extra coverage at bottom */}
+        <div 
+          className="absolute inset-x-0 bottom-0 h-1/2"
+          style={{
+            backgroundColor: currentTheme === "dark" ? "rgba(15, 23, 42, 0.97)" : "rgba(28, 25, 23, 0.95)",
           }}
         />
       </div>
