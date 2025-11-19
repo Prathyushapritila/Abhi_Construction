@@ -40,15 +40,15 @@ export function HomeHero() {
         />
       </div>
 
-      {/* Subtle overlay - only at the very bottom to hide "Where architecture..." text, blending naturally with image */}
+      {/* Overlay to hide all text: "BUILDING MORE THAN... CRAFTING LEGACIES" and "Where architecture... to create timeless spaces" */}
       <div className="pointer-events-none absolute inset-0 z-[1]">
-        {/* Very subtle bottom overlay - only covers bottom 15-20% where unwanted text is, blends with image */}
+        {/* Stronger overlay covering middle and bottom areas where text appears */}
         <div 
-          className="absolute inset-x-0 bottom-0 h-1/5 sm:h-1/4"
+          className="absolute inset-x-0 bottom-0 h-3/5 sm:h-2/3"
           style={{
             background: currentTheme === "dark"
-              ? "linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.4) 50%, transparent 100%)"
-              : "linear-gradient(to top, rgba(28, 25, 23, 0.75) 0%, rgba(28, 25, 23, 0.35) 50%, transparent 100%)",
+              ? "linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.85) 40%, rgba(15, 23, 42, 0.6) 70%, transparent 100%)"
+              : "linear-gradient(to top, rgba(28, 25, 23, 0.92) 0%, rgba(28, 25, 23, 0.8) 40%, rgba(28, 25, 23, 0.55) 70%, transparent 100%)",
           }}
         />
       </div>
