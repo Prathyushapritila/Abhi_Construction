@@ -357,18 +357,18 @@
 }
   
   /* Portfolio button + text visibility */
-  #portfolio button[data-variant="outline"]:not(.portfolio-filter-btn),
-  #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) {
+  #portfolio button[data-variant="outline"],
+  #portfolio button:not([class*="bg-royalBlue"]) {
     border-color: rgb(64, 64, 64) !important;
     color: rgb(64, 64, 64) !important;
   }
   
-  .dark #portfolio button[data-variant="outline"]:not(.portfolio-filter-btn),
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn),
-  .dark #portfolio button[data-variant="outline"]:not(.portfolio-filter-btn) *,
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) *,
-  .dark #portfolio button[data-variant="outline"]:not(.portfolio-filter-btn) svg,
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) svg {
+  .dark #portfolio button[data-variant="outline"],
+  .dark #portfolio button:not([class*="bg-royalBlue"]),
+  .dark #portfolio button[data-variant="outline"] *,
+  .dark #portfolio button:not([class*="bg-royalBlue"]) *,
+  .dark #portfolio button[data-variant="outline"] svg,
+  .dark #portfolio button:not([class*="bg-royalBlue"]) svg {
     border-color: rgb(255, 255, 255) !important;
     color: rgb(255, 255, 255) !important;
   }
@@ -380,7 +380,7 @@
   }
   
   /* Ensure portfolio buttons are visible in dark mode - ULTRA AGGRESSIVE */
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) {
+  .dark #portfolio button:not([class*="bg-royalBlue"]) {
     opacity: 1 !important;
     visibility: visible !important;
     border-width: 2px !important;
@@ -432,15 +432,15 @@
   }
   
   /* Portfolio buttons - ensure visibility and alignment in dark mode */
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) {
+  .dark #portfolio button:not([class*="bg-royalBlue"]) {
     border-color: rgb(255, 255, 255) !important;
     color: rgb(255, 255, 255) !important;
     background-color: transparent !important;
   }
   
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) *,
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) svg,
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) span {
+  .dark #portfolio button:not([class*="bg-royalBlue"]) *,
+  .dark #portfolio button:not([class*="bg-royalBlue"]) svg,
+  .dark #portfolio button:not([class*="bg-royalBlue"]) span {
     color: rgb(255, 255, 255) !important;
   }
   
@@ -470,31 +470,6 @@
   .service-card * {
     border: none !important;
   }
-
-/* Portfolio filter buttons */
-#portfolio .portfolio-filter-btn {
-  border-color: rgb(64, 64, 64) !important;
-  color: rgb(64, 64, 64) !important;
-  background-color: transparent !important;
-  transition: all 0.2s ease !important;
-}
-
-.dark #portfolio .portfolio-filter-btn {
-  border-color: rgb(248, 250, 252) !important;
-  color: rgb(248, 250, 252) !important;
-  background-color: transparent !important;
-}
-
-#portfolio .portfolio-filter-btn--active {
-  background-color: rgb(255, 140, 0) !important;
-  border-color: rgb(255, 140, 0) !important;
-  color: #ffffff !important;
-  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.25) !important;
-}
-
-#portfolio .portfolio-filter-btn--active * {
-  color: #ffffff !important;
-}
   
   /* Select a service placeholder color - not yellow - match other form colors */
   [id="serviceType"] span[data-placeholder],

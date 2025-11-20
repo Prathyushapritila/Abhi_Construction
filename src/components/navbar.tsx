@@ -42,28 +42,28 @@ export function Navbar() {
       <nav className="container mx-auto flex h-20 sm:h-22 md:h-24 lg:h-28 items-center justify-between px-3 sm:px-4 md:px-6 max-w-7xl" aria-label="Main navigation">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 sm:gap-3 whitespace-nowrap group"
+          className="flex flex-row items-center space-x-2 sm:space-x-3 group dark:flex-col dark:items-start dark:space-x-0"
         >
-          <div className="relative flex-shrink-0">
+          <div className="relative">
             {/* Logo with transparent white background */}
             <div className="relative bg-transparent logo-container">
               <div className="relative">
                 <Image
                   src={siteConfig.logo.image}
                   alt="Abhi Constructions & Innovations"
-                  width={200}
-                  height={100}
-                  className="h-10 sm:h-12 w-auto max-w-[160px] sm:max-w-[180px] object-contain drop-shadow-2xl relative z-10 transition-all duration-300 group-hover:scale-105 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
+                  width={240}
+                  height={120}
+                  className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[180px] sm:max-w-[200px] md:max-w-[240px] object-contain drop-shadow-2xl relative z-10 transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
                   style={{ 
                     backgroundColor: 'transparent'
                   }}
                   priority
-                  sizes="(max-width: 640px) 140px, (max-width: 768px) 160px, (max-width: 1024px) 180px, 200px"
+                  sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
                 />
               </div>
             </div>
           </div>
-          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] leading-none whitespace-nowrap">
+          <span className="text-royalNavy dark:text-white font-semibold text-xs sm:text-sm md:text-base lg:text-lg leading-tight whitespace-nowrap ml-2 dark:ml-0 dark:mt-1">
             Constructions and Innovations
           </span>
         </Link>
