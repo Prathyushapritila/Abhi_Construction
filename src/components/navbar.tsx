@@ -60,6 +60,9 @@ export function Navbar() {
               </div>
             </div>
           </div>
+          <span className="hidden sm:block text-royalNavy dark:text-white font-semibold text-base sm:text-lg md:text-xl lg:text-2xl whitespace-nowrap">
+            Constructions and Innovations
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

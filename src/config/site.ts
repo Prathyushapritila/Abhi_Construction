@@ -25,7 +25,7 @@ export const siteConfig = {
     hero: {
       headline: "Construction In Hyderabad",
       subheadline: "Meeting your residential and commercial needs",
-      description: "Abhi Constructions & Innovations is a dedicated team of skilled workers, that has been building and renovating homes, historical buildings, and commercial sites in Hyderabad, India since 2017.",
+      description: "Abhi Constructions & Innovations is a dedicated team of skilled workers, that has been building and renovating residential and commercial sites in Hyderabad, India since 2017.",
     },
     about: {
       title: "About",
