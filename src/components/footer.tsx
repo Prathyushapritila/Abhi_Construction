@@ -32,28 +32,28 @@ export function Footer() {
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm p-1"
+                className="text-[#1877F2] hover:text-[#0f5dc8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1877F2] focus:ring-offset-2 rounded-sm p-1 bg-white/5 rounded-full"
                 aria-label="Facebook"
               >
-                <Facebook className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2} />
+                <Facebook className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.2} />
               </a>
               <a
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-sm p-1"
+                className="text-[#E4405F] hover:text-[#c42747] transition-colors focus:outline-none focus:ring-2 focus:ring-[#E4405F] focus:ring-offset-2 rounded-sm p-1 bg-white/5 rounded-full"
                 aria-label="Instagram"
               >
-                <Instagram className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2} />
+                <Instagram className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.2} />
               </a>
               <a
                 href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-marbleWhite/80 hover:text-green-400 dark:hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 rounded-sm p-1"
+                className="text-[#25D366] hover:text-[#1ea553] transition-colors focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 rounded-sm p-1 bg-white/5 rounded-full"
                 aria-label="WhatsApp - Contact us on WhatsApp"
               >
-                <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.5} />
+                <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.4} />
               </a>
             </div>
           </div>
@@ -84,10 +84,10 @@ export function Footer() {
               <li className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-premiumGold flex-shrink-0" />
                 <a
-                  href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+                  href={`tel:+91${siteConfig.contact.phone.replace(/\s/g, "")}`}
                   className="text-sm text-marbleWhite/80 hover:text-premiumGold transition-colors focus:outline-none focus:ring-2 focus:ring-premiumGold rounded-sm"
                 >
-                  {siteConfig.contact.phone}
+                  +91 {siteConfig.contact.phone}
                 </a>
               </li>
               <li className="flex items-center space-x-3">

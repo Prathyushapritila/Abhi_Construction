@@ -7,6 +7,7 @@ import { Home, Paintbrush } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 type PortfolioCategory = "residential" | "interiors";
 
@@ -141,34 +142,22 @@ export function PortfolioSimple() {
             return (
               <Button
                 key={category.value}
-                variant={isActive ? "default" : "outline"}
+                variant="outline"
                 onClick={() => setActiveCategory(isActive ? null : category.value)}
-                className="flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 min-w-[140px]"
-                style={{
-                  ...(isActive ? {
-                    backgroundColor: 'rgb(255, 140, 0)',
-                    borderColor: 'rgb(255, 140, 0)',
-                    color: 'white',
-                  } : {
-                    borderColor: 'rgb(64, 64, 64)',
-                    color: 'rgb(64, 64, 64)',
-                    backgroundColor: 'transparent',
-                  }),
-                }}
+                className={cn(
+                  "flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 min-w-[140px] shadow-sm",
+                  isActive
+                    ? "bg-premiumGold border-premiumGold text-white shadow-xl scale-105"
+                    : "border-royalNavy text-royalNavy dark:border-slate-200 dark:text-slate-200 hover:border-premiumGold hover:text-premiumGold dark:hover:border-premiumGold dark:hover:text-premiumGold"
+                )}
               >
                 <Icon 
-                  className="h-4 w-4 flex-shrink-0" 
-                  style={{
-                    color: isActive ? 'white' : 'inherit',
-                  }} 
+                  className={cn(
+                    "h-4 w-4 flex-shrink-0",
+                    isActive ? "text-white" : "text-current"
+                  )}
                 />
-                <span 
-                  style={{
-                    color: isActive ? 'white' : 'inherit',
-                  }}
-                >
-                  {category.label}
-                </span>
+                <span className={cn(isActive ? "text-white" : "text-current")}>{category.label}</span>
               </Button>
             );
           })}

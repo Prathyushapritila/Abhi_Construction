@@ -165,7 +165,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy dark:text-premiumGold">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 sm:mb-6 text-premiumGold dark:text-premiumGold">
               Handyman Services
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-steelGray dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">

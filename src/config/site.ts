@@ -57,7 +57,7 @@ export const siteConfig = {
     name: "Srikanth Pritila",
     phone: "9666155296",
     email: "abhignaninnovations@gmail.com",
-    address: "Abhi constructions and Innovations,\nBlock: AG8\nMathrusApartment,\nOpp: Zudio showroom Hyderguda-Basheerbagh Road,\nHyderguda,\nHyderabad, Telangana 500029",
+    address: "Address: Abhi Constructions and Innovations,\nBlock AG8, Mathurs Apartment,\nOpp. Zudio Showroom, Hyderguda–Basheerbagh Road,\nHyderguda,\nHyderabad, Telangana 500029",
     whatsapp: "9666155296",
     mapsUrl: "https://maps.app.goo.gl/NpNJMwc81mmLFjud6?g_st=aw",
   },
@@ -65,7 +65,7 @@ export const siteConfig = {
   // Logo
   logo: {
     image: "/AbhiPng-1.png",
-    caption: "experience the way of living",
+    caption: "Experience the way of living",
   },
 };
 
