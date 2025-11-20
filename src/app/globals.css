@@ -566,14 +566,20 @@
     vertical-align: middle !important;
   }
   
-  /* Ensure icon doesn't overlap text */
+  /* Ensure icon doesn't overlap text and is vertically centered */
   [id="serviceType"] svg,
-  button[id="serviceType"] svg {
+  button[id="serviceType"] svg,
+  [id="serviceType"] [data-radix-select-icon],
+  button[id="serviceType"] [data-radix-select-icon] {
     flex-shrink: 0 !important;
     width: 16px !important;
     height: 16px !important;
     margin-left: auto !important;
     align-self: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
   }
   
   /* Ensure buttons are visible in both modes - ENHANCED FOR DARK MODE */
