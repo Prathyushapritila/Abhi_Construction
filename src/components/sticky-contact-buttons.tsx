@@ -17,10 +17,10 @@ export function StickyContactButtons() {
       >
         <Button
           size="lg"
-          className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full bg-green-600 hover:bg-green-700 active:bg-green-800 text-white shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all duration-200 flex items-center justify-center p-2 sm:p-2.5 md:p-3"
+          className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full bg-green-600 hover:bg-green-700 active:bg-green-800 text-white shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all duration-200 flex items-center justify-center p-0"
           aria-label="WhatsApp - Contact us on WhatsApp"
         >
-          <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-white flex-shrink-0" strokeWidth={2.5} fill="none" />
+          <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white flex-shrink-0 m-auto" strokeWidth={2.5} fill="none" />
         </Button>
       </Link>
       <Link

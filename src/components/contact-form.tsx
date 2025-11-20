@@ -149,15 +149,16 @@ export function ContactForm() {
             <Label htmlFor="serviceType" className="text-royalNavy dark:text-slate-200 font-medium">
               Service Type <span className="text-destructive">*</span>
             </Label>
-            <Select onValueChange={(value) => setValue("serviceType", value)}>
-              <SelectTrigger 
-                id="serviceType" 
-                aria-invalid={errors.serviceType ? "true" : "false"}
-                className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 w-full min-h-[42px] px-3 py-2"
-                style={{ color: 'rgb(64, 64, 64)', boxSizing: 'border-box' }}
-              >
-                <SelectValue placeholder="Select a service" className="truncate" />
-              </SelectTrigger>
+            <div className="w-full">
+              <Select onValueChange={(value) => setValue("serviceType", value)}>
+                <SelectTrigger 
+                  id="serviceType" 
+                  aria-invalid={errors.serviceType ? "true" : "false"}
+                  className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 w-full h-10"
+                  style={{ color: 'rgb(64, 64, 64)', boxSizing: 'border-box', width: '100%' }}
+                >
+                  <SelectValue placeholder="Select a service" />
+                </SelectTrigger>
               <SelectContent className="bg-white dark:bg-slate-800 border-premiumGold/30 dark:border-premiumGold/40">
                 <SelectItem 
                   value="custom-home"
@@ -201,8 +202,9 @@ export function ContactForm() {
                 >
                   Other
                 </SelectItem>
-              </SelectContent>
-            </Select>
+                </SelectContent>
+              </Select>
+            </div>
             {errors.serviceType && (
               <p id="serviceType-error" className="text-sm text-destructive" role="alert">
                 {errors.serviceType.message}

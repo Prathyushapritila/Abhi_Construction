@@ -29,13 +29,8 @@ export default function PortfolioPage() {
               objectPosition: "center",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-stone-900/80 via-stone-800/75 to-stone-900/80 dark:from-slate-900/85 dark:via-slate-800/80 dark:to-slate-900/85" />
+          <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-stone-800/60 to-stone-900/70 dark:from-slate-900/80 dark:via-slate-800/70 dark:to-slate-900/80" />
         </div>
-        {/* Background pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.08] blueprint-grid z-[1]" />
-        {/* Decorative circles - hidden on mobile to prevent orange shades */}
-        <div className="hidden md:block absolute top-0 right-0 w-96 h-96 bg-premiumGold/10 dark:bg-premiumGold/15 rounded-full blur-3xl z-[1]" />
-        <div className="hidden md:block absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/15 rounded-full blur-3xl z-[1]" />
         
         <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
           <div className="text-center max-w-4xl mx-auto py-12 sm:py-16 md:py-20">

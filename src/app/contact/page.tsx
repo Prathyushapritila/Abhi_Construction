@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full py-12 sm:py-16 md:py-20 md:min-h-[70vh] overflow-x-hidden overflow-y-visible flex items-center justify-center">
+      <section className="relative py-14 sm:py-18 md:py-22 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
           <Image
@@ -34,8 +34,8 @@ export default function ContactPage() {
         <div className="hidden md:block absolute top-0 right-0 w-96 h-96 bg-premiumGold/10 dark:bg-premiumGold/15 rounded-full blur-3xl z-[1]" />
         <div className="hidden md:block absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/15 rounded-full blur-3xl z-[1]" />
         
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10 w-full">
-          <div className="text-center max-w-4xl mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
+          <div className="text-center max-w-4xl mx-auto py-12 sm:py-16 md:py-20">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-4 sm:mb-6 text-white drop-shadow-lg">
               {siteConfig.sections.contact.title}
             </h1>
