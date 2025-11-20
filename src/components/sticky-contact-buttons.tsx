@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 
 export function StickyContactButtons() {
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-4 sm:gap-5 md:gap-6">
+    <div className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-50 flex flex-col gap-3 sm:gap-4 md:gap-5 safe-area-inset-bottom">
       <Link
         href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
         target="_blank"
@@ -17,10 +17,10 @@ export function StickyContactButtons() {
       >
         <Button
           size="lg"
-          className="h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full bg-green-600 hover:bg-green-700 active:bg-green-800 text-white shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all duration-200 flex items-center justify-center"
+          className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full bg-green-600 hover:bg-green-700 active:bg-green-800 text-white shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all duration-200 flex items-center justify-center p-0"
           aria-label="WhatsApp - Contact us on WhatsApp"
         >
-          <MessageCircle className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10" strokeWidth={2.5} />
+          <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-white" strokeWidth={2.5} fill="none" />
         </Button>
       </Link>
       <Link
@@ -31,7 +31,7 @@ export function StickyContactButtons() {
         <Button
           size="lg"
           variant="outline"
-          className="h-12 w-12 sm:h-14 sm:w-14 rounded-full border-2 border-royalBlue bg-white text-royalBlue hover:bg-royalBlue hover:text-white shadow-lg hover:scale-110 transition-transform"
+          className="h-12 w-12 sm:h-14 sm:w-14 rounded-full border-2 border-royalBlue bg-white text-royalBlue hover:bg-royalBlue hover:text-white shadow-lg hover:scale-110 transition-transform flex items-center justify-center p-0"
           aria-label={`Call us at +91 ${siteConfig.contact.phone}`}
         >
           <Phone className="h-5 w-5 sm:h-6 sm:w-6" />

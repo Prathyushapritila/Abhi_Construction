@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function HomeHero() {
   return (
     <section className="relative w-full py-12 sm:py-16 md:py-20 md:min-h-[70vh] flex items-center justify-center">
-      {/* Background Image */}
+      {/* Background Image with brightness filter for more colorful look */}
       <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
         <Image
           src="/home-hero-image.png"
@@ -17,9 +17,10 @@ export function HomeHero() {
           priority
           style={{
             objectPosition: "center",
+            filter: "brightness(1.15) contrast(1.1) saturate(1.2)",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-stone-800/60 to-stone-900/70 dark:from-slate-900/80 dark:via-slate-800/70 dark:to-slate-900/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-900/60 via-stone-800/50 to-stone-900/60 dark:from-slate-900/70 dark:via-slate-800/60 dark:to-slate-900/70" />
       </div>
       {/* Background pattern overlay */}
       <div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.08] blueprint-grid z-[1]" />
