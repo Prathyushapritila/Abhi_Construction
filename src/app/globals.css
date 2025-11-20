@@ -213,16 +213,16 @@
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.2;
-    background-image: url('/Abi_Logo_New.jpeg');
-    background-size: 50% auto;
+    opacity: 0.15;
+    background-image: url('/AbhiPng-1.png');
+    background-size: 40% auto;
     background-position: center;
     background-repeat: no-repeat;
     mix-blend-mode: multiply;
   }
   
   .dark .logo-watermark {
-    opacity: 0.25;
+    opacity: 0.2;
     mix-blend-mode: screen;
   }
   

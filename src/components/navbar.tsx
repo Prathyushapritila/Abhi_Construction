@@ -63,7 +63,7 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] leading-none whitespace-nowrap">
+          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] dark:text-[#E37B29] leading-none whitespace-nowrap flex items-center">
             Constructions and Innovations
           </span>
         </Link>
