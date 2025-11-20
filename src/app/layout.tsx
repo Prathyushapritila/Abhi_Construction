@@ -22,36 +22,36 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abhiconstructions.com"),
+  metadataBase: new URL("https://abhi-construction-two.vercel.app"),
   title: {
-    default: "Abhi Constructions - Building Excellence Since 2017",
-    template: "%s | Abhi Constructions",
+    default: "Abhi Constructions & Innovations | Modern Homes & Interiors in Hyderabad",
+    template: "%s | Abhi Constructions & Innovations",
   },
-  description: "Premier construction company in Hyderabad, India specializing in custom home building, residential construction, and renovation projects. Quality craftsmanship, on-time delivery, and exceptional service.",
-  keywords: ["construction", "residential construction", "commercial construction", "renovation", "building", "construction company"],
-  authors: [{ name: "Abhi Constructions" }],
-  creator: "Abhi Constructions",
+  description: "Abhi Constructions & Innovations designs and builds custom homes, villas, and interiors in Hyderabad with end-to-end design-build services.",
+  keywords: ["construction", "residential construction", "commercial construction", "renovation", "building", "construction company", "custom homes", "interior design", "Hyderabad"],
+  authors: [{ name: "Abhi Constructions & Innovations" }],
+  creator: "Abhi Constructions & Innovations",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://abhi-construction-two.vercel.app",
-    siteName: "Abhi Constructions",
-    title: "Abhi Constructions - Building Excellence Since 2017",
-    description: "Premier construction company in Hyderabad, India specializing in custom home building, residential construction, and renovation projects.",
+    siteName: "Abhi Constructions & Innovations",
+    title: "Abhi Constructions & Innovations | Modern Homes & Interiors in Hyderabad",
+    description: "Custom home construction, architectural design, and interior design in Hyderabad — one team from blueprint to handover.",
     images: [
       {
         url: "https://abhi-construction-two.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Abhi Constructions",
+        alt: "Abhi Constructions & Innovations",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abhi Constructions - Building Excellence Since 2017",
-    description: "Premier construction company in Hyderabad, India specializing in custom home building, residential construction, and renovation projects.",
-    images: ["/og-image.jpg"],
+    title: "Abhi Constructions & Innovations | Modern Homes & Interiors in Hyderabad",
+    description: "Custom homes and interiors crafted with precision in Hyderabad.",
+    images: ["https://abhi-construction-two.vercel.app/og-image.jpg"],
   },
   robots: {
     index: true,
