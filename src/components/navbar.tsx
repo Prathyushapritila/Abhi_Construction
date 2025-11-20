@@ -42,9 +42,9 @@ export function Navbar() {
       <nav className="container mx-auto flex h-20 sm:h-22 md:h-24 lg:h-28 items-center justify-between px-3 sm:px-4 md:px-6 max-w-7xl" aria-label="Main navigation">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap"
+          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-0"
         >
-          <div className="relative flex-shrink-0 flex items-center">
+          <div className="relative flex-shrink-0 flex items-center justify-center">
             {/* Logo with transparent white background */}
             <div className="relative bg-transparent logo-container">
               <div className="relative">
@@ -63,7 +63,7 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] leading-none whitespace-nowrap flex items-center">
+          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] leading-none whitespace-nowrap flex items-center self-center">
             Constructions and Innovations
           </span>
         </Link>

@@ -245,8 +245,8 @@ export function PortfolioSimple() {
                       </>
                     )}
                   </div>
-                  <CardContent className="p-4 sm:p-6">
-                    <p className="text-sm sm:text-base text-steelGray dark:text-slate-400 text-center font-medium group-hover:text-premiumGold dark:group-hover:text-premiumGold transition-colors duration-250">
+                  <CardContent className="p-4 sm:p-6 group">
+                    <p className="text-sm sm:text-base text-steelGray dark:text-slate-400 text-center font-medium group-hover:text-[#E37B29] dark:group-hover:text-[#E37B29] transition-colors duration-300">
                       {item.location}
                     </p>
                   </CardContent>

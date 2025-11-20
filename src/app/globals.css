@@ -210,12 +210,17 @@
   /* Logo Background Watermark - Visible on all pages */
   .logo-watermark {
     position: fixed !important;
-    inset: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
     pointer-events: none !important;
     z-index: 0 !important;
-    opacity: 0.18 !important;
+    opacity: 0.2 !important;
     background-image: url('/AbhiPng-1.png') !important;
-    background-size: 55% auto !important;
+    background-size: 60% auto !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     mix-blend-mode: multiply !important;
@@ -223,7 +228,7 @@
   }
   
   .dark .logo-watermark {
-    opacity: 0.22 !important;
+    opacity: 0.25 !important;
     mix-blend-mode: screen !important;
   }
   
