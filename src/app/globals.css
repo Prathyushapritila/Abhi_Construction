@@ -219,17 +219,24 @@
     height: 100%;
     pointer-events: none;
     z-index: 0;
-    background-image: url('/abhi-watermark.svg');
-    background-size: 60% auto;
+    background-image: url('/AbhiPng-1.png');
+    background-size: 70% auto;
     background-position: center center;
     background-repeat: no-repeat;
-    opacity: 0.04;
+    opacity: 0.06;
     mix-blend-mode: multiply;
   }
   
   .dark .page-wrapper::before {
-    opacity: 0.05;
+    opacity: 0.08;
     mix-blend-mode: screen;
+    filter: brightness(1.1);
+  }
+  
+  /* Ensure watermark doesn't appear in hero sections with distinct backgrounds */
+  section[class*="hero"]::before,
+  section[class*="Hero"]::before {
+    display: none !important;
   }
   
   /* Remove white background from logo */
