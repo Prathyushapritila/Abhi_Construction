@@ -57,7 +57,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-lg p-1"
-                  aria-label={name}
+                  aria-label={`Open ${name} in a new tab`}
                 >
                   <span
                     className="h-12 w-12 sm:h-14 sm:w-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 group-hover:scale-110 flex-shrink-0"
