@@ -78,9 +78,9 @@ export function ContactContent() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div className="flex items-start space-x-4 p-4 rounded-lg border-2 hover:border-premiumGold/50 transition-colors bg-white dark:bg-slate-800 shadow-md">
-                    <div className="h-12 w-12 rounded-lg bg-premiumGold/20 dark:bg-premiumGold/30 flex items-center justify-center flex-shrink-0">
-                      <Icon className="h-6 w-6 text-premiumGold dark:text-premiumGold" />
+                  <div className="flex items-start space-x-4 p-4 rounded-lg border-2 border-premiumGold/30 dark:border-premiumGold/40 hover:border-premiumGold/50 transition-colors bg-white dark:bg-slate-800 shadow-md">
+                    <div className="h-12 w-12 rounded-lg bg-premiumGold/20 dark:bg-premiumGold/30 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(255, 140, 0, 0.2)' }}>
+                      <Icon className="h-6 w-6 text-premiumGold dark:text-premiumGold" style={{ color: 'rgb(255, 140, 0)' }} />
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-lg mb-2 text-royalNavy dark:text-slate-100">
