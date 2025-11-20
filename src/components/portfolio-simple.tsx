@@ -30,7 +30,10 @@ const portfolioItemsByCategory: Record<PortfolioCategory, string[]> = {
     "/Residential/4.jpg",
   ],
   interiors: [
-    "/Interiors/1.jpg", "/Interiors/3.jpg", "/Interiors/4.jpg", "/Interiors/5.jpg",
+    "/Interiors/1.jpg",
+    "/Interiors/padmaranagar-1.jpeg",
+    "/Interiors/manikonda-2.jpeg",
+    "/Interiors/narsingi-1.jpeg",
   ],
 };
 
@@ -45,9 +48,9 @@ const residentialLocations = [
 // Location labels for interiors images
 const interiorsLocations = [
   "Manikonda",
+  "PadmaRao Nagar",
   "Manikonda",
-  "Manikonda",
-  "Manikonda",
+  "Narsingi",
 ];
 
 const categories: { value: PortfolioCategory; label: string; icon: typeof Home }[] = [
