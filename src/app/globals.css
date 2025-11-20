@@ -520,6 +520,26 @@
     color: rgb(148, 163, 184) !important; /* slate-400 */
   }
   
+  /* Prevent Service Type dropdown clipping */
+  [id="serviceType"],
+  button[id="serviceType"],
+  [id="serviceType"] * {
+    overflow: visible !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+  
+  [id="serviceType"] span,
+  button[id="serviceType"] span {
+    display: block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    max-width: 100% !important;
+    flex: 1 1 0% !important;
+    min-width: 0 !important;
+  }
+  
   /* Ensure buttons are visible in both modes - ENHANCED FOR DARK MODE */
   button,
   .btn,
