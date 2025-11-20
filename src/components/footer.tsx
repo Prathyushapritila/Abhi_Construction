@@ -60,7 +60,7 @@ export function Footer() {
                   aria-label={`Open ${name} in a new tab`}
                 >
                   <span
-                    className="h-12 w-12 sm:h-14 sm:w-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 group-hover:scale-110 flex-shrink-0"
+                    className="min-h-[44px] min-w-[44px] h-12 w-12 sm:h-14 sm:w-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 group-hover:scale-110 flex-shrink-0"
                     style={{ backgroundColor: color }}
                   >
                     <svg
@@ -68,6 +68,7 @@ export function Footer() {
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
                     >
                       <path d={iconPath} fill="white" />
                     </svg>
