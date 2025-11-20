@@ -17,10 +17,10 @@ export function StickyContactButtons() {
       >
         <Button
           size="lg"
-          className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full bg-green-600 hover:bg-green-700 active:bg-green-800 text-white shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all duration-200 flex items-center justify-center p-0"
+          className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full bg-green-600 hover:bg-green-700 active:bg-green-800 text-white shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all duration-200 flex items-center justify-center p-2 sm:p-2.5 md:p-3"
           aria-label="WhatsApp - Contact us on WhatsApp"
         >
-          <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-white" strokeWidth={2.5} fill="none" />
+          <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-white flex-shrink-0" strokeWidth={2.5} fill="none" />
         </Button>
       </Link>
       <Link
@@ -31,10 +31,10 @@ export function StickyContactButtons() {
         <Button
           size="lg"
           variant="outline"
-          className="h-12 w-12 sm:h-14 sm:w-14 rounded-full border-2 border-royalBlue bg-white text-royalBlue hover:bg-royalBlue hover:text-white shadow-lg hover:scale-110 transition-transform flex items-center justify-center p-0"
+          className="h-12 w-12 sm:h-14 sm:w-14 rounded-full border-2 border-royalBlue bg-white dark:bg-slate-800 dark:border-white text-royalBlue dark:text-white hover:bg-royalBlue dark:hover:bg-white/10 hover:text-white dark:hover:text-white shadow-lg hover:scale-110 transition-transform flex items-center justify-center p-2 sm:p-2.5"
           aria-label={`Call us at +91 ${siteConfig.contact.phone}`}
         >
-          <Phone className="h-5 w-5 sm:h-6 sm:w-6" />
+          <Phone className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-current" />
         </Button>
       </Link>
     </div>

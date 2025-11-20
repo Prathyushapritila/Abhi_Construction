@@ -98,9 +98,9 @@ export function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
-            className="w-10 h-10 flex items-center justify-center text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold"
+            className="w-10 h-10 flex items-center justify-center text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold hover:bg-premiumGold/10 dark:hover:bg-premiumGold/20"
           >
-            {isOpen ? <X className="h-6 w-6 text-current" /> : <Menu className="h-6 w-6 text-current" />}
+            {isOpen ? <X className="h-6 w-6 text-royalNavy dark:text-white" /> : <Menu className="h-6 w-6 text-royalNavy dark:text-white" />}
           </Button>
         </div>
       </nav>

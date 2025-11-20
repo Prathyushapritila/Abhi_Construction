@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full py-12 sm:py-16 md:py-20 overflow-x-hidden overflow-y-visible min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] flex items-center justify-center">
+      <section className="relative w-full py-12 sm:py-16 md:py-20 md:min-h-[70vh] overflow-x-hidden overflow-y-visible flex items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
           <Image
@@ -24,7 +24,6 @@ export default function ContactPage() {
             priority
             style={{
               objectPosition: "center",
-              objectFit: "cover",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-stone-800/60 to-stone-900/70 dark:from-slate-900/80 dark:via-slate-800/70 dark:to-slate-900/80" />
