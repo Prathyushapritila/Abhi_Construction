@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block group">
+            <Link href="/" className="inline-flex items-center gap-3 group flex-wrap">
               <div className="relative">
                 <div className="absolute inset-0 blur-lg opacity-20 group-hover:opacity-30 transition-opacity bg-premiumGold/20 rounded-lg" />
                 <Image
@@ -23,6 +23,9 @@ export function Footer() {
                   sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
                 />
               </div>
+              <span className="text-base sm:text-lg font-semibold text-marbleWhite whitespace-nowrap">
+                Constructions and Innovations
+              </span>
             </Link>
             <p className="text-sm text-marbleWhite/90 leading-relaxed italic font-medium">
               {siteConfig.logo.caption}
@@ -77,7 +80,7 @@ export function Footer() {
               )}
               <li className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-premiumGold mt-1 flex-shrink-0" />
-                <span className="text-sm text-marbleWhite/80 leading-relaxed">
+                <span className="text-sm text-marbleWhite/80 leading-relaxed whitespace-pre-line">
                   {siteConfig.contact.address}
                 </span>
               </li>

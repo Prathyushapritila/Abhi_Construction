@@ -50,7 +50,7 @@ export function HomeCEOQuote() {
               <p className="text-xl font-semibold text-premiumGold dark:text-premiumGold mb-1">
                 Srikanth Pritila
               </p>
-              <p className="text-sm text-steelGray dark:text-slate-300">
+              <p className="text-sm text-premiumGold dark:text-premiumGold font-semibold tracking-wide">
                 CEO
               </p>
             </div>
