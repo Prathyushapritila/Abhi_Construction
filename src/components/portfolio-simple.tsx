@@ -145,7 +145,8 @@ export function PortfolioSimple() {
                 variant="outline"
                 onClick={() => setActiveCategory(isActive ? null : category.value)}
                 className={cn(
-                  "flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 min-w-[140px] shadow-sm",
+                  "portfolio-filter-btn flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 min-w-[140px] shadow-sm",
+                  isActive && "portfolio-filter-btn--active",
                   isActive
                     ? "bg-premiumGold border-premiumGold text-white shadow-xl scale-105"
                     : "border-royalNavy text-royalNavy dark:border-slate-200 dark:text-slate-200 hover:border-premiumGold hover:text-premiumGold dark:hover:border-premiumGold dark:hover:text-premiumGold"
