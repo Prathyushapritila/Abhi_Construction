@@ -179,16 +179,19 @@ export function PortfolioSimple() {
                     "portfolio-filter-btn flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 min-w-[140px] shadow-sm group",
                     isActive
                       ? "portfolio-filter-btn--active bg-premiumGold border-premiumGold text-white shadow-xl"
-                      : "border-royalNavy text-royalNavy dark:border-slate-200 dark:text-slate-200 hover:border-premiumGold hover:text-premiumGold hover:shadow-lg dark:hover:border-premiumGold dark:hover:text-premiumGold"
+                      : "border-royalNavy text-royalNavy dark:border-slate-200 dark:text-slate-200 hover:border-premiumGold hover:shadow-lg dark:hover:border-premiumGold"
                   )}
                 >
                 <Icon 
                   className={cn(
-                    "h-4 w-4 flex-shrink-0",
-                    isActive ? "text-white" : "text-current"
+                    "h-4 w-4 flex-shrink-0 transition-colors duration-200",
+                    isActive ? "text-white" : "text-current group-hover:text-premiumGold dark:group-hover:text-premiumGold"
                   )}
                 />
-                <span className={cn(isActive ? "text-white" : "text-current")}>{category.label}</span>
+                <span className={cn(
+                  "transition-colors duration-200",
+                  isActive ? "text-white" : "text-current group-hover:text-premiumGold dark:group-hover:text-premiumGold"
+                )}>{category.label}</span>
                 </Button>
               </motion.div>
             );

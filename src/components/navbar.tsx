@@ -42,7 +42,7 @@ export function Navbar() {
       <nav className="container mx-auto flex h-20 sm:h-22 md:h-24 lg:h-28 items-center justify-between px-3 sm:px-4 md:px-6 max-w-7xl" aria-label="Main navigation">
         <Link
           href="/"
-          className="flex flex-row items-center space-x-2 sm:space-x-3 group dark:flex-col dark:items-start dark:space-x-0"
+          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap"
         >
           <div className="relative">
             {/* Logo with transparent white background */}
@@ -63,7 +63,7 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <span className="text-royalNavy dark:text-white font-semibold text-xs sm:text-sm md:text-base lg:text-lg leading-tight whitespace-nowrap ml-2 dark:ml-0 dark:mt-1">
+          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] leading-none whitespace-nowrap">
             Constructions and Innovations
           </span>
         </Link>
