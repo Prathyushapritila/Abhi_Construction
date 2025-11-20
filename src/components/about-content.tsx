@@ -128,16 +128,6 @@ export function AboutContent() {
         
         {/* Background animation */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] marble-texture" />
-        {/* Abhi logo watermark */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.05]">
-          <Image
-            src={siteConfig.logo.image}
-            alt="Abhi Constructions & Innovations logo"
-            width={260}
-            height={260}
-            className="object-contain"
-          />
-        </div>
         <motion.div 
           className="absolute top-1/4 left-1/4 w-64 h-64 bg-premiumGold/10 dark:bg-premiumGold/20 rounded-full blur-3xl"
           animate={{ 
@@ -181,16 +171,6 @@ export function AboutContent() {
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
-        {/* Abhi logo watermark */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.05]">
-          <Image
-            src={siteConfig.logo.image}
-            alt="Abhi Constructions & Innovations logo"
-            width={260}
-            height={260}
-            className="object-contain"
-          />
-        </div>
         
         <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
           <motion.div
@@ -327,16 +307,6 @@ export function AboutContent() {
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] marble-texture" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl" />
-        {/* Abhi logo watermark */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.05]">
-          <Image
-            src={siteConfig.logo.image}
-            alt="Abhi Constructions & Innovations logo"
-            width={260}
-            height={260}
-            className="object-contain"
-          />
-        </div>
         
         <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
           <div className="max-w-4xl mx-auto">

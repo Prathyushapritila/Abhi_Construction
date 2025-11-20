@@ -216,8 +216,8 @@ export function PortfolioSimple() {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 whileHover={{ y: -8, scale: 1.02 }}
               >
-                <Card className="h-full overflow-hidden border-0 transition-all duration-300 hover:shadow-2xl cursor-pointer bg-white dark:bg-slate-800 group">
-                  <div className="relative aspect-square overflow-hidden bg-stone-100 dark:bg-slate-700">
+                <Card className="h-full overflow-hidden border-0 transition-all duration-300 hover:shadow-2xl cursor-pointer bg-white dark:bg-white group">
+                  <div className="relative aspect-square overflow-hidden bg-stone-100 dark:bg-stone-100">
                     <Image
                       src={item.image}
                       alt={item.title}
