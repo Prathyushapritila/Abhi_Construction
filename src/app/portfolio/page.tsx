@@ -16,6 +16,8 @@ export default function PortfolioPage() {
       <StickyContactButtons />
       {/* Hero Section with Background */}
       <section className="relative py-14 sm:py-18 md:py-22 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
+        {/* Logo Watermark Background */}
+        <div className="logo-watermark absolute inset-0 z-[1]" />
         {/* Background Image */}
         <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
           <Image

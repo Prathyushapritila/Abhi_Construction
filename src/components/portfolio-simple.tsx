@@ -176,21 +176,21 @@ export function PortfolioSimple() {
                   variant="outline"
                   onClick={() => setActiveCategory(isActive ? null : category.value)}
                   className={cn(
-                    "flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-300 min-w-[140px] shadow-sm group cursor-pointer",
+                    "flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-300 min-w-[140px] shadow-sm group cursor-pointer focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2",
                     isActive
                       ? "bg-premiumGold border-premiumGold text-white shadow-xl hover:bg-premiumGold/90 hover:border-premiumGold/90 hover:shadow-2xl transform hover:scale-105"
-                      : "border-royalNavy text-royalNavy dark:border-slate-200 dark:text-slate-200 hover:bg-premiumGold hover:border-premiumGold hover:text-white dark:hover:text-white hover:shadow-xl dark:hover:shadow-xl transform hover:scale-105"
+                      : "border-royalNavy text-royalNavy dark:border-slate-200 dark:text-slate-200 hover:border-premiumGold dark:hover:border-premiumGold hover:shadow-lg dark:hover:shadow-lg transform hover:scale-105"
                   )}
                 >
                 <Icon 
                   className={cn(
                     "h-4 w-4 flex-shrink-0 transition-colors duration-300",
-                    isActive ? "text-white" : "text-current group-hover:text-white dark:group-hover:text-white"
+                    isActive ? "text-white" : "text-current group-hover:text-premiumGold dark:group-hover:text-premiumGold"
                   )}
                 />
                 <span className={cn(
                   "transition-colors duration-300",
-                  isActive ? "text-white" : "text-current group-hover:text-white dark:group-hover:text-white"
+                  isActive ? "text-white" : "text-current group-hover:text-premiumGold dark:group-hover:text-premiumGold"
                 )}>{category.label}</span>
                 </Button>
               </motion.div>
