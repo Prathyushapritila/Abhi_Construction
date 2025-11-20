@@ -207,7 +207,7 @@
 }
 
 @layer utilities {
-  /* Logo Background Watermark - Visible on all pages (global) */
+  /* Logo Background Watermark - Global page background */
   .logo-watermark {
     position: fixed !important;
     top: 0 !important;
@@ -227,9 +227,19 @@
     will-change: opacity !important;
   }
   
+  /* Logo watermark in hero sections (absolute positioning) */
+  section .logo-watermark {
+    position: absolute !important;
+    z-index: 1 !important;
+  }
+  
   .dark .logo-watermark {
     opacity: 0.2 !important;
     mix-blend-mode: screen !important;
+  }
+  
+  .dark section .logo-watermark {
+    opacity: 0.2 !important;
   }
   
   /* Remove white background from logo */
