@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Simplified Abhi logo watermark - geometric representation -->
+  <g fill="currentColor" opacity="1">
+    <!-- Square/box shape representing the logo -->
+    <rect x="50" y="50" width="300" height="300" rx="20" stroke="currentColor" stroke-width="8" fill="none"/>
+    <!-- Letter A representation -->
+    <path d="M 120 280 L 200 80 L 280 280 M 160 220 L 240 220" stroke="currentColor" stroke-width="20" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>
+

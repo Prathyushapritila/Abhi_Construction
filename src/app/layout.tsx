@@ -86,9 +86,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col relative">
-            {/* Logo Background Watermark */}
-            <div className="logo-watermark" />
+          <div className="flex min-h-screen flex-col relative page-wrapper">
             <div className="relative z-10">
               <Navbar />
               <main className="flex-1">{children}</main>
