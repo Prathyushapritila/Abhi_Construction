@@ -40,7 +40,7 @@ export function Navbar() {
   return (
     <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#ffffff] dark:bg-slate-900 dark:backdrop-blur-md supports-[backdrop-filter]:bg-[#ffffff] dark:supports-[backdrop-filter]:bg-slate-900 shadow-lg dark:shadow-2xl">
       <nav className="container mx-auto flex h-20 sm:h-22 md:h-24 lg:h-28 items-center justify-between px-3 sm:px-4 md:px-6 max-w-7xl" aria-label="Main navigation">
-        <Link href="/" className="flex items-center space-x-3 group">
+        <Link href="/" className="flex flex-col items-start group">
           <div className="relative">
             {/* Logo with transparent white background */}
             <div className="relative bg-transparent logo-container">
@@ -60,7 +60,7 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <span className="hidden sm:block text-royalNavy dark:text-white font-semibold text-base sm:text-lg md:text-xl lg:text-2xl whitespace-nowrap">
+          <span className="hidden sm:block text-royalNavy dark:text-white font-semibold text-xs sm:text-sm md:text-base lg:text-lg mt-1 leading-tight whitespace-nowrap">
             Constructions and Innovations
           </span>
         </Link>
