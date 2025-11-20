@@ -207,9 +207,9 @@
 }
 
 @layer utilities {
-  /* Logo Background Watermark - Visible on hero sections */
+  /* Logo Background Watermark - Visible on all pages (global) */
   .logo-watermark {
-    position: absolute !important;
+    position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
@@ -217,7 +217,7 @@
     width: 100% !important;
     height: 100% !important;
     pointer-events: none !important;
-    z-index: 1 !important;
+    z-index: 0 !important;
     opacity: 0.15 !important;
     background-image: url('/AbhiPng-1.png') !important;
     background-size: 55% auto !important;
