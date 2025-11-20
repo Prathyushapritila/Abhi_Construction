@@ -30,34 +30,46 @@ export function Footer() {
             <p className="text-sm text-marbleWhite/90 leading-relaxed italic font-medium">
               {siteConfig.logo.caption}
             </p>
-            <div className="flex items-center space-x-4 pt-2">
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#1877F2] hover:text-[#0f5dc8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1877F2] focus:ring-offset-2 rounded-sm p-1 bg-white/5 rounded-full"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.2} />
-              </a>
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#E4405F] hover:text-[#c42747] transition-colors focus:outline-none focus:ring-2 focus:ring-[#E4405F] focus:ring-offset-2 rounded-sm p-1 bg-white/5 rounded-full"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.2} />
-              </a>
-              <a
-                href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#25D366] hover:text-[#1ea553] transition-colors focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 rounded-sm p-1 bg-white/5 rounded-full"
-                aria-label="WhatsApp - Contact us on WhatsApp"
-              >
-                <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.4} />
-              </a>
+            <div className="flex items-center gap-6 pt-2 flex-wrap">
+              {[
+                {
+                  name: "Facebook",
+                  href: "https://www.facebook.com",
+                  color: "#1877F2",
+                  Icon: Facebook,
+                },
+                {
+                  name: "Instagram",
+                  href: "https://www.instagram.com",
+                  color: "#E4405F",
+                  Icon: Instagram,
+                },
+                {
+                  name: "WhatsApp",
+                  href: `https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`,
+                  color: "#25D366",
+                  Icon: MessageCircle,
+                },
+              ].map(({ name, href, color, Icon }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-2 group focus:outline-none"
+                  aria-label={name}
+                >
+                  <span
+                    className="h-12 w-12 rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 group-hover:scale-105"
+                    style={{ backgroundColor: color }}
+                  >
+                    <Icon className="h-6 w-6 text-white" strokeWidth={2.2} />
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-wide text-marbleWhite/90">
+                    {name}
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
 
