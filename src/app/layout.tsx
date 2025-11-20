@@ -34,13 +34,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://abhiconstructions.com",
+    url: "https://abhi-construction-two.vercel.app",
     siteName: "Abhi Constructions",
     title: "Abhi Constructions - Building Excellence Since 2017",
     description: "Premier construction company in Hyderabad, India specializing in custom home building, residential construction, and renovation projects.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://abhi-construction-two.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Abhi Constructions",
