@@ -154,17 +154,20 @@ export function ContactForm() {
                 <SelectTrigger 
                   id="serviceType" 
                   aria-invalid={errors.serviceType ? "true" : "false"}
-                  className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 w-full"
+                  className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 w-full items-center"
                   style={{ 
                     color: 'rgb(64, 64, 64)', 
                     boxSizing: 'border-box', 
                     width: '100%',
-                    height: '40px',
-                    minHeight: '40px',
+                    height: '42px',
+                    minHeight: '42px',
                     paddingLeft: '12px',
                     paddingRight: '32px',
-                    paddingTop: '8px',
-                    paddingBottom: '8px'
+                    paddingTop: '10px',
+                    paddingBottom: '10px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between'
                   }}
                 >
                   <SelectValue placeholder="Select a service" />

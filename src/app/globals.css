@@ -526,16 +526,22 @@
     overflow: visible !important;
     box-sizing: border-box !important;
     width: 100% !important;
+    height: 42px !important;
+    min-height: 42px !important;
     padding-left: 12px !important;
     padding-right: 32px !important;
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
   }
   
   [id="serviceType"] span,
   button[id="serviceType"] span,
   [id="serviceType"] > span {
     display: flex !important;
+    align-items: center !important;
     flex: 1 1 auto !important;
     min-width: 0 !important;
     max-width: calc(100% - 24px) !important;
@@ -543,6 +549,8 @@
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
     margin-right: 8px !important;
+    line-height: 1.5 !important;
+    vertical-align: middle !important;
   }
   
   /* Ensure icon doesn't overlap text */
@@ -552,6 +560,7 @@
     width: 16px !important;
     height: 16px !important;
     margin-left: auto !important;
+    align-self: center !important;
   }
   
   /* Ensure buttons are visible in both modes - ENHANCED FOR DARK MODE */
