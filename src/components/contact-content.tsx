@@ -142,7 +142,7 @@ export function ContactContent() {
               </div>
             </motion.div>
 
-            {/* Google Maps Placeholder */}
+            {/* Google Maps */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -166,9 +166,19 @@ export function ContactContent() {
                   title="Abhi Constructions Location - Hyderabad, Telangana, India"
                 />
               </div>
-              <p className="text-sm text-royalNavy dark:text-slate-200 mt-2 font-medium">
+              <p className="text-sm text-royalNavy dark:text-slate-200 mt-2 font-medium whitespace-pre-line">
                 {siteConfig.contact.address}
               </p>
+              {siteConfig.contact.mapsUrl && (
+                <a
+                  href={siteConfig.contact.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-premiumGold hover:text-premiumGold/80 dark:text-premiumGold dark:hover:text-premiumGold/80 font-medium text-sm underline transition-colors"
+                >
+                  View on Google Maps →
+                </a>
+              )}
             </motion.div>
           </div>
         </div>

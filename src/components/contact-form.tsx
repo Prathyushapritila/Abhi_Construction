@@ -89,9 +89,9 @@ export function ContactForm() {
               <Input
                 id="name"
                 {...register("name")}
-                placeholder="Your full name"
-                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-premiumGold/50"
-                style={{ color: 'rgb(64, 64, 64)' }}
+                placeholder="Full name"
+                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray/60 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-premiumGold/50 opacity-90"
+                style={{ color: 'rgb(64, 64, 64)', opacity: 0.85 }}
                 aria-invalid={errors.name ? "true" : "false"}
                 aria-describedby={errors.name ? "name-error" : undefined}
               />
@@ -110,9 +110,9 @@ export function ContactForm() {
                 id="email"
                 type="email"
                 {...register("email")}
-                placeholder="your.email@example.com"
-                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-premiumGold/50"
-                style={{ color: 'rgb(64, 64, 64)' }}
+                placeholder="email@example.com"
+                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray/60 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-premiumGold/50 opacity-90"
+                style={{ color: 'rgb(64, 64, 64)', opacity: 0.85 }}
                 aria-invalid={errors.email ? "true" : "false"}
                 aria-describedby={errors.email ? "email-error" : undefined}
               />
@@ -133,8 +133,8 @@ export function ContactForm() {
                 type="tel"
                 {...register("phone")}
                 placeholder="+91 98765 43210"
-                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-premiumGold/50"
-                style={{ color: 'rgb(64, 64, 64)' }}
+                className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray/60 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-premiumGold/50 opacity-90"
+                style={{ color: 'rgb(64, 64, 64)', opacity: 0.85 }}
                 aria-invalid={errors.phone ? "true" : "false"}
                 aria-describedby={errors.phone ? "phone-error" : undefined}
               />
@@ -154,7 +154,7 @@ export function ContactForm() {
                 <SelectTrigger 
                   id="serviceType" 
                   aria-invalid={errors.serviceType ? "true" : "false"}
-                  className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 w-full items-center overflow-hidden"
+                  className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 w-full items-center overflow-hidden opacity-90"
                   style={{ 
                     color: 'rgb(64, 64, 64)', 
                     boxSizing: 'border-box', 
@@ -167,7 +167,8 @@ export function ContactForm() {
                     paddingBottom: '10px',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'space-between'
+                    justifyContent: 'space-between',
+                    opacity: 0.85
                   }}
                 >
                   <SelectValue placeholder="Select a service" />
@@ -234,8 +235,8 @@ export function ContactForm() {
               {...register("message")}
               placeholder="Tell us about your project..."
               rows={6}
-              className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-premiumGold/50"
-              style={{ color: 'rgb(64, 64, 64)' }}
+              className="border-royalNavy/30 dark:border-slate-600 focus-visible:border-premiumGold focus-visible:ring-premiumGold/50 bg-white dark:bg-slate-800 text-royalNavy dark:text-slate-200 placeholder:text-steelGray/60 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-premiumGold/50 opacity-90"
+              style={{ color: 'rgb(64, 64, 64)', opacity: 0.85 }}
               aria-invalid={errors.message ? "true" : "false"}
               aria-describedby={errors.message ? "message-error" : undefined}
             />
