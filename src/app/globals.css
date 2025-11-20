@@ -356,37 +356,6 @@
   color: rgb(248, 250, 252) !important;
 }
   
-  /* Portfolio button + text visibility */
-  #portfolio button[data-variant="outline"]:not(.portfolio-filter-btn),
-  #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) {
-    border-color: rgb(64, 64, 64) !important;
-    color: rgb(64, 64, 64) !important;
-  }
-  
-  .dark #portfolio button[data-variant="outline"]:not(.portfolio-filter-btn),
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn),
-  .dark #portfolio button[data-variant="outline"]:not(.portfolio-filter-btn) *,
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) *,
-  .dark #portfolio button[data-variant="outline"]:not(.portfolio-filter-btn) svg,
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) svg {
-    border-color: rgb(255, 255, 255) !important;
-    color: rgb(255, 255, 255) !important;
-  }
-  
-  .dark #portfolio button span,
-  .dark #portfolio button[data-variant="outline"] span,
-  .dark #portfolio button:not([class*="bg-royalBlue"]) span {
-    color: rgb(255, 255, 255) !important;
-  }
-  
-  /* Ensure portfolio buttons are visible in dark mode - ULTRA AGGRESSIVE */
-  .dark #portfolio button:not([class*="bg-royalBlue"]):not(.portfolio-filter-btn) {
-    opacity: 1 !important;
-    visibility: visible !important;
-    border-width: 2px !important;
-    background-color: transparent !important;
-  }
-  
   /* Contact buttons - ensure they stay in box and are visible */
   form button[type="submit"],
   a[href^="tel:"] button {
@@ -448,21 +417,6 @@
   #portfolio .flex.flex-wrap {
     align-items: center !important;
     justify-content: center !important;
-  }
-  
-  /* Portfolio buttons - ensure proper sizing and alignment */
-  #portfolio button {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-  }
-  
-  .dark #portfolio h2,
-  .dark #portfolio p,
-  .dark #portfolio .text-steelGray,
-  .dark #portfolio .text-royalNavy {
-    color: rgb(248, 250, 252) !important;
   }
   
 /* Force remove borders from service cards */

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Clock, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export function Footer() {
@@ -36,21 +36,21 @@ export function Footer() {
                   name: "Facebook",
                   href: "https://www.facebook.com",
                   color: "#1877F2",
-                  Icon: Facebook,
+                  logo: "/social/facebook.svg",
                 },
                 {
                   name: "Instagram",
                   href: "https://www.instagram.com",
                   color: "#E4405F",
-                  Icon: Instagram,
+                  logo: "/social/instagram.svg",
                 },
                 {
                   name: "WhatsApp",
                   href: `https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`,
                   color: "#25D366",
-                  Icon: MessageCircle,
+                  logo: "/social/whatsapp.svg",
                 },
-              ].map(({ name, href, color, Icon }) => (
+              ].map(({ name, href, color, logo }) => (
                 <a
                   key={name}
                   href={href}
@@ -60,10 +60,16 @@ export function Footer() {
                   aria-label={name}
                 >
                   <span
-                    className="h-12 w-12 rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 group-hover:scale-105"
-                    style={{ backgroundColor: color }}
+                    className="h-12 w-12 rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 group-hover:scale-105 bg-white"
+                    style={{ border: `2px solid ${color}` }}
                   >
-                    <Icon className="h-6 w-6 text-white" strokeWidth={2.2} />
+                    <Image
+                      src={logo}
+                      alt={`${name} logo`}
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
                   </span>
                   <span className="text-xs font-semibold uppercase tracking-wide text-marbleWhite/90">
                     {name}

@@ -48,19 +48,6 @@ export default function ServicesPage() {
         </div>
         {/* Background pattern overlay */}
         <div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.08] blueprint-grid z-[1]" />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 z-[1] flex items-center justify-center opacity-[0.08] pointer-events-none"
-        >
-          <Image
-            src={siteConfig.logo.image}
-            alt="Abhi Constructions & Innovations watermark"
-            width={360}
-            height={360}
-            className="object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]"
-            priority
-          />
-        </div>
         {/* Decorative circles - hidden on mobile to prevent orange shades */}
         <div className="hidden md:block absolute top-0 right-0 w-96 h-96 bg-premiumGold/10 dark:bg-premiumGold/15 rounded-full blur-3xl z-[1]" />
         <div className="hidden md:block absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/15 rounded-full blur-3xl z-[1]" />
