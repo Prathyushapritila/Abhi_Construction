@@ -123,7 +123,7 @@ export function ContactContent() {
                 >
                   <Button
                     variant="outline"
-                    className="w-full border-2 border-royalBlue text-royalBlue hover:bg-royalBlue hover:text-white text-base sm:text-lg font-semibold dark:border-white dark:text-white dark:bg-transparent dark:hover:text-white dark:hover:bg-white/10 flex items-center justify-center gap-3 rounded-lg transition-all duration-200"
+                    className="w-full border-2 border-premiumGold text-premiumGold hover:bg-premiumGold hover:text-white text-base sm:text-lg font-semibold dark:border-premiumGold dark:text-premiumGold dark:bg-transparent dark:hover:text-white dark:hover:bg-premiumGold flex items-center justify-center gap-3 rounded-lg transition-all duration-200"
                     style={{ 
                       maxWidth: '100%', 
                       width: '100%',
@@ -135,8 +135,8 @@ export function ContactContent() {
                       justifyContent: 'center',
                     }}
                   >
-                    <Phone className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-current dark:text-white" />
-                    <span className="whitespace-nowrap text-current dark:text-white">Call Us Now</span>
+                    <Phone className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-current dark:text-premiumGold" />
+                    <span className="whitespace-nowrap text-current dark:text-premiumGold">Call Us Now</span>
                   </Button>
                 </Link>
               </div>
