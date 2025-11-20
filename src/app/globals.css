@@ -548,6 +548,48 @@
     box-sizing: border-box !important;
     width: 100% !important;
     max-width: 100% !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    padding-left: 12px !important;
+    padding-right: 32px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  
+  /* Dark mode span alignment - same as light mode */
+  .dark [id="serviceType"] span,
+  .dark button[id="serviceType"] span,
+  .dark [id="serviceType"] > span {
+    display: flex !important;
+    align-items: center !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    max-width: calc(100% - 24px) !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    margin-right: 8px !important;
+    line-height: 1.5 !important;
+    vertical-align: middle !important;
+  }
+  
+  /* Dark mode icon centering - same as light mode */
+  .dark [id="serviceType"] svg,
+  .dark button[id="serviceType"] svg,
+  .dark [id="serviceType"] [data-radix-select-icon],
+  .dark button[id="serviceType"] [data-radix-select-icon] {
+    flex-shrink: 0 !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: auto !important;
+    align-self: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
   }
   
   [id="serviceType"] span,
