@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Facebook, Instagram, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export function Footer() {
@@ -30,48 +30,53 @@ export function Footer() {
             <p className="text-sm text-marbleWhite/90 leading-relaxed italic font-medium">
               {siteConfig.logo.caption}
             </p>
-            <div className="flex items-center gap-6 pt-2 flex-wrap">
+            <div className="flex items-center gap-4 sm:gap-6 pt-2 flex-wrap">
               {[
                 {
                   name: "Facebook",
                   href: "https://www.facebook.com",
                   color: "#1877F2",
-                  logo: "/social/facebook.svg",
+                  Icon: Facebook,
                 },
                 {
                   name: "Instagram",
                   href: "https://www.instagram.com",
                   color: "#E4405F",
-                  logo: "/social/instagram.svg",
+                  Icon: Instagram,
                 },
                 {
                   name: "WhatsApp",
                   href: `https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`,
                   color: "#25D366",
-                  logo: "/social/whatsapp.svg",
+                  Icon: MessageCircle,
                 },
-              ].map(({ name, href, color, logo }) => (
+              ].map(({ name, href, color, Icon }) => (
                 <a
                   key={name}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-2 group focus:outline-none"
+                  className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-lg p-1"
                   aria-label={name}
                 >
                   <span
-                    className="h-12 w-12 rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 group-hover:scale-105 bg-white"
-                    style={{ border: `2px solid ${color}` }}
+                    className="h-12 w-12 sm:h-14 sm:w-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 group-hover:scale-110 flex-shrink-0"
+                    style={{ backgroundColor: color }}
                   >
-                    <Image
-                      src={logo}
-                      alt={`${name} logo`}
-                      width={20}
-                      height={20}
-                      className="object-contain"
-                    />
+                    {name === "Instagram" ? (
+                      <Icon 
+                        className="h-6 w-6 sm:h-7 sm:w-7 text-white" 
+                        strokeWidth={2}
+                        fill="white"
+                      />
+                    ) : (
+                      <Icon 
+                        className="h-6 w-6 sm:h-7 sm:w-7 text-white" 
+                        strokeWidth={2.5}
+                      />
+                    )}
                   </span>
-                  <span className="text-xs font-semibold uppercase tracking-wide text-marbleWhite/90">
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-marbleWhite/90 whitespace-nowrap">
                     {name}
                   </span>
                 </a>

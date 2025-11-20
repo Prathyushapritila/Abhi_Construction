@@ -167,17 +167,21 @@ export function PortfolioSimple() {
             const Icon = category.icon;
             const isActive = activeCategory === category.value;
             return (
-              <Button
+              <motion.div
                 key={category.value}
-                variant="outline"
-                onClick={() => setActiveCategory(isActive ? null : category.value)}
-                className={cn(
-                  "portfolio-filter-btn flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 min-w-[140px] shadow-sm",
-                  isActive
-                    ? "portfolio-filter-btn--active bg-premiumGold border-premiumGold text-white shadow-xl scale-105"
-                    : "border-royalNavy text-royalNavy dark:border-slate-200 dark:text-slate-200 hover:border-premiumGold hover:text-premiumGold dark:hover:border-premiumGold dark:hover:text-premiumGold"
-                )}
+                whileHover={{ y: -4, scale: 1.05 }}
+                transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
               >
+                <Button
+                  variant="outline"
+                  onClick={() => setActiveCategory(isActive ? null : category.value)}
+                  className={cn(
+                    "portfolio-filter-btn flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 min-w-[140px] shadow-sm group",
+                    isActive
+                      ? "portfolio-filter-btn--active bg-premiumGold border-premiumGold text-white shadow-xl"
+                      : "border-royalNavy text-royalNavy dark:border-slate-200 dark:text-slate-200 hover:border-premiumGold hover:text-premiumGold hover:shadow-lg dark:hover:border-premiumGold dark:hover:text-premiumGold"
+                  )}
+                >
                 <Icon 
                   className={cn(
                     "h-4 w-4 flex-shrink-0",
@@ -185,7 +189,8 @@ export function PortfolioSimple() {
                   )}
                 />
                 <span className={cn(isActive ? "text-white" : "text-current")}>{category.label}</span>
-              </Button>
+                </Button>
+              </motion.div>
             );
           })}
         </div>

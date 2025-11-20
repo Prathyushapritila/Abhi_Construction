@@ -31,16 +31,6 @@ export default function PortfolioPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-stone-800/60 to-stone-900/70 dark:from-slate-900/80 dark:via-slate-800/70 dark:to-slate-900/80" />
         </div>
-        {/* Logo watermark */}
-        <div className="absolute inset-0 z-[1] flex items-center justify-center opacity-[0.08] pointer-events-none">
-          <Image
-            src={siteConfig.logo.image}
-            alt="Abhi Constructions & Innovations watermark"
-            width={360}
-            height={360}
-            className="object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]"
-          />
-        </div>
         
         <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
           <div className="text-center max-w-4xl mx-auto py-12 sm:py-16 md:py-20">
