@@ -154,7 +154,7 @@ export function ContactForm() {
                 <SelectTrigger 
                   id="serviceType" 
                   aria-invalid={errors.serviceType ? "true" : "false"}
-                  className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 w-full items-center"
+                  className="border-royalNavy/30 dark:border-slate-600 focus:border-premiumGold focus:ring-premiumGold/50 bg-white dark:bg-slate-800 w-full items-center overflow-hidden"
                   style={{ 
                     color: 'rgb(64, 64, 64)', 
                     boxSizing: 'border-box', 

@@ -523,9 +523,10 @@
   /* Prevent Service Type dropdown clipping - AGGRESSIVE FIX */
   [id="serviceType"],
   button[id="serviceType"] {
-    overflow: visible !important;
+    overflow: hidden !important;
     box-sizing: border-box !important;
     width: 100% !important;
+    max-width: 100% !important;
     height: 42px !important;
     min-height: 42px !important;
     padding-left: 12px !important;
@@ -535,6 +536,18 @@
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
+    border: 1px solid rgba(64, 64, 64, 0.3) !important;
+  }
+  
+  /* Dark mode specific fixes for Service Type */
+  .dark [id="serviceType"],
+  .dark button[id="serviceType"] {
+    border: 1px solid rgb(71, 85, 105) !important; /* slate-600 */
+    background-color: rgb(30, 41, 59) !important; /* slate-800 */
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   [id="serviceType"] span,
