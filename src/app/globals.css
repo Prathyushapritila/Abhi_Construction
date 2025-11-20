@@ -213,16 +213,16 @@
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.15;
+    opacity: 0.12;
     background-image: url('/AbhiPng-1.png');
-    background-size: 40% auto;
+    background-size: 45% auto;
     background-position: center;
     background-repeat: no-repeat;
     mix-blend-mode: multiply;
   }
   
   .dark .logo-watermark {
-    opacity: 0.2;
+    opacity: 0.18;
     mix-blend-mode: screen;
   }
   
