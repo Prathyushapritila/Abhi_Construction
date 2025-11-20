@@ -115,7 +115,7 @@ export function HomeAboutTeaser() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-royalNavy dark:text-slate-100 mb-4 sm:mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-premiumGold dark:text-premiumGold mb-4 sm:mb-6"
             >
               {siteConfig.sections.hero.headline}
             </motion.h2>
@@ -189,7 +189,7 @@ export function HomeAboutTeaser() {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="mb-12"
           >
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-center mb-8 text-royalNavy dark:text-premiumGold">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-center mb-8 text-premiumGold dark:text-premiumGold">
               What Our Satisfied Clients Are Saying
             </h3>
             <p className="text-base md:text-lg text-steelGray dark:text-slate-300 text-center mb-8 max-w-3xl mx-auto leading-relaxed">
