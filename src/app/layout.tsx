@@ -24,7 +24,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://abhiconstructions.com"),
   title: {
-    default: "Abhi Constructions - Building Excellence Since 1999",
+    default: "Abhi Constructions - Building Excellence Since 2017",
     template: "%s | Abhi Constructions",
   },
   description: "Premier construction company in Hyderabad, India specializing in custom home building, residential construction, and renovation projects. Quality craftsmanship, on-time delivery, and exceptional service.",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://abhiconstructions.com",
     siteName: "Abhi Constructions",
-    title: "Abhi Constructions - Building Excellence Since 1999",
+    title: "Abhi Constructions - Building Excellence Since 2017",
     description: "Premier construction company in Hyderabad, India specializing in custom home building, residential construction, and renovation projects.",
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abhi Constructions - Building Excellence Since 1999",
+    title: "Abhi Constructions - Building Excellence Since 2017",
     description: "Premier construction company in Hyderabad, India specializing in custom home building, residential construction, and renovation projects.",
     images: ["/og-image.jpg"],
   },
