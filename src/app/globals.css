@@ -209,21 +209,21 @@
 @layer utilities {
   /* Logo Background Watermark - Visible on all pages */
   .logo-watermark {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.12;
-    background-image: url('/AbhiPng-1.png');
-    background-size: 45% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    mix-blend-mode: multiply;
+    position: fixed !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+    opacity: 0.15 !important;
+    background-image: url('/AbhiPng-1.png') !important;
+    background-size: 50% auto !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    mix-blend-mode: multiply !important;
   }
   
   .dark .logo-watermark {
-    opacity: 0.18;
-    mix-blend-mode: screen;
+    opacity: 0.2 !important;
+    mix-blend-mode: screen !important;
   }
   
   /* Remove white background from logo */
