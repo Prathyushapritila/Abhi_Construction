@@ -118,7 +118,7 @@ export function ProjectsGallery() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-premiumGold">
             Project Gallery
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

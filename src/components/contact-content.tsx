@@ -63,7 +63,7 @@ export function ContactContent() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy dark:text-slate-100">
+              <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4 sm:mb-6 text-premiumGold dark:text-premiumGold">
                 Contact Information
               </h2>
             </motion.div>
@@ -112,7 +112,7 @@ export function ContactContent() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="pt-6"
             >
-              <h3 className="font-heading font-semibold text-lg text-royalNavy dark:text-slate-100 mb-4">
+              <h3 className="font-heading font-semibold text-lg text-premiumGold dark:text-premiumGold mb-4">
                 Quick Contact
               </h3>
               <div className="w-full" style={{ maxWidth: '100%', boxSizing: 'border-box' }}>
@@ -150,7 +150,7 @@ export function ContactContent() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="pt-6"
             >
-              <h3 className="font-heading font-semibold text-lg text-royalNavy dark:text-slate-100 mb-4">
+              <h3 className="font-heading font-semibold text-lg text-premiumGold dark:text-premiumGold mb-4">
                 Our Location
               </h3>
               <div className="relative h-48 sm:h-56 md:h-64 rounded-lg overflow-hidden border-2 border-premiumGold/30 dark:border-premiumGold/40 bg-stone-100 dark:bg-slate-700">

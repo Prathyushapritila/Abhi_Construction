@@ -40,7 +40,7 @@ export function PortfolioPreview() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-royalNavy mb-4 gold-underline">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-premiumGold mb-4 gold-underline">
             {siteConfig.sections.portfolio.title}
           </h2>
           <p className="text-xl text-steelGray max-w-2xl mx-auto">

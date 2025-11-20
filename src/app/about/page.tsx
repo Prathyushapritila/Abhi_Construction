@@ -19,7 +19,7 @@ export default function AboutPage() {
         overlay={0.7}
       >
         <div className="text-center max-w-4xl mx-auto py-12 sm:py-16 md:py-20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-marbleWhite mb-4 sm:mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-premiumGold mb-4 sm:mb-6">
             About Us
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-marbleWhite/90 leading-relaxed">

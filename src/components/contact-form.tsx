@@ -74,7 +74,7 @@ export function ContactForm() {
   return (
     <Card className="border-2 border-premiumGold/30 dark:border-premiumGold/40 bg-white dark:bg-slate-800 shadow-xl">
       <CardHeader>
-        <CardTitle className="text-2xl font-heading text-royalNavy dark:text-slate-100">Get In Touch</CardTitle>
+        <CardTitle className="text-2xl font-heading text-premiumGold dark:text-premiumGold">Get In Touch</CardTitle>
         <CardDescription className="text-steelGray dark:text-slate-300">
           Fill out the form below and we&apos;ll get back to you as soon as possible.
         </CardDescription>

@@ -125,7 +125,7 @@ export function PortfolioSimple() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 sm:mb-6 text-royalNavy dark:text-premiumGold gold-underline">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 sm:mb-6 text-premiumGold dark:text-premiumGold gold-underline">
             Our Portfolio
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-steelGray dark:text-slate-400 max-w-2xl mx-auto">
@@ -146,8 +146,8 @@ export function PortfolioSimple() {
                 className="flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-200 min-w-[140px]"
                 style={{
                   ...(isActive ? {
-                    backgroundColor: 'rgb(59, 130, 246)',
-                    borderColor: 'rgb(59, 130, 246)',
+                    backgroundColor: 'rgb(255, 140, 0)',
+                    borderColor: 'rgb(255, 140, 0)',
                     color: 'white',
                   } : {
                     borderColor: 'rgb(64, 64, 64)',
@@ -208,15 +208,19 @@ export function PortfolioSimple() {
                         target.style.display = 'none';
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <h3 className="text-white font-heading font-semibold text-lg mb-1">
-                        {item.title}
-                      </h3>
-                      <p className="text-white/90 text-sm">
-                        {item.location}
-                      </p>
-                    </div>
+                    {item.category === "interiors" && (
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                          <h3 className="text-white font-heading font-semibold text-lg mb-1">
+                            {item.title}
+                          </h3>
+                          <p className="text-white/90 text-sm">
+                            {item.location}
+                          </p>
+                        </div>
+                      </>
+                    )}
                   </div>
                   <CardContent className="p-4 sm:p-6">
                     <p className="text-sm sm:text-base text-steelGray dark:text-slate-400 text-center font-medium">
