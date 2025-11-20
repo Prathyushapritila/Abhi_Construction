@@ -474,18 +474,26 @@
   /* Select a service placeholder color - not yellow - match other form colors */
   [id="serviceType"] span[data-placeholder],
   [id="serviceType"] [data-placeholder],
-  [id="serviceType"]::placeholder,
-  [id="serviceType"] span,
-  [id="serviceType"] * {
+  [id="serviceType"]::placeholder {
     color: rgb(128, 128, 128) !important; /* steelGray - matches other placeholders */
+  }
+  
+  /* Selected value (not placeholder) - ensure visibility */
+  [id="serviceType"] span:not([data-placeholder]),
+  [id="serviceType"] button span:not([data-placeholder]) {
+    color: rgb(64, 64, 64) !important; /* royalNavy */
   }
   
   .dark [id="serviceType"] span[data-placeholder],
   .dark [id="serviceType"] [data-placeholder],
-  .dark [id="serviceType"]::placeholder,
-  .dark [id="serviceType"] span,
-  .dark [id="serviceType"] * {
+  .dark [id="serviceType"]::placeholder {
     color: rgb(148, 163, 184) !important; /* slate-400 - matches other placeholders */
+  }
+  
+  /* Selected value in dark mode - ensure visibility */
+  .dark [id="serviceType"] span:not([data-placeholder]),
+  .dark [id="serviceType"] button span:not([data-placeholder]) {
+    color: rgb(226, 232, 240) !important; /* slate-200 - visible on dark background */
   }
   
   /* Override any yellow/premiumGold color on SelectValue placeholder */
