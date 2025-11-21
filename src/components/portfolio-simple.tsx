@@ -181,7 +181,7 @@ export function PortfolioSimple() {
                     "bg-white text-royalNavy border-royalNavy shadow-sm",
                     "dark:bg-transparent dark:text-white dark:border-white/80",
                     isActive
-                      ? "bg-premiumGold border-premiumGold text-royalNavy shadow-xl dark:bg-premiumGold dark:text-royalNavy"
+                      ? "border-premiumGold shadow-xl dark:border-premiumGold"
                       : "hover:border-premiumGold hover:text-premiumGold dark:hover:border-white dark:hover:text-white dark:hover:bg-white/10"
                   )}
                 >
@@ -190,7 +190,7 @@ export function PortfolioSimple() {
                       className={cn(
                         "h-4 w-4 flex-shrink-0 transition-colors duration-300",
                         isActive
-                          ? "text-royalNavy"
+                          ? "text-premiumGold dark:text-premiumGold"
                           : "text-royalNavy group-hover:text-premiumGold dark:text-white dark:group-hover:text-white"
                       )}
                     />
@@ -198,7 +198,7 @@ export function PortfolioSimple() {
                       className={cn(
                         "transition-colors duration-300 whitespace-nowrap leading-none",
                         isActive
-                          ? "text-royalNavy"
+                          ? "text-premiumGold dark:text-premiumGold"
                           : "text-royalNavy group-hover:text-premiumGold dark:text-white dark:group-hover:text-white"
                       )}
                     >
