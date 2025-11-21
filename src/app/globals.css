@@ -752,18 +752,37 @@
   /* Ensure logo is not clipped - just fix overflow, don't change size */
   header nav a[href="/"] {
     overflow: visible !important;
+    max-width: none !important;
   }
   
   header nav a[href="/"] > div {
     overflow: visible !important;
+    max-width: none !important;
+  }
+  
+  header nav a[href="/"] > div > div {
+    overflow: visible !important;
+    max-width: none !important;
   }
   
   .logo-container {
     overflow: visible !important;
+    max-width: none !important;
   }
   
   .logo-container img {
     overflow: visible !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure nav container doesn't clip logo in light mode */
+  header nav {
+    overflow: visible !important;
+  }
+  
+  /* Light mode specific - ensure logo container has enough space */
+  header nav a[href="/"] {
+    min-width: fit-content !important;
   }
   
   .blueprint-grid {
