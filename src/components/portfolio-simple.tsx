@@ -216,7 +216,7 @@ export function PortfolioSimple() {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 whileHover={{ y: -8, scale: 1.02 }}
               >
-                <Card className="h-full overflow-hidden border-0 transition-all duration-300 hover:shadow-2xl cursor-pointer bg-white dark:bg-white group">
+                <Card className="h-full overflow-hidden border-0 transition-all duration-300 hover:shadow-2xl cursor-pointer bg-white dark:bg-white group max-w-full">
                   <div className="relative aspect-square overflow-hidden bg-stone-100 dark:bg-stone-100">
                     <Image
                       src={item.image}
@@ -245,8 +245,8 @@ export function PortfolioSimple() {
                       </>
                     )}
                   </div>
-                  <CardContent className="p-4 sm:p-6 group overflow-hidden">
-                    <p className="text-sm sm:text-base text-steelGray dark:text-slate-400 text-center font-medium group-hover:text-[#E37B29] dark:group-hover:text-[#E37B29] transition-colors duration-300 break-words overflow-wrap-anywhere">
+                  <CardContent className="p-4 sm:p-6 group overflow-hidden max-w-full box-border">
+                    <p className="text-sm sm:text-base text-steelGray dark:text-slate-400 text-center font-medium group-hover:text-[#E37B29] dark:group-hover:text-[#E37B29] transition-colors duration-300 break-words overflow-wrap-anywhere max-w-full box-border">
                       {item.location}
                     </p>
                   </CardContent>
