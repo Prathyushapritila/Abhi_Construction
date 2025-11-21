@@ -39,7 +39,7 @@ export function Navbar() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#ffffff] dark:bg-slate-900 dark:backdrop-blur-md supports-[backdrop-filter]:bg-[#ffffff] dark:supports-[backdrop-filter]:bg-slate-900 shadow-lg dark:shadow-2xl">
-      <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-6 md:px-8 max-w-7xl">
+      <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl overflow-visible">
         <Link
           href="/"
           className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-0"

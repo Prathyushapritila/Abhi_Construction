@@ -30,7 +30,7 @@ export default function ServicesPage() {
     <div className="min-h-screen page-with-watermark">
       <StickyContactButtons />
       {/* Hero Section */}
-      <section className="relative py-14 sm:py-18 md:py-22 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-x-hidden overflow-y-visible min-h-[65vh] sm:min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
           <Image
@@ -52,8 +52,9 @@ export default function ServicesPage() {
         <div className="hidden md:block absolute top-0 right-0 w-96 h-96 bg-premiumGold/10 dark:bg-premiumGold/15 rounded-full blur-3xl z-[1]" />
         <div className="hidden md:block absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/15 rounded-full blur-3xl z-[1]" />
         
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
-          <div className="text-center max-w-4xl mx-auto py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 max-w-7xl relative z-10">
+          <div className="flex items-center justify-center min-h-[65vh] sm:min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh]">
+            <div className="text-center max-w-4xl mx-auto w-full px-2 sm:px-4 py-8 sm:py-12 md:py-16">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -70,6 +71,7 @@ export default function ServicesPage() {
             >
               Explore our construction and design services
             </motion.p>
+            </div>
           </div>
         </div>
       </section>

@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 
 export function StickyContactButtons() {
   return (
-    <div className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-50 flex flex-col gap-3 sm:gap-4 md:gap-5 safe-area-inset-bottom">
+    <div className="fixed bottom-16 right-3 sm:bottom-6 sm:right-4 md:bottom-8 md:right-6 lg:bottom-8 lg:right-8 z-50 flex flex-col gap-2.5 sm:gap-3 md:gap-4 safe-area-inset-bottom" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0)' }}>
       <Link
         href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
         target="_blank"
@@ -17,10 +17,10 @@ export function StickyContactButtons() {
       >
         <Button
           size="lg"
-          className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full bg-green-600 hover:bg-green-700 active:bg-green-800 text-white shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all duration-200 flex items-center justify-center p-0"
+          className="h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 rounded-full bg-green-600 hover:bg-green-700 active:bg-green-800 text-white shadow-2xl hover:shadow-green-500/50 hover:scale-110 transition-all duration-200 flex items-center justify-center p-0"
           aria-label="WhatsApp - Contact us on WhatsApp"
         >
-          <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white flex-shrink-0 m-auto" strokeWidth={2.5} fill="none" />
+          <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 lg:h-8 lg:w-8 text-white flex-shrink-0 m-auto" strokeWidth={2.5} fill="none" />
         </Button>
       </Link>
       <Link
@@ -31,10 +31,10 @@ export function StickyContactButtons() {
         <Button
           size="lg"
           variant="outline"
-          className="h-12 w-12 sm:h-14 sm:w-14 rounded-full border-2 border-royalBlue bg-white dark:bg-slate-800 dark:border-white text-royalBlue dark:text-white hover:bg-royalBlue dark:hover:bg-white/10 hover:text-white dark:hover:text-white shadow-lg hover:scale-110 transition-transform flex items-center justify-center p-2 sm:p-2.5"
+          className="h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full border-2 border-royalBlue bg-white dark:bg-slate-800 dark:border-white text-royalBlue dark:text-white hover:bg-royalBlue dark:hover:bg-white/10 hover:text-white dark:hover:text-white shadow-lg hover:scale-110 transition-transform flex items-center justify-center p-2 sm:p-2.5"
           aria-label={`Call us at +91 ${siteConfig.contact.phone}`}
         >
-          <Phone className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-current" />
+          <Phone className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 flex-shrink-0 text-current" />
         </Button>
       </Link>
     </div>

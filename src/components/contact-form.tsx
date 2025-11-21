@@ -149,7 +149,7 @@ export function ContactForm() {
             <Label htmlFor="serviceType" className="text-royalNavy dark:text-slate-200 font-medium">
               Service Type <span className="text-destructive">*</span>
             </Label>
-            <div className="w-full">
+            <div className="w-full" style={{ maxWidth: '100%', boxSizing: 'border-box' }}>
               <Select onValueChange={(value) => setValue("serviceType", value)}>
                 <SelectTrigger 
                   id="serviceType" 
@@ -159,8 +159,9 @@ export function ContactForm() {
                     color: 'rgb(64, 64, 64)', 
                     boxSizing: 'border-box', 
                     width: '100%',
-                    height: '42px',
-                    minHeight: '42px',
+                    maxWidth: '100%',
+                    minHeight: '44px',
+                    height: 'auto',
                     paddingLeft: '12px',
                     paddingRight: '32px',
                     paddingTop: '10px',
