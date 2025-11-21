@@ -1131,20 +1131,9 @@
     letter-spacing: 0.015em !important;
   }
   
-  /* Ensure nav buttons spacing matches space-x-6 xl:space-x-8 */
+  /* Ensure nav buttons spacing matches space-x-6 */
   header nav > div.hidden.md\:flex {
     gap: 24px !important; /* space-x-6 = 24px */
-  }
-  
-  @media (min-width: 1280px) {
-    header nav > div.hidden.md\:flex {
-      gap: 32px !important; /* xl:space-x-8 = 32px */
-    }
-  }
-  
-  /* Theme toggle margin from nav links */
-  header nav .desktop-theme-toggle {
-    margin-left: 16px !important; /* ml-4 = 16px */
   }
   
   /* Ensure nav container doesn't clip logo in both modes */
