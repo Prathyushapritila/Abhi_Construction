@@ -779,9 +779,9 @@
   
   .logo-container img {
     overflow: visible !important;
-    max-width: none !important;
+    max-width: 100% !important;
     width: auto !important;
-    min-width: fit-content !important;
+    height: auto !important;
   }
   
   /* Prevent header from clipping logo */
@@ -789,33 +789,36 @@
     overflow: visible !important;
   }
   
-  /* Ensure logo container has enough space */
+  /* Ensure logo container fits within navbar */
   .logo-container {
     width: auto !important;
-    min-width: fit-content !important;
-    padding-right: 4px !important;
+    max-width: 100% !important;
   }
   
-  /* Increase logo max-width to prevent clipping */
+  /* Set logo max-width to fit navbar - smaller sizes */
   header nav a[href="/"] .logo-container img {
-    max-width: 200px !important;
+    max-width: 140px !important;
+    height: 48px !important;
   }
   
   @media (min-width: 640px) {
     header nav a[href="/"] .logo-container img {
-      max-width: 220px !important;
+      max-width: 160px !important;
+      height: 56px !important;
     }
   }
   
   @media (min-width: 768px) {
     header nav a[href="/"] .logo-container img {
-      max-width: 260px !important;
+      max-width: 180px !important;
+      height: 64px !important;
     }
   }
   
   @media (min-width: 1024px) {
     header nav a[href="/"] .logo-container img {
-      max-width: 280px !important;
+      max-width: 200px !important;
+      height: 72px !important;
     }
   }
   
