@@ -245,8 +245,8 @@ export function PortfolioSimple() {
                       </>
                     )}
                   </div>
-                  <CardContent className="p-4 sm:p-6 group flex-shrink-0" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box', overflow: 'hidden', minWidth: 0, padding: '1rem 1.5rem' }}>
-                    <p className="text-sm sm:text-base text-steelGray dark:text-slate-400 text-center font-medium group-hover:text-[#E37B29] dark:group-hover:text-[#E37B29] transition-colors duration-300" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box', overflow: 'hidden', wordWrap: 'break-word', overflowWrap: 'break-word', whiteSpace: 'normal', margin: 0, padding: 0, display: 'block', lineHeight: '1.4' }}>
+                  <CardContent className="p-4 sm:p-6 group flex-shrink-0 flex items-center justify-center" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box', overflow: 'hidden', minWidth: 0, padding: '1rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <p className="text-sm sm:text-base text-steelGray dark:text-slate-400 text-center font-medium group-hover:text-[#E37B29] dark:group-hover:text-[#E37B29] transition-colors duration-300" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box', overflow: 'hidden', wordWrap: 'break-word', overflowWrap: 'break-word', whiteSpace: 'normal', margin: 0, padding: 0, display: 'block', lineHeight: '1.4', textAlign: 'center' }}>
                       {item.location}
                     </p>
                   </CardContent>
