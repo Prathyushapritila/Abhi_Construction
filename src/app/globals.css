@@ -940,6 +940,20 @@
     line-height: 1.4 !important;
     margin: 0 !important;
     padding: 0 !important;
+    white-space: normal !important;
+  }
+  
+  /* Additional fix for portfolio card grid */
+  #portfolio [class*="grid"] [class*="Card"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  
+  .dark #portfolio [class*="grid"] [class*="Card"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
   }
   
   /* Dark mode specific fixes */
@@ -975,6 +989,20 @@
     line-height: 1.4 !important;
     margin: 0 !important;
     padding: 0 !important;
+    white-space: normal !important;
+  }
+  
+  /* Additional fix for portfolio card grid */
+  #portfolio [class*="grid"] [class*="Card"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  
+  .dark #portfolio [class*="grid"] [class*="Card"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
   }
   
   /* Ensure nav links and theme toggle are on same baseline */
