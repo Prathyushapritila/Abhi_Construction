@@ -1005,6 +1005,11 @@
     justify-content: flex-end !important;
   }
   
+  /* Theme toggle margin from nav buttons */
+  header nav .desktop-theme-toggle {
+    margin-left: 8px !important; /* ml-2 = 8px */
+  }
+  
   header nav {
     justify-content: space-between !important;
   }
@@ -1066,30 +1071,42 @@
     max-width: 100% !important;
   }
   
-  /* Set logo max-width to fit navbar - balanced sizes */
+  /* Set logo max-width to fit navbar - match component classes */
+  header nav a[href="/"] img,
   header nav a[href="/"] .logo-container img {
-    max-width: 150px !important;
+    max-width: 180px !important;
     height: 56px !important;
   }
   
   @media (min-width: 640px) {
+    header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 150px !important;
-      height: 56px !important;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    header nav a[href="/"] .logo-container img {
-      max-width: 170px !important;
+      max-width: 200px !important;
       height: 64px !important;
     }
   }
   
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
+    header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 190px !important;
-      height: 72px !important;
+      max-width: 240px !important;
+      height: 80px !important;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    header nav a[href="/"] img,
+    header nav a[href="/"] .logo-container img {
+      max-width: 240px !important;
+      height: 96px !important;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    header nav a[href="/"] img,
+    header nav a[href="/"] .logo-container img {
+      max-width: 240px !important;
+      height: 112px !important;
     }
   }
   
@@ -1100,10 +1117,26 @@
     height: 100% !important;
   }
   
-  /* Ensure consistent spacing between nav items */
+  /* Ensure consistent spacing between nav items - match component classes */
   header nav a[href^="/"]:not([href="/"]) {
     line-height: 1.5 !important;
-    padding: 8px 12px !important;
+    padding: 8px 12px !important; /* px-3 py-2 = 12px horizontal, 8px vertical */
+    font-size: 16px !important; /* text-base */
+    font-weight: 600 !important; /* font-semibold */
+  }
+  
+  /* Ensure nav buttons spacing matches space-x-6 (24px) */
+  header nav .hidden.md\:flex {
+    gap: 24px !important; /* space-x-6 = 24px */
+  }
+  
+  /* Theme toggle size matches nav buttons */
+  header nav .desktop-theme-toggle button,
+  header nav .mobile-theme-toggle button {
+    width: 32px !important; /* w-8 */
+    height: 32px !important; /* h-8 */
+    min-width: 32px !important;
+    min-height: 32px !important;
   }
   
   /* Ensure nav container doesn't clip logo in both modes */
