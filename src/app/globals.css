@@ -756,7 +756,7 @@
     vertical-align: middle !important;
   }
   
-  /* Ensure only ONE theme toggle shows at a time */
+  /* Ensure only ONE theme toggle shows at a time - FORCE visibility rules */
   .desktop-theme-toggle {
     display: none !important;
   }
@@ -767,7 +767,7 @@
   
   @media (min-width: 768px) {
     .desktop-theme-toggle {
-      display: block !important;
+      display: flex !important;
     }
     
     .mobile-theme-toggle {
@@ -775,13 +775,28 @@
     }
   }
   
-  /* Hide mobile nav buttons on desktop */
+  /* Hide mobile nav buttons on desktop - FORCE hide */
   .mobile-nav-buttons {
     display: flex !important;
   }
   
   @media (min-width: 768px) {
     .mobile-nav-buttons {
+      display: none !important;
+    }
+  }
+  
+  /* Double check - ensure parent containers respect these rules */
+  header nav .hidden.md\:flex .desktop-theme-toggle {
+    display: flex !important;
+  }
+  
+  header nav .flex.md\:hidden .mobile-theme-toggle {
+    display: block !important;
+  }
+  
+  @media (min-width: 768px) {
+    header nav .flex.md\:hidden .mobile-theme-toggle {
       display: none !important;
     }
   }
