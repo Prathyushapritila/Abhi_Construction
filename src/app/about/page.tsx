@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen page-with-watermark">
       <StickyContactButtons />
       {/* Hero Section with Background */}
       <FullWidthBg 

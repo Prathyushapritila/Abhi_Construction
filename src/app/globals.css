@@ -207,8 +207,12 @@
 }
 
 @layer utilities {
-  /* Logo Background Watermark - Visible on all pages */
-  .page-wrapper::before {
+  /* Logo Background Watermark - Only on Home, About, Services, Portfolio pages */
+  .page-with-watermark {
+    position: relative;
+  }
+  
+  .page-with-watermark::before {
     content: '';
     position: fixed;
     top: 0;
@@ -220,23 +224,23 @@
     pointer-events: none;
     z-index: 0;
     background-image: url('/AbhiPng-1.png');
-    background-size: 50% auto;
-    background-position: center center;
     background-repeat: no-repeat;
-    opacity: 0.12;
+    background-position: center center;
+    background-size: clamp(240px, 40vw, 420px);
+    opacity: 0.06;
     mix-blend-mode: multiply;
   }
   
-  .dark .page-wrapper::before {
-    opacity: 0.15;
+  .dark .page-with-watermark::before {
+    opacity: 0.09;
     mix-blend-mode: screen;
-    filter: brightness(1.2);
+    filter: brightness(1.15);
   }
   
-  /* Ensure watermark doesn't appear in hero sections with distinct backgrounds */
-  section[class*="hero"]::before,
-  section[class*="Hero"]::before {
-    display: none !important;
+  /* Ensure watermark doesn't interfere with content */
+  .page-with-watermark > * {
+    position: relative;
+    z-index: 1;
   }
   
   /* Remove white background from logo */
