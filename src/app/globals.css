@@ -756,8 +756,30 @@
     vertical-align: middle !important;
   }
   
-  /* Theme toggle visibility - handled by Tailwind classes in navbar */
-  /* No wrapper divs needed - ThemeToggle is directly in nav */
+  /* Ensure only ONE theme toggle shows at a time */
+  /* Desktop: show only in hidden md:flex container */
+  header nav > div.hidden.md\:flex > button[aria-label="Toggle theme"] {
+    display: flex !important;
+  }
+  
+  /* Mobile: show only in flex md:hidden container */
+  header nav > div.flex.md\:hidden > button[aria-label="Toggle theme"] {
+    display: flex !important;
+  }
+  
+  /* Hide desktop toggle on mobile */
+  @media (max-width: 767px) {
+    header nav > div.hidden.md\:flex > button[aria-label="Toggle theme"] {
+      display: none !important;
+    }
+  }
+  
+  /* Hide mobile toggle on desktop */
+  @media (min-width: 768px) {
+    header nav > div.flex.md\:hidden > button[aria-label="Toggle theme"] {
+      display: none !important;
+    }
+  }
   
   /* Logo watermark for pages - visible in light and dark mode */
   .page-with-watermark {
