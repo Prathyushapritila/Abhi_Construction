@@ -6,8 +6,8 @@ import { siteConfig } from "@/config/site";
 export function Footer() {
   return (
     <footer className="border-t border-premiumGold/30 bg-royalNavy text-marbleWhite">
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 py-8 sm:py-10 md:py-12 max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-8">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 py-6 sm:py-8 md:py-10 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-6">
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="inline-flex items-center gap-3 group flex-wrap">
@@ -30,7 +30,7 @@ export function Footer() {
             <p className="text-sm text-marbleWhite/90 leading-relaxed italic font-medium">
               {siteConfig.logo.caption}
             </p>
-            <div className="flex items-center gap-4 sm:gap-6 pt-2 flex-wrap">
+            <div className="flex items-center gap-3 sm:gap-4 pt-2 flex-wrap">
               {[
                 {
                   name: "Facebook",
@@ -56,15 +56,15 @@ export function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-lg p-1"
+                  className="flex flex-col items-center gap-1.5 group focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-lg p-1"
                   aria-label={`Open ${name} in a new tab`}
                 >
                   <span
-                    className="h-12 w-12 sm:h-14 sm:w-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 group-hover:scale-110 flex-shrink-0"
+                    className="h-10 w-10 sm:h-12 sm:w-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 group-hover:scale-110 flex-shrink-0"
                     style={{ backgroundColor: color }}
                   >
                     <svg
-                      className="h-6 w-6 sm:h-7 sm:w-7 text-white"
+                      className="h-5 w-5 sm:h-6 sm:w-6 text-white"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -126,8 +126,8 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-premiumGold/30">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-4 border-t border-premiumGold/30">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3">
             <p className="text-sm text-marbleWhite/60 text-center md:text-left">
               &copy; 2017 {siteConfig.name}. All rights reserved.
             </p>
