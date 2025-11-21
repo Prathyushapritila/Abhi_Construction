@@ -38,8 +38,11 @@ export function Navbar() {
   }, [isOpen]);
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#ffffff] dark:bg-slate-900 dark:backdrop-blur-md supports-[backdrop-filter]:bg-[#ffffff] dark:supports-[backdrop-filter]:bg-slate-900 shadow-lg dark:shadow-2xl">
-      <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-6 md:px-8 max-w-7xl">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#ffffff] dark:bg-[#060F1F] dark:backdrop-blur-md supports-[backdrop-filter]:bg-[#ffffff] dark:supports-[backdrop-filter]:bg-[#060F1F] shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)]"
+    >
+      <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-5 sm:px-7 md:px-9 lg:px-12 xl:px-16 max-w-7xl">
         <Link
           href="/"
           className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-0"
@@ -50,24 +53,24 @@ export function Navbar() {
               alt="Abhi Constructions & Innovations"
               width={240}
               height={120}
-              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[180px] sm:max-w-[200px] md:max-w-[240px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
+              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-26 w-auto max-w-[160px] sm:max-w-[185px] md:max-w-[215px] lg:max-w-[245px] xl:max-w-[260px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-[1.03] dark:brightness-[1.1] dark:contrast-[1.05] dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.45)]"
               priority
-              sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
+              sizes="(max-width: 640px) 160px, (max-width: 768px) 185px, (max-width: 1024px) 215px, 260px"
             />
           </div>
-          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] dark:text-white leading-none whitespace-nowrap">
+          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] dark:text-white leading-none whitespace-nowrap tracking-tight">
             Constructions and Innovations
           </span>
         </Link>
 
         {/* Desktop Navigation - Right Side */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-6 xl:space-x-8 ml-auto">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "text-base font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-md px-3 py-2 relative group whitespace-nowrap",
+                "text-[16px] lg:text-[17px] font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus-visible:ring-2 focus-visible:ring-premiumGold/60 focus-visible:ring-offset-2 rounded-md px-3.5 py-2 relative group whitespace-nowrap tracking-wide",
                 pathname === item.href
                   ? "text-premiumGold dark:text-premiumGold"
                   : "text-royalNavy dark:text-white dark:hover:text-premiumGold"
@@ -80,11 +83,13 @@ export function Navbar() {
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-premiumGold/50 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
-          <ThemeToggle />
+          <div className="desktop-theme-toggle ml-4">
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Mobile Menu Button - Right Side */}
-        <div className="flex md:hidden items-center space-x-6">
+        <div className="mobile-nav-buttons flex md:hidden items-center gap-3">
           <div className="mobile-theme-toggle">
             <ThemeToggle />
           </div>
