@@ -852,12 +852,14 @@
     z-index: auto;
   }
   
-  /* Portfolio card text overflow fix - ULTRA AGGRESSIVE */
+  /* Portfolio card text overflow fix - ULTRA AGGRESSIVE - FORCE CONTAINMENT */
   #portfolio [class*="Card"] {
     overflow: hidden !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
     width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
   
   #portfolio [class*="CardContent"],
@@ -868,11 +870,51 @@
     box-sizing: border-box !important;
     max-width: 100% !important;
     width: 100% !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
     padding: 1rem 1.5rem !important;
   }
   
   #portfolio [class*="CardContent"] p,
   #portfolio .card-content p {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .dark #portfolio [class*="Card"] {
+    overflow: hidden !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .dark #portfolio [class*="CardContent"],
+  .dark #portfolio .card-content {
+    overflow: hidden !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    padding: 1rem 1.5rem !important;
+  }
+  
+  .dark #portfolio [class*="CardContent"] p,
+  .dark #portfolio .card-content p {
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
     hyphens: auto !important;
