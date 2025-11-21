@@ -7,7 +7,7 @@ export function HomeHero() {
   return (
     <section className="relative py-14 sm:py-18 md:py-22 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
+      <div className="absolute inset-0 z-0 bg-[#0A1323] dark:bg-[#020812]">
         <Image
           src="/home-hero-image.png"
           alt="Modern luxury villa exterior"
@@ -17,16 +17,16 @@ export function HomeHero() {
           priority
           style={{
             objectPosition: "center",
-            filter: "brightness(1.15) contrast(1.1) saturate(1.2)",
+            filter: "brightness(1.02) contrast(1.05) saturate(1.05)",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-stone-900/80 via-stone-800/75 to-stone-900/80 dark:from-slate-900/85 dark:via-slate-800/80 dark:to-slate-900/85" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#050B16]/65 via-[#080F1C]/55 to-[#050B16]/70 dark:from-[#01050B]/70 dark:via-[#040910]/65 dark:to-[#01050B]/75" />
       </div>
       {/* Background pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.08] blueprint-grid z-[1]" />
-      {/* Decorative circles - hidden on mobile to prevent orange shades */}
-      <div className="hidden md:block absolute top-0 right-0 w-96 h-96 bg-premiumGold/10 dark:bg-premiumGold/15 rounded-full blur-3xl z-[1]" />
-      <div className="hidden md:block absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/15 rounded-full blur-3xl z-[1]" />
+      <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] blueprint-grid z-[1]" />
+      {/* Decorative accents toned down */}
+      <div className="hidden md:block absolute top-0 right-0 w-72 h-72 bg-premiumGold/6 dark:bg-premiumGold/10 rounded-full blur-3xl z-[1]" />
+      <div className="hidden md:block absolute bottom-0 left-0 w-72 h-72 bg-white/5 dark:bg-white/8 rounded-full blur-3xl z-[1]" />
       
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
         <div className="text-center max-w-4xl mx-auto py-12 sm:py-16 md:py-20">
