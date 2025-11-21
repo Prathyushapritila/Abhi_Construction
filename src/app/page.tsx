@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="page-with-watermark">
+    <>
       <StickyContactButtons />
       <HomeHero />
       <HomeCEOQuote />
       <HomeAboutTeaser />
-    </div>
+    </>
   );
 }
