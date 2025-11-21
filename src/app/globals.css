@@ -745,7 +745,23 @@
   header nav > div:last-child {
     display: flex !important;
     align-items: center !important;
-    gap: 0 !important;
+    height: 100% !important;
+  }
+  
+  /* Ensure theme toggle button is properly aligned vertically */
+  header nav button[aria-label="Toggle theme"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+  }
+  
+  /* Ensure nav links and theme toggle are on same baseline */
+  header nav > div:last-child > a,
+  header nav > div:last-child > div {
+    display: inline-flex !important;
+    align-items: center !important;
+    height: auto !important;
   }
   
   /* Navbar items - prevent layout shift */
