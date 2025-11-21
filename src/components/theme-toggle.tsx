@@ -15,7 +15,7 @@ export function ThemeToggle() {
   }, []);
 
   const baseClasses =
-    "text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold h-8 w-8 flex items-center justify-center rounded-full bg-transparent hover:bg-transparent active:bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-premiumGold/40 focus-visible:ring-offset-0";
+    "text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold w-8 h-8 flex items-center justify-center rounded-full bg-transparent hover:bg-transparent active:bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-premiumGold/40 focus-visible:ring-offset-0 flex-shrink-0";
 
   if (!mounted) {
     return (

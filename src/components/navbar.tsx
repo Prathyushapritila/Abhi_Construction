@@ -72,13 +72,13 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-5 lg:space-x-6">
+        <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm md:text-base font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-md px-3 py-2 relative group whitespace-nowrap flex items-center",
+                "text-base font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-md px-3 py-2 relative group whitespace-nowrap",
                 pathname === item.href
                   ? "text-premiumGold dark:text-premiumGold"
                   : "text-royalNavy dark:!text-white dark:hover:!text-premiumGold"
@@ -91,25 +91,21 @@ export function Navbar() {
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-premiumGold/50 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
-          <div className="flex-shrink-0 ml-2">
-            <ThemeToggle />
-          </div>
+          <ThemeToggle />
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex md:hidden items-center space-x-3">
-          <div className="flex-shrink-0">
-            <ThemeToggle />
-          </div>
+        <div className="flex md:hidden items-center space-x-2">
+          <ThemeToggle />
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
-            className="w-9 h-9 flex items-center justify-center text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold hover:bg-premiumGold/10 dark:hover:bg-premiumGold/20"
+            className="w-10 h-10 flex items-center justify-center text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold hover:bg-premiumGold/10 dark:hover:bg-premiumGold/20"
           >
-            {isOpen ? <X className="h-5 w-5 text-royalNavy dark:text-white" /> : <Menu className="h-5 w-5 text-royalNavy dark:text-white" />}
+            {isOpen ? <X className="h-6 w-6 text-royalNavy dark:text-white" /> : <Menu className="h-6 w-6 text-royalNavy dark:text-white" />}
           </Button>
         </div>
       </nav>
