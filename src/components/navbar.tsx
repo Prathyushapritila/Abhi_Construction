@@ -61,14 +61,13 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation - Right Side */}
-        <div className="hidden md:flex items-center">
-          {navItems.map((item, index) => (
+        <div className="hidden md:flex items-center space-x-6">
+          {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
                 "text-base font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-md px-3 py-2 relative group whitespace-nowrap",
-                index === 0 ? "" : "ml-6",
                 pathname === item.href
                   ? "text-premiumGold dark:text-premiumGold"
                   : "text-royalNavy dark:text-white dark:hover:text-premiumGold"
@@ -81,9 +80,7 @@ export function Navbar() {
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-premiumGold/50 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
-          <div className="ml-6">
-            <ThemeToggle />
-          </div>
+          <ThemeToggle />
         </div>
 
         {/* Mobile Menu Button - Right Side */}
