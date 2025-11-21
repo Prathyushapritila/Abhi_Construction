@@ -42,7 +42,7 @@ export function Navbar() {
       <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-6 md:px-8 max-w-7xl">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-0"
+          className="inline-flex items-center gap-2.5 sm:gap-3 group whitespace-nowrap flex-shrink-0"
         >
           <div className="relative flex items-center">
             <Image

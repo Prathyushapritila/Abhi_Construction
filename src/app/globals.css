@@ -801,6 +801,59 @@
     }
   }
   
+  /* Logo watermark for pages - visible in light and dark mode */
+  .page-with-watermark {
+    position: relative;
+  }
+  
+  .page-with-watermark::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(300px, 50vw, 600px);
+    height: clamp(300px, 50vw, 600px);
+    background-image: url('/AbhiPng-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+    filter: brightness(1.1);
+  }
+  
+  .dark .page-with-watermark::before {
+    opacity: 0.08;
+    filter: brightness(1.2);
+  }
+  
+  /* Ensure watermark doesn't appear in hero sections */
+  .page-with-watermark section:first-child::before,
+  .page-with-watermark > section[class*="hero"]::before {
+    display: none !important;
+  }
+  
+  /* Portfolio card text overflow fix */
+  #portfolio .card-content p,
+  #portfolio [class*="CardContent"] p {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .dark #portfolio .card-content p,
+  .dark #portfolio [class*="CardContent"] p {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
   /* Ensure nav links and theme toggle are on same baseline */
   header nav > div:last-child > a,
   header nav > div:last-child > div {

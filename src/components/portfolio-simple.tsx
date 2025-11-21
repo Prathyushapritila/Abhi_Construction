@@ -245,8 +245,8 @@ export function PortfolioSimple() {
                       </>
                     )}
                   </div>
-                  <CardContent className="p-4 sm:p-6 group">
-                    <p className="text-sm sm:text-base text-steelGray dark:text-slate-400 text-center font-medium group-hover:text-[#E37B29] dark:group-hover:text-[#E37B29] transition-colors duration-300">
+                  <CardContent className="p-4 sm:p-6 group overflow-hidden">
+                    <p className="text-sm sm:text-base text-steelGray dark:text-slate-400 text-center font-medium group-hover:text-[#E37B29] dark:group-hover:text-[#E37B29] transition-colors duration-300 break-words overflow-wrap-anywhere">
                       {item.location}
                     </p>
                   </CardContent>

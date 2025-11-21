@@ -27,7 +27,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen page-with-watermark">
       <StickyContactButtons />
       {/* Hero Section */}
       <section className="relative py-14 sm:py-18 md:py-22 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
