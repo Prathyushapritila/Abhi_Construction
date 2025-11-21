@@ -42,7 +42,7 @@ export function Navbar() {
       <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-6 md:px-8 max-w-7xl">
         <Link
           href="/"
-          className="inline-flex items-center gap-3 group whitespace-nowrap"
+          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-0"
         >
           <div className="relative flex items-center">
             <Image
@@ -50,17 +50,17 @@ export function Navbar() {
               alt="Abhi Constructions & Innovations"
               width={240}
               height={120}
-              className="h-14 md:h-16 lg:h-18 w-auto max-w-[150px] md:max-w-[170px] lg:max-w-[190px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
+              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[180px] sm:max-w-[200px] md:max-w-[240px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
               priority
-              sizes="(max-width: 640px) 150px, (max-width: 768px) 170px, 190px"
+              sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
             />
           </div>
-          <span className="text-base md:text-lg font-semibold text-[#E37B29] leading-tight whitespace-nowrap">
+          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] leading-none whitespace-nowrap">
             Constructions and Innovations
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - Right Side */}
         <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
           {navItems.map((item) => (
             <Link
@@ -83,7 +83,7 @@ export function Navbar() {
           <ThemeToggle />
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - Right Side */}
         <div className="flex md:hidden items-center gap-3">
           <ThemeToggle />
           <Button
