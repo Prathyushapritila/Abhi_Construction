@@ -779,7 +779,44 @@
   
   .logo-container img {
     overflow: visible !important;
-    max-width: 100% !important;
+    max-width: none !important;
+    width: auto !important;
+    min-width: fit-content !important;
+  }
+  
+  /* Prevent header from clipping logo */
+  header {
+    overflow: visible !important;
+  }
+  
+  /* Ensure logo container has enough space */
+  .logo-container {
+    width: auto !important;
+    min-width: fit-content !important;
+    padding-right: 4px !important;
+  }
+  
+  /* Increase logo max-width to prevent clipping */
+  header nav a[href="/"] .logo-container img {
+    max-width: 200px !important;
+  }
+  
+  @media (min-width: 640px) {
+    header nav a[href="/"] .logo-container img {
+      max-width: 220px !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    header nav a[href="/"] .logo-container img {
+      max-width: 260px !important;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    header nav a[href="/"] .logo-container img {
+      max-width: 280px !important;
+    }
   }
   
   /* Ensure nav container doesn't clip logo in both modes */
