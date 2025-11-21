@@ -178,11 +178,11 @@ export function PortfolioSimple() {
                   onClick={() => setActiveCategory(isActive ? null : category.value)}
                   className={cn(
                     "relative inline-flex h-[56px] md:h-[60px] items-center justify-center rounded-full border-2 px-6 md:px-7 text-base md:text-lg font-semibold tracking-wide transition-all duration-300 min-w-[140px] md:min-w-[155px] focus:outline-none focus:ring-2 focus:ring-premiumGold/70 focus:ring-offset-2",
-                    "bg-white text-royalNavy border-royalNavy shadow-sm",
-                    "dark:bg-transparent dark:text-white dark:border-white/80",
+                    "bg-white border-royalNavy shadow-sm",
+                    "dark:bg-transparent dark:border-white/80",
                     isActive
-                      ? "border-premiumGold shadow-xl dark:border-premiumGold"
-                      : "hover:border-premiumGold hover:text-premiumGold dark:hover:border-white dark:hover:text-white dark:hover:bg-white/10"
+                      ? "border-premiumGold text-premiumGold shadow-xl dark:border-premiumGold dark:text-premiumGold"
+                      : "text-royalNavy dark:text-white hover:border-premiumGold hover:text-premiumGold dark:hover:border-white dark:hover:text-white dark:hover:bg-white/10"
                   )}
                 >
                   <span className="inline-flex items-center gap-2 leading-none">
