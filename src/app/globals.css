@@ -829,20 +829,27 @@
     filter: brightness(1.2);
   }
   
-  /* Ensure watermark appears on all pages including about */
+  /* Ensure watermark appears on all pages including about - higher z-index */
   .page-with-watermark::before {
     z-index: 1 !important;
   }
   
-  /* Ensure watermark appears above content but below modals */
-  .page-with-watermark > * {
+  /* Ensure watermark is visible above background images but below content */
+  .page-with-watermark section[class*="FullWidthBg"]::before,
+  .page-with-watermark section[class*="full-width"]::before {
+    display: none !important;
+  }
+  
+  /* Ensure content sections have proper z-index */
+  .page-with-watermark > section,
+  .page-with-watermark > div > section {
     position: relative;
     z-index: 2;
   }
   
-  /* Ensure watermark doesn't appear in hero sections - but keep it visible on about page */
-  .page-with-watermark section:first-child[class*="hero"]::before {
-    display: none !important;
+  /* Ensure FullWidthBg doesn't block watermark */
+  .page-with-watermark section[class*="relative"] {
+    z-index: auto;
   }
   
   /* Portfolio card text overflow fix - ULTRA AGGRESSIVE */
