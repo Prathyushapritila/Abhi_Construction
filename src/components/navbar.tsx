@@ -40,9 +40,9 @@ export function Navbar() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#ffffff] dark:bg-[#070F1F] dark:backdrop-blur-md supports-[backdrop-filter]:bg-[#ffffff] dark:supports-[backdrop-filter]:bg-[#070F1F] shadow-lg dark:shadow-[0_10px_35px_rgba(0,0,0,0.55)]"
+      className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#ffffff] dark:bg-[#050E1D] dark:backdrop-blur-md supports-[backdrop-filter]:bg-[#ffffff] dark:supports-[backdrop-filter]:bg-[#050E1D] shadow-lg dark:shadow-[0_10px_35px_rgba(0,0,0,0.55)]"
     >
-      <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-8 lg:px-14 xl:px-20 max-w-7xl">
+      <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 max-w-7xl">
         <Link
           href="/"
           className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-0"
@@ -53,9 +53,9 @@ export function Navbar() {
               alt="Abhi Constructions & Innovations"
               width={240}
               height={120}
-              className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-22 w-auto max-w-[135px] sm:max-w-[160px] md:max-w-[185px] lg:max-w-[205px] xl:max-w-[225px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-[1.03] dark:brightness-[1.2] dark:contrast-[1.1] dark:drop-shadow-[0_0_22px_rgba(255,165,0,0.45)]"
+              className="h-12 sm:h-13 md:h-15 lg:h-18 xl:h-20 w-auto max-w-[125px] sm:max-w-[150px] md:max-w-[175px] lg:max-w-[200px] xl:max-w-[215px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-[1.02] dark:brightness-[1.15] dark:contrast-[1.05] dark:drop-shadow-[0_0_18px_rgba(255,165,0,0.4)]"
               priority
-              sizes="(max-width: 640px) 135px, (max-width: 768px) 160px, (max-width: 1024px) 185px, 225px"
+              sizes="(max-width: 640px) 125px, (max-width: 768px) 150px, (max-width: 1024px) 175px, 215px"
             />
           </div>
           <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] dark:text-white leading-none whitespace-nowrap tracking-tight">
@@ -64,13 +64,13 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation - Right Side */}
-        <div className="hidden md:flex items-center space-x-8 xl:space-x-12 ml-auto">
+        <div className="hidden md:flex items-center space-x-5 xl:space-x-6 ml-auto">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "text-[17px] lg:text-[18px] font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus-visible:ring-2 focus-visible:ring-premiumGold/60 focus-visible:ring-offset-2 rounded-md px-3.5 py-2 relative group whitespace-nowrap tracking-wide",
+                "text-base font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus-visible:ring-2 focus-visible:ring-premiumGold/60 focus-visible:ring-offset-2 rounded-md px-3 py-2 relative group whitespace-nowrap tracking-wide",
                 pathname === item.href
                   ? "text-premiumGold dark:text-premiumGold"
                   : "text-royalNavy dark:text-white dark:hover:text-premiumGold"
@@ -83,7 +83,7 @@ export function Navbar() {
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-premiumGold/50 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
-          <div className="desktop-theme-toggle ml-8">
+          <div className="desktop-theme-toggle ml-3">
             <ThemeToggle />
           </div>
         </div>

@@ -1071,47 +1071,47 @@
     max-width: 100% !important;
   }
   
-  /* Set logo max-width to fit navbar - screenshot alignment */
-  /* Mobile: h-12 = 48px */
+  /* Set logo max-width to fit navbar - updated spacing */
+  /* Mobile */
   header nav a[href="/"] img,
   header nav a[href="/"] .logo-container img {
-    max-width: 135px !important;
+    max-width: 125px !important;
     height: 48px !important;
   }
   
-  /* Small (≥640px): sm:h-14 = 56px */
+  /* Small (≥640px) */
   @media (min-width: 640px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 150px !important;
-      height: 56px !important;
+      max-width: 145px !important;
+      height: 52px !important;
     }
   }
   
-  /* Medium (≥768px): md:h-16 = 64px */
+  /* Medium (≥768px) */
   @media (min-width: 768px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 175px !important;
-      height: 64px !important;
+      max-width: 165px !important;
+      height: 58px !important;
     }
   }
   
-  /* Large (≥1024px): lg:h-20 = 80px */
+  /* Large (≥1024px) */
   @media (min-width: 1024px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 205px !important;
-      height: 80px !important;
+      max-width: 185px !important;
+      height: 70px !important;
     }
   }
   
-  /* XL (≥1280px): xl:h-22 = 88px */
+  /* XL (≥1280px) */
   @media (min-width: 1280px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 225px !important;
-      height: 88px !important;
+      max-width: 200px !important;
+      height: 78px !important;
     }
   }
   
@@ -1125,26 +1125,26 @@
   /* Ensure consistent spacing between nav items - screenshot alignment */
   header nav a[href^="/"]:not([href="/"]) {
     line-height: 1.5 !important;
-    padding: 9px 14px !important; /* px-3.5 py-2 */
-    font-size: 18px !important; /* text-lg */
+    padding: 8px 12px !important;
+    font-size: 16px !important;
     font-weight: 600 !important; /* font-semibold */
-    letter-spacing: 0.02em !important;
+    letter-spacing: 0.015em !important;
   }
   
-  /* Ensure nav buttons spacing matches space-x-8 / xl:space-x-12 */
+  /* Ensure nav buttons spacing matches space-x-6 / xl:space-x-8 */
   header nav > div.hidden.md\:flex {
-    gap: 32px !important;
+    gap: 24px !important;
   }
 
   @media (min-width: 1280px) {
     header nav > div.hidden.md\:flex {
-      gap: 48px !important;
+      gap: 32px !important;
     }
   }
   
   /* Theme toggle margin from nav buttons - standardized */
   header nav .desktop-theme-toggle {
-    margin-left: 32px !important; /* ml-8 = 32px */
+    margin-left: 16px !important; /* ml-4 = 16px */
   }
   
   /* Ensure nav container doesn't clip logo in both modes */

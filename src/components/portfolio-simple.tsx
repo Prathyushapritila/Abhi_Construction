@@ -172,32 +172,38 @@ export function PortfolioSimple() {
                 whileHover={{ y: -4, scale: 1.05 }}
                 transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
               >
-                <Button
-                  variant="outline"
+                <button
+                  type="button"
+                  aria-pressed={isActive}
                   onClick={() => setActiveCategory(isActive ? null : category.value)}
                   className={cn(
-                    "flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base md:text-lg font-semibold tracking-wide transition-all duration-300 min-w-[140px] md:min-w-[150px] shadow-sm group cursor-pointer focus:outline-none focus:ring-2 focus:ring-premiumGold/70 focus:ring-offset-2 focus-visible:outline-none bg-white border-royalNavy text-royalNavy overflow-visible",
-                    "dark:bg-transparent dark:border-white/80 dark:text-white",
+                    "relative inline-flex items-center justify-center gap-2 rounded-full border-2 px-6 py-3 text-base md:text-lg font-semibold tracking-wide transition-all duration-300 min-w-[140px] md:min-w-[155px] focus:outline-none focus:ring-2 focus:ring-premiumGold/70 focus:ring-offset-2 focus-visible:outline-none group",
+                    "bg-white text-royalNavy border-royalNavy shadow-sm",
+                    "dark:bg-transparent dark:text-white dark:border-white/80",
                     isActive
-                      ? "bg-premiumGold border-premiumGold text-white shadow-xl hover:bg-premiumGold/90 hover:border-premiumGold/90 hover:shadow-2xl dark:text-royalNavy"
+                      ? "bg-premiumGold border-premiumGold text-royalNavy shadow-xl dark:bg-premiumGold dark:text-royalNavy"
                       : "hover:border-premiumGold hover:text-premiumGold dark:hover:border-white dark:hover:text-white dark:hover:bg-white/10"
                   )}
                 >
-                <Icon 
-                  className={cn(
-                    "h-4 w-4 flex-shrink-0 transition-colors duration-300",
-                    isActive
-                      ? "text-white dark:text-royalNavy"
-                      : "text-royalNavy group-hover:text-premiumGold dark:text-white dark:group-hover:text-white"
-                  )}
-                />
-                <span className={cn(
-                  "transition-colors duration-300 whitespace-nowrap no-underline",
-                  isActive
-                    ? "text-white dark:text-royalNavy"
-                    : "text-royalNavy group-hover:text-premiumGold dark:text-white dark:group-hover:text-white"
-                )}>{category.label}</span>
-                </Button>
+                  <Icon
+                    className={cn(
+                      "h-4 w-4 flex-shrink-0 transition-colors duration-300",
+                      isActive
+                        ? "text-royalNavy"
+                        : "text-royalNavy group-hover:text-premiumGold dark:text-white dark:group-hover:text-white"
+                    )}
+                  />
+                  <span
+                    className={cn(
+                      "transition-colors duration-300 whitespace-nowrap leading-none",
+                      isActive
+                        ? "text-royalNavy"
+                        : "text-royalNavy group-hover:text-premiumGold dark:text-white dark:group-hover:text-white"
+                    )}
+                  >
+                    {category.label}
+                  </span>
+                </button>
               </motion.div>
             );
           })}
