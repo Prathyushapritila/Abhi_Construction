@@ -709,20 +709,20 @@
   /* Ensure navbar has solid dark background in dark mode */
   .dark header,
   .dark header nav {
-    background-color: rgb(15, 23, 42) !important; /* slate-900 - solid dark background */
-    background: rgb(15, 23, 42) !important;
+    background-color: #0b1324 !important; /* Match old deployment */
+    background: #0b1324 !important;
   }
   
   /* Ensure mobile menu also has dark background */
   .dark header nav div[class*="container"] {
-    background-color: rgb(15, 23, 42) !important; /* slate-900 */
+    background-color: #0b1324 !important;
   }
   
   /* Override any transparent backgrounds in dark mode navbar */
   .dark header[class*="bg-"],
   .dark header[class*="backdrop"] {
-    background-color: rgb(15, 23, 42) !important; /* slate-900 */
-    background: rgb(15, 23, 42) !important;
+    background-color: #0b1324 !important;
+    background: #0b1324 !important;
   }
   
   /* Theme toggle button - prevent layout shift - match nav button height */
