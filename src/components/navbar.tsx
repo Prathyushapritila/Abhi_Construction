@@ -39,47 +39,35 @@ export function Navbar() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#ffffff] dark:bg-slate-900 dark:backdrop-blur-md supports-[backdrop-filter]:bg-[#ffffff] dark:supports-[backdrop-filter]:bg-slate-900 shadow-lg dark:shadow-2xl">
-      <nav className="container mx-auto flex h-20 sm:h-20 md:h-24 lg:h-24 items-center justify-between px-4 sm:px-6 md:px-8 max-w-7xl overflow-visible" aria-label="Main navigation" style={{ overflow: 'visible' }}>
+      <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-6 md:px-8 max-w-7xl">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 sm:gap-2.5 md:gap-3 group whitespace-nowrap flex-shrink-0 overflow-visible"
-          style={{ overflow: 'visible', maxWidth: 'none' }}
+          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap"
         >
-          <div className="relative flex-shrink-0 flex items-center overflow-visible" style={{ overflow: 'visible', maxWidth: '100%' }}>
-            {/* Logo with transparent white background */}
-            <div className="relative bg-transparent logo-container overflow-visible" style={{ overflow: 'visible', maxWidth: '100%' }}>
-              <Image
-                src={siteConfig.logo.image}
-                alt="Abhi Constructions & Innovations"
-                width={240}
-                height={120}
-                className="h-14 sm:h-14 md:h-16 lg:h-18 w-auto max-w-[150px] sm:max-w-[150px] md:max-w-[170px] lg:max-w-[190px] object-contain drop-shadow-2xl relative z-10 transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
-                style={{ 
-                  backgroundColor: 'transparent',
-                  overflow: 'visible',
-                  maxWidth: '100%',
-                  width: 'auto',
-                  height: 'auto'
-                }}
-                priority
-                sizes="(max-width: 640px) 150px, (max-width: 768px) 150px, (max-width: 1024px) 170px, 190px"
-              />
-            </div>
+          <div className="relative flex items-center">
+            <Image
+              src={siteConfig.logo.image}
+              alt="Abhi Constructions & Innovations"
+              width={240}
+              height={120}
+              className="h-14 md:h-16 lg:h-18 w-auto max-w-[150px] md:max-w-[170px] lg:max-w-[190px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
+              priority
+              sizes="(max-width: 640px) 150px, (max-width: 768px) 170px, 190px"
+            />
           </div>
-          <span className="text-base sm:text-base md:text-lg font-semibold text-[#E37B29] leading-tight whitespace-nowrap flex items-center">
+          <span className="text-base md:text-lg font-semibold text-[#E37B29] leading-tight whitespace-nowrap">
             Constructions and Innovations
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center">
-          {navItems.map((item, index) => (
+        <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+          {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
                 "text-base font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-md px-3 py-2 relative group whitespace-nowrap",
-                index === 0 ? "" : "ml-4 lg:ml-6",
                 pathname === item.href
                   ? "text-premiumGold dark:text-premiumGold"
                   : "text-royalNavy dark:!text-white dark:hover:!text-premiumGold"
@@ -92,13 +80,11 @@ export function Navbar() {
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-premiumGold/50 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
-          <div className="ml-4 lg:ml-6 flex items-center">
-            <ThemeToggle />
-          </div>
+          <ThemeToggle />
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex md:hidden items-center space-x-2">
+        <div className="flex md:hidden items-center gap-3">
           <ThemeToggle />
           <Button
             variant="ghost"
@@ -106,9 +92,9 @@ export function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
-            className="w-10 h-10 flex items-center justify-center text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold hover:bg-premiumGold/10 dark:hover:bg-premiumGold/20"
+            className="w-10 h-10 text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold"
           >
-            {isOpen ? <X className="h-6 w-6 text-royalNavy dark:text-white" /> : <Menu className="h-6 w-6 text-royalNavy dark:text-white" />}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
       </nav>
