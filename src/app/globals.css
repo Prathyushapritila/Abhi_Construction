@@ -829,13 +829,30 @@
     filter: brightness(1.2);
   }
   
-  /* Ensure watermark doesn't appear in hero sections */
-  .page-with-watermark section:first-child::before,
-  .page-with-watermark > section[class*="hero"]::before {
+  /* Ensure watermark appears on all pages including about */
+  .page-with-watermark::before {
+    z-index: 1 !important;
+  }
+  
+  /* Ensure watermark appears above content but below modals */
+  .page-with-watermark > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Ensure watermark doesn't appear in hero sections - but keep it visible on about page */
+  .page-with-watermark section:first-child[class*="hero"]::before {
     display: none !important;
   }
   
-  /* Portfolio card text overflow fix - AGGRESSIVE */
+  /* Portfolio card text overflow fix - ULTRA AGGRESSIVE */
+  #portfolio [class*="Card"] {
+    overflow: hidden !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+  
   #portfolio [class*="CardContent"],
   #portfolio .card-content {
     overflow: hidden !important;
@@ -843,6 +860,8 @@
     overflow-wrap: break-word !important;
     box-sizing: border-box !important;
     max-width: 100% !important;
+    width: 100% !important;
+    padding: 1rem 1.5rem !important;
   }
   
   #portfolio [class*="CardContent"] p,
@@ -851,13 +870,22 @@
     overflow-wrap: break-word !important;
     hyphens: auto !important;
     max-width: 100% !important;
+    width: 100% !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important;
+    display: block !important;
     line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Dark mode specific fixes */
+  .dark #portfolio [class*="Card"] {
+    overflow: hidden !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
   }
   
   .dark #portfolio [class*="CardContent"],
@@ -867,6 +895,8 @@
     overflow-wrap: break-word !important;
     box-sizing: border-box !important;
     max-width: 100% !important;
+    width: 100% !important;
+    padding: 1rem 1.5rem !important;
   }
   
   .dark #portfolio [class*="CardContent"] p,
@@ -875,26 +905,14 @@
     overflow-wrap: break-word !important;
     hyphens: auto !important;
     max-width: 100% !important;
+    width: 100% !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important;
+    display: block !important;
     line-height: 1.4 !important;
-  }
-  
-  /* Ensure portfolio cards don't overflow */
-  #portfolio [class*="Card"] {
-    overflow: hidden !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  
-  .dark #portfolio [class*="Card"] {
-    overflow: hidden !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   /* Ensure nav links and theme toggle are on same baseline */
