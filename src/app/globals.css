@@ -749,6 +749,42 @@
     flex-shrink: 0 !important;
   }
   
+  /* Ensure logo is not clipped */
+  header nav a[href="/"] {
+    overflow: visible !important;
+  }
+  
+  header nav a[href="/"] > div {
+    overflow: visible !important;
+  }
+  
+  .logo-container {
+    overflow: visible !important;
+  }
+  
+  .logo-container img {
+    overflow: visible !important;
+    max-width: none !important;
+  }
+  
+  @media (min-width: 640px) {
+    .logo-container img {
+      max-width: 240px !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .logo-container img {
+      max-width: 280px !important;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .logo-container img {
+      max-width: 320px !important;
+    }
+  }
+  
   .blueprint-grid {
     background-image: 
       linear-gradient(rgba(10, 77, 173, 0.06) 1px, transparent 1px),
