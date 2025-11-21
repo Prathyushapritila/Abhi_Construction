@@ -207,7 +207,7 @@
 }
 
 @layer utilities {
-  /* Logo Background Watermark - Subtle background for all pages */
+  /* Logo Background Watermark - Visible on all pages */
   .page-wrapper::before {
     content: '';
     position: fixed;
@@ -220,17 +220,17 @@
     pointer-events: none;
     z-index: 0;
     background-image: url('/AbhiPng-1.png');
-    background-size: 70% auto;
+    background-size: 50% auto;
     background-position: center center;
     background-repeat: no-repeat;
-    opacity: 0.06;
+    opacity: 0.12;
     mix-blend-mode: multiply;
   }
   
   .dark .page-wrapper::before {
-    opacity: 0.08;
+    opacity: 0.15;
     mix-blend-mode: screen;
-    filter: brightness(1.1);
+    filter: brightness(1.2);
   }
   
   /* Ensure watermark doesn't appear in hero sections with distinct backgrounds */
