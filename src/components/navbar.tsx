@@ -44,7 +44,7 @@ export function Navbar() {
           href="/"
           className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-0"
         >
-          <div className="relative flex-shrink-0 flex items-center">
+          <div className="relative flex-shrink-0 h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 flex items-center">
             {/* Logo with transparent white background */}
             <div className="relative bg-transparent logo-container">
               <div className="relative">
@@ -63,7 +63,7 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] leading-none whitespace-nowrap flex items-center">
+          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] leading-none whitespace-nowrap flex items-center h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28">
             Constructions and Innovations
           </span>
         </Link>

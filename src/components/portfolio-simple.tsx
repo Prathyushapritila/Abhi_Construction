@@ -176,21 +176,21 @@ export function PortfolioSimple() {
                   variant="outline"
                   onClick={() => setActiveCategory(isActive ? null : category.value)}
                   className={cn(
-                    "flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-300 min-w-[140px] shadow-sm group cursor-pointer focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 bg-white dark:bg-white",
+                    "flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-300 min-w-[140px] shadow-sm group cursor-pointer focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 bg-white dark:bg-white box-border overflow-visible",
                     isActive
-                      ? "bg-premiumGold border-premiumGold text-white shadow-xl hover:bg-premiumGold/90 hover:border-premiumGold/90 hover:shadow-2xl transform hover:scale-105"
-                      : "border-royalNavy text-royalNavy dark:border-royalNavy dark:text-royalNavy hover:border-premiumGold dark:hover:border-premiumGold hover:shadow-lg dark:hover:shadow-lg transform hover:scale-105"
+                      ? "bg-premiumGold border-premiumGold text-white shadow-xl hover:bg-premiumGold/90 hover:border-premiumGold/90 hover:shadow-2xl"
+                      : "border-royalNavy text-royalNavy dark:border-royalNavy dark:text-royalNavy hover:border-premiumGold dark:hover:border-premiumGold hover:shadow-lg dark:hover:shadow-lg"
                   )}
                 >
                 <Icon 
                   className={cn(
                     "h-4 w-4 flex-shrink-0 transition-colors duration-300",
-                    isActive ? "text-white" : "text-current group-hover:text-premiumGold dark:group-hover:text-premiumGold"
+                    isActive ? "text-white" : "text-royalNavy dark:text-royalNavy group-hover:text-premiumGold dark:group-hover:text-premiumGold"
                   )}
                 />
                 <span className={cn(
-                  "transition-colors duration-300",
-                  isActive ? "text-white" : "text-current group-hover:text-premiumGold dark:group-hover:text-premiumGold"
+                  "transition-colors duration-300 whitespace-nowrap",
+                  isActive ? "text-white" : "text-royalNavy dark:text-royalNavy group-hover:text-premiumGold dark:group-hover:text-premiumGold"
                 )}>{category.label}</span>
                 </Button>
               </motion.div>

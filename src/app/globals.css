@@ -408,18 +408,34 @@
 }
 
 /* Portfolio filter buttons */
-/* Portfolio filter buttons - ensure no black backgrounds */
+/* Portfolio filter buttons - ensure no black backgrounds and no text clipping */
 #portfolio button[class*="rounded-full"] {
   background-color: white !important;
+  min-height: 44px !important;
+  padding: 12px 24px !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
 }
 
 .dark #portfolio button[class*="rounded-full"] {
   background-color: white !important;
+  border-color: rgb(64, 64, 64) !important;
+  color: rgb(64, 64, 64) !important;
+}
+
+.dark #portfolio button[class*="rounded-full"] span,
+.dark #portfolio button[class*="rounded-full"] svg {
+  color: rgb(64, 64, 64) !important;
 }
 
 #portfolio button[class*="rounded-full"][class*="bg-premiumGold"] {
   background-color: rgb(255, 140, 0) !important;
   border-color: rgb(255, 140, 0) !important;
+  color: #ffffff !important;
+}
+
+#portfolio button[class*="rounded-full"][class*="bg-premiumGold"] span,
+#portfolio button[class*="rounded-full"][class*="bg-premiumGold"] svg {
   color: #ffffff !important;
 }
   
