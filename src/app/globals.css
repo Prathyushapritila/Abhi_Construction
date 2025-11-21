@@ -877,7 +877,7 @@
   
   #portfolio [class*="CardContent"],
   #portfolio .card-content {
-    overflow: hidden !important;
+    overflow: visible !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
     box-sizing: border-box !important;
@@ -889,6 +889,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    min-height: 60px !important;
   }
   
   #portfolio [class*="CardContent"] p,
@@ -899,13 +900,14 @@
     max-width: 100% !important;
     width: 100% !important;
     box-sizing: border-box !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
     display: block !important;
-    line-height: 1.4 !important;
+    line-height: 1.5 !important;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0 0.5rem !important;
     white-space: normal !important;
+    text-align: center !important;
   }
   
   .dark #portfolio [class*="Card"] {
@@ -919,7 +921,7 @@
   
   .dark #portfolio [class*="CardContent"],
   .dark #portfolio .card-content {
-    overflow: hidden !important;
+    overflow: visible !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
     box-sizing: border-box !important;
@@ -931,6 +933,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    min-height: 60px !important;
   }
   
   .dark #portfolio [class*="CardContent"] p,
@@ -941,13 +944,14 @@
     max-width: 100% !important;
     width: 100% !important;
     box-sizing: border-box !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
     display: block !important;
-    line-height: 1.4 !important;
+    line-height: 1.5 !important;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0 0.5rem !important;
     white-space: normal !important;
+    text-align: center !important;
   }
   
   /* Additional fix for portfolio card grid */
