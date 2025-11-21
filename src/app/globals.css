@@ -709,20 +709,20 @@
   /* Ensure navbar has solid dark background in dark mode */
   .dark header,
   .dark header nav {
-    background-color: #060F1F !important; /* Match reference deployment */
-    background: #060F1F !important;
+    background-color: rgb(15, 23, 42) !important; /* slate-900 - solid dark background */
+    background: rgb(15, 23, 42) !important;
   }
   
   /* Ensure mobile menu also has dark background */
   .dark header nav div[class*="container"] {
-    background-color: #060F1F !important;
+    background-color: rgb(15, 23, 42) !important; /* slate-900 */
   }
   
   /* Override any transparent backgrounds in dark mode navbar */
   .dark header[class*="bg-"],
   .dark header[class*="backdrop"] {
-    background-color: #060F1F !important;
-    background: #060F1F !important;
+    background-color: rgb(15, 23, 42) !important; /* slate-900 */
+    background: rgb(15, 23, 42) !important;
   }
   
   /* Theme toggle button - prevent layout shift - match nav button height */
@@ -758,27 +758,21 @@
   
   /* Ensure only ONE theme toggle shows at a time */
   /* Desktop: show only in hidden md:flex container */
-  header nav .desktop-theme-toggle {
-    display: none !important;
-  }
-  
-  @media (min-width: 768px) {
-    header nav .desktop-theme-toggle {
-      display: block !important;
-    }
-    
-    header nav .mobile-nav-buttons {
-      display: none !important;
-    }
-  }
-  
-  /* Mobile: show only in flex md:hidden container */
-  header nav .mobile-nav-buttons {
+  header nav > div.hidden.md\:flex > button[aria-label="Toggle theme"] {
     display: flex !important;
   }
   
-  @media (min-width: 768px) {
-    header nav .mobile-nav-buttons {
+  /* Mobile: show only in flex md:hidden container - HIDDEN on desktop */
+  header nav > div.flex.md\:hidden {
+    display: none !important;
+  }
+  
+  @media (max-width: 767px) {
+    header nav > div.flex.md\:hidden {
+      display: flex !important;
+    }
+    
+    header nav > div.hidden.md\:flex {
       display: none !important;
     }
   }
@@ -1121,26 +1115,14 @@
     letter-spacing: 0.015em !important;
   }
   
-  /* Ensure nav buttons spacing matches space-x-6 xl:space-x-8 */
+  /* Ensure nav buttons spacing matches space-x-6 - consistent for all buttons */
   header nav > div.hidden.md\:flex {
     gap: 24px !important; /* space-x-6 = 24px */
-    margin-left: auto !important; /* ml-auto */
   }
   
-  @media (min-width: 1280px) {
-    header nav > div.hidden.md\:flex {
-      gap: 32px !important; /* xl:space-x-8 = 32px */
-    }
-  }
-  
-  /* Desktop theme toggle margin */
-  header nav .desktop-theme-toggle {
-    margin-left: 16px !important; /* ml-4 = 16px */
-  }
-  
-  /* Mobile buttons use gap-3 */
-  header nav .mobile-nav-buttons {
-    gap: 12px !important; /* gap-3 = 12px */
+  /* Mobile buttons also use space-x-6 for consistency */
+  header nav > div.flex.md\:hidden {
+    gap: 24px !important; /* space-x-6 = 24px */
   }
   
   /* Ensure nav container doesn't clip logo in both modes */
