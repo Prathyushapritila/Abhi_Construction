@@ -207,37 +207,6 @@
 }
 
 @layer utilities {
-  /* Logo Background Watermark - Visible on all pages */
-  .page-wrapper::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-    background-image: url('/AbhiPng-1.png');
-    background-size: 50% auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-    opacity: 0.12;
-    mix-blend-mode: multiply;
-  }
-  
-  .dark .page-wrapper::before {
-    opacity: 0.15;
-    mix-blend-mode: screen;
-    filter: brightness(1.2);
-  }
-  
-  /* Ensure watermark doesn't appear in hero sections with distinct backgrounds */
-  section[class*="hero"]::before,
-  section[class*="Hero"]::before {
-    display: none !important;
-  }
   
   /* Remove white background from logo */
   img[alt="Abhi Constructions & Innovations"] {
