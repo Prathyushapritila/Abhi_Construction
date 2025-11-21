@@ -55,13 +55,13 @@ export function Navbar() {
               sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
             />
           </div>
-          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] leading-none whitespace-nowrap">
+          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] dark:text-white leading-none whitespace-nowrap">
             Constructions and Innovations
           </span>
         </Link>
 
         {/* Desktop Navigation - Right Side */}
-        <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+        <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -70,7 +70,7 @@ export function Navbar() {
                 "text-base font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-md px-3 py-2 relative group whitespace-nowrap",
                 pathname === item.href
                   ? "text-premiumGold dark:text-premiumGold"
-                  : "text-royalNavy dark:!text-white dark:hover:!text-premiumGold"
+                  : "text-royalNavy dark:text-white dark:hover:text-premiumGold"
               )}
             >
               {item.label}
