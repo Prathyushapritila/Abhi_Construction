@@ -176,10 +176,10 @@ export function PortfolioSimple() {
                   variant="outline"
                   onClick={() => setActiveCategory(isActive ? null : category.value)}
                   className={cn(
-                    "flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-300 min-w-[140px] shadow-sm group cursor-pointer focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2",
+                    "flex items-center justify-center space-x-2 rounded-full border-2 px-6 py-3 text-base font-semibold transition-all duration-300 min-w-[140px] shadow-sm group cursor-pointer focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 bg-white dark:bg-white",
                     isActive
                       ? "bg-premiumGold border-premiumGold text-white shadow-xl hover:bg-premiumGold/90 hover:border-premiumGold/90 hover:shadow-2xl transform hover:scale-105"
-                      : "border-royalNavy text-royalNavy dark:border-slate-200 dark:text-slate-200 hover:border-premiumGold dark:hover:border-premiumGold hover:shadow-lg dark:hover:shadow-lg transform hover:scale-105"
+                      : "border-royalNavy text-royalNavy dark:border-royalNavy dark:text-royalNavy hover:border-premiumGold dark:hover:border-premiumGold hover:shadow-lg dark:hover:shadow-lg transform hover:scale-105"
                   )}
                 >
                 <Icon 
