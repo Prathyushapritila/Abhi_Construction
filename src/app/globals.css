@@ -1072,41 +1072,46 @@
   }
   
   /* Set logo max-width to fit navbar - standardized sizes for dark mode */
+  /* Mobile: h-14 = 56px */
   header nav a[href="/"] img,
   header nav a[href="/"] .logo-container img {
     max-width: 150px !important;
     height: 56px !important;
   }
   
+  /* Small (≥640px): sm:h-16 = 64px */
   @media (min-width: 640px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
       max-width: 150px !important;
-      height: 56px !important;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    header nav a[href="/"] img,
-    header nav a[href="/"] .logo-container img {
-      max-width: 170px !important;
       height: 64px !important;
     }
   }
   
+  /* Medium (≥768px): md:h-20 = 80px */
+  @media (min-width: 768px) {
+    header nav a[href="/"] img,
+    header nav a[href="/"] .logo-container img {
+      max-width: 170px !important;
+      height: 80px !important;
+    }
+  }
+  
+  /* Large (≥1024px): lg:h-24 = 96px */
   @media (min-width: 1024px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
       max-width: 190px !important;
-      height: 72px !important;
+      height: 96px !important;
     }
   }
   
+  /* XL (≥1280px): xl:h-28 = 112px */
   @media (min-width: 1280px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
       max-width: 190px !important;
-      height: 72px !important;
+      height: 112px !important;
     }
   }
   
@@ -1126,8 +1131,14 @@
   }
   
   /* Ensure nav buttons spacing matches space-x-6 (24px) */
-  header nav .hidden.md\:flex {
+  /* Note: space-x-6 uses margin-left on children, but we use gap for consistency */
+  header nav > div.hidden.md\:flex {
     gap: 24px !important; /* space-x-6 = 24px */
+  }
+  
+  /* Override any margin-left from space-x-6 utility to use gap instead */
+  header nav > div.hidden.md\:flex > * {
+    margin-left: 0 !important;
   }
   
   /* Theme toggle margin from nav buttons - standardized */
