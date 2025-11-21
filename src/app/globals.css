@@ -756,50 +756,8 @@
     vertical-align: middle !important;
   }
   
-  /* Ensure only ONE theme toggle shows at a time - FORCE visibility rules */
-  .desktop-theme-toggle {
-    display: none !important;
-  }
-  
-  .mobile-theme-toggle {
-    display: block !important;
-  }
-  
-  @media (min-width: 768px) {
-    .desktop-theme-toggle {
-      display: flex !important;
-    }
-    
-    .mobile-theme-toggle {
-      display: none !important;
-    }
-  }
-  
-  /* Hide mobile nav buttons on desktop - FORCE hide */
-  .mobile-nav-buttons {
-    display: flex !important;
-  }
-  
-  @media (min-width: 768px) {
-    .mobile-nav-buttons {
-      display: none !important;
-    }
-  }
-  
-  /* Double check - ensure parent containers respect these rules */
-  header nav .hidden.md\:flex .desktop-theme-toggle {
-    display: flex !important;
-  }
-  
-  header nav .flex.md\:hidden .mobile-theme-toggle {
-    display: block !important;
-  }
-  
-  @media (min-width: 768px) {
-    header nav .flex.md\:hidden .mobile-theme-toggle {
-      display: none !important;
-    }
-  }
+  /* Theme toggle visibility - handled by Tailwind classes in navbar */
+  /* No wrapper divs needed - ThemeToggle is directly in nav */
   
   /* Logo watermark for pages - visible in light and dark mode */
   .page-with-watermark {
@@ -1005,10 +963,7 @@
     justify-content: flex-end !important;
   }
   
-  /* Theme toggle margin from nav buttons */
-  header nav .desktop-theme-toggle {
-    margin-left: 8px !important; /* ml-2 = 8px */
-  }
+  /* Theme toggle spacing - handled by space-x-6 in navbar */
   
   header nav {
     justify-content: space-between !important;
