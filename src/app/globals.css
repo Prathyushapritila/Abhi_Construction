@@ -1131,26 +1131,14 @@
     letter-spacing: 0.015em !important;
   }
   
-  /* Ensure nav buttons spacing matches space-x-4 / lg:space-x-5 / xl:space-x-6 */
+  /* Ensure nav buttons spacing matches gap-8 (32px) */
   header nav > div.hidden.md\:flex {
-    gap: 16px !important;
+    gap: 32px !important; /* gap-8 = 32px */
   }
   
-  @media (min-width: 1024px) {
-    header nav > div.hidden.md\:flex {
-      gap: 20px !important;
-    }
-  }
-  
-  @media (min-width: 1280px) {
-    header nav > div.hidden.md\:flex {
-      gap: 24px !important;
-    }
-  }
-  
-  /* Theme toggle margin from nav buttons - standardized */
+  /* Theme toggle group - no extra margin, gap-4 handles spacing */
   header nav .desktop-theme-toggle {
-    margin-left: 24px !important; /* ml-6 = 24px */
+    margin-left: 0 !important;
   }
   
   /* Ensure nav container doesn't clip logo in both modes */
