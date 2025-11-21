@@ -42,7 +42,7 @@ export function Navbar() {
       ref={headerRef}
       className="sticky top-0 z-50 w-full border-b border-white/10 bg-white dark:bg-[#060F1F] dark:backdrop-blur-md supports-[backdrop-filter]:bg-white dark:supports-[backdrop-filter]:bg-[#060F1F] shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)]"
     >
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Left Side: Logo + Text */}
         <Link
           href="/"
@@ -65,13 +65,13 @@ export function Navbar() {
         </Link>
 
         {/* Right Side: Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "text-base font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus-visible:ring-2 focus-visible:ring-premiumGold/60 focus-visible:ring-offset-2 rounded-md px-2 py-1 relative group whitespace-nowrap",
+                "text-base font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus-visible:ring-2 focus-visible:ring-premiumGold/60 focus-visible:ring-offset-2 relative group whitespace-nowrap",
                 pathname === item.href
                   ? "text-premiumGold dark:text-premiumGold"
                   : "text-royalNavy dark:text-white dark:hover:text-premiumGold"
@@ -79,12 +79,12 @@ export function Navbar() {
             >
               {item.label}
               {pathname === item.href && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-premiumGold rounded-full" />
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-premiumGold rounded-full" />
               )}
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-premiumGold/50 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+              <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-premiumGold/50 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
-          <div className="flex items-center gap-4 ml-4">
+          <div className="flex items-center ml-6">
             <div className="desktop-theme-toggle">
               <ThemeToggle />
             </div>

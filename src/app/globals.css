@@ -1131,14 +1131,14 @@
     letter-spacing: 0.015em !important;
   }
   
-  /* Ensure nav buttons spacing matches gap-8 (32px) */
+  /* Ensure nav buttons spacing matches gap-10 (40px) */
   header nav > div.hidden.md\:flex {
-    gap: 32px !important; /* gap-8 = 32px */
+    gap: 40px !important; /* gap-10 = 40px */
   }
   
-  /* Theme toggle group - no extra margin, gap-4 handles spacing */
-  header nav .desktop-theme-toggle {
-    margin-left: 0 !important;
+  /* Theme toggle margin from nav links */
+  header nav > div.hidden.md\:flex > div.flex.items-center.ml-6 {
+    margin-left: 24px !important; /* ml-6 = 24px */
   }
   
   /* Ensure nav container doesn't clip logo in both modes */
