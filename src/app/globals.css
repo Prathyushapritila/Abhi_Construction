@@ -820,7 +820,7 @@
     background-position: center;
     opacity: 0.12;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
     filter: brightness(1.1);
   }
   
@@ -829,27 +829,40 @@
     filter: brightness(1.2);
   }
   
-  /* Ensure watermark appears on all pages including about - higher z-index */
-  .page-with-watermark::before {
-    z-index: 1 !important;
-  }
-  
-  /* Ensure watermark is visible above background images but below content */
-  .page-with-watermark section[class*="FullWidthBg"]::before,
-  .page-with-watermark section[class*="full-width"]::before {
-    display: none !important;
-  }
-  
-  /* Ensure content sections have proper z-index */
-  .page-with-watermark > section,
-  .page-with-watermark > div > section {
+  /* Hide watermark on hero sections - hero sections cover watermark */
+  .page-with-watermark > section:first-child,
+  .page-with-watermark > div > section:first-child,
+  .page-with-watermark section[class*="relative"][class*="py-14"],
+  .page-with-watermark section[class*="relative"][class*="py-18"],
+  .page-with-watermark section[class*="relative"][class*="py-22"],
+  .page-with-watermark section[class*="min-h-"],
+  .page-with-watermark [class*="HomeHero"],
+  .page-with-watermark [class*="FullWidthBg"] {
     position: relative;
-    z-index: 2;
+    z-index: 10 !important;
   }
   
-  /* Ensure FullWidthBg doesn't block watermark */
-  .page-with-watermark section[class*="relative"] {
-    z-index: auto;
+  /* Hide watermark when scrolling over hero sections */
+  .page-with-watermark::before {
+    z-index: 0 !important;
+  }
+  
+  /* Hero sections have higher z-index to cover watermark */
+  .page-with-watermark > section:first-child,
+  .page-with-watermark > div > section:first-child {
+    z-index: 10 !important;
+  }
+  
+  /* Ensure hero background covers watermark */
+  .page-with-watermark > section:first-child > div[class*="absolute"],
+  .page-with-watermark > div > section:first-child > div[class*="absolute"] {
+    z-index: 0 !important;
+  }
+  
+  .page-with-watermark > section:first-child > div[class*="container"],
+  .page-with-watermark > div > section:first-child > div[class*="container"] {
+    position: relative;
+    z-index: 10 !important;
   }
   
   /* Portfolio card text overflow fix - ULTRA AGGRESSIVE - FORCE CONTAINMENT */
