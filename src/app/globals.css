@@ -1146,6 +1146,13 @@
     overflow: visible !important;
   }
   
+  /* Slim navbar height - match old deployment */
+  header nav {
+    height: 4rem !important; /* h-16 = 64px */
+    padding-top: 0.75rem !important; /* py-3 = 12px top */
+    padding-bottom: 0.75rem !important; /* py-3 = 12px bottom */
+  }
+  
   /* Light mode specific - ensure logo container has enough space - match dark mode behavior */
   header nav a[href="/"],
   .dark header nav a[href="/"] {
