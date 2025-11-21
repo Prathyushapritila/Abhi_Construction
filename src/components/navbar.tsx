@@ -80,12 +80,16 @@ export function Navbar() {
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-premiumGold/50 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
-          <ThemeToggle />
+          <div className="desktop-theme-toggle">
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Mobile Menu Button - Right Side */}
-        <div className="flex md:hidden items-center gap-3">
-          <ThemeToggle />
+        <div className="mobile-nav-buttons flex md:hidden items-center gap-3">
+          <div className="mobile-theme-toggle">
+            <ThemeToggle />
+          </div>
           <Button
             variant="ghost"
             size="icon"

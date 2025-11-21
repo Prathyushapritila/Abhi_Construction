@@ -756,6 +756,36 @@
     vertical-align: middle !important;
   }
   
+  /* Ensure only ONE theme toggle shows at a time */
+  .desktop-theme-toggle {
+    display: none !important;
+  }
+  
+  .mobile-theme-toggle {
+    display: block !important;
+  }
+  
+  @media (min-width: 768px) {
+    .desktop-theme-toggle {
+      display: block !important;
+    }
+    
+    .mobile-theme-toggle {
+      display: none !important;
+    }
+  }
+  
+  /* Hide mobile nav buttons on desktop */
+  .mobile-nav-buttons {
+    display: flex !important;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-nav-buttons {
+      display: none !important;
+    }
+  }
+  
   /* Ensure nav links and theme toggle are on same baseline */
   header nav > div:last-child > a,
   header nav > div:last-child > div {
