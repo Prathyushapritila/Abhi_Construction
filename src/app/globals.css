@@ -1075,7 +1075,7 @@
   /* Mobile: h-12 = 48px */
   header nav a[href="/"] img,
   header nav a[href="/"] .logo-container img {
-    max-width: 130px !important;
+    max-width: 135px !important;
     height: 48px !important;
   }
   
@@ -1092,7 +1092,7 @@
   @media (min-width: 768px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 170px !important;
+      max-width: 175px !important;
       height: 64px !important;
     }
   }
@@ -1101,17 +1101,17 @@
   @media (min-width: 1024px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 190px !important;
+      max-width: 205px !important;
       height: 80px !important;
     }
   }
   
-  /* XL (≥1280px): xl:h-24 = 96px */
+  /* XL (≥1280px): xl:h-22 = 88px */
   @media (min-width: 1280px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 190px !important;
-      height: 96px !important;
+      max-width: 225px !important;
+      height: 88px !important;
     }
   }
   
@@ -1128,22 +1128,23 @@
     padding: 9px 14px !important; /* px-3.5 py-2 */
     font-size: 18px !important; /* text-lg */
     font-weight: 600 !important; /* font-semibold */
+    letter-spacing: 0.02em !important;
   }
   
-  /* Ensure nav buttons spacing matches space-x-8 / xl:space-x-10 */
+  /* Ensure nav buttons spacing matches space-x-8 / xl:space-x-12 */
   header nav > div.hidden.md\:flex {
-    gap: 32px !important; /* space-x-8 */
+    gap: 32px !important;
   }
-  
+
   @media (min-width: 1280px) {
     header nav > div.hidden.md\:flex {
-      gap: 40px !important; /* space-x-10 */
+      gap: 48px !important;
     }
   }
   
   /* Theme toggle margin from nav buttons - standardized */
   header nav .desktop-theme-toggle {
-    margin-left: 24px !important; /* ml-6 = 24px */
+    margin-left: 32px !important; /* ml-8 = 32px */
   }
   
   /* Ensure nav container doesn't clip logo in both modes */
