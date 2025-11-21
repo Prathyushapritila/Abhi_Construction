@@ -1075,16 +1075,16 @@
   /* Mobile */
   header nav a[href="/"] img,
   header nav a[href="/"] .logo-container img {
-    max-width: 125px !important;
-    height: 48px !important;
+    max-width: 160px !important;
+    height: 56px !important;
   }
   
   /* Small (≥640px) */
   @media (min-width: 640px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 145px !important;
-      height: 52px !important;
+      max-width: 185px !important;
+      height: 64px !important;
     }
   }
   
@@ -1092,8 +1092,8 @@
   @media (min-width: 768px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 165px !important;
-      height: 58px !important;
+      max-width: 215px !important;
+      height: 80px !important;
     }
   }
   
@@ -1101,8 +1101,8 @@
   @media (min-width: 1024px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 185px !important;
-      height: 70px !important;
+      max-width: 245px !important;
+      height: 96px !important;
     }
   }
   
@@ -1110,8 +1110,8 @@
   @media (min-width: 1280px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 200px !important;
-      height: 78px !important;
+      max-width: 260px !important;
+      height: 104px !important;
     }
   }
   
