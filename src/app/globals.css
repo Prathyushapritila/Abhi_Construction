@@ -1071,47 +1071,47 @@
     max-width: 100% !important;
   }
   
-  /* Set logo max-width to fit navbar - standardized sizes for dark mode */
-  /* Mobile: h-14 = 56px */
+  /* Set logo max-width to fit navbar - screenshot alignment */
+  /* Mobile: h-12 = 48px */
   header nav a[href="/"] img,
   header nav a[href="/"] .logo-container img {
-    max-width: 150px !important;
-    height: 56px !important;
+    max-width: 130px !important;
+    height: 48px !important;
   }
   
-  /* Small (≥640px): sm:h-16 = 64px */
+  /* Small (≥640px): sm:h-14 = 56px */
   @media (min-width: 640px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
       max-width: 150px !important;
-      height: 64px !important;
+      height: 56px !important;
     }
   }
   
-  /* Medium (≥768px): md:h-20 = 80px */
+  /* Medium (≥768px): md:h-16 = 64px */
   @media (min-width: 768px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
       max-width: 170px !important;
-      height: 80px !important;
+      height: 64px !important;
     }
   }
   
-  /* Large (≥1024px): lg:h-24 = 96px */
+  /* Large (≥1024px): lg:h-20 = 80px */
   @media (min-width: 1024px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
       max-width: 190px !important;
-      height: 96px !important;
+      height: 80px !important;
     }
   }
   
-  /* XL (≥1280px): xl:h-28 = 112px */
+  /* XL (≥1280px): xl:h-24 = 96px */
   @media (min-width: 1280px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
       max-width: 190px !important;
-      height: 112px !important;
+      height: 96px !important;
     }
   }
   
@@ -1122,28 +1122,28 @@
     height: 100% !important;
   }
   
-  /* Ensure consistent spacing between nav items - standardized for dark mode */
+  /* Ensure consistent spacing between nav items - screenshot alignment */
   header nav a[href^="/"]:not([href="/"]) {
     line-height: 1.5 !important;
-    padding: 8px 12px !important; /* px-3 py-2 = 12px horizontal, 8px vertical */
-    font-size: 16px !important; /* text-base */
+    padding: 9px 14px !important; /* px-3.5 py-2 */
+    font-size: 18px !important; /* text-lg */
     font-weight: 600 !important; /* font-semibold */
   }
   
-  /* Ensure nav buttons spacing matches space-x-6 (24px) */
-  /* Note: space-x-6 uses margin-left on children, but we use gap for consistency */
+  /* Ensure nav buttons spacing matches space-x-8 / xl:space-x-10 */
   header nav > div.hidden.md\:flex {
-    gap: 24px !important; /* space-x-6 = 24px */
+    gap: 32px !important; /* space-x-8 */
   }
   
-  /* Override any margin-left from space-x-6 utility to use gap instead */
-  header nav > div.hidden.md\:flex > * {
-    margin-left: 0 !important;
+  @media (min-width: 1280px) {
+    header nav > div.hidden.md\:flex {
+      gap: 40px !important; /* space-x-10 */
+    }
   }
   
   /* Theme toggle margin from nav buttons - standardized */
   header nav .desktop-theme-toggle {
-    margin-left: 8px !important; /* ml-2 = 8px */
+    margin-left: 24px !important; /* ml-6 = 24px */
   }
   
   /* Ensure nav container doesn't clip logo in both modes */
