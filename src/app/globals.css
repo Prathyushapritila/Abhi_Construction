@@ -1131,20 +1131,26 @@
     letter-spacing: 0.015em !important;
   }
   
-  /* Ensure nav buttons spacing matches space-x-6 / xl:space-x-8 */
+  /* Ensure nav buttons spacing matches space-x-4 / lg:space-x-5 / xl:space-x-6 */
   header nav > div.hidden.md\:flex {
-    gap: 24px !important;
+    gap: 16px !important;
   }
-
+  
+  @media (min-width: 1024px) {
+    header nav > div.hidden.md\:flex {
+      gap: 20px !important;
+    }
+  }
+  
   @media (min-width: 1280px) {
     header nav > div.hidden.md\:flex {
-      gap: 32px !important;
+      gap: 24px !important;
     }
   }
   
   /* Theme toggle margin from nav buttons - standardized */
   header nav .desktop-theme-toggle {
-    margin-left: 16px !important; /* ml-4 = 16px */
+    margin-left: 24px !important; /* ml-6 = 24px */
   }
   
   /* Ensure nav container doesn't clip logo in both modes */
