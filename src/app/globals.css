@@ -709,20 +709,20 @@
   /* Ensure navbar has solid dark background in dark mode */
   .dark header,
   .dark header nav {
-    background-color: #0b1324 !important; /* Match old deployment */
-    background: #0b1324 !important;
+    background-color: rgb(15, 23, 42) !important; /* slate-900 - solid dark background */
+    background: rgb(15, 23, 42) !important;
   }
   
   /* Ensure mobile menu also has dark background */
   .dark header nav div[class*="container"] {
-    background-color: #0b1324 !important;
+    background-color: rgb(15, 23, 42) !important; /* slate-900 */
   }
   
   /* Override any transparent backgrounds in dark mode navbar */
   .dark header[class*="bg-"],
   .dark header[class*="backdrop"] {
-    background-color: #0b1324 !important;
-    background: #0b1324 !important;
+    background-color: rgb(15, 23, 42) !important; /* slate-900 */
+    background: rgb(15, 23, 42) !important;
   }
   
   /* Theme toggle button - prevent layout shift - match nav button height */
@@ -1144,13 +1144,6 @@
   /* Ensure nav container doesn't clip logo in both modes */
   header nav {
     overflow: visible !important;
-  }
-  
-  /* Slim navbar height - match old deployment */
-  header nav {
-    height: 4rem !important; /* h-16 = 64px */
-    padding-top: 0.75rem !important; /* py-3 = 12px top */
-    padding-bottom: 0.75rem !important; /* py-3 = 12px bottom */
   }
   
   /* Light mode specific - ensure logo container has enough space - match dark mode behavior */

@@ -40,9 +40,9 @@ export function Navbar() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-50 w-full border-b border-white/10 bg-white dark:bg-[#0b1324] shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)]"
+      className="sticky top-0 z-50 w-full border-b border-white/10 bg-white dark:bg-[#060F1F] dark:backdrop-blur-md supports-[backdrop-filter]:bg-white dark:supports-[backdrop-filter]:bg-[#060F1F] shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)]"
     >
-      <nav className="max-w-7xl mx-auto px-6 h-16 py-3 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Left Side: Logo + Text */}
         <Link
           href="/"
@@ -54,12 +54,12 @@ export function Navbar() {
               alt="Abhi Constructions & Innovations"
               width={240}
               height={120}
-              className="h-10 sm:h-12 md:h-14 w-auto max-w-[120px] sm:max-w-[140px] md:max-w-[160px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-[1.02] dark:brightness-[1.1] dark:contrast-[1.05] dark:drop-shadow-[0_0_18px_rgba(255,165,0,0.4)]"
+              className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto max-w-[140px] sm:max-w-[160px] md:max-w-[180px] lg:max-w-[200px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-[1.02] dark:brightness-[1.1] dark:contrast-[1.05] dark:drop-shadow-[0_0_18px_rgba(255,165,0,0.4)]"
               priority
-              sizes="(max-width: 640px) 120px, (max-width: 768px) 140px, 160px"
+              sizes="(max-width: 640px) 140px, (max-width: 768px) 160px, (max-width: 1024px) 180px, 200px"
             />
           </div>
-          <span className="text-[15px] sm:text-[16px] md:text-[17px] font-semibold text-royalNavy dark:text-white leading-none whitespace-nowrap tracking-tight">
+          <span className="text-[16px] sm:text-[18px] md:text-[20px] font-semibold text-[#E37B29] dark:text-white leading-none whitespace-nowrap tracking-tight">
             Constructions and Innovations
           </span>
         </Link>
@@ -79,9 +79,9 @@ export function Navbar() {
             >
               {item.label}
               {pathname === item.href && (
-                <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-premiumGold" />
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-premiumGold rounded-full" />
               )}
-              <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-premiumGold/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+              <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-premiumGold/50 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
           <div className="flex items-center ml-6">
@@ -141,4 +141,3 @@ export function Navbar() {
     </header>
   );
 }
-
