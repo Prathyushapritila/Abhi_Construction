@@ -50,24 +50,24 @@ export function Navbar() {
               alt="Abhi Constructions & Innovations"
               width={240}
               height={120}
-              className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-18 w-auto max-w-[120px] sm:max-w-[140px] md:max-w-[160px] lg:max-w-[180px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
+              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[180px] sm:max-w-[200px] md:max-w-[240px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
               priority
-              sizes="(max-width: 640px) 120px, (max-width: 768px) 140px, (max-width: 1024px) 160px, 180px"
+              sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
             />
           </div>
-          <span className="text-[14px] sm:text-[16px] md:text-[18px] font-semibold text-[#E37B29] dark:text-white leading-none whitespace-nowrap">
+          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] dark:text-white leading-none whitespace-nowrap">
             Constructions and Innovations
           </span>
         </Link>
 
         {/* Desktop Navigation - Right Side */}
-        <div className="hidden md:flex items-center space-x-4 lg:space-x-6 ml-auto">
+        <div className="hidden md:flex items-center space-x-6 ml-auto">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm md:text-base font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-md px-2 md:px-3 py-1.5 md:py-2 relative group whitespace-nowrap",
+                "text-base font-semibold transition-colors duration-300 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 rounded-md px-3 py-2 relative group whitespace-nowrap",
                 pathname === item.href
                   ? "text-premiumGold dark:text-premiumGold"
                   : "text-royalNavy dark:text-white dark:hover:text-premiumGold"
@@ -80,7 +80,7 @@ export function Navbar() {
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-premiumGold/50 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
-          <div className="desktop-theme-toggle ml-3 lg:ml-4">
+          <div className="desktop-theme-toggle ml-2">
             <ThemeToggle />
           </div>
         </div>
