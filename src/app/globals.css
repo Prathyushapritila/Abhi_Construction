@@ -1071,42 +1071,42 @@
     max-width: 100% !important;
   }
   
-  /* Set logo max-width to fit navbar - match component classes */
+  /* Set logo max-width to fit navbar - reduced sizes */
   header nav a[href="/"] img,
   header nav a[href="/"] .logo-container img {
-    max-width: 180px !important;
-    height: 56px !important;
+    max-width: 120px !important;
+    height: 40px !important;
   }
   
   @media (min-width: 640px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 200px !important;
-      height: 64px !important;
+      max-width: 140px !important;
+      height: 48px !important;
     }
   }
   
   @media (min-width: 768px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 240px !important;
-      height: 80px !important;
+      max-width: 160px !important;
+      height: 56px !important;
     }
   }
   
   @media (min-width: 1024px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 240px !important;
-      height: 96px !important;
+      max-width: 180px !important;
+      height: 64px !important;
     }
   }
   
   @media (min-width: 1280px) {
     header nav a[href="/"] img,
     header nav a[href="/"] .logo-container img {
-      max-width: 240px !important;
-      height: 112px !important;
+      max-width: 180px !important;
+      height: 72px !important;
     }
   }
   
@@ -1125,18 +1125,44 @@
     font-weight: 600 !important; /* font-semibold */
   }
   
-  /* Ensure nav buttons spacing matches space-x-6 (24px) */
+  /* Ensure nav buttons spacing - responsive */
   header nav .hidden.md\:flex {
-    gap: 24px !important; /* space-x-6 = 24px */
+    gap: 16px !important; /* space-x-4 = 16px on md */
   }
   
-  /* Theme toggle size matches nav buttons */
+  @media (min-width: 1024px) {
+    header nav .hidden.md\:flex {
+      gap: 24px !important; /* space-x-6 = 24px on lg+ */
+    }
+  }
+  
+  /* Theme toggle size - responsive */
   header nav .desktop-theme-toggle button,
   header nav .mobile-theme-toggle button {
-    width: 32px !important; /* w-8 */
-    height: 32px !important; /* h-8 */
-    min-width: 32px !important;
-    min-height: 32px !important;
+    width: 28px !important; /* w-7 = 28px on md */
+    height: 28px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+  }
+  
+  @media (min-width: 768px) {
+    header nav .desktop-theme-toggle button {
+      width: 32px !important; /* w-8 = 32px on md+ */
+      height: 32px !important;
+      min-width: 32px !important;
+      min-height: 32px !important;
+    }
+  }
+  
+  /* Theme toggle margin from nav buttons */
+  header nav .desktop-theme-toggle {
+    margin-left: 12px !important; /* ml-3 = 12px */
+  }
+  
+  @media (min-width: 1024px) {
+    header nav .desktop-theme-toggle {
+      margin-left: 16px !important; /* ml-4 = 16px on lg+ */
+    }
   }
   
   /* Ensure nav container doesn't clip logo in both modes */
