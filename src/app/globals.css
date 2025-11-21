@@ -747,6 +747,13 @@
   /* Prevent navbar container from shifting */
   header nav > div {
     flex-shrink: 0 !important;
+    overflow: visible !important;
+  }
+  
+  /* Ensure container class doesn't clip logo */
+  header nav.container {
+    overflow: visible !important;
+    max-width: 100% !important;
   }
   
   /* Ensure logo is not clipped - just fix overflow, don't change size */
@@ -775,14 +782,46 @@
     max-width: 100% !important;
   }
   
-  /* Ensure nav container doesn't clip logo in light mode */
+  /* Ensure nav container doesn't clip logo in both modes */
   header nav {
     overflow: visible !important;
   }
   
-  /* Light mode specific - ensure logo container has enough space */
-  header nav a[href="/"] {
+  /* Light mode specific - ensure logo container has enough space - match dark mode behavior */
+  header nav a[href="/"],
+  .dark header nav a[href="/"] {
     min-width: fit-content !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+  
+  /* Ensure logo and text are on same line in light mode - match dark mode */
+  header nav a[href="/"] > div,
+  .dark header nav a[href="/"] > div {
+    display: flex !important;
+    align-items: center !important;
+    height: auto !important;
+  }
+  
+  header nav a[href="/"] span,
+  .dark header nav a[href="/"] span {
+    display: inline-flex !important;
+    align-items: center !important;
+    height: auto !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Prevent any container from clipping logo in light mode */
+  header nav.container,
+  header nav[class*="container"] {
+    overflow: visible !important;
+  }
+  
+  /* Ensure logo image displays fully in light mode */
+  header:not(.dark) .logo-container img {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
   }
   
   .blueprint-grid {
