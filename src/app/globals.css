@@ -762,23 +762,30 @@
     display: flex !important;
   }
   
-  /* Mobile: show only in flex md:hidden container */
-  header nav > div.flex.md\:hidden > button[aria-label="Toggle theme"] {
-    display: flex !important;
+  /* Mobile: show only in flex md:hidden container - HIDDEN on desktop */
+  header nav > div.flex.md\:hidden {
+    display: none !important;
   }
   
-  /* Hide desktop toggle on mobile */
   @media (max-width: 767px) {
-    header nav > div.hidden.md\:flex > button[aria-label="Toggle theme"] {
+    header nav > div.flex.md\:hidden {
+      display: flex !important;
+    }
+    
+    header nav > div.hidden.md\:flex {
       display: none !important;
     }
   }
   
-  /* Hide mobile toggle on desktop */
-  @media (min-width: 768px) {
-    header nav > div.flex.md\:hidden > button[aria-label="Toggle theme"] {
-      display: none !important;
-    }
+  /* Mobile theme toggle - black color */
+  header nav .mobile-theme-toggle button[aria-label="Toggle theme"],
+  header nav .mobile-theme-toggle button[aria-label="Toggle theme"] * {
+    color: #000000 !important;
+  }
+  
+  .dark header nav .mobile-theme-toggle button[aria-label="Toggle theme"],
+  .dark header nav .mobile-theme-toggle button[aria-label="Toggle theme"] * {
+    color: #ffffff !important;
   }
   
   /* Logo watermark for pages - visible in light and dark mode */
@@ -1108,8 +1115,13 @@
     letter-spacing: 0.015em !important;
   }
   
-  /* Ensure nav buttons spacing matches space-x-6 */
+  /* Ensure nav buttons spacing matches space-x-6 - consistent for all buttons */
   header nav > div.hidden.md\:flex {
+    gap: 24px !important; /* space-x-6 = 24px */
+  }
+  
+  /* Mobile buttons also use space-x-6 for consistency */
+  header nav > div.flex.md\:hidden {
     gap: 24px !important; /* space-x-6 = 24px */
   }
   

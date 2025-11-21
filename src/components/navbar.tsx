@@ -84,8 +84,10 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu Button - Right Side */}
-        <div className="flex md:hidden items-center gap-3">
-          <ThemeToggle />
+        <div className="flex md:hidden items-center space-x-6">
+          <div className="mobile-theme-toggle">
+            <ThemeToggle />
+          </div>
           <Button
             variant="ghost"
             size="icon"
