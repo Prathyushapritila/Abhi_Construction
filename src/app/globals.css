@@ -249,6 +249,8 @@
     margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
     position: relative !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
   }
   
   /* Background divs in hero sections - full width */
@@ -259,6 +261,47 @@
     transform: translateX(-50%) !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+  
+  /* Mobile-specific hero fixes - prevent clipping */
+  @media (max-width: 768px) {
+    section[class*="relative"][class*="py-"] {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      overflow-x: hidden !important;
+    }
+    
+    section[class*="relative"][class*="py-"] > div[class*="absolute"][class*="inset-0"] {
+      width: 100% !important;
+      left: 0 !important;
+      right: 0 !important;
+      transform: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    
+    /* Ensure hero content doesn't clip on mobile */
+    section[class*="relative"][class*="py-"] .container {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+    
+    /* Ensure text content is fully visible */
+    section[class*="relative"][class*="py-"] h1,
+    section[class*="relative"][class*="py-"] h2,
+    section[class*="relative"][class*="py-"] p {
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+      max-width: 100% !important;
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+    }
   }
   
   /* Mobile and tablet specific fixes */

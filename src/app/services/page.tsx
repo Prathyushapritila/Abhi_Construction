@@ -30,9 +30,9 @@ export default function ServicesPage() {
     <div className="min-h-screen page-with-watermark">
       <StickyContactButtons />
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-x-hidden overflow-y-visible min-h-[65vh] sm:min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh]">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-x-hidden overflow-y-visible min-h-[65vh] sm:min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh] w-full">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
+        <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900 w-full" style={{ width: '100%', left: 0, right: 0 }}>
           <Image
             src="/bg/services.jpg"
             alt="Construction and design services"
