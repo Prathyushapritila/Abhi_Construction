@@ -70,7 +70,6 @@ export default function ServicesPage() {
             >
               Explore our construction and design services
             </motion.p>
-            </div>
           </div>
         </div>
       </section>
