@@ -19,11 +19,10 @@ export function FullWidthBg({
   parallax = true
 }: FullWidthBgProps) {
   return (
-    <section className={`relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-x-hidden overflow-y-visible min-h-[65vh] sm:min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh] w-full ${className}`}>
+    <section className={`relative py-14 sm:py-18 md:py-22 overflow-x-hidden overflow-y-visible min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh] ${className}`}>
       {/* Background Image */}
       <motion.div
-        className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900 w-full"
-        style={{ width: '100%', left: 0, right: 0 }}
+        className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900"
         initial={parallax ? { scale: 1.1 } : { scale: 1 }}
         whileInView={parallax ? { scale: 1 } : { scale: 1 }}
         viewport={{ once: true }}
@@ -61,12 +60,8 @@ export function FullWidthBg({
       />
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 max-w-7xl relative z-20">
-        <div className="flex items-center justify-center min-h-[65vh] sm:min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh]">
-          <div className="w-full px-2 sm:px-4">
-            {children}
-          </div>
-        </div>
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-20">
+        {children}
       </div>
     </section>
   );
