@@ -86,10 +86,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col relative">
-            <div className="relative z-10">
+          <div className="flex min-h-screen flex-col relative w-full" style={{ margin: 0, padding: 0, width: '100%' }}>
+            <div className="relative z-10 w-full" style={{ margin: 0, padding: 0, width: '100%' }}>
               <Navbar />
-              <main className="flex-1">{children}</main>
+              <main className="flex-1 w-full" style={{ margin: 0, padding: 0, width: '100%' }}>{children}</main>
               <Footer />
             </div>
           </div>
