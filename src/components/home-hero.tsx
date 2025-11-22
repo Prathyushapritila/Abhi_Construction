@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 export function HomeHero() {
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-x-hidden overflow-y-visible min-h-[65vh] sm:min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh] w-full">
+    <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-x-hidden overflow-y-visible min-h-[65vh] sm:min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh]">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 bg-[#0A1323] dark:bg-[#020812] w-full" style={{ left: 0, right: 0, width: '100%' }}>
+      <div className="absolute inset-0 z-0 bg-[#0A1323] dark:bg-[#020812]">
         <Image
           src="/home-hero-image.png"
           alt="Modern luxury villa exterior"
