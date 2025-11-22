@@ -23,9 +23,8 @@ export default function AboutPage() {
             About Us
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-marbleWhite/90 leading-relaxed">
-              Where architecture, craftsmanship, and interiors meet to create homes that feel personal—and look unforgettable.
-            </p>
-          </div>
+            Where architecture, craftsmanship, and interiors meet to create homes that feel personal—and look unforgettable.
+          </p>
         </div>
       </FullWidthBg>
 

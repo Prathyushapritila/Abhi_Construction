@@ -42,7 +42,6 @@ export default function ContactPage() {
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed drop-shadow-md">
               {siteConfig.sections.contact.subtitle}
             </p>
-            </div>
           </div>
         </div>
       </section>
