@@ -238,6 +238,25 @@
     overflow-y: visible;
     box-sizing: border-box;
     position: relative;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  /* Hero sections - full width edge-to-edge */
+  section[class*="relative"][class*="py-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Background divs in hero sections - full width */
+  section[class*="relative"] > div[class*="absolute"][class*="inset-0"] {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   /* Hero sections should be full-width with no white space */
