@@ -1274,21 +1274,21 @@
     }
   }
   
-  /* Mobile theme toggle - black color and larger size */
+  /* Mobile theme toggle - black color and proportional size */
   header nav .mobile-theme-toggle button[aria-label="Toggle theme"],
   header nav .mobile-theme-toggle button[aria-label="Toggle theme"] *,
   header nav .mobile-theme-toggle button[aria-label="Toggle theme"] svg {
     color: #000000 !important;
-    width: 24px !important;
-    height: 24px !important;
+    width: 20px !important;
+    height: 20px !important;
   }
   
   .dark header nav .mobile-theme-toggle button[aria-label="Toggle theme"],
   .dark header nav .mobile-theme-toggle button[aria-label="Toggle theme"] *,
   .dark header nav .mobile-theme-toggle button[aria-label="Toggle theme"] svg {
     color: #ffffff !important;
-    width: 24px !important;
-    height: 24px !important;
+    width: 20px !important;
+    height: 20px !important;
   }
   
   /* Hamburger menu button - black color in light mode */
