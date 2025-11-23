@@ -70,11 +70,18 @@
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgb(250, 250, 250);
     /* iOS safe area support */
     padding-top: env(safe-area-inset-top);
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
   }
+  
+  .dark html {
+    background-color: rgb(15, 23, 42);
+  }
+  
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-inter);
@@ -83,6 +90,8 @@
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgb(250, 250, 250);
     user-select: text;
     -webkit-user-select: text;
     -moz-user-select: text;
@@ -91,6 +100,10 @@
     padding-bottom: env(safe-area-inset-bottom);
     min-height: 100vh;
     min-height: -webkit-fill-available;
+  }
+  
+  .dark body {
+    background-color: rgb(15, 23, 42);
   }
   
   /* Allow text selection everywhere */
@@ -272,6 +285,7 @@
       overflow-x: hidden !important;
       width: 100% !important;
       max-width: 100vw !important;
+      position: relative !important;
     }
     
     header {
@@ -336,9 +350,16 @@
       white-space: normal !important;
       box-sizing: border-box !important;
     }
+    
+    /* Ensure all buttons are visible and tappable */
+    button, a[role="button"] {
+      min-width: 44px !important;
+      min-height: 44px !important;
+      touch-action: manipulation !important;
+    }
   }
   
-  /* Mobile-specific hero fixes - ensure proper containment */
+  /* Mobile-specific hero fixes - ensure proper containment and no overflow */
   @media (max-width: 768px) {
     section[class*="relative"][class*="py-"] {
       width: 100vw !important;
@@ -346,6 +367,7 @@
       margin-left: calc(50% - 50vw) !important;
       margin-right: calc(50% - 50vw) !important;
       overflow-x: hidden !important;
+      position: relative !important;
     }
     
     section[class*="relative"][class*="py-"] > div[class*="absolute"][class*="inset-0"] {
@@ -353,6 +375,7 @@
       left: 50% !important;
       right: auto !important;
       transform: translateX(-50%) !important;
+      max-width: 100vw !important;
     }
     
     /* Ensure hero content doesn't clip on mobile */
@@ -361,15 +384,20 @@
       padding-right: 1rem !important;
       max-width: 100% !important;
       overflow-x: hidden !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
     }
     
-    /* Ensure text content is fully visible */
+    /* Ensure text content is fully visible and wraps properly */
     section[class*="relative"][class*="py-"] h1,
     section[class*="relative"][class*="py-"] h2,
     section[class*="relative"][class*="py-"] p {
       word-wrap: break-word !important;
       overflow-wrap: break-word !important;
       max-width: 100% !important;
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+      box-sizing: border-box !important;
     }
   }
   

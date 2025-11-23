@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 
 export function StickyContactButtons() {
   return (
-    <div className="fixed bottom-16 right-3 sm:bottom-6 sm:right-4 md:bottom-8 md:right-6 lg:bottom-8 lg:right-8 z-50 flex flex-col gap-2.5 sm:gap-3 md:gap-4 safe-area-inset-bottom" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0)' }}>
+    <div className="fixed bottom-16 right-3 sm:bottom-6 sm:right-4 md:bottom-8 md:right-6 lg:bottom-8 lg:right-8 z-50 flex flex-col gap-2.5 sm:gap-3 md:gap-4 safe-area-inset-bottom" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0)', maxWidth: 'calc(100vw - 1.5rem)' }}>
       <Link
         href={`https://wa.me/91${siteConfig.contact.whatsapp.replace(/\s/g, "")}`}
         target="_blank"
