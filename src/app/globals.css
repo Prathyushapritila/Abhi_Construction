@@ -368,24 +368,24 @@
     box-sizing: border-box;
   }
   
-  /* Ensure NO element except html creates a scrollbar */
-  *:not(html) {
-    overflow-y: visible !important;
-  }
-  
-  /* Exception: only html can have overflow-y scroll */
-  html {
-    overflow-y: scroll !important;
-  }
-  
-  /* Ensure all wrapper divs don't create scrollbars */
+  /* CRITICAL: Only html should have scrollbar - all other elements must not */
+  body,
   body > *,
   body > * > *,
+  main,
+  section,
+  div,
   div[class*="flex"],
-  div[class*="relative"] {
-    overflow-y: visible !important;
+  div[class*="relative"],
+  div[class*="min-h-screen"],
+  div[class*="page-with-watermark"] {
+    overflow-y: hidden !important;
     overflow: visible !important;
-    max-height: none !important;
+  }
+  
+  /* Exception: html gets the scrollbar */
+  html {
+    overflow-y: scroll !important;
   }
   
   /* Prevent any element from causing horizontal scroll */
