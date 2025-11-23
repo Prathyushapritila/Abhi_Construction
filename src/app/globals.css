@@ -1810,3 +1810,50 @@ body {
   height: auto !important;
 }
 
+/* ============================================
+   CRITICAL: Fix quote section scrolling issue
+   Ensure quote section doesn't have nested scroll
+   ============================================ */
+section.quote-section-no-scroll,
+section.quote-section-no-scroll *,
+section.section-standard.quote-section-no-scroll,
+section.section-standard.quote-section-no-scroll * {
+  overflow: visible !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  position: relative !important;
+}
+
+/* Ensure motion elements in quote section don't create scroll */
+section.quote-section-no-scroll [class*="motion"],
+section.quote-section-no-scroll [data-framer-component],
+section.quote-section-no-scroll motion.div,
+section.quote-section-no-scroll motion.blockquote {
+  overflow: visible !important;
+  overflow-y: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* Ensure containers in quote section don't create scroll */
+section.quote-section-no-scroll > div,
+section.quote-section-no-scroll > div.container,
+section.quote-section-no-scroll > div[class*="container"],
+section.quote-section-no-scroll div[class*="motion"],
+section.quote-section-no-scroll blockquote {
+  overflow: visible !important;
+  overflow-y: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* Prevent any scroll-snap or scroll behavior on quote section */
+section.quote-section-no-scroll {
+  scroll-snap-align: none !important;
+  scroll-snap-stop: normal !important;
+  scroll-behavior: auto !important;
+}
+
