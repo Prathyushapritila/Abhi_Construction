@@ -83,25 +83,29 @@ export function Navbar() {
           <ThemeToggle />
         </div>
 
-        {/* Mobile Menu Button - Right Side */}
-        <div className="flex md:hidden items-center gap-2 sm:gap-3 overflow-visible flex-shrink-0 ml-2" style={{ 
-          display: 'flex', 
-          visibility: 'visible', 
-          opacity: 1,
-          position: 'relative',
-          zIndex: 50,
-          pointerEvents: 'auto'
-        }}>
+        {/* Mobile Menu Button - Right Side - Always visible on mobile */}
+        <div 
+          className="flex md:hidden items-center gap-2 sm:gap-3 overflow-visible flex-shrink-0 ml-2 mobile-menu-container" 
+          style={{ 
+            display: 'flex', 
+            visibility: 'visible', 
+            opacity: 1,
+            position: 'relative',
+            zIndex: 50,
+            pointerEvents: 'auto',
+            minWidth: '80px',
+            justifyContent: 'flex-end'
+          }}
+        >
           <div className="mobile-theme-toggle overflow-visible flex-shrink-0">
             <ThemeToggle />
           </div>
-          <Button
-            variant="ghost"
-            size="icon"
+          <button
+            type="button"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
-            className="w-10 h-10 text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold flex-shrink-0 overflow-visible md:hidden"
+            className="w-10 h-10 text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold flex-shrink-0 overflow-visible flex items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground transition-colors mobile-menu-button"
             style={{ 
               display: 'flex', 
               visibility: 'visible', 
@@ -110,11 +114,13 @@ export function Navbar() {
               pointerEvents: 'auto',
               backgroundColor: 'transparent',
               border: 'none',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              minWidth: '40px',
+              minHeight: '40px'
             }}
           >
-            {isOpen ? <X className="h-6 w-6" style={{ display: 'block', visibility: 'visible', opacity: 1 }} /> : <Menu className="h-6 w-6" style={{ display: 'block', visibility: 'visible', opacity: 1 }} />}
-          </Button>
+            {isOpen ? <X className="h-6 w-6" style={{ display: 'block', visibility: 'visible', opacity: 1, color: 'inherit' }} /> : <Menu className="h-6 w-6" style={{ display: 'block', visibility: 'visible', opacity: 1, color: 'inherit' }} />}
+          </button>
         </div>
       </nav>
 

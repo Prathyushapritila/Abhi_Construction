@@ -444,7 +444,9 @@
     
     /* Ensure hamburger menu button is always visible on mobile */
     header nav > div.flex.md\:hidden button[aria-label="Toggle menu"],
-    header nav > div[class*="flex"][class*="md:hidden"] button[aria-label="Toggle menu"] {
+    header nav > div[class*="flex"][class*="md:hidden"] button[aria-label="Toggle menu"],
+    header nav .mobile-menu-button,
+    header nav .mobile-menu-container button {
       display: flex !important;
       visibility: visible !important;
       opacity: 1 !important;
@@ -456,9 +458,17 @@
       border: none !important;
     }
     
+    /* Ensure mobile menu container is visible */
+    header nav .mobile-menu-container {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
     /* Ensure hamburger menu icon is visible */
     header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] svg,
-    header nav > div[class*="flex"][class*="md:hidden"] button[aria-label="Toggle menu"] svg {
+    header nav > div[class*="flex"][class*="md:hidden"] button[aria-label="Toggle menu"] svg,
+    header nav .mobile-menu-button svg {
       display: block !important;
       visibility: visible !important;
       opacity: 1 !important;
