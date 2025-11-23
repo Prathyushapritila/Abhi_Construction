@@ -415,6 +415,11 @@
       flex-shrink: 0 !important;
       gap: 0.5rem !important;
       min-width: fit-content !important;
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      z-index: 50 !important;
     }
     
     header nav > div.flex.md\:hidden > div,
@@ -424,6 +429,20 @@
       min-width: 2.5rem !important;
       width: 2.5rem !important;
       height: 2.5rem !important;
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+    }
+    
+    /* Ensure hamburger menu button is always visible on mobile */
+    header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      z-index: 50 !important;
+      background-color: transparent !important;
     }
     
     /* Ensure mobile menu items are fully visible */
@@ -1114,9 +1133,22 @@
   }
   
   @media (max-width: 767px) {
-    /* Show mobile menu button on mobile */
+    /* Show mobile menu button on mobile - ensure it's always visible */
     header nav > div.flex.md\:hidden {
       display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      z-index: 50 !important;
+    }
+    
+    /* Ensure mobile menu button is always visible and tappable */
+    header nav > div.flex.md\:hidden > button {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      z-index: 50 !important;
     }
     
     /* Hide desktop navigation on mobile */

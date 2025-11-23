@@ -84,7 +84,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu Button - Right Side */}
-        <div className="flex md:hidden items-center gap-2 sm:gap-3 overflow-visible flex-shrink-0 ml-2">
+        <div className="flex md:hidden items-center gap-2 sm:gap-3 overflow-visible flex-shrink-0 ml-2" style={{ display: 'flex', visibility: 'visible', opacity: 1 }}>
           <div className="mobile-theme-toggle overflow-visible flex-shrink-0">
             <ThemeToggle />
           </div>
@@ -95,6 +95,7 @@ export function Navbar() {
             aria-label="Toggle menu"
             aria-expanded={isOpen}
             className="w-10 h-10 text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold flex-shrink-0 overflow-visible"
+            style={{ display: 'flex', visibility: 'visible', opacity: 1, zIndex: 50 }}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
