@@ -4,7 +4,6 @@ import React from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { Watermark } from "@/components/watermark";
 import { LayoutSEO } from "./layout-seo";
 import "./globals.css";
 
@@ -87,7 +86,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Watermark />
           <div className="flex min-h-screen flex-col relative w-full overflow-x-hidden bg-background" style={{ margin: 0, padding: 0, width: '100%' }}>
             <div className="relative z-10 w-full" style={{ margin: 0, padding: 0, width: '100%' }}>
               <Navbar />

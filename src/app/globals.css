@@ -1285,18 +1285,7 @@
     color: #ffffff !important;
   }
   
-  /* Logo watermark component - visible in light and dark mode */
-  .watermark-logo {
-    position: relative;
-  }
-  
-  .dark .watermark-logo {
-    opacity: 0.28 !important;
-    filter: brightness(1.2);
-    mix-blend-mode: screen;
-  }
-  
-  /* Legacy support for page-with-watermark class (if still used) */
+  /* Logo watermark for pages - visible in light and dark mode */
   .page-with-watermark {
     position: relative;
   }
