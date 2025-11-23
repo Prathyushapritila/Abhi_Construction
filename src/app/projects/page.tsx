@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <>
+    <div className="page-with-watermark">
       <section className="py-20 bg-gradient-to-br from-royalNavy/5 via-background to-premiumGold/5 marble-texture">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -26,7 +26,7 @@ export default function ProjectsPage() {
       <ResidentialProjects />
       <ProjectsGallery />
       <CTA />
-    </>
+    </div>
   );
 }
 

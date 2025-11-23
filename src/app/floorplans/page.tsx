@@ -188,7 +188,7 @@ function FloorplansContent() {
   }, [minPrice, maxPrice, beds, baths, minSqft, maxSqft, garage, stories, sort]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background page-with-watermark">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-royalNavy/5 via-background to-premiumGold/5 marble-texture">
         <div className="container mx-auto px-4">
