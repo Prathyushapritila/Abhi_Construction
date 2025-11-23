@@ -67,7 +67,7 @@
   html {
     scroll-padding-top: var(--header-h);
     overflow-x: hidden !important;
-    overflow-y: auto !important;
+    overflow-y: scroll !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
@@ -85,12 +85,15 @@
     @apply bg-background text-foreground;
     font-family: var(--font-inter);
     overflow-x: hidden !important;
-    overflow-y: auto !important;
+    overflow-y: visible !important;
+    overflow: visible !important;
     max-width: 100vw !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     background-color: rgb(250, 250, 250);
     user-select: text;
     -webkit-user-select: text;
@@ -98,8 +101,6 @@
     -ms-user-select: text;
     /* iOS safe area support - only bottom for footer */
     padding-bottom: env(safe-area-inset-bottom);
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
   }
   
   .dark body {
