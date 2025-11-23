@@ -1147,6 +1147,7 @@
       opacity: 1 !important;
       position: relative !important;
       z-index: 50 !important;
+      pointer-events: auto !important;
     }
     
     /* Ensure mobile menu button is always visible and tappable */
@@ -1156,6 +1157,17 @@
       opacity: 1 !important;
       position: relative !important;
       z-index: 50 !important;
+      pointer-events: auto !important;
+      background-color: transparent !important;
+    }
+    
+    /* Ensure hamburger menu icon is visible */
+    header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] svg,
+    header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] * {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      color: inherit !important;
     }
     
     /* Hide desktop navigation on mobile */
