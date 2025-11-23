@@ -50,12 +50,12 @@ export function Navbar() {
               alt="Abhi Constructions & Innovations"
               width={240}
               height={120}
-              className="h-12 sm:h-14 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[120px] sm:max-w-[160px] md:max-w-[240px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
+              className="h-16 sm:h-18 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[160px] sm:max-w-[180px] md:max-w-[240px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
               priority
-              sizes="(max-width: 640px) 120px, (max-width: 768px) 160px, (max-width: 1024px) 240px, 280px"
+              sizes="(max-width: 640px) 160px, (max-width: 768px) 180px, (max-width: 1024px) 240px, 280px"
             />
           </div>
-          <span className="text-[14px] sm:text-[16px] md:text-[20px] font-semibold text-[#E37B29] dark:text-white leading-none whitespace-nowrap hidden sm:inline">
+          <span className="text-[16px] sm:text-[18px] md:text-[20px] font-semibold text-[#E37B29] dark:text-white leading-none whitespace-nowrap hidden sm:inline">
             Constructions and Innovations
           </span>
         </Link>

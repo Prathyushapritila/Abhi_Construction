@@ -452,10 +452,21 @@
       flex: 0 1 auto !important;
     }
     
-    /* Ensure logo image doesn't overflow */
+    /* Ensure logo image doesn't overflow - increased size for mobile */
     header nav .logo-link img {
-      max-width: 120px !important;
+      max-width: 160px !important;
       height: auto !important;
+    }
+    
+    /* Increase logo size on mobile to match buttons */
+    header nav .logo-link img {
+      height: 64px !important;
+      max-height: 64px !important;
+    }
+    
+    /* Increase text size on mobile if visible */
+    header nav .logo-link span {
+      font-size: 16px !important;
     }
     
     /* Ensure mobile menu button container has enough space and is always visible */
