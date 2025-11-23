@@ -291,10 +291,20 @@
     width: 100% !important;
     max-width: 100vw !important;
     overflow-x: hidden !important;
+    overflow-y: visible !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
+    background-color: transparent !important;
+  }
+  
+  /* Ensure no white background overlays from pseudo-elements */
+  div[class*="min-h-screen"]::before,
+  div[class*="min-h-screen"]::after,
+  div[class*="page-with-watermark"]::after {
+    display: none !important;
+    content: none !important;
   }
   
   /* Ensure footer doesn't cause overflow */
@@ -1099,15 +1109,19 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: transparent !important;
     opacity: 0.12;
     pointer-events: none;
-    z-index: 1;
+    z-index: -1 !important;
     filter: brightness(1.1);
+    mix-blend-mode: multiply;
   }
   
   .dark .page-with-watermark::before {
     opacity: 0.15;
     filter: brightness(1.2);
+    background-color: transparent !important;
+    mix-blend-mode: screen;
   }
   
   /* Hide watermark on hero sections - hero sections cover watermark */
