@@ -42,20 +42,20 @@ export function Navbar() {
       <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-6 md:px-8 max-w-7xl overflow-visible w-full" style={{ position: 'relative', zIndex: 50 }}>
         <Link
           href="/"
-          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-1 overflow-visible min-w-0"
+          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink overflow-visible min-w-0 logo-link"
         >
-          <div className="relative flex items-center">
+          <div className="relative flex items-center flex-shrink-0">
             <Image
               src={siteConfig.logo.image}
               alt="Abhi Constructions & Innovations"
               width={240}
               height={120}
-              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[180px] sm:max-w-[200px] md:max-w-[240px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
+              className="h-12 sm:h-14 md:h-20 lg:h-24 xl:h-28 w-auto max-w-[120px] sm:max-w-[160px] md:max-w-[240px] object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-110 dark:brightness-110 dark:contrast-110 dark:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]"
               priority
-              sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 240px, 280px"
+              sizes="(max-width: 640px) 120px, (max-width: 768px) 160px, (max-width: 1024px) 240px, 280px"
             />
           </div>
-          <span className="text-[18px] sm:text-[20px] font-semibold text-[#E37B29] dark:text-white leading-none whitespace-nowrap">
+          <span className="text-[14px] sm:text-[16px] md:text-[20px] font-semibold text-[#E37B29] dark:text-white leading-none whitespace-nowrap hidden sm:inline">
             Constructions and Innovations
           </span>
         </Link>
