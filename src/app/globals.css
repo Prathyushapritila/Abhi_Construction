@@ -66,16 +66,15 @@
   }
   html {
     scroll-padding-top: var(--header-h);
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
     background-color: rgb(250, 250, 250);
-    /* iOS safe area support */
+    /* iOS safe area support - only top for header */
     padding-top: env(safe-area-inset-top);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
   }
   
   .dark html {
@@ -85,18 +84,19 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-inter);
-    overflow-x: hidden;
-    max-width: 100vw;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
     background-color: rgb(250, 250, 250);
     user-select: text;
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
-    /* iOS safe area support */
+    /* iOS safe area support - only bottom for footer */
     padding-bottom: env(safe-area-inset-bottom);
     min-height: 100vh;
     min-height: -webkit-fill-available;
@@ -243,16 +243,19 @@
     aspect-ratio: 3 / 4;
     object-fit: cover;
   }
-  /* Ensure all sections are contained */
+  /* Ensure all sections are contained - no side gutters */
   section {
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
-    overflow-y: visible;
-    box-sizing: border-box;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    box-sizing: border-box !important;
     position: relative;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   
   /* Hero sections - full width edge-to-edge, break out of container */
@@ -281,8 +284,11 @@
   /* Prevent horizontal scroll from hero sections */
   main {
     overflow-x: hidden !important;
+    overflow-y: visible !important;
     width: 100% !important;
     max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   /* Ensure page wrappers don't cause overflow */
@@ -292,8 +298,10 @@
     max-width: 100vw !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
+    margin: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    padding: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     background-color: transparent !important;
@@ -491,16 +499,20 @@
     }
   }
   
-  /* Safe area for iOS devices */
+  /* Safe area for iOS devices - only apply to specific elements, not body */
   @supports (padding: max(0px)) {
-    body {
-      padding-left: max(1rem, env(safe-area-inset-left));
-      padding-right: max(1rem, env(safe-area-inset-right));
-    }
+    /* Don't add padding to body - it creates side gutters */
+    /* Safe area padding should only be on specific elements that need it */
     
     .sticky-contact-buttons,
     [class*="fixed"] {
       bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+    
+    /* Apply safe area to navbar if needed */
+    header {
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
     }
   }
 }
