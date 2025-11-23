@@ -39,10 +39,10 @@ export function Navbar() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#ffffff] dark:bg-slate-900 dark:backdrop-blur-md supports-[backdrop-filter]:bg-[#ffffff] dark:supports-[backdrop-filter]:bg-slate-900 shadow-lg dark:shadow-2xl">
-      <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-6 md:px-8 max-w-7xl">
+      <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-6 md:px-8 max-w-7xl overflow-visible">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-0"
+          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-0 overflow-visible"
         >
           <div className="relative flex items-center">
             <Image
@@ -84,8 +84,8 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu Button - Right Side */}
-        <div className="flex md:hidden items-center space-x-6">
-          <div className="mobile-theme-toggle">
+        <div className="flex md:hidden items-center space-x-4 gap-3 overflow-visible">
+          <div className="mobile-theme-toggle overflow-visible">
             <ThemeToggle />
           </div>
           <Button
@@ -94,7 +94,7 @@ export function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
-            className="w-10 h-10 text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold"
+            className="w-10 h-10 text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold flex-shrink-0 overflow-visible"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
@@ -110,14 +110,14 @@ export function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden border-t"
           >
-            <div className="container mx-auto px-4 py-4 space-y-2 bg-[#ffffff] dark:bg-slate-900">
+            <div className="container mx-auto px-4 py-4 space-y-2 bg-[#ffffff] dark:bg-slate-900 w-full">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "block px-4 py-3 rounded-lg text-base font-semibold transition-all hover:bg-premiumGold/10 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2",
+                    "block px-4 py-3 rounded-lg text-base font-semibold transition-all hover:bg-premiumGold/10 hover:text-premiumGold focus:outline-none focus:ring-2 focus:ring-premiumGold focus:ring-offset-2 w-full",
                     pathname === item.href
                       ? "text-premiumGold bg-premiumGold/10 border-l-4 border-premiumGold dark:!text-premiumGold"
                       : "text-royalNavy dark:!text-white"

@@ -242,22 +242,62 @@
     margin-right: 0;
   }
   
-  /* Hero sections - normal container width, not breaking out */
+  /* Hero sections - full width but contained within page flow */
   section[class*="relative"][class*="py-"] {
     width: 100% !important;
     max-width: 100% !important;
     position: relative !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
-  /* Background divs in hero sections - contained */
+  /* Background divs in hero sections - full width within section */
   section[class*="relative"][class*="py-"] > div[class*="absolute"][class*="inset-0"] {
     width: 100% !important;
     left: 0 !important;
     right: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+  
+  /* Mobile navbar fixes - prevent clipping */
+  @media (max-width: 767px) {
+    header nav {
+      overflow: visible !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    
+    header nav > div.flex.md\:hidden {
+      overflow: visible !important;
+      flex-shrink: 0 !important;
+      gap: 0.75rem !important;
+    }
+    
+    header nav > div.flex.md\:hidden > div,
+    header nav > div.flex.md\:hidden > button {
+      flex-shrink: 0 !important;
+      overflow: visible !important;
+      min-width: 2.5rem !important;
+    }
+    
+    /* Ensure mobile menu items are fully visible */
+    header nav div[class*="md:hidden"] div[class*="container"] {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    
+    header nav div[class*="md:hidden"] a {
+      width: 100% !important;
+      display: block !important;
+      overflow: visible !important;
+      text-overflow: clip !important;
+      white-space: normal !important;
+    }
   }
   
   /* Mobile-specific hero fixes - ensure proper containment */
