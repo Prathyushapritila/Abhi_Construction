@@ -1772,3 +1772,41 @@
   }
 }
 
+/* ============================================
+   CRITICAL FIX: SINGLE SCROLLBAR - HIGHEST PRIORITY
+   This must be at the end to override everything
+   ============================================ */
+html {
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+}
+
+body,
+body *,
+body > *,
+body > * > *,
+body > * > * > *,
+html body,
+html body *,
+main,
+main *,
+section,
+section *,
+div,
+div *,
+[class*="min-h-screen"],
+[class*="page-with-watermark"],
+[class*="flex"],
+[class*="relative"] {
+  overflow-y: visible !important;
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+/* Force body to never have scrollbar */
+body {
+  overflow-y: visible !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+
