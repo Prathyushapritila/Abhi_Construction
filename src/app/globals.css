@@ -1154,21 +1154,22 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent !important;
-    opacity: 0.12;
+    opacity: 0.15;
     pointer-events: none;
-    z-index: -1 !important;
+    z-index: 1 !important;
     filter: brightness(1.1);
     mix-blend-mode: multiply;
   }
   
   .dark .page-with-watermark::before {
-    opacity: 0.15;
+    opacity: 0.18;
     filter: brightness(1.2);
     background-color: transparent !important;
     mix-blend-mode: screen;
   }
   
-  /* Hide watermark on hero sections - hero sections cover watermark */
+  /* Watermark visible on all sections, including hero sections */
+  /* Hero sections can show watermark behind them */
   .page-with-watermark > section:first-child,
   .page-with-watermark > div > section:first-child,
   .page-with-watermark section[class*="relative"][class*="py-14"],
@@ -1178,30 +1179,37 @@
   .page-with-watermark [class*="HomeHero"],
   .page-with-watermark [class*="FullWidthBg"] {
     position: relative;
-    z-index: 10 !important;
+    z-index: 2 !important;
   }
   
-  /* Hide watermark when scrolling over hero sections - keep it behind everything */
+  /* Watermark stays behind content but visible */
   .page-with-watermark::before {
-    z-index: -1 !important;
+    z-index: 1 !important;
   }
   
-  /* Hero sections have higher z-index to cover watermark */
+  /* Hero sections have higher z-index than watermark */
   .page-with-watermark > section:first-child,
   .page-with-watermark > div > section:first-child {
-    z-index: 10 !important;
+    z-index: 2 !important;
   }
   
-  /* Ensure hero background covers watermark */
+  /* Hero backgrounds are above watermark */
   .page-with-watermark > section:first-child > div[class*="absolute"],
   .page-with-watermark > div > section:first-child > div[class*="absolute"] {
-    z-index: 0 !important;
+    z-index: 1 !important;
   }
   
+  /* Content containers are above watermark */
   .page-with-watermark > section:first-child > div[class*="container"],
   .page-with-watermark > div > section:first-child > div[class*="container"] {
     position: relative;
-    z-index: 10 !important;
+    z-index: 3 !important;
+  }
+  
+  /* Ensure content sections show watermark behind them */
+  .page-with-watermark section:not(:first-child) {
+    position: relative;
+    z-index: 2 !important;
   }
   
   /* Portfolio card text overflow fix - ULTRA AGGRESSIVE - FORCE CONTAINMENT */
