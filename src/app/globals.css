@@ -1154,7 +1154,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent !important;
-    opacity: 0.15;
+    opacity: 0.25 !important;
     pointer-events: none;
     z-index: 1 !important;
     filter: brightness(1.1);
@@ -1162,7 +1162,7 @@
   }
   
   .dark .page-with-watermark::before {
-    opacity: 0.18;
+    opacity: 0.28 !important;
     filter: brightness(1.2);
     background-color: transparent !important;
     mix-blend-mode: screen;
@@ -1182,9 +1182,11 @@
     z-index: 2 !important;
   }
   
-  /* Watermark stays behind content but visible */
+  /* Watermark stays behind content but visible - ensure it's always visible */
   .page-with-watermark::before {
     z-index: 1 !important;
+    display: block !important;
+    visibility: visible !important;
   }
   
   /* Hero sections have higher z-index than watermark */
@@ -1193,7 +1195,7 @@
     z-index: 2 !important;
   }
   
-  /* Hero backgrounds are above watermark */
+  /* Hero backgrounds are above watermark but allow watermark to show through */
   .page-with-watermark > section:first-child > div[class*="absolute"],
   .page-with-watermark > div > section:first-child > div[class*="absolute"] {
     z-index: 1 !important;
@@ -1210,6 +1212,16 @@
   .page-with-watermark section:not(:first-child) {
     position: relative;
     z-index: 2 !important;
+  }
+  
+  /* Ensure watermark is visible on About, Services, and Portfolio pages specifically */
+  .page-with-watermark[class*="min-h-screen"]::before {
+    opacity: 0.25 !important;
+    z-index: 1 !important;
+  }
+  
+  .dark .page-with-watermark[class*="min-h-screen"]::before {
+    opacity: 0.28 !important;
   }
   
   /* Portfolio card text overflow fix - ULTRA AGGRESSIVE - FORCE CONTAINMENT */
