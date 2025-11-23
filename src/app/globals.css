@@ -980,16 +980,21 @@
     display: flex !important;
   }
   
-  /* Mobile: show only in flex md:hidden container - HIDDEN on desktop */
-  header nav > div.flex.md\:hidden {
-    display: none !important;
+  /* Mobile menu button container - show on mobile, hide on desktop */
+  @media (min-width: 768px) {
+    /* Hide mobile menu button on desktop */
+    header nav > div.flex.md\:hidden {
+      display: none !important;
+    }
   }
   
   @media (max-width: 767px) {
+    /* Show mobile menu button on mobile */
     header nav > div.flex.md\:hidden {
       display: flex !important;
     }
     
+    /* Hide desktop navigation on mobile */
     header nav > div.hidden.md\:flex {
       display: none !important;
     }
