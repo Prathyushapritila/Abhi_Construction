@@ -282,9 +282,69 @@
   section > div,
   section > div[class*="absolute"],
   section > div[class*="container"],
-  section > div[class*="motion"] {
+  section > div[class*="motion"],
+  section[class*="section-standard"] > div,
+  section[class*="section-standard"] > div[class*="container"],
+  section[class*="section-standard"] > div[class*="motion"],
+  section[class*="section-standard"] div[class*="motion"] {
     overflow: visible !important;
     overflow-x: hidden !important;
+    overflow-y: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Specifically target the CEO quote section and all its nested elements */
+  section.section-standard[class*="relative"],
+  section[class*="section-standard"][class*="relative"] {
+    overflow: visible !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Target all nested elements in quote section - motion.div, blockquote, etc. */
+  section.section-standard *,
+  section[class*="section-standard"] * {
+    overflow: visible !important;
+    overflow-y: visible !important;
+  }
+  
+  /* Exception: only allow overflow-x: hidden for horizontal overflow prevention */
+  section.section-standard * {
+    overflow-x: hidden !important;
+  }
+  
+  /* Ensure motion elements don't create scrollbars */
+  [data-framer-component],
+  [class*="motion"] {
+    overflow: visible !important;
+    overflow-y: visible !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Specific class for quote section to prevent any scrollbars */
+  .quote-section-no-scrollbar,
+  .quote-section-no-scrollbar *,
+  section.quote-section-no-scrollbar,
+  section.quote-section-no-scrollbar * {
+    overflow: visible !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Ensure blockquote and all text elements in quote section don't create scrollbars */
+  section.quote-section-no-scrollbar blockquote,
+  section.quote-section-no-scrollbar blockquote *,
+  section.quote-section-no-scrollbar [class*="motion"] {
+    overflow: visible !important;
     overflow-y: visible !important;
     height: auto !important;
     max-height: none !important;

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function HomeCEOQuote() {
   return (
-    <section className="relative section-standard" style={{ overflow: 'visible', overflowX: 'hidden', overflowY: 'visible', height: 'auto' }}>
+    <section className="relative section-standard quote-section-no-scrollbar" style={{ overflow: 'visible', overflowX: 'hidden', overflowY: 'visible', height: 'auto', maxHeight: 'none' }}>
       {/* Background with gradient - NO IMAGE */}
       <div className="absolute inset-0 bg-gradient-to-br from-marbleWhite via-royalNavy/5 to-marbleWhite dark:from-slate-900 dark:via-royalNavy/20 dark:to-slate-900" />
       
