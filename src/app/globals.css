@@ -282,38 +282,9 @@
   section > div,
   section > div[class*="absolute"],
   section > div[class*="container"],
-  section > div[class*="motion"],
-  section.section-standard > div,
-  section.section-standard > div[class*="container"],
-  section.section-standard > div[class*="motion"],
-  section.section-standard div[class*="motion"],
-  section.section-standard blockquote,
-  section.section-standard blockquote * {
+  section > div[class*="motion"] {
     overflow: visible !important;
     overflow-x: hidden !important;
-    overflow-y: visible !important;
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
-  }
-  
-  /* Ensure all nested elements in quote section don't create scrollbars */
-  section.section-standard *,
-  section[class*="section-standard"] * {
-    overflow: visible !important;
-    overflow-y: visible !important;
-    max-height: none !important;
-  }
-  
-  /* Only allow overflow-x: hidden for horizontal overflow prevention */
-  section.section-standard * {
-    overflow-x: hidden !important;
-  }
-  
-  /* Ensure motion elements from framer-motion don't create scrollbars */
-  [data-framer-component],
-  [class*="motion"] {
-    overflow: visible !important;
     overflow-y: visible !important;
     height: auto !important;
     max-height: none !important;
