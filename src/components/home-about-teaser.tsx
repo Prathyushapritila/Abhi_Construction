@@ -92,7 +92,7 @@ function CountUp({
 
 export function HomeAboutTeaser() {
   return (
-    <section className="relative section-standard overflow-hidden">
+    <section className="relative section-standard overflow-x-hidden overflow-y-visible">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-royalNavy/5 via-marbleWhite to-royalBlue/5 dark:from-slate-900 dark:via-slate-800 dark:to-royalNavy/30" />
       
