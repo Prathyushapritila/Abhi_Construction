@@ -437,7 +437,7 @@
     header nav > div.flex.md\:hidden {
       overflow: visible !important;
       flex-shrink: 0 !important;
-      gap: 0.5rem !important;
+      gap: 4px !important;
       min-width: fit-content !important;
       display: flex !important;
       visibility: visible !important;
@@ -491,8 +491,9 @@
       margin-left: auto !important;
       flex-shrink: 0 !important;
       flex: 0 0 auto !important;
-      min-width: 100px !important;
+      min-width: 80px !important;
       z-index: 100 !important;
+      gap: 4px !important;
     }
     
     /* Ensure hamburger menu icon is visible */
@@ -1598,9 +1599,10 @@
     gap: 24px !important; /* space-x-6 = 24px */
   }
   
-  /* Mobile buttons also use space-x-6 for consistency */
-  header nav > div.flex.md\:hidden {
-    gap: 24px !important; /* space-x-6 = 24px */
+  /* Mobile buttons use smaller gap for side-by-side placement */
+  header nav > div.flex.md\:hidden,
+  header nav .mobile-menu-container {
+    gap: 4px !important;
   }
   
   /* Ensure nav container doesn't clip logo in both modes */

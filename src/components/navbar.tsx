@@ -85,7 +85,7 @@ export function Navbar() {
 
         {/* Mobile Menu Button - Right Side - Always visible on mobile */}
         <div 
-          className="flex md:hidden items-center gap-2 sm:gap-3 overflow-visible flex-shrink-0 ml-2 mobile-menu-container" 
+          className="flex md:hidden items-center gap-1 overflow-visible flex-shrink-0 ml-2 mobile-menu-container" 
           style={{ 
             display: 'flex', 
             visibility: 'visible', 
@@ -94,7 +94,8 @@ export function Navbar() {
             zIndex: 50,
             pointerEvents: 'auto',
             minWidth: '80px',
-            justifyContent: 'flex-end'
+            justifyContent: 'flex-end',
+            gap: '4px'
           }}
         >
           <div className="mobile-theme-toggle overflow-visible flex-shrink-0">
