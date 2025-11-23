@@ -278,6 +278,49 @@
     margin-right: 0 !important;
   }
   
+  /* Prevent horizontal scroll from hero sections */
+  main {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+  
+  /* Ensure page wrappers don't cause overflow */
+  div[class*="min-h-screen"],
+  div[class*="page-with-watermark"] {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Ensure footer doesn't cause overflow */
+  footer {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Global overflow prevention */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Prevent any element from causing horizontal scroll */
+  img, video, iframe, embed, object {
+    max-width: 100% !important;
+    height: auto;
+  }
+  
+  /* Ensure all fixed/sticky elements don't overflow */
+  [class*="fixed"],
+  [class*="sticky"] {
+    max-width: 100vw !important;
+  }
+  
   /* Mobile navbar fixes - prevent clipping */
   @media (max-width: 767px) {
     /* Prevent horizontal scroll */
