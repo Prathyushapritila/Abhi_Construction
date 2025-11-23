@@ -1274,14 +1274,35 @@
     }
   }
   
-  /* Mobile theme toggle - black color */
+  /* Mobile theme toggle - black color and larger size */
   header nav .mobile-theme-toggle button[aria-label="Toggle theme"],
-  header nav .mobile-theme-toggle button[aria-label="Toggle theme"] * {
+  header nav .mobile-theme-toggle button[aria-label="Toggle theme"] *,
+  header nav .mobile-theme-toggle button[aria-label="Toggle theme"] svg {
     color: #000000 !important;
+    width: 24px !important;
+    height: 24px !important;
   }
   
   .dark header nav .mobile-theme-toggle button[aria-label="Toggle theme"],
-  .dark header nav .mobile-theme-toggle button[aria-label="Toggle theme"] * {
+  .dark header nav .mobile-theme-toggle button[aria-label="Toggle theme"] *,
+  .dark header nav .mobile-theme-toggle button[aria-label="Toggle theme"] svg {
+    color: #ffffff !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  
+  /* Hamburger menu button - black color in light mode */
+  header nav .mobile-menu-button,
+  header nav .mobile-menu-button svg,
+  header nav button[aria-label="Toggle menu"],
+  header nav button[aria-label="Toggle menu"] svg {
+    color: #000000 !important;
+  }
+  
+  .dark header nav .mobile-menu-button,
+  .dark header nav .mobile-menu-button svg,
+  .dark header nav button[aria-label="Toggle menu"],
+  .dark header nav button[aria-label="Toggle menu"] svg {
     color: #ffffff !important;
   }
   

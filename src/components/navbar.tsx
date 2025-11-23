@@ -106,7 +106,7 @@ export function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
-            className="w-10 h-10 text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold flex-shrink-0 overflow-visible flex items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground transition-colors mobile-menu-button"
+            className="w-10 h-10 text-black dark:text-white hover:text-premiumGold dark:hover:text-premiumGold flex-shrink-0 overflow-visible flex items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground transition-colors mobile-menu-button"
             style={{ 
               display: 'flex', 
               visibility: 'visible', 
@@ -117,10 +117,11 @@ export function Navbar() {
               border: 'none',
               cursor: 'pointer',
               minWidth: '40px',
-              minHeight: '40px'
+              minHeight: '40px',
+              color: '#000000'
             }}
           >
-            {isOpen ? <X className="h-6 w-6" style={{ display: 'block', visibility: 'visible', opacity: 1, color: 'inherit' }} /> : <Menu className="h-6 w-6" style={{ display: 'block', visibility: 'visible', opacity: 1, color: 'inherit' }} />}
+            {isOpen ? <X className="h-6 w-6" style={{ display: 'block', visibility: 'visible', opacity: 1, color: '#000000' }} /> : <Menu className="h-6 w-6" style={{ display: 'block', visibility: 'visible', opacity: 1, color: '#000000' }} />}
           </button>
         </div>
       </nav>
