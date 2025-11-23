@@ -177,12 +177,12 @@ export function PortfolioSimple() {
                   aria-pressed={isActive}
                   onClick={() => setActiveCategory(isActive ? null : category.value)}
                   className={cn(
-                    "relative inline-flex h-[56px] md:h-[60px] items-center justify-center rounded-full border-2 px-6 md:px-7 text-base md:text-lg font-semibold tracking-wide transition-all duration-300 min-w-[140px] md:min-w-[155px] focus:outline-none focus:ring-2 focus:ring-premiumGold/70 focus:ring-offset-2",
+                    "group relative inline-flex h-[56px] md:h-[60px] items-center justify-center rounded-full border-2 px-6 md:px-7 text-base md:text-lg font-semibold tracking-wide transition-all duration-300 min-w-[140px] md:min-w-[155px] focus:outline-none focus:ring-2 focus:ring-premiumGold/70 focus:ring-offset-2",
                     "bg-white border-royalNavy shadow-sm",
                     "dark:bg-transparent dark:border-white/80",
                     isActive
                       ? "border-premiumGold text-premiumGold shadow-xl dark:border-premiumGold dark:text-premiumGold"
-                      : "text-royalNavy dark:text-white hover:border-premiumGold hover:text-premiumGold dark:hover:border-white dark:hover:text-white dark:hover:bg-white/10"
+                      : "text-royalNavy dark:text-white hover:border-premiumGold hover:text-premiumGold dark:hover:border-premiumGold dark:hover:text-premiumGold dark:hover:bg-white/10"
                   )}
                 >
                   <span className="inline-flex items-center gap-2 leading-none">
@@ -191,7 +191,7 @@ export function PortfolioSimple() {
                         "h-4 w-4 flex-shrink-0 transition-colors duration-300",
                         isActive
                           ? "text-premiumGold dark:text-premiumGold"
-                          : "text-royalNavy group-hover:text-premiumGold dark:text-white dark:group-hover:text-white"
+                          : "text-royalNavy group-hover:text-premiumGold dark:text-white dark:group-hover:text-premiumGold"
                       )}
                     />
                     <span
@@ -199,7 +199,7 @@ export function PortfolioSimple() {
                         "transition-colors duration-300 whitespace-nowrap leading-none",
                         isActive
                           ? "text-premiumGold dark:text-premiumGold"
-                          : "text-royalNavy group-hover:text-premiumGold dark:text-white dark:group-hover:text-white"
+                          : "text-royalNavy group-hover:text-premiumGold dark:text-white dark:group-hover:text-premiumGold"
                       )}
                     >
                       {category.label}
