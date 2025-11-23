@@ -39,10 +39,10 @@ export function Navbar() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#ffffff] dark:bg-slate-900 dark:backdrop-blur-md supports-[backdrop-filter]:bg-[#ffffff] dark:supports-[backdrop-filter]:bg-slate-900 shadow-lg dark:shadow-2xl">
-      <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-6 md:px-8 max-w-7xl overflow-visible">
+      <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 sm:px-6 md:px-8 max-w-7xl overflow-visible w-full">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-0 overflow-visible"
+          className="inline-flex items-center gap-2 sm:gap-3 group whitespace-nowrap flex-shrink-1 overflow-visible min-w-0"
         >
           <div className="relative flex items-center">
             <Image
@@ -84,8 +84,8 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu Button - Right Side */}
-        <div className="flex md:hidden items-center space-x-4 gap-3 overflow-visible">
-          <div className="mobile-theme-toggle overflow-visible">
+        <div className="flex md:hidden items-center gap-2 sm:gap-3 overflow-visible flex-shrink-0 ml-2">
+          <div className="mobile-theme-toggle overflow-visible flex-shrink-0">
             <ThemeToggle />
           </div>
           <Button
