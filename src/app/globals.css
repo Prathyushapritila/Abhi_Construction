@@ -1137,9 +1137,9 @@
     z-index: 10 !important;
   }
   
-  /* Hide watermark when scrolling over hero sections */
+  /* Hide watermark when scrolling over hero sections - keep it behind everything */
   .page-with-watermark::before {
-    z-index: 0 !important;
+    z-index: -1 !important;
   }
   
   /* Hero sections have higher z-index to cover watermark */
