@@ -67,7 +67,7 @@
   html {
     scroll-padding-top: var(--header-h);
     overflow-x: hidden !important;
-    overflow-y: auto !important;
+    overflow-y: scroll !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
@@ -85,12 +85,15 @@
     @apply bg-background text-foreground;
     font-family: var(--font-inter);
     overflow-x: hidden !important;
-    overflow-y: auto !important;
+    overflow-y: visible !important;
+    overflow: visible !important;
     max-width: 100vw !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     background-color: rgb(250, 250, 250);
     user-select: text;
     -webkit-user-select: text;
@@ -98,8 +101,6 @@
     -ms-user-select: text;
     /* iOS safe area support - only bottom for footer */
     padding-bottom: env(safe-area-inset-bottom);
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
   }
   
   .dark body {
@@ -282,12 +283,48 @@
   section > div,
   section > div[class*="absolute"],
   section > div[class*="container"],
-  section > div[class*="motion"] {
+  section > div[class*="motion"],
+  section.section-standard > div,
+  section.section-standard > div[class*="container"],
+  section.section-standard > div[class*="motion"],
+  section.section-standard div[class*="motion"],
+  section.section-standard blockquote,
+  section.section-standard blockquote * {
     overflow: visible !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
     height: auto !important;
+    min-height: auto !important;
     max-height: none !important;
+  }
+  
+  /* Ensure all nested elements in sections don't create scrollbars */
+  section *,
+  section.section-standard * {
+    overflow-y: visible !important;
+    max-height: none !important;
+  }
+  
+  /* Only allow overflow-x: hidden for horizontal overflow prevention */
+  section * {
+    overflow-x: hidden !important;
+  }
+  
+  /* Ensure motion elements from framer-motion don't create scrollbars */
+  [data-framer-component],
+  [class*="motion"] {
+    overflow: visible !important;
+    overflow-y: visible !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Ensure main and page wrappers don't create scrollbars */
+  main,
+  div[class*="min-h-screen"],
+  div[class*="page-with-watermark"] {
+    overflow-y: visible !important;
+    overflow: visible !important;
   }
   
   /* Hero sections - full width edge-to-edge, break out of container */
