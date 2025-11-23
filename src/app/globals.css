@@ -103,6 +103,12 @@
     padding-bottom: env(safe-area-inset-bottom);
   }
   
+  /* CRITICAL: Override any conflicting rules - body must NOT have scrollbar */
+  body {
+    overflow-y: visible !important;
+    overflow: visible !important;
+  }
+  
   .dark body {
     background-color: rgb(15, 23, 42);
   }
@@ -369,23 +375,30 @@
   }
   
   /* CRITICAL: Only html should have scrollbar - all other elements must not */
-  body,
+  /* Body is already set above, so exclude it here to avoid conflicts */
   body > *,
   body > * > *,
   main,
   section,
-  div,
+  div:not(html):not(body),
   div[class*="flex"],
   div[class*="relative"],
   div[class*="min-h-screen"],
   div[class*="page-with-watermark"] {
-    overflow-y: hidden !important;
+    overflow-y: visible !important;
     overflow: visible !important;
+    max-height: none !important;
   }
   
-  /* Exception: html gets the scrollbar */
+  /* Exception: ONLY html gets the scrollbar - this is the single source of truth */
   html {
     overflow-y: scroll !important;
+  }
+  
+  /* Double-check: body must NEVER have scrollbar */
+  body {
+    overflow-y: visible !important;
+    overflow: visible !important;
   }
   
   /* Prevent any element from causing horizontal scroll */
