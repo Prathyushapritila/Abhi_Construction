@@ -67,7 +67,7 @@
   html {
     scroll-padding-top: var(--header-h);
     overflow-x: hidden !important;
-    overflow-y: auto !important;
+    overflow-y: scroll !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
@@ -85,12 +85,14 @@
     @apply bg-background text-foreground;
     font-family: var(--font-inter);
     overflow-x: hidden !important;
-    overflow-y: auto !important;
+    overflow-y: visible !important;
     max-width: 100vw !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     background-color: rgb(250, 250, 250);
     user-select: text;
     -webkit-user-select: text;
@@ -98,8 +100,6 @@
     -ms-user-select: text;
     /* iOS safe area support - only bottom for footer */
     padding-bottom: env(safe-area-inset-bottom);
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
   }
   
   .dark body {
@@ -267,7 +267,8 @@
     padding-right: 0 !important;
   }
   
-  /* Fix: Remove extra scrollbar in quote section and similar sections */
+  /* Fix: Remove extra scrollbar in all sections - ensure only main page scrollbar */
+  section,
   section.section-standard,
   section[class*="section-standard"] {
     overflow: visible !important;
@@ -278,11 +279,25 @@
     max-height: none !important;
   }
   
-  /* Ensure quote section children don't create scrollbars */
+  /* Ensure all section children don't create scrollbars */
+  section > div,
   section.section-standard > div,
   section[class*="section-standard"] > div,
+  section > div[class*="container"],
   section.section-standard > div[class*="container"],
-  section[class*="section-standard"] > div[class*="container"] {
+  section[class*="section-standard"] > div[class*="container"],
+  section > div[class*="motion"],
+  section[class*="motion"] {
+    overflow: visible !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Ensure grid containers don't create scrollbars */
+  section [class*="grid"],
+  section [class*="grid"] > * {
     overflow: visible !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
@@ -321,9 +336,14 @@
     max-width: 100vw !important;
     margin: 0 !important;
     padding: 0 !important;
+    background-color: rgb(250, 250, 250);
   }
   
-  /* Ensure page wrappers don't cause overflow */
+  .dark main {
+    background-color: rgb(15, 23, 42);
+  }
+  
+  /* Ensure page wrappers don't cause overflow and have proper backgrounds */
   div[class*="min-h-screen"],
   div[class*="page-with-watermark"] {
     width: 100% !important;
@@ -336,7 +356,12 @@
     padding: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    background-color: transparent !important;
+    background-color: rgb(250, 250, 250);
+  }
+  
+  .dark div[class*="min-h-screen"],
+  .dark div[class*="page-with-watermark"] {
+    background-color: rgb(15, 23, 42);
   }
   
   /* Ensure no white background overlays from pseudo-elements */
