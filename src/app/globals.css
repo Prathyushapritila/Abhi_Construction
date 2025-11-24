@@ -267,7 +267,7 @@
     padding-right: 0 !important;
   }
   
-  /* Specifically target quote section to prevent nested scrollbars */
+  /* Fix: Remove extra scrollbar in quote section and similar sections */
   section.section-standard,
   section[class*="section-standard"] {
     overflow: visible !important;
@@ -278,11 +278,11 @@
     max-height: none !important;
   }
   
-  /* Ensure all children of sections don't create scrollbars */
-  section > div,
-  section > div[class*="absolute"],
-  section > div[class*="container"],
-  section > div[class*="motion"] {
+  /* Ensure quote section children don't create scrollbars */
+  section.section-standard > div,
+  section[class*="section-standard"] > div,
+  section.section-standard > div[class*="container"],
+  section[class*="section-standard"] > div[class*="container"] {
     overflow: visible !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
