@@ -295,6 +295,30 @@
     max-height: none !important;
   }
   
+  /* Prevent any nested containers from creating scrollbars */
+  div[class*="page-with-watermark"] > *,
+  div[class*="page-with-watermark"] > section > *,
+  div[class*="page-with-watermark"] > div > section > * {
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    max-height: none !important;
+  }
+  
+  /* Ensure cards and containers don't create scrollbars */
+  [class*="Card"],
+  [class*="card"],
+  [class*="container"] {
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+  }
+  
+  /* Exception: Only allow overflow-hidden for image containers, not for scrolling */
+  [class*="Card"] > div[class*="relative"][class*="overflow-hidden"],
+  [class*="card"] > div[class*="relative"][class*="overflow-hidden"],
+  div[class*="relative"][class*="aspect-"] {
+    overflow: hidden !important; /* This is fine for image clipping */
+  }
+  
   /* Ensure grid containers don't create scrollbars */
   section [class*="grid"],
   section [class*="grid"] > * {
@@ -336,11 +360,11 @@
     max-width: 100vw !important;
     margin: 0 !important;
     padding: 0 !important;
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(250, 250, 250) !important;
   }
   
   .dark main {
-    background-color: rgb(15, 23, 42);
+    background-color: rgb(15, 23, 42) !important;
   }
   
   /* Ensure page wrappers don't cause overflow and have proper backgrounds */
@@ -356,12 +380,13 @@
     padding: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(250, 250, 250) !important;
+    min-height: 100vh;
   }
   
   .dark div[class*="min-h-screen"],
   .dark div[class*="page-with-watermark"] {
-    background-color: rgb(15, 23, 42);
+    background-color: rgb(15, 23, 42) !important;
   }
   
   /* Ensure no white background overlays from pseudo-elements */
@@ -485,6 +510,7 @@
       margin-left: calc(50% - 50vw) !important;
       margin-right: calc(50% - 50vw) !important;
       overflow-x: hidden !important;
+      overflow-y: visible !important;
       position: relative !important;
     }
     
@@ -494,6 +520,7 @@
       right: auto !important;
       transform: translateX(-50%) !important;
       max-width: 100vw !important;
+      overflow: hidden !important; /* Only for background images */
     }
     
     /* Ensure hero content doesn't clip on mobile */
@@ -502,6 +529,7 @@
       padding-right: 1rem !important;
       max-width: 100% !important;
       overflow-x: hidden !important;
+      overflow-y: visible !important;
       width: 100% !important;
       box-sizing: border-box !important;
     }
@@ -517,6 +545,17 @@
       padding-right: 0.5rem !important;
       box-sizing: border-box !important;
     }
+    
+    /* Ensure no double scrollbars on mobile */
+    html {
+      overflow-y: scroll !important;
+      overflow-x: hidden !important;
+    }
+    
+    body {
+      overflow-y: visible !important;
+      overflow-x: hidden !important;
+    }
   }
   
   /* Mobile and tablet specific fixes */
@@ -524,6 +563,8 @@
     section {
       padding-left: 0;
       padding-right: 0;
+      overflow-x: hidden !important;
+      overflow-y: visible !important;
     }
     
     /* Ensure containers don't overflow */
@@ -531,6 +572,8 @@
       padding-left: 1rem;
       padding-right: 1rem;
       max-width: 100%;
+      overflow-x: hidden !important;
+      overflow-y: visible !important;
     }
     
     /* Prevent text clipping */
@@ -538,13 +581,24 @@
       word-wrap: break-word;
       overflow-wrap: break-word;
       hyphens: auto;
+      max-width: 100%;
     }
     
     /* Ensure images don't overflow */
     img {
-      max-width: 100%;
+      max-width: 100% !important;
       height: auto;
       object-fit: contain;
+    }
+    
+    /* Ensure no nested scrollbars on mobile */
+    div[class*="page-with-watermark"],
+    div[class*="page-with-watermark"] > *,
+    main,
+    main > * {
+      overflow-x: hidden !important;
+      overflow-y: visible !important;
+      max-width: 100vw !important;
     }
   }
   
@@ -1181,7 +1235,7 @@
     background-color: transparent !important;
     opacity: 0.12;
     pointer-events: none;
-    z-index: -1 !important;
+    z-index: 0 !important;
     filter: brightness(1.1);
     mix-blend-mode: multiply;
   }
@@ -1193,7 +1247,7 @@
     mix-blend-mode: screen;
   }
   
-  /* Hide watermark on hero sections - hero sections cover watermark */
+  /* Hero sections have higher z-index to cover watermark */
   .page-with-watermark > section:first-child,
   .page-with-watermark > div > section:first-child,
   .page-with-watermark section[class*="relative"][class*="py-14"],
@@ -1203,18 +1257,7 @@
   .page-with-watermark [class*="HomeHero"],
   .page-with-watermark [class*="FullWidthBg"] {
     position: relative;
-    z-index: 10 !important;
-  }
-  
-  /* Hide watermark when scrolling over hero sections - keep it behind everything */
-  .page-with-watermark::before {
-    z-index: -1 !important;
-  }
-  
-  /* Hero sections have higher z-index to cover watermark */
-  .page-with-watermark > section:first-child,
-  .page-with-watermark > div > section:first-child {
-    z-index: 10 !important;
+    z-index: 1 !important;
   }
   
   /* Ensure hero background covers watermark */
@@ -1226,7 +1269,13 @@
   .page-with-watermark > section:first-child > div[class*="container"],
   .page-with-watermark > div > section:first-child > div[class*="container"] {
     position: relative;
-    z-index: 10 !important;
+    z-index: 2 !important;
+  }
+  
+  /* Ensure watermark is visible behind content sections */
+  .page-with-watermark > section:not(:first-child) {
+    position: relative;
+    z-index: 1 !important;
   }
   
   /* Portfolio card text overflow fix - ULTRA AGGRESSIVE - FORCE CONTAINMENT */

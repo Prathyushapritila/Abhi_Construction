@@ -113,7 +113,7 @@ export function AboutContent() {
       </section>
 
       {/* Our Promise */}
-      <section className="section-standard bg-stone-50 dark:bg-slate-800 relative overflow-hidden">
+      <section className="section-standard bg-stone-50 dark:bg-slate-800 relative overflow-x-hidden overflow-y-visible">
         {/* Background Image */}
         <div className="absolute inset-0 opacity-10 dark:opacity-15">
           <Image
@@ -159,7 +159,7 @@ export function AboutContent() {
       </section>
 
       {/* What Sets Us Apart - Value Pillars */}
-      <section className="section-standard bg-marbleWhite dark:bg-slate-900 relative overflow-hidden">
+      <section className="section-standard bg-marbleWhite dark:bg-slate-900 relative overflow-x-hidden overflow-y-visible">
         {/* Animated background */}
         <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] blueprint-grid" />
         <motion.div 
@@ -291,7 +291,7 @@ export function AboutContent() {
       </section>
 
       {/* Our Story */}
-      <section className="section-standard bg-stone-50 dark:bg-slate-800 relative overflow-hidden">
+      <section className="section-standard bg-stone-50 dark:bg-slate-800 relative overflow-x-hidden overflow-y-visible">
         {/* Background Image */}
         <div className="absolute inset-0 opacity-10 dark:opacity-15">
           <Image
@@ -328,7 +328,7 @@ export function AboutContent() {
       </section>
 
       {/* How We Work - 5 Step Process */}
-      <section className="section-standard bg-gradient-to-br from-marbleWhite via-royalNavy/5 to-marbleWhite dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
+      <section className="section-standard bg-gradient-to-br from-marbleWhite via-royalNavy/5 to-marbleWhite dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-x-hidden overflow-y-visible">
         {/* Background Image */}
         <div className="absolute inset-0 opacity-10 dark:opacity-15">
           <Image
@@ -454,7 +454,7 @@ export function AboutContent() {
       </section>
 
       {/* Closing Statement */}
-      <section className="py-20 bg-gradient-to-br from-royalBlue/10 via-marbleWhite to-premiumGold/5 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-royalBlue/10 via-marbleWhite to-premiumGold/5 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 relative overflow-x-hidden overflow-y-visible">
         {/* Animated background */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] blueprint-grid" />
         <motion.div 

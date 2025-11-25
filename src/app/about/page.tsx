@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="page-with-watermark bg-marbleWhite dark:bg-slate-900">
+    <div className="page-with-watermark">
       <StickyContactButtons />
       {/* Hero Section with Background */}
       <FullWidthBg 

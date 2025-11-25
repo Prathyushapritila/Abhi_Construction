@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <div className="page-with-watermark bg-marbleWhite dark:bg-slate-900">
+    <div className="page-with-watermark">
       <StickyContactButtons />
       {/* Hero Section with Background */}
-      <section className="relative py-14 sm:py-18 md:py-22 overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
+      <section className="relative py-14 sm:py-18 md:py-22 overflow-x-hidden overflow-y-visible min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
           <Image

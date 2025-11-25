@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function HomeHero() {
   return (
-    <section className="relative py-14 sm:py-18 md:py-22 overflow-hidden min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh]">
+    <section className="relative py-14 sm:py-18 md:py-22 overflow-x-hidden overflow-y-visible min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 bg-[#0A1323] dark:bg-[#020812]">
         <Image
