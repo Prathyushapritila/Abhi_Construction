@@ -31,20 +31,20 @@ export default function ServicesPage() {
       <StickyContactButtons />
       {/* Hero Section */}
       <section className="relative py-14 sm:py-18 md:py-22 overflow-x-hidden overflow-y-visible min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh]">
-        {/* Background Image */}
+        {/* Background Image - Hidden in dark mode to match Home page */}
         <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
           <Image
             src="/bg/services.jpg"
             alt="Construction and design services"
             fill
-            className="object-cover"
+            className="object-cover dark:hidden"
             sizes="100vw"
             priority
             style={{
               objectPosition: "center",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-stone-900/80 via-stone-800/75 to-stone-900/80 dark:from-slate-900/85 dark:via-slate-800/80 dark:to-slate-900/85" />
+          <div className="absolute inset-0 bg-gradient-to-br from-stone-900/80 via-stone-800/75 to-stone-900/80 dark:from-slate-900/95 dark:via-slate-800/90 dark:to-slate-900/95" />
         </div>
         {/* Background pattern overlay */}
         <div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.08] blueprint-grid z-[1]" />

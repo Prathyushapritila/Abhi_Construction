@@ -16,20 +16,20 @@ export default function PortfolioPage() {
       <StickyContactButtons />
       {/* Hero Section with Background */}
       <section className="relative py-14 sm:py-18 md:py-22 overflow-x-hidden overflow-y-visible min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh]">
-        {/* Background Image */}
+        {/* Background Image - Hidden in dark mode to match Home page */}
         <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
           <Image
             src="/bg/portfolio.jpg"
             alt="Portfolio background"
             fill
-            className="object-cover"
+            className="object-cover dark:hidden"
             sizes="100vw"
             priority
             style={{
               objectPosition: "center",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-stone-800/60 to-stone-900/70 dark:from-slate-900/80 dark:via-slate-800/70 dark:to-slate-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-stone-800/60 to-stone-900/70 dark:from-slate-900/95 dark:via-slate-800/90 dark:to-slate-900/95" />
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">

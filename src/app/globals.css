@@ -102,6 +102,28 @@
     padding-bottom: env(safe-area-inset-bottom);
   }
   
+  /* CRITICAL: Prevent any scrollbars from appearing on any element at any time */
+  * {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE and Edge */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none !important; /* Chrome, Safari, Opera */
+    width: 0 !important;
+    height: 0 !important;
+  }
+  
+  /* Exception: Only html can have scrollbar */
+  html {
+    scrollbar-width: auto; /* Firefox - allow scrollbar on html only */
+    -ms-overflow-style: auto; /* IE and Edge - allow scrollbar on html only */
+  }
+  
+  html::-webkit-scrollbar {
+    display: block; /* Chrome, Safari, Opera - allow scrollbar on html only */
+  }
+  
   .dark body {
     background-color: rgb(15, 23, 42);
   }
@@ -267,10 +289,11 @@
     padding-right: 0 !important;
   }
   
-  /* Fix: Remove extra scrollbar in all sections - ensure only main page scrollbar */
+  /* Fix: Remove extra scrollbar in all sections - ensure only main page scrollbar - ULTRA AGGRESSIVE */
   section,
   section.section-standard,
-  section[class*="section-standard"] {
+  section[class*="section-standard"],
+  section *:not(img):not(video):not(iframe):not(canvas):not(svg) {
     overflow: visible !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
@@ -279,7 +302,31 @@
     max-height: none !important;
   }
   
-  /* Ensure all section children don't create scrollbars */
+  /* Force no scrollbars on containers and sections - GLOBAL RULE */
+  div:not([class*="Dialog"]):not([class*="Popover"]):not([class*="SelectContent"]):not([class*="DropdownContent"]),
+  section,
+  main,
+  article,
+  aside,
+  header,
+  footer {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    max-height: none !important;
+  }
+  
+  /* Exception: Allow overflow-hidden only for image containers and UI components */
+  [class*="overflow-hidden"][class*="relative"][class*="aspect-"],
+  [class*="Card"] > div[class*="relative"][class*="overflow-hidden"],
+  [class*="card"] > div[class*="relative"][class*="overflow-hidden"],
+  [class*="Dialog"],
+  [class*="Popover"],
+  [class*="SelectContent"],
+  [class*="DropdownContent"] {
+    overflow: hidden !important; /* Only for image clipping and UI dropdowns */
+  }
+  
+  /* Ensure all section children don't create scrollbars - ENHANCED */
   section > div,
   section.section-standard > div,
   section[class*="section-standard"] > div,
@@ -287,7 +334,9 @@
   section.section-standard > div[class*="container"],
   section[class*="section-standard"] > div[class*="container"],
   section > div[class*="motion"],
-  section[class*="motion"] {
+  section[class*="motion"],
+  section > *,
+  section > * > * {
     overflow: visible !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
@@ -302,14 +351,42 @@
     overflow-x: hidden !important;
     overflow-y: visible !important;
     max-height: none !important;
+    height: auto !important;
   }
   
-  /* Ensure cards and containers don't create scrollbars */
+  /* Ensure cards and containers don't create scrollbars - AGGRESSIVE */
   [class*="Card"],
   [class*="card"],
-  [class*="container"] {
+  [class*="container"],
+  div[class*="motion"],
+  [class*="motion"] > div,
+  [class*="motion"] > section {
     overflow-x: hidden !important;
     overflow-y: visible !important;
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+  
+  /* Prevent scrollbars on ALL divs and sections - ULTRA AGGRESSIVE */
+  div:not([class*="Dialog"]):not([class*="Popover"]):not([class*="Select"]):not([class*="Dropdown"]),
+  section,
+  main,
+  article,
+  aside {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+  
+  /* Prevent scrollbars during animations - CRITICAL */
+  [class*="motion"],
+  [data-framer-name],
+  [style*="height"]:not([style*="height: 100vh"]):not([style*="height: 100%"]):not([style*="height: auto"]) {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    max-height: none !important;
   }
   
   /* Exception: Only allow overflow-hidden for image containers, not for scrolling */
@@ -319,14 +396,44 @@
     overflow: hidden !important; /* This is fine for image clipping */
   }
   
-  /* Ensure grid containers don't create scrollbars */
+  /* Ensure grid containers don't create scrollbars - ENHANCED */
   section [class*="grid"],
-  section [class*="grid"] > * {
+  section [class*="grid"] > *,
+  [class*="grid"] > *,
+  [class*="grid"] {
     overflow: visible !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
     height: auto !important;
     max-height: none !important;
+  }
+  
+  /* Prevent scrollbars on framer-motion animated elements */
+  [data-framer-component-type],
+  [data-framer-name] {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+  
+  /* Prevent scrollbars on mobile menu during animation */
+  header [id="mobile-navigation"],
+  header [id="mobile-navigation"] > div,
+  header .md\:hidden[class*="border-t"] {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    max-height: none !important;
+  }
+  
+  /* Prevent scrollbars on ALL motion.div elements */
+  [class*="motion"] > div,
+  div[class*="motion"],
+  section[class*="motion"] {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    max-height: none !important;
+    height: auto !important;
   }
   
   /* Hero sections - full width edge-to-edge, break out of container */
@@ -1204,6 +1311,31 @@
   .dark header nav .mobile-theme-toggle button[aria-label="Toggle theme"],
   .dark header nav .mobile-theme-toggle button[aria-label="Toggle theme"] * {
     color: #ffffff !important;
+  }
+  
+  /* Ensure mobile hamburger menu is always visible and accessible */
+  @media (max-width: 767px) {
+    header nav > div.flex.md\:hidden {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      z-index: 50 !important;
+    }
+    
+    header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      position: relative !important;
+      z-index: 50 !important;
+    }
+    
+    header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] svg {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
   }
   
   /* Logo watermark for pages - visible in light and dark mode */

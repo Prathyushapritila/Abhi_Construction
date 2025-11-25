@@ -22,7 +22,7 @@ export default function AboutPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-premiumGold mb-4 sm:mb-6">
             About Us
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-marbleWhite/90 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-marbleWhite/90 dark:text-slate-100 leading-relaxed">
             Where architecture, craftsmanship, and interiors meet to create homes that feel personal—and look unforgettable.
           </p>
         </div>

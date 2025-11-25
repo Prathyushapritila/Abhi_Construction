@@ -73,27 +73,36 @@ const processSteps = [
 export function AboutContent() {
   return (
     <>
-      {/* Hero Band with Quote */}
-      <FullWidthBg 
-        image="/bg/about-quote.png"
-        overlay={0.75}
-      >
-        <div className="text-center max-w-4xl mx-auto py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <p className="text-3xl md:text-5xl font-heading font-bold text-premiumGold leading-tight mb-6">
-              We don&apos;t just build homes. We shape the way you live.
-            </p>
-            <p className="text-xl md:text-2xl text-marbleWhite/90 leading-relaxed">
-              From the first sketch to the final cushion, our team designs, builds, and styles spaces that feel refined, warm, and beautifully yours.
-            </p>
-          </motion.div>
+      {/* Hero Band with Quote - Matching Home page style */}
+      <section className="relative section-standard overflow-x-hidden overflow-y-visible">
+        {/* Background with gradient - NO IMAGE - matching Home page */}
+        <div className="absolute inset-0 bg-gradient-to-br from-marbleWhite via-royalNavy/5 to-marbleWhite dark:from-slate-900 dark:via-royalNavy/20 dark:to-slate-900" />
+        
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-royalBlue/5 dark:bg-royalBlue/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] blueprint-grid" />
+        
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
+          <div className="text-center max-w-4xl mx-auto py-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <p className="text-3xl md:text-5xl font-heading font-bold text-premiumGold dark:text-premiumGold leading-tight mb-6">
+                We don&apos;t just build homes. We shape the way you live.
+              </p>
+              <p className="text-xl md:text-2xl text-royalNavy dark:text-slate-100 leading-relaxed">
+                From the first sketch to the final cushion, our team designs, builds, and styles spaces that feel refined, warm, and beautifully yours.
+              </p>
+            </motion.div>
+          </div>
         </div>
-      </FullWidthBg>
+      </section>
 
       {/* Credibility Line */}
       <section className="py-12 sm:py-16 bg-royalNavy text-marbleWhite">
@@ -114,18 +123,6 @@ export function AboutContent() {
 
       {/* Our Promise */}
       <section className="section-standard bg-stone-50 dark:bg-slate-800 relative overflow-x-hidden overflow-y-visible">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-10 dark:opacity-15">
-          <Image
-            src="/projects/interior-1.jpeg"
-            alt="Our Promise"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-50/95 via-stone-50/90 to-stone-50/95 dark:from-slate-800/95 dark:via-slate-800/90 dark:to-slate-800/95" />
-        </div>
-        
         {/* Background animation */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] marble-texture" />
         <motion.div 
@@ -292,18 +289,6 @@ export function AboutContent() {
 
       {/* Our Story */}
       <section className="section-standard bg-stone-50 dark:bg-slate-800 relative overflow-x-hidden overflow-y-visible">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-10 dark:opacity-15">
-          <Image
-            src="/projects/living-room-1.jpeg"
-            alt="Our Story"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-50/95 via-stone-50/90 to-stone-50/95 dark:from-slate-800/95 dark:via-slate-800/90 dark:to-slate-800/95" />
-        </div>
-        
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] marble-texture" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl" />
@@ -329,18 +314,6 @@ export function AboutContent() {
 
       {/* How We Work - 5 Step Process */}
       <section className="section-standard bg-gradient-to-br from-marbleWhite via-royalNavy/5 to-marbleWhite dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-x-hidden overflow-y-visible">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-10 dark:opacity-15">
-          <Image
-            src="/projects/kitchen-1.jpeg"
-            alt="How We Work"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-marbleWhite/95 via-marbleWhite/90 to-marbleWhite/95 dark:from-slate-900/95 dark:via-slate-800/90 dark:to-slate-900/95" />
-        </div>
-        
         {/* Decorative background elements with animation */}
         <motion.div 
           className="absolute top-0 left-0 w-96 h-96 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"

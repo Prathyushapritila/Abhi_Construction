@@ -41,7 +41,7 @@ export function FullWidthBg({
               ? "Construction and design background"
               : "Background image"}
             fill
-            className="object-cover"
+            className="object-cover dark:hidden"
             style={{
               objectPosition: "center",
             }}
@@ -53,9 +53,9 @@ export function FullWidthBg({
         </div>
       </motion.div>
 
-      {/* Dark Overlay */}
+      {/* Dark Overlay - Lighter in dark mode to match Home page */}
       <div 
-        className="absolute inset-0 z-10"
+        className="absolute inset-0 z-10 dark:bg-slate-900/95"
         style={{ backgroundColor: `rgba(11, 28, 61, ${overlay})` }}
       />
 
