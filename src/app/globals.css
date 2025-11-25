@@ -103,12 +103,12 @@
   }
   
   /* CRITICAL: Prevent any scrollbars from appearing on any element at any time */
-  * {
+  *:not(html):not(body) {
     scrollbar-width: none !important; /* Firefox */
     -ms-overflow-style: none !important; /* IE and Edge */
   }
   
-  *::-webkit-scrollbar {
+  *:not(html):not(body)::-webkit-scrollbar {
     display: none !important; /* Chrome, Safari, Opera */
     width: 0 !important;
     height: 0 !important;
@@ -122,6 +122,26 @@
   
   html::-webkit-scrollbar {
     display: block; /* Chrome, Safari, Opera - allow scrollbar on html only */
+  }
+  
+  /* Ensure sections never have scrollbars but can have smooth animations */
+  section,
+  section *,
+  div[class*="motion"],
+  [class*="motion"] * {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  
+  section::-webkit-scrollbar,
+  section *::-webkit-scrollbar,
+  div[class*="motion"]::-webkit-scrollbar,
+  [class*="motion"] *::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
   
   .dark body {
@@ -1291,14 +1311,27 @@
   }
   
   @media (max-width: 767px) {
-    /* Show mobile menu button on mobile */
+    /* Show mobile menu button on mobile - FORCE VISIBLE */
     header nav > div.flex.md\:hidden {
       display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      z-index: 100 !important;
     }
     
     /* Hide desktop navigation on mobile */
     header nav > div.hidden.md\:flex {
       display: none !important;
+    }
+    
+    /* Force mobile hamburger button to be visible */
+    header nav button[aria-label="Toggle menu"] {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      cursor: pointer !important;
     }
   }
   
@@ -1313,13 +1346,14 @@
     color: #ffffff !important;
   }
   
-  /* Ensure mobile hamburger menu is always visible and accessible */
+  /* Ensure mobile hamburger menu is always visible and accessible - ULTRA AGGRESSIVE */
   @media (max-width: 767px) {
     header nav > div.flex.md\:hidden {
       display: flex !important;
       visibility: visible !important;
       opacity: 1 !important;
-      z-index: 50 !important;
+      z-index: 100 !important;
+      position: relative !important;
     }
     
     header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] {
@@ -1328,13 +1362,39 @@
       opacity: 1 !important;
       pointer-events: auto !important;
       position: relative !important;
-      z-index: 50 !important;
+      z-index: 100 !important;
+      width: 40px !important;
+      height: 40px !important;
+      min-width: 40px !important;
+      min-height: 40px !important;
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      border: 2px solid rgba(64, 64, 64, 0.3) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
     }
     
-    header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] svg {
+    .dark header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] {
+      background-color: rgba(15, 23, 42, 0.95) !important;
+      border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    }
+    
+    header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] svg,
+    header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] > svg {
       display: block !important;
       visibility: visible !important;
       opacity: 1 !important;
+      width: 24px !important;
+      height: 24px !important;
+      color: rgb(64, 64, 64) !important;
+    }
+    
+    .dark header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] svg,
+    .dark header nav > div.flex.md\:hidden button[aria-label="Toggle menu"] > svg {
+      color: rgb(255, 255, 255) !important;
+    }
+    
+    /* Ensure mobile menu container is never hidden */
+    header nav > div.flex.md\:hidden {
+      display: flex !important;
     }
   }
   

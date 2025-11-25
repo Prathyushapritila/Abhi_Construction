@@ -84,8 +84,8 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu Button - Right Side */}
-        <div className="flex md:hidden items-center gap-2 sm:gap-3 overflow-visible flex-shrink-0 ml-2 relative z-50">
-          <div className="mobile-theme-toggle overflow-visible flex-shrink-0">
+        <div className="flex md:hidden items-center gap-2 sm:gap-3 overflow-visible flex-shrink-0 ml-2 relative z-[100]">
+          <div className="mobile-theme-toggle overflow-visible flex-shrink-0 z-[100]">
             <ThemeToggle />
           </div>
           <Button
@@ -96,10 +96,11 @@ export function Navbar() {
             aria-label="Toggle menu"
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
-            className="w-10 h-10 text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold flex-shrink-0 overflow-visible border border-royalNavy/20 dark:border-white/20 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm shadow-sm"
+            className="w-10 h-10 min-w-[40px] min-h-[40px] text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold flex-shrink-0 overflow-visible border-2 border-royalNavy/30 dark:border-white/40 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md shadow-lg z-[100] relative"
+            style={{ display: 'flex', visibility: 'visible', opacity: 1 }}
           >
             <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
-            {isOpen ? <X className="h-6 w-6" strokeWidth={2.5} /> : <Menu className="h-6 w-6" strokeWidth={2.5} />}
+            {isOpen ? <X className="h-6 w-6" strokeWidth={2.5} style={{ display: 'block', visibility: 'visible' }} /> : <Menu className="h-6 w-6" strokeWidth={2.5} style={{ display: 'block', visibility: 'visible' }} />}
           </Button>
         </div>
       </nav>
