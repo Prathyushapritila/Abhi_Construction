@@ -87,13 +87,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-full flex-col relative w-full overflow-x-hidden bg-marbleWhite dark:bg-slate-900">
+          <div className="flex min-h-screen flex-col relative w-full overflow-x-hidden bg-marbleWhite dark:bg-slate-900">
             <Watermark />
             <div className="relative z-10 w-full">
               <Navbar />
-              <main className="flex-1 w-full overflow-x-hidden page-with-watermark">
-                {children}
-              </main>
+              <main className="flex-1 w-full overflow-x-hidden">{children}</main>
               <Footer />
             </div>
           </div>

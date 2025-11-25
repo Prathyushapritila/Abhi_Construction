@@ -84,22 +84,19 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu Button - Right Side */}
-        <div className="flex md:hidden items-center gap-2 sm:gap-3 overflow-visible flex-shrink-0 ml-2 relative z-50">
+        <div className="flex md:hidden items-center gap-2 sm:gap-3 overflow-visible flex-shrink-0 ml-2">
           <div className="mobile-theme-toggle overflow-visible flex-shrink-0">
             <ThemeToggle />
           </div>
           <Button
             variant="ghost"
             size="icon"
-            type="button"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
-            aria-controls="mobile-navigation"
-            className="w-10 h-10 text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold flex-shrink-0 overflow-visible border border-royalNavy/20 dark:border-white/20 bg-white/70 dark:bg-slate-800/70 backdrop-blur"
+            className="w-10 h-10 text-royalNavy dark:text-white hover:text-premiumGold dark:hover:text-premiumGold flex-shrink-0 overflow-visible"
           >
-            <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
-            {isOpen ? <X className="h-6 w-6" strokeWidth={2.25} /> : <Menu className="h-6 w-6" strokeWidth={2.25} />}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
       </nav>
@@ -112,7 +109,6 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden border-t"
-            id="mobile-navigation"
           >
             <div className="container mx-auto px-4 py-4 space-y-2 bg-[#ffffff] dark:bg-slate-900 w-full">
               {navItems.map((item) => (
