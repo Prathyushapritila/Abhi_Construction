@@ -114,18 +114,8 @@ export function AboutContent() {
 
       {/* Our Promise */}
       <section className="section-standard bg-stone-50 dark:bg-slate-800 relative overflow-x-hidden overflow-y-visible">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-10 dark:opacity-15">
-          <Image
-            src="/projects/interior-1.jpeg"
-            alt="Our Promise"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-50/95 via-stone-50/90 to-stone-50/95 dark:from-slate-800/95 dark:via-slate-800/90 dark:to-slate-800/95" />
-        </div>
-        
+        {/* Soft gradient background for light/dark mode consistency */}
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-50/95 via-stone-50/90 to-stone-50/95 dark:from-slate-800/95 dark:via-slate-800/90 dark:to-slate-800/95 pointer-events-none" />
         {/* Background animation */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] marble-texture" />
         <motion.div 
@@ -292,18 +282,8 @@ export function AboutContent() {
 
       {/* Our Story */}
       <section className="section-standard bg-stone-50 dark:bg-slate-800 relative overflow-x-hidden overflow-y-visible">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-10 dark:opacity-15">
-          <Image
-            src="/projects/living-room-1.jpeg"
-            alt="Our Story"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-50/95 via-stone-50/90 to-stone-50/95 dark:from-slate-800/95 dark:via-slate-800/90 dark:to-slate-800/95" />
-        </div>
-        
+        {/* Uniform gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-50/95 via-stone-50/90 to-stone-50/95 dark:from-slate-800/95 dark:via-slate-800/90 dark:to-slate-800/95 pointer-events-none" />
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] marble-texture" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl" />
@@ -329,18 +309,8 @@ export function AboutContent() {
 
       {/* How We Work - 5 Step Process */}
       <section className="section-standard bg-gradient-to-br from-marbleWhite via-royalNavy/5 to-marbleWhite dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-x-hidden overflow-y-visible">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-10 dark:opacity-15">
-          <Image
-            src="/projects/kitchen-1.jpeg"
-            alt="How We Work"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-marbleWhite/95 via-marbleWhite/90 to-marbleWhite/95 dark:from-slate-900/95 dark:via-slate-800/90 dark:to-slate-900/95" />
-        </div>
-        
+        {/* Consistent gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-marbleWhite/95 via-marbleWhite/90 to-marbleWhite/95 dark:from-slate-900/95 dark:via-slate-800/90 dark:to-slate-900/95 pointer-events-none" />
         {/* Decorative background elements with animation */}
         <motion.div 
           className="absolute top-0 left-0 w-96 h-96 bg-premiumGold/5 dark:bg-premiumGold/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"
