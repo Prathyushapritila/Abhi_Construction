@@ -293,7 +293,7 @@
     aspect-ratio: 3 / 4;
     object-fit: cover;
   }
-  /* Ensure all sections are contained - no side gutters - STATIC POSITION */
+  /* Ensure all sections are contained - no side gutters */
   section {
     width: 100% !important;
     max-width: 100vw !important;
@@ -301,114 +301,12 @@
     overflow-y: visible !important;
     overflow: visible !important;
     box-sizing: border-box !important;
-    position: static !important;
+    position: relative;
     margin: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    transform: none !important;
-    will-change: auto !important;
-  }
-  
-  /* Prevent any scroll-based movement on sections */
-  section,
-  section *,
-  div[class*="motion"],
-  [class*="motion"] {
-    transform: translateY(0) !important;
-    transform: translateX(0) !important;
-    position: static !important;
-    position: relative !important; /* Allow relative for absolute children */
-  }
-  
-  /* Exception: Only allow relative positioning for sections that need absolute children */
-  section[class*="relative"],
-  section.relative {
-    position: relative !important;
-  }
-  
-  /* Prevent parallax or scroll-based transforms - SECTIONS MUST BE STATIC */
-  section,
-  section > div,
-  section > * {
-    will-change: auto !important;
-  }
-  
-  /* CRITICAL: Prevent any y-axis movement on sections - keep fade animations only */
-  section {
-    transform: translateY(0) !important;
-    transform: translateX(0) !important;
-    position: static !important;
-  }
-  
-  /* Allow relative positioning only for sections that need absolute children */
-  section[class*="relative"],
-  section.relative {
-    position: relative !important;
-    transform: translateY(0) !important;
-    transform: translateX(0) !important;
-  }
-  
-  /* Prevent framer-motion from moving sections - override ALL y transforms */
-  section [class*="motion"],
-  section [data-framer-name],
-  section > [class*="motion"],
-  section > div[class*="motion"],
-  section h1[class*="motion"],
-  section h2[class*="motion"],
-  section h3[class*="motion"],
-  section p[class*="motion"],
-  section div[class*="motion"],
-  section *[class*="motion"] {
-    transform: translateY(0) !important;
-    transform: translateX(0) !important;
-  }
-  
-  /* Override inline styles from framer-motion - FORCE NO MOVEMENT - ULTRA AGGRESSIVE */
-  section *[style*="transform"],
-  section *[style*="translateY"],
-  section *[style*="translateX"] {
-    transform: translateY(0) translateX(0) !important;
-  }
-  
-  /* Prevent any scroll-based position changes */
-  section,
-  section * {
-    will-change: auto !important;
-  }
-  
-  /* Ensure sections don't move during scroll - STATIC POSITIONING */
-  section {
-    position: static !important;
-  }
-  
-  section[class*="relative"] {
-    position: relative !important;
-  }
-  
-  /* CRITICAL: Override ALL framer-motion transforms on sections - NO MOVEMENT ALLOWED */
-  section [class*="motion"],
-  section [data-framer-component-type],
-  section [data-framer-name] {
-    transform: translateY(0) translateX(0) scale(1) !important;
-  }
-  
-  /* Prevent any parallax or scroll-based movement */
-  section,
-  section > div,
-  section > *,
-  main > section,
-  main > div > section {
-    transform: translateY(0) !important;
-    position: static !important;
-  }
-  
-  /* Exception: Only relative for sections that need absolute children */
-  section.relative,
-  section[class*="relative"] {
-    position: relative !important;
-    transform: translateY(0) translateX(0) !important;
   }
   
   /* Fix: Remove extra scrollbar in all sections - ensure only main page scrollbar - ULTRA AGGRESSIVE */
@@ -558,7 +456,7 @@
     height: auto !important;
   }
   
-  /* Hero sections - full width edge-to-edge, break out of container - STATIC */
+  /* Hero sections - full width edge-to-edge, break out of container */
   section[class*="relative"][class*="py-"] {
     width: 100vw !important;
     max-width: 100vw !important;
@@ -569,8 +467,6 @@
     margin-right: calc(50% - 50vw) !important;
     left: 0 !important;
     right: 0 !important;
-    transform: none !important;
-    will-change: auto !important;
   }
   
   /* Background divs in hero sections - full viewport width */

@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface FullWidthBgProps {
@@ -15,12 +16,18 @@ export function FullWidthBg({
   overlay = 0.7,
   children,
   className = "",
-  parallax = false
+  parallax = true
 }: FullWidthBgProps) {
   return (
     <section className={`relative py-14 sm:py-18 md:py-22 overflow-x-hidden overflow-y-visible min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh] ${className}`}>
-      {/* Background Image - NO PARALLAX, STATIC */}
-      <div className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900">
+      {/* Background Image */}
+      <motion.div
+        className="absolute inset-0 z-0 bg-stone-900 dark:bg-slate-900"
+        initial={parallax ? { scale: 1.1 } : { scale: 1 }}
+        whileInView={parallax ? { scale: 1 } : { scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
         <div className="relative w-full h-full">
           <Image
             src={image}
@@ -44,7 +51,7 @@ export function FullWidthBg({
             unoptimized={false}
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Dark Overlay - Lighter in dark mode to match Home page */}
       <div 
