@@ -17,8 +17,8 @@ export function HomeCEOQuote() {
       
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-5xl mx-auto"
@@ -40,8 +40,8 @@ export function HomeCEOQuote() {
 
           {/* Author Info - Right Corner - No Box */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-12 flex justify-end"

@@ -104,8 +104,8 @@ export function HomeAboutTeaser() {
         <div className="max-w-6xl mx-auto">
           {/* Main Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -120,8 +120,8 @@ export function HomeAboutTeaser() {
               {siteConfig.sections.hero.headline}
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-base sm:text-lg md:text-xl lg:text-2xl text-steelGray dark:text-slate-300 leading-relaxed max-w-4xl mx-auto"
@@ -132,8 +132,8 @@ export function HomeAboutTeaser() {
 
           {/* Stats Cards */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16"
@@ -147,11 +147,11 @@ export function HomeAboutTeaser() {
               return (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -8 }}
+                  whileHover={{ scale: 1.05 }}
                   className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 sm:p-8 border-0 shadow-lg hover:shadow-2xl transition-all duration-200 cursor-pointer group"
                 >
                   <div className="flex flex-col items-center text-center">
@@ -183,8 +183,8 @@ export function HomeAboutTeaser() {
 
           {/* Testimonials */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.7 }}
             className="mb-12"
@@ -212,11 +212,11 @@ export function HomeAboutTeaser() {
               ].map((testimonial, index) => (
                 <motion.div
                   key={testimonial.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                  whileHover={{ y: -6, scale: 1.02 }}
+                  whileHover={{ scale: 1.02 }}
                   className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-xl p-6 sm:p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer group h-full flex flex-col"
                 >
                   <p className="text-sm md:text-base text-steelGray dark:text-slate-300 leading-relaxed italic mb-4 flex-grow">
@@ -234,8 +234,8 @@ export function HomeAboutTeaser() {
 
           {/* CTA Button */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 1.1 }}
             className="text-center"
