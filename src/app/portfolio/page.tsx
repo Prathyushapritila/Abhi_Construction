@@ -45,7 +45,9 @@ export default function PortfolioPage() {
       </section>
 
       {/* Portfolio Content */}
-      <PortfolioSimple />
+      <Suspense fallback={<div className="py-20 text-center text-steelGray dark:text-slate-400">Loading portfolio...</div>}>
+        <PortfolioSimple />
+      </Suspense>
     </div>
   );
 }
