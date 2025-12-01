@@ -211,8 +211,8 @@ export function PortfolioSimple() {
           })}
         </div>
 
-        {/* Portfolio Grid */}
-        {activeCategory && filteredItems.length > 0 && (
+        {/* Portfolio Grid - Show all items by default when no category is selected */}
+        {filteredItems.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -269,7 +269,7 @@ export function PortfolioSimple() {
           </motion.div>
         )}
 
-        {activeCategory && filteredItems.length === 0 && (
+        {filteredItems.length === 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -278,25 +278,16 @@ export function PortfolioSimple() {
             className="text-center py-12"
           >
             <p className="text-lg text-steelGray dark:text-slate-400">
-              No images found for <span className="font-semibold text-premiumGold">{activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}</span> category.
+              {activeCategory 
+                ? `No images found for ${activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)} category.`
+                : "No portfolio items available at this time."
+              }
             </p>
-            <p className="text-sm text-steelGray dark:text-slate-500 mt-2">
-              Please add images to <code className="bg-stone-100 dark:bg-slate-800 px-2 py-1 rounded">/public/{activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}/</code> folder
-            </p>
-          </motion.div>
-        )}
-        
-        {!activeCategory && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center py-12"
-          >
-            <p className="text-lg text-steelGray dark:text-slate-400">
-              Select a category above to view projects
-            </p>
+            {activeCategory && (
+              <p className="text-sm text-steelGray dark:text-slate-500 mt-2">
+                Please add images to <code className="bg-stone-100 dark:bg-slate-800 px-2 py-1 rounded">/public/{activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}/</code> folder
+              </p>
+            )}
           </motion.div>
         )}
       </div>

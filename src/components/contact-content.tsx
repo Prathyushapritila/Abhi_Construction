@@ -166,9 +166,6 @@ export function ContactContent() {
                   title="Abhi Constructions Location - Hyderabad, Telangana, India"
                 />
               </div>
-              <p className="text-sm text-royalNavy dark:text-slate-200 mt-2 font-medium whitespace-pre-line">
-                {siteConfig.contact.address}
-              </p>
               {siteConfig.contact.mapsUrl && (
                 <a
                   href={siteConfig.contact.mapsUrl}

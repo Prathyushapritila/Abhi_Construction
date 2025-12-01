@@ -193,21 +193,21 @@ export function HomeAboutTeaser() {
               What Our Satisfied Clients Are Saying
             </h3>
             <p className="text-base md:text-lg text-steelGray dark:text-slate-300 text-center mb-8 max-w-3xl mx-auto leading-relaxed">
-              At Abhi Constructions and Innovations, we&apos;re all about building strong bonding and relationships with our clients. We hear you from getting feedback in order to improve and progress in our service.
+              At Abhi Constructions and Innovations, we&apos;re all about building strong bonds and relationships with our clients. We listen to your feedback to continuously improve and enhance our service.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
               {[
                 {
                   name: "K P Rajendra",
-                  content: "Abhi Constructions and Innovations proved to my expectations in every way. The team was professional, efficient, and delivered thier best results. I recommend them for any construction or interior design projects. all the best.",
+                  content: "Abhi Constructions and Innovations exceeded my expectations in every way. The team was professional, efficient, and delivered their best results. I recommend them for any construction or interior design projects. All the best.",
                 },
                 {
                   name: "Krishna C Kammari",
-                  content: "I'm so happy to have worked with Abhi Constructions and Innovations. Their attention to minute detailings and perseverance to quality is impressive. I would definitely work with them again if I start my next new house.",
+                  content: "I'm so happy to have worked with Abhi Constructions and Innovations. Their attention to detail and commitment to quality is impressive. I would definitely work with them again if I start my next new house.",
                 },
                 {
                   name: "Arun",
-                  content: "Working with Abhi Constructions and Innovations was delightful. They made the construction process seamless and stress-free, and the end result was absouletly amazing.",
+                  content: "Working with Abhi Constructions and Innovations was delightful. They made the construction process seamless and stress-free, and the end result was absolutely amazing.",
                 },
               ].map((testimonial, index) => (
                 <motion.div
